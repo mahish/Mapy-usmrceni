@@ -1,5 +1,6 @@
 function initialize() {
 
+    //to be replaced with reference to json file
     var mapyData = [{
         "cislo_osoby": 275,
         "vek_h": "21",
