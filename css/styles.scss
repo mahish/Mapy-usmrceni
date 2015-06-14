@@ -19,7 +19,27 @@ header {
 }
 
 section.map {
+	position: relative;
+
+	.controls {
+		z-index: 2;
+		border: 1px solid gray;
+		border-radius: 2px;
+		height: 400px;
+		padding: 10px;
+		@include position(absolute, 100px null 100px 10px);
+		@include outer-container(38%);
+		min-width: 250px;
+		background: white;
+		overflow: scroll;
+	}
+
 	#map-canvas {
+		z-index: 0;
 		height: 600px;
 	}
 }
+
+// ===============================================
+
+@import "components";
