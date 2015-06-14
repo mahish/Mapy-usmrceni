@@ -1,0 +1,25 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
+@import "normalize/normalize";
+@import "base/base";
+@import "base/class-variables";
+
+// ===============================================
+
+html, body {
+	height: 100%;
+}
+
+header,section.map {
+	@include outer-container(100%);
+}
+
+header {
+	margin: #{$heading-line-height*3}em 0;
+}
+
+section.map {
+	#map-canvas {
+		height: 600px;
+	}
+}
