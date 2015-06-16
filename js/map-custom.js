@@ -2665,8 +2665,8 @@ function initialize() {
 
     var mapOptions = {
         center: {
-            lat: 49.921552, // 49° 45'
-            lng: 12.637676  // 15° 30'
+            lat: 49.921552, // 49° 45' = 49.75
+            lng: 12.637676  // 15° 30' = 15.5
         },
         zoom: 7
     };
