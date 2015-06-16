@@ -32,6 +32,23 @@ section.map {
 		min-width: 250px;
 		background: white;
 		overflow: scroll;
+
+		input[type='range'] {
+			width: 100%;
+		}
+
+		input[type='range']::-webkit-slider-runnable-track {
+			&:after {
+				position: absolute;
+				float: left;
+				width: 100%;
+				font-size: 9px;
+				white-space: 10px;
+				content: "Vše 1947-1950 1951-1965 1966-1971 1972-1989";
+			}
+		}
+
+
 	}
 
 	#map-canvas {
