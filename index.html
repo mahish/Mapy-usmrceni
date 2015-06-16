@@ -29,14 +29,7 @@
       </h1>
       <hr>
       <label for=obdobi>Období</label>
-      <input type=range min=1 max=5 value=1 id=obdobi step=1 list=zvolitObdobi oninput="outputUpdate(value)">
-      <datalist id=zvolitObdobi>
-        <option>Vše</option>
-        <option>1947-1950</option>
-        <option>1951-1965</option>
-        <option>1966-1971</option>
-        <option>1972-1989</option>
-      </datalist>
+      <input type=range min=1948 max=1990 value=1 id=obdobi step=1 list=zvolitObdobi onchange="initialize(value)">
 
       <hr>
       <p>

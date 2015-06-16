@@ -1,6 +1,8 @@
-function initialize() {
+function initialize(inputSliderValue) {
 
     //to be replaced with reference to json file
+    //$.getJSON( "ajax/test.json", function( data ) {
+
     var mapyData = [{
         "cislo_osoby": 275,
         "vek_h": "21",
@@ -2676,6 +2678,7 @@ function initialize() {
     $.each(mapyData, function(key, data) {
         var myLat = data.gps_incidentu.split(",")[0];
         var myLng = data.gps_incidentu.split(",")[1];
+        var myYear = data.rok;
 
         var latLng = new google.maps.LatLng(myLat, myLng);
         // Creating a marker and putting it on the map
@@ -2683,7 +2686,9 @@ function initialize() {
             position: latLng,
             title: data.cislo_osoby.toString()
         });
-        marker.setMap(map);
+        if (myYear < inputSliderValue) {
+            marker.setMap(map);
+        }
     });
 
 }
