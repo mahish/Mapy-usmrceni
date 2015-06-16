@@ -2672,6 +2672,7 @@ function setAllMap(map) {
 // Removes the markers from the map, but keeps them in the array.
 function clearMarkers() {
   setAllMap(null);
+  markers = [];
 }
 
 function draw(map, data, filter){
@@ -2683,20 +2684,26 @@ function draw(map, data, filter){
         var myLng = data.gps_incidentu.split(",")[1];
         var myYear = data.rok;
 
-        console.log(map)
-
         var latLng = new google.maps.LatLng(myLat, myLng);
         // Creating a marker and putting it on the map
         var marker = new google.maps.Marker({
             position: latLng,
             title: data.cislo_osoby.toString()
         });
-        if (myYear < filter) {
-            marker.setMap(map);
-        }
 
-        markers.push(marker);
+        if (filter != null) {
+            if (myYear == filter) {
+                marker.setMap(map);
+                markers.push(marker);
+            }
+        } else {
+            marker.setMap(map);
+            markers.push(marker);
+        };
+
     });
+    console.log('Showing data for: ' + filter + '[' + markers.length + ']');
+
 }
 
 function initialize() {
@@ -2713,7 +2720,7 @@ function initialize() {
     map = new google.maps.Map(document.getElementById('map-canvas'),
         mapOptions);
 
-    draw(map, data, 1950);
+    draw(map, data, null);
 
 }
 
