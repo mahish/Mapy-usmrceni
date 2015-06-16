@@ -2692,7 +2692,11 @@ function draw(map, data, filter){
         });
 
         if (filter != null) {
-            if (myYear == filter) {
+            filter = filter.toString().split(',');
+            if (typeof(filter) == 'object' && myYear >= filter[0] && myYear < filter[1]) {
+                marker.setMap(map);
+                markers.push(marker);
+            } else if (myYear == filter) {
                 marker.setMap(map);
                 markers.push(marker);
             }

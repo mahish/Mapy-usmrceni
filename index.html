@@ -29,16 +29,22 @@
       </h1>
       <hr>
       <label for=obdobi>Období</label>
-      <input type=range min=1948 max=1990 value=1 id=obdobi step=1 list=zvolitObdobi onchange="draw(map, mapsDataJSON, value)">
+      <input type=range min=1948 max=1990 value=1 id=obdobi step=1 list=zvolitObdobi oninput="draw(map, mapsDataJSON, value)">
 
       <hr>
       <p>
         <label for="radio_buttons">Radio Buttons:</label>
         <label>
-          <input type="radio" class="radio" name="radio_button" value="radio_1"> Radio 1
+          <input type="radio" class="radio" name="radio_button" value="1948,1950" onchange="draw(map, mapsDataJSON, value)">1948-1950
         </label>
         <label>
-          <input type="radio" class="radio" name="radio_button" value="radio_2"> Radio 2
+          <input type="radio" class="radio" name="radio_button" value="1951,1965" onchange="draw(map, mapsDataJSON, value)">1951-1965
+        </label>
+        <label>
+          <input type="radio" class="radio" name="radio_button" value="1966,1971" onchange="draw(map, mapsDataJSON, value)">1966-1971
+        </label>
+        <label>
+          <input type="radio" class="radio" name="radio_button" value="1972,1989" onchange="draw(map, mapsDataJSON, value)">1972-1989
         </label>
       </p>
       <hr>
