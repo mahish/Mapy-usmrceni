@@ -3,11 +3,16 @@
 @import "normalize/normalize";
 @import "base/base";
 @import "base/class-variables";
+@import "base/my-variables";
 
 // ===============================================
 
 html, body {
 	height: 100%;
+}
+
+h1 {
+	font-size: modular-scale(3);
 }
 
 header,section.map {
