@@ -1,5 +1,6 @@
 var map;
 var markers = [];
+var markerCluster;
 var mapsDataJSON = [{
     "cislo_osoby": 275,
     "vek_h": "21",
@@ -2664,15 +2665,19 @@ var mapsDataJSON = [{
 
 // Sets the map on all markers in the array.
 function setAllMap(map) {
-  for (var i = 0; i < markers.length; i++) {
-    markers[i].setMap(map);
-  }
+    for (var i = 0; i < markers.length; i++) {
+        markers[i].setMap(map);
+    }
+    if (typeof(markerCluster) == 'object') {
+        markerCluster.clearMarkers();
+    }
 }
 
 // Removes the markers from the map, but keeps them in the array.
 function clearMarkers() {
   setAllMap(null);
   markers = [];
+  markerCluster = null;
 }
 
 function draw(map, data, filter){
@@ -2694,18 +2699,19 @@ function draw(map, data, filter){
         if (filter != null) {
             filter = filter.toString().split(',');
             if (typeof(filter) == 'object' && myYear >= filter[0] && myYear <= filter[1]) {
-                marker.setMap(map);
+                //marker.setMap(map);
                 markers.push(marker);
             } else if (myYear == filter) {
-                marker.setMap(map);
+                //marker.setMap(map);
                 markers.push(marker);
             }
         } else {
-            marker.setMap(map);
+            //marker.setMap(map);
             markers.push(marker);
         };
 
     });
+    markerCluster = new MarkerClusterer(map, markers);
     console.log('Showing data for: ' + filter + '[' + markers.length + ']');
 
 }
@@ -2716,8 +2722,8 @@ function initialize() {
 
     var mapOptions = {
         center: {
-            lat: 49.921552,
-            lng: 12.637676
+            lat: 49.45,
+            lng: 15.30
         },
         zoom: 7
     };
