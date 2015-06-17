@@ -1,5 +1,2 @@
-# Mapy-usmrceni
-
-Jde o mapy usmrcení bla.
-Blah Blah.
-Another blah.
+# Dokumentace usmrcených na československých státních hranicích 1948−1989
+Projekt Dokumentace usmrcených na čs. hranici 1948–1989 se zabývá feno- nem neúspěšných přechodů hranice, které skončily úmrtím. Zkoumání rysů množiny usmrcených osob a jejich proměn v čase a prostoru umožňuje sada dat s informace- mi ke 276 zdokumentovaným případům usmrcených. Základní proměnné databáze (např. místo narození, bydliště, incidentu – včetně GPS lokace) jsou sestaveny na zá- kladě informací v primárních archivních dokumentech. Další proměnné jsou konstru- ovány či harmonizovány tak, aby rozšířily možnosti statistické analýzy (např. vzdá- lenost mezi místem bydliště a incidentu). Kvantitativní zpracování je kombinováno s biografickými sondami, vychází z právního a historického kontextu a výsledky jsou k němu zpět vztaženy.
