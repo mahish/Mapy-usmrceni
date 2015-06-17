@@ -1,3 +1,3 @@
-# Přes železnou oponu 
-## Usmrcení na československé hranici
+# Přes železnou oponu: Usmrcení na československé hranici
+## O projektu
 Projekt Dokumentace usmrcených na čs. hranici 1948–1989 se zabývá fenoménem neúspěšných přechodů hranice, které skončily úmrtím. Zkoumání rysů množiny usmrcených osob a jejich proměn v čase a prostoru umožňuje sada dat s informacemi ke 276 zdokumentovaným případům usmrcených. Základní proměnné databáze (např. místo narození, bydliště, incidentu – včetně GPS lokace) jsou sestaveny na základě informací v primárních archivních dokumentech. Další proměnné jsou konstruovány či harmonizovány tak, aby rozšířily možnosti statistické analýzy (např. vzdálenost mezi místem bydliště a incidentu). Kvantitativní zpracování je kombinováno s biografickými sondami, vychází z právního a historického kontextu a výsledky jsou k němu zpět vztaženy.
