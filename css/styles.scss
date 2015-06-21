@@ -14,6 +14,10 @@ html, body {
 h1 {
 	font-size: modular-scale(3);
 	color: $red;
+
+	a {
+		font-size: 50%;
+	}
 }
 
 header,
@@ -53,6 +57,7 @@ aside.controls {
 			label {
 				@include span-columns(1 of 4);
 				line-height: 2;
+				cursor: pointer;
 			}
 		}
 	}
@@ -82,6 +87,10 @@ section.map {
 	}
 }
 
+footer {
+	height: #{$heading-line-height*7}em;
+	background-color: $dark-gray;
+}
 
 
 
