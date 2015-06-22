@@ -1,76 +1,169 @@
+// word-spacing: ($w/2 - 3.5em)/$fs;
+
 .label-switch {
-  $action-color: #477DCA !default;
-  $base-background-color: white !default;
-  $switch-width: 52px;
-  $switch-padding: 2px;
-  $switch-height: 32px;
-  $switch-radius: $switch-height;
-  $knob-size: $switch-height - ($switch-padding * 2);
-  $knob-radius: $switch-height - ($switch-padding * 2);
-  $knob-width: $knob-size;
-  $switch-background: $base-background-color;
-  $switch-border-background: darken($base-background-color, 9%);
-  $switch-shadow: 0 2px 5px transparentize(black, 0.6);
+	$action-color: #477DCA !default;
+	$base-background-color: white !default;
+	$switch-width: 52px;
+	$switch-padding: 2px;
+	$switch-height: 32px;
+	$switch-radius: $switch-height;
+	$knob-size: $switch-height - ($switch-padding * 2);
+	$knob-radius: $switch-height - ($switch-padding * 2);
+	$knob-width: $knob-size;
+	$switch-background: $base-background-color;
+	$switch-border-background: darken($base-background-color, 9%);
+	$switch-shadow: 0 2px 5px transparentize(black, 0.6);
 
-  border-radius: $switch-radius;
-  cursor: pointer;
-  display: inline-block;
-  height: $switch-height;
-  position: relative;
-  width: $switch-width;
+	border-radius: $switch-radius;
+	cursor: pointer;
+	display: inline-block;
+	height: $switch-height;
+	position: relative;
+	width: $switch-width;
 
-  input[type="checkbox"] {
-    display: none;
+	input[type="checkbox"] {
+		display: none;
 
-    + .checkbox {
-      @include transition(all 0.3s ease);
-      background: $switch-border-background;
-      border-radius: $switch-radius;
-      border: none;
-      cursor: pointer;
-      height: $switch-height;
-      margin: 0;
-      padding: 0;
-      position: relative;
-      width: $switch-width;
-      z-index: 0;
+		+ .checkbox {
+			@include transition(all 0.3s ease);
+			background: $switch-border-background;
+			border-radius: $switch-radius;
+			border: none;
+			cursor: pointer;
+			height: $switch-height;
+			margin: 0;
+			padding: 0;
+			position: relative;
+			width: $switch-width;
+			z-index: 0;
 
-      &:before {
-        @include position(absolute, 2px 0 0 2px);
-        @include transform(scale(1));
-        @include transition(all 0.3s ease);
-        background: $switch-background;
-        border-radius: $switch-radius;
-        content: "";
-        height: $knob-radius;
-        width: $switch-width - ($switch-padding * 2);
-        z-index: 1;
-      }
+			&:before {
+				@include position(absolute, 2px 0 0 2px);
+				@include transform(scale(1));
+				@include transition(all 0.3s ease);
+				background: $switch-background;
+				border-radius: $switch-radius;
+				content: "";
+				height: $knob-radius;
+				width: $switch-width - ($switch-padding * 2);
+				z-index: 1;
+			}
 
-      &:after {
-        @include position(absolute, 2px 0 0 2px);
-        @include transition(all 0.3s ease);
-        @include size($knob-size);
-        background: $switch-background;
-        border-radius: $knob-radius;
-        box-shadow: $switch-shadow;
-        content: "";
-        z-index: 2;
-      }
-    }
+			&:after {
+				@include position(absolute, 2px 0 0 2px);
+				@include transition(all 0.3s ease);
+				@include size($knob-size);
+				background: $switch-background;
+				border-radius: $knob-radius;
+				box-shadow: $switch-shadow;
+				content: "";
+				z-index: 2;
+			}
+		}
 
-    &:checked {
-      + .checkbox {
-        background: $action-color;
+		&:checked {
+			+ .checkbox {
+				background: $action-color;
 
-        &:before {
-          @include transform(scale(0));
-        }
+				&:before {
+					@include transform(scale(0));
+				}
 
-        &:after {
-          left: $switch-width - $knob-width - ($switch-padding);
-        }
-      }
-    }
-  }
+				&:after {
+					left: $switch-width - $knob-width - ($switch-padding);
+				}
+			}
+		}
+	}
+}
+
+// Checkbox/Radio replacement
+input.option {
+	@include appearance(none);
+	@include position($option-size/3 0 0 0);
+	@include size($option-size);
+	@include transition;
+	background: $option-color;
+	border: none;
+	// color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	outline: none;
+	position: relative;
+	// margin-right: 0.5rem;
+	z-index: 1000;
+
+	&:hover {
+		background: darken($checked-option-color, 15%);
+	}
+
+	&:checked {
+		background: $checked-option-color;
+
+		// The checkmark
+		// &::before {
+		//   @include size($option-size);
+		//   @include position(absolute);
+		//   content: '\2716';
+		//   display: inline-block;
+		//   font-size: $option-size/1.5;
+		//   text-align: center;
+		//   line-height: $option-size;
+		// }
+	}
+
+	&.radio {
+		border-radius: 50%;
+
+		&::after {
+			border-radius: 50%;
+		}
+	}
+}
+
+// Range slider
+// Slider
+input.range {
+	-webkit-appearance: none;
+	height: 10px;
+	border-radius: 5px;
+	background: $light-blue;
+	outline: none;
+
+	// Slider Handle
+	&::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		@include size($option-size);
+		border-radius: 50%;
+		background: #353535;
+		cursor: pointer;
+		-webkit-transition: background .15s ease-in-out;
+		transition: background .15s ease-in-out;
+
+		&:hover {
+			background: $light-red;
+		}
+	}
+
+	&:active::-webkit-slider-thumb {
+		background: $light-red;
+	}
+
+	&::-moz-range-thumb {
+		@include size($option-size);
+		border: 0;
+		border-radius: 50%;
+		background: #353535;
+		cursor: pointer;
+		-webkit-transition: background .15s ease-in-out;
+		transition: background .15s ease-in-out;
+
+		&:hover {
+			background: $light-red;
+		}
+	}
+
+	&:active::-moz-range-thumb {
+		background: $light-red;
+	}
 }

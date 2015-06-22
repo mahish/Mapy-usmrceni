@@ -1,82 +1,84 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width initial-scale=1" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Dokumentace usmrcených na československých státních hranicích 1948−1989</title>
-  <meta name="description" content="">
+	<title>Přes železnou oponu: Usmrcení na československé hranici</title>
+	<meta name="description" content="">
 
-  <link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/styles.css">
 
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEX0ppwsuLCVSqKzyDkj5KDTnx3KXt_zw"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script type="text/javascript" src="js/map-custom.js"></script>
-  <script type="text/javascript" src="js/map-style.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEX0ppwsuLCVSqKzyDkj5KDTnx3KXt_zw"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script type="text/javascript" src="js/map-custom.js"></script>
+	<script type="text/javascript" src="js/map-style.js"></script>
 
 </head>
 <body>
-  <header>
-    <h1 class="text-center">
-      Dokumentace usmrcených na československých státních hranicích 1948−1989
-    </h1>
-  </header>
-  <section class="map">
-    <aside class="controls">
-      <h1>
-        Controls
-      </h1>
-      <hr>
-      <label for=obdobi>Období</label>
-      <input type=range min=1948 max=1990 value=1 id=obdobi step=1 list=zvolitObdobi oninput="draw(map, mapsDataJSON, value)">
+	<header>
+		<h1 class="">
+			<span class="black">Přes železnou oponu </span>Usmrcení na&#160;československé hranici
+			<br>
+			<a href="#controls">&#8702; Aplikace</a>
+		</h1>
+		<article>
+			<p>
+				Projekt Dokumentace usmrcených na čs.&#160;hranici 1948–1989 se zabývá fenoménem neúspěšných přechodů hranice, které skončily úmrtím. Zkoumání rysů množiny usmrcených osob a&#160;jejich proměn v&#160;čase a&#160;prostoru umožňuje sada dat s&#160;informacemi ke 276 zdokumentovaným případům usmrcených. Základní proměnné databáze (např. místo narození, bydliště, incidentu – včetně GPS lokace) jsou sestaveny na základě informací v&#160;primárních archivních dokumentech. Další proměnné jsou konstruovány či harmonizovány tak, aby rozšířily možnosti statistické analýzy (např. vzdálenost mezi místem bydliště a&#160;incidentu). Kvantitativní zpracování je kombinováno s&#160;biografickými sondami, vychází z právního a&#160;historického kontextu a&#160;výsledky jsou k němu zpět vztaženy.
+			</p>
+		</article>
+	</header>
 
-      <hr>
-      <p>
-        <label for="radio_buttons">Radio Buttons:</label>
-        <label>
-          <input type="radio" class="radio" name="radio_button" value="1948,1950" onchange="draw(map, mapsDataJSON, value)">1948-1950
-        </label>
-        <label>
-          <input type="radio" class="radio" name="radio_button" value="1951,1965" onchange="draw(map, mapsDataJSON, value)">1951-1965
-        </label>
-        <label>
-          <input type="radio" class="radio" name="radio_button" value="1966,1971" onchange="draw(map, mapsDataJSON, value)">1966-1971
-        </label>
-        <label>
-          <input type="radio" class="radio" name="radio_button" value="1972,1989" onchange="draw(map, mapsDataJSON, value)">1972-1989
-        </label>
-      </p>
-      <hr>
-      <p>
-        <label for="checkboxes">Checkboxes:</label>
-        <label>
-          <input type="checkbox" class="checkbox" name="checkboxes" value="check_1"> Checkbox 1
-        </label>
-        <label>
-          <input type="checkbox" class="checkbox" name="checkboxes" value="check_2"> Checkbox 2
-        </label>
-      </p>
-      <hr>
-      <label class="label-switch left">
-        <input type="checkbox" />
-        <div class="checkbox"></div>
-      </label>
-      <label class="label-switch left">
-        <input type="checkbox" />
-        <div class="checkbox"></div>
-      </label>
-    </aside>
-    <div id="map-canvas"></div>
-  </section>
+	<div class="text-center">
+		<h1>
 
-  <script>
-  // Vypisuje hodnoty u slideru ovládajícího filtrování jednotlivých období
-  // http://demosthenes.info/blog/757/Playing-With-The-HTML5-range-Slider-Input
-  function outputUpdate(vol) {
-    document.querySelector('#zvoleneObdobi').value = vol;
-  }
-  </script>
+		</h1>
+	</div>
+	<br>
+
+	<aside id="controls" class="controls">
+		<div class="checkbox">
+			<label for="radio_buttons">Dle období</label>
+			<div class="options">
+				<label class="text-center ">
+					<input type="radio" class="radio option" name="radio_button" value="1948,1950" onchange="draw(map, mapsDataJSON, value)"><br>1948-1950
+				</label>
+				<label class="text-center ">
+					<input type="radio" class="radio option" name="radio_button" value="1951,1965" onchange="draw(map, mapsDataJSON, value)"><br>1951-1965
+				</label>
+				<label class="text-center ">
+					<input type="radio" class="radio option" name="radio_button" value="1966,1971" onchange="draw(map, mapsDataJSON, value)"><br>1966-1971
+				</label>
+				<label class="text-center ">
+					<input type="radio" class="radio option" name="radio_button" value="1972,1989" onchange="draw(map, mapsDataJSON, value)"><br>1972-1989
+				</label>
+			</div>
+		</div>
+		<div class="slider">
+			<label for=obdobi>Dle roku</label>
+			<!-- <output for=fader id=zvoleneObdobi>50</output> -->
+			<input type=range class="range" min=1948 max=1990 value=1 id=obdobi step=1 list=zvolitObdobi oninput="draw(map, mapsDataJSON, value)">
+			<div class="years">
+				<div class="text-left">1948</div>
+				<div class="text-right">1989</div>
+			</div>
+		</div>
+	</aside>
+	<section class="map">
+		<div id="map-canvas"></div>
+	</section>
+	<footer>
+
+	</footer>
+
+	<script>
+	// Vypisuje hodnoty u slideru ovládajícího filtrování jednotlivých období
+	// http://demosthenes.info/blog/757/Playing-With-The-HTML5-range-Slider
+	// function outputUpdate(vol) {
+	//   document.querySelector('#zvoleneObdobi').value = vol;
+	// }
+	</script>
 
 </body>
 </html>
