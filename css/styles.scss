@@ -1,4 +1,5 @@
 @import "bourbon/bourbon";
+@import "neat-settings";
 @import "neat/neat";
 @import "normalize/normalize";
 @import "base/base";
@@ -7,55 +8,91 @@
 // ===============================================
 
 html, body {
-	height: 100%;
-}
-
-header,section.map {
 	@include outer-container(100%);
 }
 
+h1 {
+	font-size: modular-scale(3);
+	color: $red;
+
+	a {
+		font-size: 50%;
+	}
+}
+
+header,
+aside.controls,
+section.map,
+footer {
+	@include row();
+}
+
 header {
-	margin: #{$heading-line-height*3}em 0;
+	margin: #{$heading-line-height}em 0;
+	padding: #{$heading-line-height}em;
+	h1 {
+		@include span-columns(3);
+		@include shift(2);
+	}
+	article {
+		@include span-columns(5);
+	}
+}
+
+aside.controls {
+	background-color: $dark-blue;
+	padding: #{$heading-line-height}em 0;
+	color: $light-gray;
+
+	.checkbox {
+		@include span-columns(4);
+		@include shift(1);
+		border-right: 1px solid darken($dark-blue, 10%);
+
+		label {
+			display: inline-block;
+		}
+
+		.options {
+			label {
+				@include span-columns(1 of 4);
+				line-height: 2;
+				cursor: pointer;
+			}
+		}
+	}
+
+	.slider {
+		@include span-columns(6);
+
+		input[type='range'] {
+			width: 100%;
+			margin: 1em 0;
+		}
+
+		.years {
+			> div {
+				@include span-columns(1 of 2);
+				line-height: 2;
+			}
+		}
+	}
 }
 
 section.map {
 	position: relative;
-
-	.controls {
-		z-index: 2;
-		border: 1px solid gray;
-		border-radius: 2px;
-		height: 400px;
-		padding: 10px;
-		@include position(absolute, 100px null 100px 10px);
-		@include outer-container(38%);
-		min-width: 250px;
-		background: white;
-		overflow: scroll;
-
-		input[type='range'] {
-			width: 100%;
-		}
-
-		input[type='range']::-webkit-slider-runnable-track {
-			&:after {
-				position: absolute;
-				float: left;
-				width: 100%;
-				font-size: 9px;
-				white-space: 10px;
-				content: "Vše 1947-1950 1951-1965 1966-1971 1972-1989";
-			}
-		}
-
-
-	}
-
 	#map-canvas {
 		z-index: 0;
 		height: 600px;
 	}
 }
+
+footer {
+	height: #{$heading-line-height*7}em;
+	background-color: $dark-gray;
+}
+
+
 
 // ===============================================
 
