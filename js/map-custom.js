@@ -2711,7 +2711,8 @@ function draw(map, data, filter){
         };
 
     });
-    markerCluster = new MarkerClusterer(map, markers);
+    var mcOptions = {gridSize: 1, maxZoom: 30};
+    markerCluster = new MarkerClusterer(map, markers, mcOptions);
     console.log('Showing data for: ' + filter + '[' + markers.length + ']');
 
 }
