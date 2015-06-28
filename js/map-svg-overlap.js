@@ -18,7 +18,7 @@ function initialize() {
 
   // The photograph is courtesy of the U.S. Geological Survey.
   var srcImage = 'data/data_mapy/';
-  srcImage += 'test.svg';
+  srcImage += 'mercator.svg';
 
   // The custom okresy object contains the USGS image,
   // the bounds of the image, and a reference to the map.
