@@ -4,17 +4,19 @@ okresy.prototype = new google.maps.OverlayView();
 // Initialize the map and the custom overlay.
 
 function initialize() {
-  var mapOptions = {
-    zoom: 7,
-    center: new google.maps.LatLng(49.75, 15.75),
-    // mapTypeId: google.maps.MapTypeId.SATELLITE
-  };
+	var mapOptions = {
+		zoom: 7,
+		center: new google.maps.LatLng(
+			49.921552,
+			12.637676
+			),
+	};
 
-  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+	var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-  var swBound = new google.maps.LatLng(48.5, 12.1);
-  var neBound = new google.maps.LatLng(51.1, 18.9);
-  var bounds = new google.maps.LatLngBounds(swBound, neBound);
+	var swBound = new google.maps.LatLng(48.5, 12.08);
+	var neBound = new google.maps.LatLng(51.11, 18.874);
+	var bounds = new google.maps.LatLngBounds(swBound, neBound);
 
   // The photograph is courtesy of the U.S. Geological Survey.
   var srcImage = 'data/data_mapy/';
@@ -48,10 +50,10 @@ function okresy(bounds, image, map) {
  */
  okresy.prototype.onAdd = function() {
 
-  var div = document.createElement('div');
-  div.style.borderStyle = 'none';
-  div.style.borderWidth = '0px';
-  div.style.position = 'absolute';
+ 	var div = document.createElement('div');
+ 	div.style.borderStyle = 'none';
+ 	div.style.borderWidth = '0px';
+ 	div.style.position = 'absolute';
 
   // Create the img element and attach it to the div.
   var img = document.createElement('img');
@@ -92,8 +94,8 @@ okresy.prototype.draw = function() {
 // The onRemove() method will be called automatically from the API if
 // we ever set the overlay's map property to 'null'.
 okresy.prototype.onRemove = function() {
-  this.div_.parentNode.removeChild(this.div_);
-  this.div_ = null;
+	this.div_.parentNode.removeChild(this.div_);
+	this.div_ = null;
 };
 
 google.maps.event.addDomListener(window, 'load', initialize);
