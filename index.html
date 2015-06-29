@@ -1,81 +1,81 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width initial-scale=1" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Dokumentace usmrcených na československých státních hranicích 1948−1989</title>
-  <meta name="description" content="">
+	<title>Dokumentace usmrcených na československých státních hranicích 1948−1989</title>
+	<meta name="description" content="">
 
-  <link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/styles.css">
 
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEX0ppwsuLCVSqKzyDkj5KDTnx3KXt_zw"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script type="text/javascript" src="js/map-custom.js"></script>
-  <script type="text/javascript" src="js/map-svg-overlap.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEX0ppwsuLCVSqKzyDkj5KDTnx3KXt_zw"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script type="text/javascript" src="js/map-custom.js"></script>
+	<script type="text/javascript" src="js/map-svg-overlap.js"></script>
 
 </head>
 <body>
-  <header>
-    <h1 class="text-center">
-      Dokumentace usmrcených na československých státních hranicích 1948−1989
-    </h1>
-  </header>
-  <section class="map">
-    <aside class="controls">
-      <h1>
-        Controls
-      </h1>
-      <hr>
-      <label for=obdobi>Období</label>
-      <input type=range min=1 max=5 value=1 id=obdobi step=1 list=zvolitObdobi oninput="outputUpdate(value)">
-      <datalist id=zvolitObdobi>
-        <option>Vše</option>
-        <option>1947-1950</option>
-        <option>1951-1965</option>
-        <option>1966-1971</option>
-        <option>1972-1989</option>
-      </datalist>
+	<header>
+		<h1 class="text-center">
+			Dokumentace usmrcených na československých státních hranicích 1948−1989
+		</h1>
+	</header>
+	<section class="map">
+		<aside class="controls">
+			<h1>
+				Controls
+			</h1>
+			<hr>
+			<label for=obdobi>Období</label>
+			<input type=range min=1 max=5 value=1 id=obdobi step=1 list=zvolitObdobi oninput="outputUpdate(value)">
+			<datalist id=zvolitObdobi>
+				<option>Vše</option>
+				<option>1947-1950</option>
+				<option>1951-1965</option>
+				<option>1966-1971</option>
+				<option>1972-1989</option>
+			</datalist>
 
-      <hr>
-      <p>
-        <label for="radio_buttons">Radio Buttons:</label>
-        <label>
-          <input type="radio" class="radio" name="radio_button" value="radio_1"> Radio 1
-        </label>
-        <label>
-          <input type="radio" class="radio" name="radio_button" value="radio_2"> Radio 2
-        </label>
-      </p>
-      <hr>
-      <p>
-        <label for="checkboxes">Checkboxes:</label>
-        <label>
-          <input type="checkbox" class="checkbox" name="checkboxes" value="check_1"> Checkbox 1
-        </label>
-        <label>
-          <input type="checkbox" class="checkbox" name="checkboxes" value="check_2"> Checkbox 2
-        </label>
-      </p>
-      <hr>
-      <label class="label-switch left">
-        <input type="checkbox" />
-        <div class="checkbox"></div>
-      </label>
-      <label class="label-switch left">
-        <input type="checkbox" />
-        <div class="checkbox"></div>
-      </label>
-    </aside>
-    <div id="map-canvas"></div>
-  </section>
+			<hr>
+			<p>
+				<label for="radio_buttons">Radio Buttons:</label>
+				<label>
+					<input type="radio" class="radio" name="radio_button" value="radio_1"> Radio 1
+				</label>
+				<label>
+					<input type="radio" class="radio" name="radio_button" value="radio_2"> Radio 2
+				</label>
+			</p>
+			<hr>
+			<p>
+				<label for="checkboxes">Checkboxes:</label>
+				<label>
+					<input type="checkbox" class="checkbox" name="checkboxes" value="check_1"> Checkbox 1
+				</label>
+				<label>
+					<input type="checkbox" class="checkbox" name="checkboxes" value="check_2"> Checkbox 2
+				</label>
+			</p>
+			<hr>
+			<label class="label-switch left">
+				<input type="checkbox" />
+				<div class="checkbox"></div>
+			</label>
+			<label class="label-switch left">
+				<input type="checkbox" />
+				<div class="checkbox"></div>
+			</label>
+		</aside>
+		<div id="map-canvas"></div>
+	</section>
 
-  <script>
+	<script>
   // Vypisuje hodnoty u slideru ovládajícího filtrování jednotlivých období
   // http://demosthenes.info/blog/757/Playing-With-The-HTML5-range-Slider-Input
   function outputUpdate(vol) {
-    document.querySelector('#zvoleneObdobi').value = vol;
+  	document.querySelector('#zvoleneObdobi').value = vol;
   }
   </script>
 
