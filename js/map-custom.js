@@ -2722,29 +2722,29 @@ var mcOptions = {
 									gridSize: 1,
 									maxZoom: 30,
 									styles: [{
-										height: 50,
+										height: 25,
 										url: "img/marker2.png",
-										width: 50
+										width: 25
 									},
 									{
-										height: 50,
+										height: 25,
 										url: "img/marker3.png",
-										width: 50
+										width: 25
 									},
 									{
-										height: 66,
-										url: "img/marker3.png",
-										width: 66
-									},
-									{
-										height: 78,
+										height: 25,
 										url: "img/marker4.png",
-										width: 78
+										width: 25
 									},
 									{
-										height: 90,
+										height: 25,
 										url: "img/marker5.png",
-										width: 90
+										width: 25
+									},
+									{
+										height: 25,
+										url: "img/marker6.png",
+										width: 25
 									}]
 								};
 			markerCluster = new MarkerClusterer(map, markers, mcOptions);
