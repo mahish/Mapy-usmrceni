@@ -2681,7 +2681,7 @@ function clearMarkers() {
 }
 
 function draw(map, data, filter){
-    
+
     clearMarkers();
 
     $.each(data, function(key, data) {
@@ -2689,10 +2689,16 @@ function draw(map, data, filter){
         var myLng = data.gps_incidentu.split(",")[1];
         var myYear = data.rok;
 
+        // Customize a map marker - define url
+        var iconBase = 'img/';
+
         var latLng = new google.maps.LatLng(myLat, myLng);
         // Creating a marker and putting it on the map
         var marker = new google.maps.Marker({
             position: latLng,
+            // Define the icon
+            icon: iconBase + 'marker.png',
+
             title: data.cislo_osoby.toString()
         });
 
