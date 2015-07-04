@@ -1,0 +1,25 @@
+.slider.x {
+	@include span-columns(12);
+	@include media($large-screen) {
+		@include span-columns(4);
+		@include shift(4);
+	}
+	// &:before, &:after {
+	// 	z-index: 1;
+	// 	position: absolute;
+	// 	top: 0; right: 0; bottom: 0; left: 0;
+	// 	// font: #{$r3-tip-fs*1em} / #{$r3-track-h/$r3-tip-fs} $ff;
+	// 	color: #777;
+	// 	text-shadow: 0 0 1px rgba(#555, .5);
+	// }
+	// &:before {
+	// 	// text-indent: $r3-ruler-unit/2/$r3-tip-fs - .5em;
+	// 	// word-spacing: 4*$r3-ruler-unit/$r3-tip-fs - 1.875em;
+	// 	content: '0% 100%';
+	// }
+	// &:after {
+	// 	// text-indent: 3*$r3-ruler-unit/2/$r3-tip-fs - .8125em;
+	// 	// word-spacing: $r3-ruler-unit/$r3-tip-fs - 1.875em;
+	// 	content: '25% 50% 75%';
+	// }
+}

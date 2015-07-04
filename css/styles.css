@@ -703,137 +703,22 @@ picture {
 .red {
   color: #6D3D3B; }
 
-html, body {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto; }
-  html::after, body::after {
-    clear: both;
-    content: "";
-    display: table; }
-
-h1 {
-  font-size: 1.95313em;
-  color: #6D3D3B; }
-  h1 a {
-    font-size: 50%; }
-
-header,
-aside.controls,
-section.map,
-footer {
-  display: block; }
-  header::after,
-  aside.controls::after,
-  section.map::after,
-  footer::after {
-    clear: both;
-    content: "";
-    display: table; }
-
-header {
-  margin: 1.2em 0;
-  padding: 1.2em; }
-  header h1 {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 100%; }
-    header h1:last-child {
-      margin-right: 0; }
-    @media screen and (min-width: 53.75em) {
-      header h1 {
-        float: left;
-        display: block;
-        margin-right: 2.35765%;
-        width: 23.23176%;
-        margin-left: 17.05961%; }
-        header h1:last-child {
-          margin-right: 0; } }
-  header article {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 100%; }
-    header article:last-child {
-      margin-right: 0; }
-    @media screen and (min-width: 53.75em) {
-      header article {
-        float: left;
-        display: block;
-        margin-right: 2.35765%;
-        width: 40.29137%; }
-        header article:last-child {
-          margin-right: 0; } }
-
-aside.controls {
-  background-color: #465957;
-  padding: 1.2em 0;
-  color: #ddd; }
-  aside.controls .checkbox {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 100%; }
-    aside.controls .checkbox:last-child {
-      margin-right: 0; }
-    @media screen and (min-width: 53.75em) {
-      aside.controls .checkbox {
-        float: left;
-        display: block;
-        margin-right: 2.35765%;
-        width: 31.76157%;
-        margin-left: 8.5298%;
-        border-right: 1px solid #303c3b; }
-        aside.controls .checkbox:last-child {
-          margin-right: 0; } }
-    aside.controls .checkbox label {
-      display: inline-block; }
-    aside.controls .checkbox .options label {
+.slider.x {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .slider.x:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 53.75em) {
+    .slider.x {
       float: left;
       display: block;
-      margin-right: 7.42297%;
-      width: 19.43277%;
-      line-height: 2;
-      cursor: pointer; }
-      aside.controls .checkbox .options label:last-child {
-        margin-right: 0; }
-  aside.controls .slider {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 100%; }
-    aside.controls .slider:last-child {
-      margin-right: 0; }
-    @media screen and (min-width: 53.75em) {
-      aside.controls .slider {
-        float: left;
-        display: block;
-        margin-right: 2.35765%;
-        width: 48.82117%; }
-        aside.controls .slider:last-child {
-          margin-right: 0; } }
-    aside.controls .slider input[type='range'] {
-      width: 100%;
-      margin: 1em 0; }
-    aside.controls .slider .years > div {
-      float: left;
-      display: block;
-      margin-right: 16.03631%;
-      width: 41.98184%;
-      line-height: 2; }
-      aside.controls .slider .years > div:last-child {
-        margin-right: 0; }
-
-section.map {
-  position: relative; }
-  section.map #map-canvas {
-    z-index: 0;
-    height: 600px; }
-
-footer {
-  height: 8.4em;
-  background-color: #333; }
+      margin-right: 2.35765%;
+      width: 31.76157%;
+      margin-left: 34.11922%; }
+      .slider.x:last-child {
+        margin-right: 0; } }
 
 .label-switch {
   border-radius: 32px;
@@ -969,5 +854,137 @@ input.range {
       background: #946563; }
   input.range:active::-moz-range-thumb {
     background: #946563; }
+
+html, body {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+  html::after, body::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+h1 {
+  font-size: 1.95313em;
+  color: #6D3D3B; }
+  h1 a {
+    font-size: 50%; }
+
+header,
+aside.controls,
+section.map,
+footer {
+  display: block; }
+  header::after,
+  aside.controls::after,
+  section.map::after,
+  footer::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+header {
+  margin: 1.2em 0;
+  padding: 1.2em; }
+  header h1 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    header h1:last-child {
+      margin-right: 0; }
+    @media screen and (min-width: 53.75em) {
+      header h1 {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 23.23176%;
+        margin-left: 17.05961%; }
+        header h1:last-child {
+          margin-right: 0; } }
+  header article {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    header article:last-child {
+      margin-right: 0; }
+    @media screen and (min-width: 53.75em) {
+      header article {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 40.29137%; }
+        header article:last-child {
+          margin-right: 0; } }
+
+aside.controls {
+  background-color: #465957;
+  padding: 1.2em 0;
+  color: #ddd; }
+  aside.controls .checkbox {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    aside.controls .checkbox:last-child {
+      margin-right: 0; }
+    @media screen and (min-width: 53.75em) {
+      aside.controls .checkbox {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 31.76157%;
+        margin-left: 8.5298%;
+        border-right: 1px solid #303c3b; }
+        aside.controls .checkbox:last-child {
+          margin-right: 0; } }
+    aside.controls .checkbox label {
+      display: inline-block; }
+    aside.controls .checkbox .options label {
+      float: left;
+      display: block;
+      margin-right: 7.42297%;
+      width: 19.43277%;
+      line-height: 2;
+      cursor: pointer; }
+      aside.controls .checkbox .options label:last-child {
+        margin-right: 0; }
+  aside.controls .slider {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    aside.controls .slider:last-child {
+      margin-right: 0; }
+    @media screen and (min-width: 53.75em) {
+      aside.controls .slider {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 48.82117%; }
+        aside.controls .slider:last-child {
+          margin-right: 0; } }
+    aside.controls .slider input[type='range'] {
+      width: 100%;
+      margin: 1em 0; }
+    aside.controls .slider .years > div {
+      float: left;
+      display: block;
+      margin-right: 16.03631%;
+      width: 41.98184%;
+      line-height: 2; }
+      aside.controls .slider .years > div:last-child {
+        margin-right: 0; }
+
+section.map {
+  position: relative; }
+  section.map #map-canvas {
+    z-index: 0;
+    height: 600px; }
+
+footer {
+  height: 8.4em;
+  background-color: #333; }
 
 /*# sourceMappingURL=styles.css.map */
