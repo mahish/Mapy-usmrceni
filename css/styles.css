@@ -738,17 +738,33 @@ header {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 23.23176%;
-    margin-left: 17.05961%; }
+    width: 100%; }
     header h1:last-child {
       margin-right: 0; }
+    @media screen and (min-width: 53.75em) {
+      header h1 {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 23.23176%;
+        margin-left: 17.05961%; }
+        header h1:last-child {
+          margin-right: 0; } }
   header article {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 40.29137%; }
+    width: 100%; }
     header article:last-child {
       margin-right: 0; }
+    @media screen and (min-width: 53.75em) {
+      header article {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 40.29137%; }
+        header article:last-child {
+          margin-right: 0; } }
 
 aside.controls {
   background-color: #465957;
@@ -758,11 +774,19 @@ aside.controls {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 31.76157%;
-    margin-left: 8.5298%;
-    border-right: 1px solid #303c3b; }
+    width: 100%; }
     aside.controls .checkbox:last-child {
       margin-right: 0; }
+    @media screen and (min-width: 53.75em) {
+      aside.controls .checkbox {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 31.76157%;
+        margin-left: 8.5298%;
+        border-right: 1px solid #303c3b; }
+        aside.controls .checkbox:last-child {
+          margin-right: 0; } }
     aside.controls .checkbox label {
       display: inline-block; }
     aside.controls .checkbox .options label {
@@ -778,9 +802,17 @@ aside.controls {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 48.82117%; }
+    width: 100%; }
     aside.controls .slider:last-child {
       margin-right: 0; }
+    @media screen and (min-width: 53.75em) {
+      aside.controls .slider {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 48.82117%; }
+        aside.controls .slider:last-child {
+          margin-right: 0; } }
     aside.controls .slider input[type='range'] {
       width: 100%;
       margin: 1em 0; }

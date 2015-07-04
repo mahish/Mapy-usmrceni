@@ -31,11 +31,18 @@ header {
 	margin: #{$heading-line-height}em 0;
 	padding: #{$heading-line-height}em;
 	h1 {
-		@include span-columns(3);
-		@include shift(2);
+		@include span-columns(12);
+		@include media($large-screen) {
+			@include span-columns(3);
+			@include shift(2);
+		}
 	}
 	article {
-		@include span-columns(5);
+		@include span-columns(12);
+
+		@include media($large-screen) {
+			@include span-columns(5);
+		}
 	}
 }
 
@@ -45,9 +52,13 @@ aside.controls {
 	color: $light-gray;
 
 	.checkbox {
-		@include span-columns(4);
-		@include shift(1);
-		border-right: 1px solid darken($dark-blue, 10%);
+		@include span-columns(12);
+
+		@include media($large-screen) {
+			@include span-columns(4);
+			@include shift(1);
+			border-right: 1px solid darken($dark-blue, 10%);
+		}
 
 		label {
 			display: inline-block;
@@ -63,8 +74,11 @@ aside.controls {
 	}
 
 	.slider {
-		@include span-columns(6);
+		@include span-columns(12);
 
+		@include media($large-screen) {
+			@include span-columns(6);
+		}
 		input[type='range'] {
 			width: 100%;
 			margin: 1em 0;
