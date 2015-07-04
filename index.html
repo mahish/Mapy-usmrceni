@@ -11,10 +11,6 @@
 	<link rel="stylesheet" href="css/styles.css">
 
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEX0ppwsuLCVSqKzyDkj5KDTnx3KXt_zw"></script>
-	<script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/tags/markerclusterer/1.0.2/src/markerclusterer_compiled.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script type="text/javascript" src="js/map-custom.js"></script>
-	<script type="text/javascript" src="js/map-style.js"></script>
 
 </head>
 <body>
@@ -22,7 +18,7 @@
 		<h1 class="">
 			<span class="black">Přes železnou oponu </span>Usmrcení na&#160;československé hranici
 			<br>
-			<a href="#controls">&#8702; Aplikace</a>
+			<a id="toApp" href="javascript:void(0)">&#8702; Aplikace</a>
 		</h1>
 		<article>
 			<p>
@@ -80,6 +76,13 @@
 	//   document.querySelector('#zvoleneObdobi').value = vol;
 	// }
 	</script>
+
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/tags/markerclusterer/1.0.2/src/markerclusterer_compiled.js"></script>
+	<script type="text/javascript" src="js/map-custom.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/jquery.scrollto/2.1.0/jquery.scrollTo.min.js"></script>
+	<script src="js/main.js"></script>
 
 </body>
 </html>
