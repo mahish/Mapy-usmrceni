@@ -1,0 +1,135 @@
+aside.controls {
+	background-color: $dark-blue;
+	padding: #{$heading-line-height}em 0;
+	color: $light-gray;
+
+	.checkbox {
+		@include span-columns(12);
+		@include pad(0 2%);
+
+		@include media($large-screen) {
+			@include span-columns(4);
+			@include shift(1);
+			border-right: 1px solid darken($dark-blue, 10%);
+		}
+
+		label {
+			display: inline-block;
+		}
+
+		.options {
+			label {
+				@include span-columns(1 of 4);
+				line-height: 2;
+				cursor: pointer;
+			}
+		}
+
+	}
+
+	.slider {
+		@include span-columns(12);
+		@include pad(0 2%);
+
+		@include media($large-screen) {
+			@include span-columns(6);
+		}
+
+		.years {
+			> div {
+				@include span-columns(1 of 2);
+				line-height: 2;
+			}
+		}
+
+		// Range slider
+		// Slider
+		input.range {
+			-webkit-appearance: none;
+			height: 10px;
+			border-radius: 5px;
+			background: $light-blue;
+			outline: none;
+			width: 100%;
+			margin: 1em 0;
+			cursor: ew-resize;
+
+			&::-moz-range-track {
+				background: none;
+				border: none;
+			}
+
+			// Slider Handle
+			&::-webkit-slider-thumb {
+				-webkit-appearance: none;
+				@include size($option-size);
+				border-radius: 50%;
+				background: #353535;
+				cursor: pointer;
+				-webkit-transition: background .15s ease-in-out;
+				transition: background .15s ease-in-out;
+
+				&:hover {
+					background: $light-red;
+				}
+			}
+
+			&:active::-webkit-slider-thumb {
+				background: $light-red;
+			}
+
+			&::-moz-range-thumb {
+				@include size($option-size);
+				border: 0;
+				border-radius: 50%;
+				background: #353535;
+				cursor: pointer;
+				-webkit-transition: background .15s ease-in-out;
+				transition: background .15s ease-in-out;
+
+				&:hover {
+					background: $light-red;
+				}
+			}
+
+			&:active::-moz-range-thumb {
+				background: $light-red;
+			}
+		}
+	}
+
+	.slider.x {
+		@include span-columns(12);
+		@include pad(0 2%);
+		position: relative;
+		min-height: 80px;
+
+		label:before {
+			@include position(absolute, null null 0px 0);
+			-webkit-background-clip: text;
+			font-weight: 600;
+			font-size: 0.875rem / 2;
+			line-height: 2;
+			text-indent: 0.5em;
+			word-spacing: 115px;
+			white-space: nowrap;
+			content: '1948 1951 1966 1989';
+		}
+
+		@include media($large-screen) {
+			@include span-columns(4);
+			@include shift(4);
+			@include pad(0);
+
+			label:before {
+				margin-left: -1em;
+				word-spacing: 120px;
+			}
+		}
+
+		input[type='range'] {
+			width: 457px;
+		}
+	}
+
+}

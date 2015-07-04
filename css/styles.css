@@ -703,22 +703,138 @@ picture {
 .red {
   color: #6D3D3B; }
 
-.slider.x {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%; }
-  .slider.x:last-child {
-    margin-right: 0; }
-  @media screen and (min-width: 53.75em) {
-    .slider.x {
+aside.controls {
+  background-color: #465957;
+  padding: 1.2em 0;
+  color: #ddd; }
+  aside.controls .checkbox {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    padding: 0 2%; }
+    aside.controls .checkbox:last-child {
+      margin-right: 0; }
+    @media screen and (min-width: 53.75em) {
+      aside.controls .checkbox {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 31.76157%;
+        margin-left: 8.5298%;
+        border-right: 1px solid #303c3b; }
+        aside.controls .checkbox:last-child {
+          margin-right: 0; } }
+    aside.controls .checkbox label {
+      display: inline-block; }
+    aside.controls .checkbox .options label {
       float: left;
       display: block;
-      margin-right: 2.35765%;
-      width: 31.76157%;
-      margin-left: 34.11922%; }
-      .slider.x:last-child {
-        margin-right: 0; } }
+      margin-right: 7.42297%;
+      width: 19.43277%;
+      line-height: 2;
+      cursor: pointer; }
+      aside.controls .checkbox .options label:last-child {
+        margin-right: 0; }
+  aside.controls .slider {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    padding: 0 2%; }
+    aside.controls .slider:last-child {
+      margin-right: 0; }
+    @media screen and (min-width: 53.75em) {
+      aside.controls .slider {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 48.82117%; }
+        aside.controls .slider:last-child {
+          margin-right: 0; } }
+    aside.controls .slider .years > div {
+      float: left;
+      display: block;
+      margin-right: 16.03631%;
+      width: 41.98184%;
+      line-height: 2; }
+      aside.controls .slider .years > div:last-child {
+        margin-right: 0; }
+    aside.controls .slider input.range {
+      -webkit-appearance: none;
+      height: 10px;
+      border-radius: 5px;
+      background: #698C89;
+      outline: none;
+      width: 100%;
+      margin: 1em 0;
+      cursor: ew-resize; }
+      aside.controls .slider input.range::-moz-range-track {
+        background: none;
+        border: none; }
+      aside.controls .slider input.range::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        height: 18px;
+        width: 18px;
+        border-radius: 50%;
+        background: #353535;
+        cursor: pointer;
+        -webkit-transition: background .15s ease-in-out;
+        transition: background .15s ease-in-out; }
+        aside.controls .slider input.range::-webkit-slider-thumb:hover {
+          background: #946563; }
+      aside.controls .slider input.range:active::-webkit-slider-thumb {
+        background: #946563; }
+      aside.controls .slider input.range::-moz-range-thumb {
+        height: 18px;
+        width: 18px;
+        border: 0;
+        border-radius: 50%;
+        background: #353535;
+        cursor: pointer;
+        -webkit-transition: background .15s ease-in-out;
+        transition: background .15s ease-in-out; }
+        aside.controls .slider input.range::-moz-range-thumb:hover {
+          background: #946563; }
+      aside.controls .slider input.range:active::-moz-range-thumb {
+        background: #946563; }
+  aside.controls .slider.x {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    padding: 0 2%;
+    position: relative;
+    min-height: 80px; }
+    aside.controls .slider.x:last-child {
+      margin-right: 0; }
+    aside.controls .slider.x label:before {
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      -webkit-background-clip: text;
+      font-weight: 600;
+      font-size: 0.875rem / 2;
+      line-height: 2;
+      text-indent: 0.5em;
+      word-spacing: 115px;
+      white-space: nowrap;
+      content: '1948 1951 1966 1989'; }
+    @media screen and (min-width: 53.75em) {
+      aside.controls .slider.x {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 31.76157%;
+        margin-left: 34.11922%;
+        padding: 0; }
+        aside.controls .slider.x:last-child {
+          margin-right: 0; }
+        aside.controls .slider.x label:before {
+          margin-left: -1em;
+          word-spacing: 120px; } }
+    aside.controls .slider.x input[type='range'] {
+      width: 457px; }
 
 .label-switch {
   border-radius: 32px;
@@ -822,39 +938,6 @@ input.option {
     input.option.radio::after {
       border-radius: 50%; }
 
-input.range {
-  -webkit-appearance: none;
-  height: 10px;
-  border-radius: 5px;
-  background: #698C89;
-  outline: none; }
-  input.range::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    height: 18px;
-    width: 18px;
-    border-radius: 50%;
-    background: #353535;
-    cursor: pointer;
-    -webkit-transition: background .15s ease-in-out;
-    transition: background .15s ease-in-out; }
-    input.range::-webkit-slider-thumb:hover {
-      background: #946563; }
-  input.range:active::-webkit-slider-thumb {
-    background: #946563; }
-  input.range::-moz-range-thumb {
-    height: 18px;
-    width: 18px;
-    border: 0;
-    border-radius: 50%;
-    background: #353535;
-    cursor: pointer;
-    -webkit-transition: background .15s ease-in-out;
-    transition: background .15s ease-in-out; }
-    input.range::-moz-range-thumb:hover {
-      background: #946563; }
-  input.range:active::-moz-range-thumb {
-    background: #946563; }
-
 html, body {
   max-width: 100%;
   margin-left: auto;
@@ -890,7 +973,8 @@ header {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 100%; }
+    width: 100%;
+    padding: 2%; }
     header h1:last-child {
       margin-right: 0; }
     @media screen and (min-width: 53.75em) {
@@ -906,7 +990,8 @@ header {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 100%; }
+    width: 100%;
+    padding: 2%; }
     header article:last-child {
       margin-right: 0; }
     @media screen and (min-width: 53.75em) {
@@ -917,65 +1002,6 @@ header {
         width: 40.29137%; }
         header article:last-child {
           margin-right: 0; } }
-
-aside.controls {
-  background-color: #465957;
-  padding: 1.2em 0;
-  color: #ddd; }
-  aside.controls .checkbox {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 100%; }
-    aside.controls .checkbox:last-child {
-      margin-right: 0; }
-    @media screen and (min-width: 53.75em) {
-      aside.controls .checkbox {
-        float: left;
-        display: block;
-        margin-right: 2.35765%;
-        width: 31.76157%;
-        margin-left: 8.5298%;
-        border-right: 1px solid #303c3b; }
-        aside.controls .checkbox:last-child {
-          margin-right: 0; } }
-    aside.controls .checkbox label {
-      display: inline-block; }
-    aside.controls .checkbox .options label {
-      float: left;
-      display: block;
-      margin-right: 7.42297%;
-      width: 19.43277%;
-      line-height: 2;
-      cursor: pointer; }
-      aside.controls .checkbox .options label:last-child {
-        margin-right: 0; }
-  aside.controls .slider {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 100%; }
-    aside.controls .slider:last-child {
-      margin-right: 0; }
-    @media screen and (min-width: 53.75em) {
-      aside.controls .slider {
-        float: left;
-        display: block;
-        margin-right: 2.35765%;
-        width: 48.82117%; }
-        aside.controls .slider:last-child {
-          margin-right: 0; } }
-    aside.controls .slider input[type='range'] {
-      width: 100%;
-      margin: 1em 0; }
-    aside.controls .slider .years > div {
-      float: left;
-      display: block;
-      margin-right: 16.03631%;
-      width: 41.98184%;
-      line-height: 2; }
-      aside.controls .slider .years > div:last-child {
-        margin-right: 0; }
 
 section.map {
   position: relative; }

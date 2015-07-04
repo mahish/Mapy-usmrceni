@@ -31,8 +31,11 @@ footer {
 header {
 	margin: #{$heading-line-height}em 0;
 	padding: #{$heading-line-height}em;
+
 	h1 {
 		@include span-columns(12);
+		@include pad(null 2%);
+
 		@include media($large-screen) {
 			@include span-columns(3);
 			@include shift(2);
@@ -40,56 +43,10 @@ header {
 	}
 	article {
 		@include span-columns(12);
+		@include pad(null 2%);
 
 		@include media($large-screen) {
 			@include span-columns(5);
-		}
-	}
-}
-
-aside.controls {
-	background-color: $dark-blue;
-	padding: #{$heading-line-height}em 0;
-	color: $light-gray;
-
-	.checkbox {
-		@include span-columns(12);
-
-		@include media($large-screen) {
-			@include span-columns(4);
-			@include shift(1);
-			border-right: 1px solid darken($dark-blue, 10%);
-		}
-
-		label {
-			display: inline-block;
-		}
-
-		.options {
-			label {
-				@include span-columns(1 of 4);
-				line-height: 2;
-				cursor: pointer;
-			}
-		}
-	}
-
-	.slider {
-		@include span-columns(12);
-
-		@include media($large-screen) {
-			@include span-columns(6);
-		}
-		input[type='range'] {
-			width: 100%;
-			margin: 1em 0;
-		}
-
-		.years {
-			> div {
-				@include span-columns(1 of 2);
-				line-height: 2;
-			}
 		}
 	}
 }
