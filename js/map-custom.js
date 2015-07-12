@@ -2680,7 +2680,7 @@ function clearMarkers() {
 	markerCluster = null;
 }
 
-function draw(map, data, filter){
+function draw(map, data, filter) {
 
 	clearMarkers();
 
@@ -2689,66 +2689,76 @@ function draw(map, data, filter){
 		var myLng = data.gps_incidentu.split(",")[1];
 		var myYear = data.rok;
 
-        // Customize a map marker - define url
-        var iconBase = 'img/';
+		// Customize a map marker - define url
+		var iconBase = 'img/';
 
-        var latLng = new google.maps.LatLng(myLat, myLng);
-        // Creating a marker and putting it on the map
-        var marker = new google.maps.Marker({
-        	position: latLng,
-            // Define the icon
-            icon: iconBase + 'marker.png',
+		var latLng = new google.maps.LatLng(myLat, myLng);
+		// Creating a marker and putting it on the map
+		var marker = new google.maps.Marker({
+			position: latLng,
+			// Define the icon
+			icon: iconBase + 'marker.png',
 
-            title: data.cislo_osoby.toString()
-          });
+			title: data.cislo_osoby.toString()
+		});
 
-        if (filter != null) {
-        	filter = filter.toString().split(',');
-        	if (typeof(filter) == 'object' && myYear >= filter[0] && myYear <= filter[1]) {
-                //marker.setMap(map);
-                markers.push(marker);
-              } else if (myYear == filter) {
-                //marker.setMap(map);
-                markers.push(marker);
-              }
-            } else {
-            //marker.setMap(map);
-            markers.push(marker);
-          };
+		var contentString = '<h1>'+data.rok.toString()+'</h1>'+
+							'<div># '+data.cislo_osoby.toString()+'</div>'+
+							'<div>'+data.umrti.toString()+'</div>';
 
-        });
+		var infowindow = new google.maps.InfoWindow({
+			content: contentString,
+			maxWidth: 200
 
-var mcOptions = {
-									gridSize: 1,
-									maxZoom: 30,
-									styles: [{
-										height: 25,
-										url: "img/marker2.png",
-										width: 25
-									},
-									{
-										height: 25,
-										url: "img/marker3.png",
-										width: 25
-									},
-									{
-										height: 25,
-										url: "img/marker4.png",
-										width: 25
-									},
-									{
-										height: 25,
-										url: "img/marker5.png",
-										width: 25
-									},
-									{
-										height: 25,
-										url: "img/marker6.png",
-										width: 25
-									}]
-								};
-			markerCluster = new MarkerClusterer(map, markers, mcOptions);
-			console.log('Showing data for: ' + filter + '[' + markers.length + ']');
+		});
+
+		google.maps.event.addListener(marker, 'click', function() {
+			infowindow.open(map, marker);
+		});
+
+		if (filter != null) {
+			filter = filter.toString().split(',');
+			if (typeof(filter) == 'object' && myYear >= filter[0] && myYear <= filter[1]) {
+				//marker.setMap(map);
+				markers.push(marker);
+			} else if (myYear == filter) {
+				//marker.setMap(map);
+				markers.push(marker);
+			}
+		} else {
+			//marker.setMap(map);
+			markers.push(marker);
+		};
+
+	});
+
+	var mcOptions = {
+		gridSize: 1,
+		maxZoom: 30,
+		styles: [{
+			height: 25,
+			url: "img/marker2.png",
+			width: 25
+		}, {
+			height: 25,
+			url: "img/marker3.png",
+			width: 25
+		}, {
+			height: 25,
+			url: "img/marker4.png",
+			width: 25
+		}, {
+			height: 25,
+			url: "img/marker5.png",
+			width: 25
+		}, {
+			height: 25,
+			url: "img/marker6.png",
+			width: 25
+		}]
+	};
+	markerCluster = new MarkerClusterer(map, markers, mcOptions);
+	console.log('Showing data for: ' + filter + '[' + markers.length + ']');
 }
 
 function initialize() {
@@ -2768,7 +2778,6 @@ function initialize() {
 	draw(map, data, null);
 
 }
-
 
 
 
