@@ -89,8 +89,8 @@ function draw(map, data, filter) {
 			width: 25
 		}]
 	};
-	//markerCluster = new MarkerClusterer(map, markers, mcOptions);
-	console.log('Showing data for: ' + filter + '[' + markers.length + ']');
+	markerCluster = new MarkerClusterer(map, markers, mcOptions);
+	//console.log('Showing data for: ' + filter + '[' + markers.length + ']');
 }
 
 function initialize() {
