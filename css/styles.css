@@ -710,7 +710,7 @@ aside.controls {
   aside.controls .checkbox {
     float: left;
     display: block;
-    margin-right: 2.35765%;
+    margin-right: 0%;
     width: 100%;
     padding: 0 2%; }
     aside.controls .checkbox:last-child {
@@ -719,9 +719,9 @@ aside.controls {
       aside.controls .checkbox {
         float: left;
         display: block;
-        margin-right: 2.35765%;
-        width: 31.76157%;
-        margin-left: 8.5298%;
+        margin-right: 0%;
+        width: 33.33333%;
+        margin-left: 8.33333%;
         border-right: 1px solid #303c3b; }
         aside.controls .checkbox:last-child {
           margin-right: 0; } }
@@ -730,8 +730,8 @@ aside.controls {
     aside.controls .checkbox .options label {
       float: left;
       display: block;
-      margin-right: 7.42297%;
-      width: 19.43277%;
+      margin-right: 0%;
+      width: 25%;
       line-height: 2;
       cursor: pointer; }
       aside.controls .checkbox .options label:last-child {
@@ -739,7 +739,7 @@ aside.controls {
   aside.controls .slider {
     float: left;
     display: block;
-    margin-right: 2.35765%;
+    margin-right: 0%;
     width: 100%;
     padding: 0 2%; }
     aside.controls .slider:last-child {
@@ -748,15 +748,15 @@ aside.controls {
       aside.controls .slider {
         float: left;
         display: block;
-        margin-right: 2.35765%;
-        width: 48.82117%; }
+        margin-right: 0%;
+        width: 50%; }
         aside.controls .slider:last-child {
           margin-right: 0; } }
     aside.controls .slider .years > div {
       float: left;
       display: block;
-      margin-right: 16.03631%;
-      width: 41.98184%;
+      margin-right: 0%;
+      width: 50%;
       line-height: 2; }
       aside.controls .slider .years > div:last-child {
         margin-right: 0; }
@@ -801,7 +801,7 @@ aside.controls {
   aside.controls .slider.x {
     float: left;
     display: block;
-    margin-right: 2.35765%;
+    margin-right: 0%;
     width: 100%;
     padding: 0 2%;
     position: relative;
@@ -824,9 +824,9 @@ aside.controls {
       aside.controls .slider.x {
         float: left;
         display: block;
-        margin-right: 2.35765%;
-        width: 31.76157%;
-        margin-left: 34.11922%;
+        margin-right: 0%;
+        width: 33.33333%;
+        margin-left: 33.33333%;
         padding: 0; }
         aside.controls .slider.x:last-child {
           margin-right: 0; }
@@ -938,6 +938,31 @@ input.option {
     input.option.radio::after {
       border-radius: 50%; }
 
+section.map {
+  position: relative; }
+  section.map #map-canvas {
+    z-index: 0; }
+  section.map > div {
+    height: 600px; }
+    section.map > div:first-child {
+      float: left;
+      display: block;
+      margin-right: 0%;
+      width: 25%; }
+      section.map > div:first-child:last-child {
+        margin-right: 0; }
+    section.map > div:last-child {
+      float: left;
+      display: block;
+      margin-right: 0%;
+      width: 75.0%; }
+      section.map > div:last-child:last-child {
+        margin-right: 0; }
+  section.map .mapbox {
+    background-color: #3b4b49;
+    padding: 1.2em;
+    color: #ddd; }
+
 html, body {
   max-width: 100%;
   margin-left: auto;
@@ -952,6 +977,12 @@ h1 {
   color: #6D3D3B; }
   h1 a {
     font-size: 50%; }
+
+h2 {
+  font-size: 1.5625em; }
+
+h3 {
+  font-size: 1.25em; }
 
 header,
 aside.controls,
@@ -972,7 +1003,7 @@ header {
   header h1 {
     float: left;
     display: block;
-    margin-right: 2.35765%;
+    margin-right: 0%;
     width: 100%;
     padding: 2%; }
     header h1:last-child {
@@ -981,15 +1012,15 @@ header {
       header h1 {
         float: left;
         display: block;
-        margin-right: 2.35765%;
-        width: 23.23176%;
-        margin-left: 17.05961%; }
+        margin-right: 0%;
+        width: 25%;
+        margin-left: 16.66667%; }
         header h1:last-child {
           margin-right: 0; } }
   header article {
     float: left;
     display: block;
-    margin-right: 2.35765%;
+    margin-right: 0%;
     width: 100%;
     padding: 2%; }
     header article:last-child {
@@ -998,16 +1029,10 @@ header {
       header article {
         float: left;
         display: block;
-        margin-right: 2.35765%;
-        width: 40.29137%; }
+        margin-right: 0%;
+        width: 41.66667%; }
         header article:last-child {
           margin-right: 0; } }
-
-section.map {
-  position: relative; }
-  section.map #map-canvas {
-    z-index: 0;
-    height: 600px; }
 
 footer {
   height: 8.4em;
