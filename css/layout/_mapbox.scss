@@ -1,0 +1,25 @@
+section.map {
+	position: relative;
+	#map-canvas {
+		z-index: 0;
+	}
+
+	> div {
+		height: 600px;
+
+		&:first-child {
+			@include span-columns(3);
+		}
+
+		&:last-child {
+			@include span-columns(9);
+		}
+	}
+
+	.mapbox {
+		background-color: darken($dark-blue, 5%);
+		padding: #{$heading-line-height}em;
+		color: $light-gray;
+	}
+
+}
