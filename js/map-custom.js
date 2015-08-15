@@ -2976,18 +2976,7 @@ function draw(map, data, filter) {
             title: data.cislo_osoby.toString()
 		});
 
-        // var contentString = '<h1>'+data.rok.toString()+'</h1>'+
-        //                     '<div># '+data.cislo_osoby.toString()+'</div>'+
-        //                     '<div>'+data.umrti.toString()+'</div>';
-
-        // var infowindow = new google.maps.InfoWindow({
-        //     content: contentString,
-        //     maxWidth: 200
-
-        // });
-
         google.maps.event.addListener(marker, 'click', function() {
-            //infowindow.open(map, marker);
             document.getElementById('cislo_osoby').innerHTML = data.cislo_osoby.toString();
             document.getElementById('vek_h').innerHTML = data.vek_h.toString();
             document.getElementById('statni_prislusnost').innerHTML = data.statni_prislusnost.toString();
