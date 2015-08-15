@@ -2973,22 +2973,31 @@ function draw(map, data, filter) {
 			position: latLng,
 			// Define the icon
 			icon: iconBase + 'marker.png',
-
-			title: data.cislo_osoby.toString()
+            title: data.cislo_osoby.toString()
 		});
 
-        var contentString = '<h1>'+data.rok.toString()+'</h1>'+
-                            '<div># '+data.cislo_osoby.toString()+'</div>'+
-                            '<div>'+data.umrti.toString()+'</div>';
+        // var contentString = '<h1>'+data.rok.toString()+'</h1>'+
+        //                     '<div># '+data.cislo_osoby.toString()+'</div>'+
+        //                     '<div>'+data.umrti.toString()+'</div>';
 
-        var infowindow = new google.maps.InfoWindow({
-            content: contentString,
-            maxWidth: 200
+        // var infowindow = new google.maps.InfoWindow({
+        //     content: contentString,
+        //     maxWidth: 200
 
-        });
+        // });
 
         google.maps.event.addListener(marker, 'click', function() {
-            infowindow.open(map, marker);
+            //infowindow.open(map, marker);
+            document.getElementById('cislo_osoby').innerHTML = data.cislo_osoby.toString();
+            document.getElementById('vek_h').innerHTML = data.vek_h.toString();
+            document.getElementById('statni_prislusnost').innerHTML = data.statni_prislusnost.toString();
+            document.getElementById('gps_bydliste').innerHTML = data.gps_bydliste.toString();
+            document.getElementById('gps_incidentu').innerHTML = data.gps_incidentu.toString();
+            document.getElementById('smer_prechodu').innerHTML = data.smer_prechodu.toString();
+            document.getElementById('umrti').innerHTML = data.umrti.toString();
+            document.getElementById('obdobi_incidentu').innerHTML = data.obdobi_incidentu.toString();
+            document.getElementById('rok').innerHTML = data.rok.toString();
+
         });
 
         if (filter != null) {
