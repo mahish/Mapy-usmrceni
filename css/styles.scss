@@ -21,6 +21,13 @@ h1 {
 	}
 }
 
+h2 {
+	font-size: modular-scale(2);
+}
+h3 {
+	font-size: modular-scale(1);
+}
+
 header,
 aside.controls,
 section.map,
@@ -41,6 +48,7 @@ header {
 			@include shift(2);
 		}
 	}
+
 	article {
 		@include span-columns(12);
 		@include pad(null 2%);
@@ -48,14 +56,6 @@ header {
 		@include media($large-screen) {
 			@include span-columns(5);
 		}
-	}
-}
-
-section.map {
-	position: relative;
-	#map-canvas {
-		z-index: 0;
-		height: 600px;
 	}
 }
 
