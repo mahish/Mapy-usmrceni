@@ -1103,7 +1103,7 @@ section.map {
   section.map #map-canvas {
     z-index: 0; }
   section.map > div {
-    height: 700px; }
+    min-height: 600px; }
     section.map > div:first-child {
       float: left;
       display: block;
