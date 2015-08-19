@@ -1,16 +1,21 @@
 aside.controls {
-	background-color: $dark-blue;
-	padding: #{$heading-line-height}em 0;
-	color: $light-gray;
+	background-color: transparent;
+	padding: 0;
+
+	// h4 {
+	// 	padding-top: $heading-line-height * 1em;
+	// 	padding-left: $heading-line-height * 1em;
+	// 	padding-bottom: $heading-line-height * 1em;
+	// 	margin-bottom: 0;
+	// }
 
 	.checkbox {
 		@include span-columns(12);
-		@include pad(0 2%);
 
 		@include media($large-screen) {
-			@include span-columns(4);
-			@include shift(1);
-			border-right: 1px solid darken($dark-blue, 10%);
+			// @include span-columns(4);
+			// @include shift(1);
+			// border-right: 1px solid darken($dark-blue, 10%);
 		}
 
 		label {
@@ -18,10 +23,78 @@ aside.controls {
 		}
 
 		.options {
+			$bg-colors-options: #ACE5E1, #9CCCC7, #8CB2AE, #8B9997, #7C7F7F;
+
 			label {
-				@include span-columns(1 of 4);
-				line-height: 2;
+				@include span-columns(1 of 5);
+				line-height: 5;
 				cursor: pointer;
+				margin-bottom: 0;
+
+				&:first-child:before {
+					content: "Dle období";
+					position: absolute;
+					line-height: 3;
+					left: 0.62em;
+					color: $medium-gray;
+					font-size: 0.62em;
+					text-transform: uppercase;
+				}
+
+				@for $i from 1 to 6 {
+					// assign colors from $bg-colors-options list
+					&:nth-child(#{$i}) {
+						$option-color-from-list: nth($bg-colors-options, $i);
+						background-color: $option-color-from-list;
+						color: darken($option-color-from-list, 15%);
+						border-bottom: 1px solid darken($option-color-from-list, 5%);
+
+						&:focus,
+						&:hover {
+							background-color: darken($option-color-from-list, 5%);
+							color: darken($option-color-from-list, 38%);
+						}
+
+						&.active {
+							color: darken($option-color-from-list, 38%);
+						}
+
+						input.option {
+							background-color: darken($option-color-from-list, 15%);
+
+							&:focus,
+							&:hover {
+								background-color: darken($option-color-from-list, 38%);
+							}
+
+							&:checked {
+								background-color: darken($option-color-from-list, 62%);
+							}
+						}
+					}
+				}
+			}
+
+			// Checkbox/Radio replacement
+			input.option {
+				@include appearance(none);
+				@include position($option-size/3 0 0 0);
+				@include size($option-size);
+				@include transition;
+				border: none;
+				cursor: pointer;
+				display: inline-block;
+				outline: none;
+				position: relative;
+				z-index: 1000;
+
+				&.radio {
+					border-radius: 50%;
+
+					&::after {
+						border-radius: 50%;
+					}
+				}
 			}
 		}
 

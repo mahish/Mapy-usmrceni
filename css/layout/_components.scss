@@ -94,11 +94,11 @@ input.option {
 	z-index: 1000;
 
 	&:hover {
-		background: darken($checked-option-color, 15%);
+		background: $checked-option-color;
 	}
 
 	&:checked {
-		background: $checked-option-color;
+		background: darken($checked-option-color, 15%);
 
 		// The checkmark
 		// &::before {

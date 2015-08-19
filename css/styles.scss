@@ -36,8 +36,8 @@ footer {
 }
 
 header {
-	margin: #{$heading-line-height}em 0;
-	padding: #{$heading-line-height}em;
+	margin: $base-line-height * 0.5em 0;
+	padding: $base-line-height * 0.5em;
 
 	h1 {
 		@include span-columns(12);
@@ -61,7 +61,7 @@ header {
 
 footer {
 	height: #{$heading-line-height*7}em;
-	background-color: $dark-gray;
+	// background-color: $dark-gray;
 }
 
 

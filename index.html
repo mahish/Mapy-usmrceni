@@ -30,44 +30,30 @@
 		</article>
 	</header>
 
-	<div class="text-center">
-		<h1>
-
-		</h1>
-	</div>
-	<br>
-
 	<aside id="controls" class="controls">
-		<!-- <div class="checkbox">
-			<label for="radio_buttons">Dle období</label>
+		<div class="checkbox">
 			<div class="options">
-				<label class="text-center ">
-					<input type="radio" class="radio option" name="radio_button" value="1948,1950" onchange="draw(map, mapsDataJSON, value)"><br>1948-1950
+				<label class="text-center active">
+					<input checked type="radio" class="radio option" name="radio_button" value="1948,1989" onchange="draw(map, mapsDataJSON, value)"><br>Vše
 				</label>
-				<label class="text-center ">
-					<input type="radio" class="radio option" name="radio_button" value="1951,1965" onchange="draw(map, mapsDataJSON, value)"><br>1951-1965
+				<label class="text-center">
+					<input type="radio" class="radio option" name="radio_button" value="1948,1950" onchange="draw(map, mapsDataJSON, value)"><br>1948 ——————————— 1950
 				</label>
-				<label class="text-center ">
-					<input type="radio" class="radio option" name="radio_button" value="1966,1971" onchange="draw(map, mapsDataJSON, value)"><br>1966-1971
+				<label class="text-center">
+					<input type="radio" class="radio option" name="radio_button" value="1951,1965" onchange="draw(map, mapsDataJSON, value)"><br>1951 ——————————— 1965
 				</label>
-				<label class="text-center ">
-					<input type="radio" class="radio option" name="radio_button" value="1972,1989" onchange="draw(map, mapsDataJSON, value)"><br>1972-1989
+				<label class="text-center">
+					<input type="radio" class="radio option" name="radio_button" value="1966,1971" onchange="draw(map, mapsDataJSON, value)"><br>1966 ——————————— 1971
+				</label>
+				<label class="text-center">
+					<input type="radio" class="radio option" name="radio_button" value="1972,1989" onchange="draw(map, mapsDataJSON, value)"><br>1972 ——————————— 1989
 				</label>
 			</div>
 		</div>
-		<div class="slider">
-			<label for=obdobi>Dle roku</label>
-			<input type=range class="range" min=1948 max=1990 value=1 id=obdobi step=1 list=zvolitObdobi oninput="draw(map, mapsDataJSON, value)">
-			<div class="years">
-				<div class="text-left">1948</div>
-				<div class="text-right">1989</div>
-			</div>
-		</div> -->
-		<div class="slider x">
+<!-- 		<div class="slider x">
 			<label for=obdobi>Dle období</label>
-			<!-- <output for=fader id=zvoleneObdobi>50</output> -->
 			<input type=range class="range" min=1948 max=1951 value=1 id=obdobi step=1 list=zvolitObdobi oninput="draw(map, mapsDataJSON, value)">
-		</div>
+		</div> -->
 	</aside>
 	<section class="map">
 		<div class="mapbox">
@@ -131,17 +117,9 @@
 		</div>
 		<div id="map-canvas"></div>
 	</section>
-	<footer>
+<!-- 	<footer>
 
-	</footer>
-
-	<script>
-	// Vypisuje hodnoty u slideru ovládajícího filtrování jednotlivých období
-	// http://demosthenes.info/blog/757/Playing-With-The-HTML5-range-Slider
-	// function outputUpdate(vol) {
-	//   document.querySelector('#zvoleneObdobi').value = vol;
-	// }
-	</script>
+	</footer> -->
 
 	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 
