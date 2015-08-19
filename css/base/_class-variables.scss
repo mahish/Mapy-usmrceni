@@ -15,6 +15,28 @@
 	text-align: center;
 }
 
+.hide-for-small {
+	display: none;
+
+	@include media($medium-screen) {
+		display: inline-block;
+	}
+}
+.hide-for-medium {
+	display: none;
+
+	@include media($large-screen) {
+		display: inline-block;
+	}
+}
+.hide-for-large {
+	display: none;
+
+	@include media($x-large-screen) {
+		display: inline-block;
+	}
+}
+
 .center-container {
 	position: relative;
 
