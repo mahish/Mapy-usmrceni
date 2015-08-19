@@ -1,6 +1,7 @@
 aside.controls {
 	background-color: transparent;
 	padding: 0;
+	overflow: hidden;
 
 	// h4 {
 	// 	padding-top: $heading-line-height * 1em;
@@ -20,6 +21,7 @@ aside.controls {
 
 		label {
 			display: inline-block;
+			overflow: hidden;
 		}
 
 		.options {
