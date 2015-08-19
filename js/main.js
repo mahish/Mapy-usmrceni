@@ -6,4 +6,12 @@ $(document).ready(function() {
 		return false;
 	});
 
+	// Assign class active to selected period
+	$('.radio.option').click(function(){
+		if ($(this).is(':checked')) {
+			$(this).parent('label').siblings().removeClass('active');
+			$(this).parent('label').addClass('active');
+		}
+	});
+
 });
