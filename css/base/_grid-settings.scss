@@ -10,7 +10,7 @@
 $tiny-screen: em(300);
 $small-screen: em(480);
 $medium-screen: em(760);
-$large-screen: em(960);
+$large-screen: em(1000);
 $x-large-screen: em(1190);
 
 $medium-screen-up: new-breakpoint(min-width $medium-screen 4);
