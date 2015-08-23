@@ -2987,20 +2987,14 @@ function draw(map, data, filter) {
             anchor: new google.maps.Point(16, 32)
         };
 
-        // var passiveIcon = {
-        //     url: 'http://maps.google.com/mapfiles/marker_grey.png',
-        //     // This marker is 20 pixels wide by 32 pixels tall.
-        //     size: new google.maps.Size(32, 32),
-        //     // The origin for this image is 0,0.
-        //     origin: new google.maps.Point(0, 0),
-        //     // The anchor for this image is the base of the flagpole at 0,32.
-        //     anchor: new google.maps.Point(16, 32)
-        // };
+        var passiveIcon = {
+            url: iconBase + 'marker.png',
+        };
 
         google.maps.event.addListener(marker, 'click', function() {
-            // for (var i = activeMarkers.length - 1; i >= 0; i--) {
-            //     activeMarkers[i].setIcon(passiveIcon);
-            // };
+            for (var i = activeMarkers.length - 1; i >= 0; i--) {
+                activeMarkers[i].setIcon(passiveIcon);
+            };
             document.getElementById('cislo_osoby').innerHTML = data.cislo_osoby.toString();
             document.getElementById('vek_h').innerHTML = data.vek_h.toString();
             document.getElementById('statni_prislusnost').innerHTML = data.statni_prislusnost.toString();
