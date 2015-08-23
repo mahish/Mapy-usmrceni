@@ -25,6 +25,16 @@ section.map {
 
 		&:first-child {
 			@include span-columns(1 of 5);
+
+			&:before {
+				content: "Info o bodu na mapě";
+				position: absolute;
+				line-height: 3;
+				left: 0.62em;
+				color: $medium-gray;
+				font-size: 0.62em;
+				text-transform: uppercase;
+			}
 		}
 
 		&:last-child {
