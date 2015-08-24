@@ -510,7 +510,7 @@ button {
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-family: "karmina", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-family: "karmina-sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-size: 1em;
   font-weight: 600;
   line-height: 1;
@@ -539,7 +539,7 @@ input,
 label,
 select {
   display: block;
-  font-family: "karmina", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-family: "karmina-sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-size: 1em; }
 
 label {
@@ -558,7 +558,7 @@ textarea {
   border-radius: 3px;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
   box-sizing: border-box;
-  font-family: "karmina", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-family: "karmina-sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-size: 1em;
   margin-bottom: 0.75em;
   padding: 0.5em;
@@ -644,7 +644,7 @@ body {
   font-feature-settings: "kern", "liga", "pnum";
   -webkit-font-smoothing: antialiased;
   color: #424143;
-  font-family: "karmina", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-family: "karmina-sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-size: 1em;
   line-height: 1.5; }
 
