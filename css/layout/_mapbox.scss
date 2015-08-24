@@ -21,7 +21,7 @@ section.map {
 	}
 
 	> div {
-		min-height: 600px;
+		min-height: 625px;
 
 		&:first-child {
 			@include span-columns(1 of 5);
