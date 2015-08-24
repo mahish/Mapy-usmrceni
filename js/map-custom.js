@@ -2978,13 +2978,14 @@ function draw(map, data, filter) {
 		});
 
         var activeIcon = {
-            url: 'http://maps.google.com/mapfiles/marker_green.png',
-            // This marker is 20 pixels wide by 32 pixels tall.
-            size: new google.maps.Size(32, 32),
+            url: iconBase + 'active-marker.png',
+            // This marker is 25 pixels wide by 25 pixels tall.
+            size: new google.maps.Size(25, 25),
             // The origin for this image is 0,0.
-            origin: new google.maps.Point(0, 0),
+            origin: new google.maps.Point(0, 0)
             // The anchor for this image is the base of the flagpole at 0,32.
-            anchor: new google.maps.Point(16, 32)
+            // 24.8.2015 — our custom marker is ok with automatic center
+            // anchor: new google.maps.Point(12, 12)
         };
 
         var passiveIcon = {
@@ -3005,7 +3006,7 @@ function draw(map, data, filter) {
             document.getElementById('obdobi_incidentu').innerHTML = data.obdobi_incidentu.toString();
             document.getElementById('rok').innerHTML = data.rok.toString();
             this.setIcon(activeIcon);
-            activeMarkers.push(this);            
+            activeMarkers.push(this);
         });
 
 		if (filter != null) {
