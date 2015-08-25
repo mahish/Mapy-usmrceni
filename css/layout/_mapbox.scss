@@ -1,0 +1,50 @@
+section.map {
+	position: relative;
+	overflow: hidden;
+	font-family: $heading-font-family;
+
+	// Add inset box-shadow on Google Maps element — http://stackoverflow.com/questions/11264240/add-inset-box-shadow-on-google-maps-element
+	&:before, &:after, #map-canvas:before, #map-canvas:after {
+		content: '';
+		position: absolute;
+		box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.38);
+		z-index: 1;
+	}
+
+	&:before { top: -20px; left: 0; right: 0; height: 20px; }
+	&:after { right: -20px; top: 0; bottom: 0; width: 20px; }
+	#map-canvas:before { bottom: -20px; left: 0; right: 0; height: 20px; }
+	#map-canvas:after { left: -20px; top: 0; bottom: 0; width: 20px; }
+
+	#map-canvas {
+		z-index: 0;
+	}
+
+	> div {
+		min-height: 625px;
+
+		&:first-child {
+			@include span-columns(1 of 5);
+
+			&:before {
+				content: "Info o bodu na mapě";
+				position: absolute;
+				line-height: 3;
+				left: 0.62em;
+				color: $medium-gray;
+				font-size: 0.62em;
+				text-transform: uppercase;
+			}
+		}
+
+		&:last-child {
+			@include span-columns(4 of 5);
+		}
+	}
+
+	.mapbox {
+		padding: #{$heading-line-height}em;
+		color: $dark-gray;
+	}
+
+}

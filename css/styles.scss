@@ -1,67 +1,71 @@
 @import "bourbon/bourbon";
+@import "neat-settings";
 @import "neat/neat";
 @import "normalize/normalize";
 @import "base/base";
 @import "base/class-variables";
-@import "base/my-variables";
+@import "layout/layout";
 
 // ===============================================
 
 html, body {
-	height: 100%;
+	@include outer-container(100%);
+	min-width: 970px;
 }
 
 h1 {
 	font-size: modular-scale(3);
+	color: $red;
+
+	a {
+		font-size: 50%;
+	}
 }
 
-header,section.map {
-	@include outer-container(100%);
+h2 {
+	font-size: modular-scale(2);
+}
+h3 {
+	font-size: modular-scale(1);
+}
+
+header,
+aside.controls,
+section.map,
+footer {
+	@include row();
 }
 
 header {
-	margin: #{$heading-line-height*3}em 0;
-}
+	margin: $base-line-height * 0.5em 0;
+	padding: $base-line-height * 0.5em;
 
-section.map {
-	position: relative;
+	h1 {
+		@include span-columns(12);
+		@include pad(null 2%);
 
-	.controls {
-		z-index: 2;
-		border: 1px solid gray;
-		border-radius: 2px;
-		height: 400px;
-		padding: 10px;
-		@include position(absolute, 100px null 100px 10px);
-		@include outer-container(38%);
-		min-width: 250px;
-		background: white;
-		overflow: scroll;
-
-		input[type='range'] {
-			width: 100%;
+		@include media($large-screen) {
+			@include span-columns(3);
+			@include shift(2);
 		}
-
-		input[type='range']::-webkit-slider-runnable-track {
-			// &:after {
-			// 	position: absolute;
-			// 	float: left;
-			// 	width: 100%;
-			// 	font-size: 9px;
-			// 	white-space: 10px;
-			// 	content: "Vše 1947-1950 1951-1965 1966-1971 1972-1989";
-			// }
-		}
-
-
 	}
 
-	#map-canvas {
-		z-index: 0;
-		height: 600px;
+	article {
+		@include span-columns(12);
+		@include pad(null 2%);
+
+		@include media($large-screen) {
+			@include span-columns(5);
+		}
 	}
 }
+
+footer {
+	height: #{$heading-line-height*7}em;
+	// background-color: $dark-gray;
+}
+
+
 
 // ===============================================
 
-@import "components";

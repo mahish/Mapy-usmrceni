@@ -14,3 +14,45 @@
 .text-center {
 	text-align: center;
 }
+
+.hide-for-small {
+	display: none;
+
+	@include media($medium-screen) {
+		display: inline-block;
+	}
+}
+.hide-for-medium {
+	display: none;
+
+	@include media($large-screen) {
+		display: inline-block;
+	}
+}
+.hide-for-large {
+	display: none;
+
+	@include media($x-large-screen) {
+		display: inline-block;
+	}
+}
+
+.center-container {
+	position: relative;
+
+	.absolute-center {
+		width: 100%;
+		height: 62%;
+		overflow: auto;
+		margin: auto;
+		@include position(absolute, 0);
+		padding: 10px;
+	}
+}
+
+.black {
+	color: $dark-gray;
+}
+.red {
+	color: $red;
+}
