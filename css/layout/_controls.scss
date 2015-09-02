@@ -25,7 +25,8 @@ aside.controls {
 		}
 
 		.options {
-			$bg-colors-options: #ACE5E1, #9CCCC7, #8CB2AE, #8B9997, #7C7F7F;
+			$bg-colors-options: #ACE5E1, #8DD6D0, #67C9C1, #42BDB3, #35968F;
+			$bg-colors-active: #EBDBDA, #DABAB9, #8CB2AE, #8B9997, #7C7F7F;
 
 			label {
 				@include span-columns(1 of 5);
@@ -48,17 +49,21 @@ aside.controls {
 					&:nth-child(#{$i}) {
 						$option-color-from-list: nth($bg-colors-options, $i);
 						background-color: $option-color-from-list;
-						color: darken($option-color-from-list, 15%);
+						color: darken($option-color-from-list, 24%);
 						border-bottom: 1px solid darken($option-color-from-list, 5%);
 
 						&:focus,
 						&:hover {
 							background-color: darken($option-color-from-list, 5%);
-							color: darken($option-color-from-list, 38%);
+							color: darken($option-color-from-list, 24%);
 						}
 
 						&.active {
-							color: darken($option-color-from-list, 38%);
+							color: desaturate(adjust_hue(darken($option-color-from-list, 24), 185), 0.4);
+							background-color: desaturate(adjust_hue($option-color-from-list, 185), 0.4);
+							// saturate(darken(adjust_hue(#8CB2AE, 189), 12), 4)
+							// adjust_hue(darken(#67C9C1, 9), 186)
+							// desaturate(adjust_hue(#67C9C1, 185), 0)
 						}
 
 						input.option {
