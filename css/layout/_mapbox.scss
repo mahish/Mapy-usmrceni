@@ -23,8 +23,10 @@ section.map {
 	> div {
 		min-height: 625px;
 
-		&:first-child {
+		&#mapbox {
 			@include span-columns(1 of 5);
+			padding: #{$heading-line-height}em;
+			color: $dark-gray;
 
 			&:before {
 				content: "Info o bodu na mapě";
@@ -35,16 +37,30 @@ section.map {
 				font-size: 0.62em;
 				text-transform: uppercase;
 			}
+
+			dl {
+				display: none;
+			}
+
+			h3 {
+				display: inline-block;
+				opacity: 0.235;
+				margin-top: 230px;
+			}
+
+			&.active {
+				dl {
+					display: block;
+				}
+				h3 {
+					display: none;
+				}
+			}
 		}
 
-		&:last-child {
+		&#map-canvas {
 			@include span-columns(4 of 5);
 		}
-	}
-
-	.mapbox {
-		padding: #{$heading-line-height}em;
-		color: $dark-gray;
 	}
 
 }

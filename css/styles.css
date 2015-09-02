@@ -770,13 +770,14 @@ aside.controls {
         text-transform: uppercase; }
       aside.controls .checkbox .options label:nth-child(1) {
         background-color: #ACE5E1;
-        color: #72d3cc;
+        color: #4fc8bf;
         border-bottom: 1px solid #99dfda; }
         aside.controls .checkbox .options label:nth-child(1):focus, aside.controls .checkbox .options label:nth-child(1):hover {
           background-color: #99dfda;
-          color: #319e96; }
+          color: #4fc8bf; }
         aside.controls .checkbox .options label:nth-child(1).active {
-          color: #319e96; }
+          color: #c7514f;
+          background-color: #e5adac; }
         aside.controls .checkbox .options label:nth-child(1) input.option {
           background-color: #72d3cc; }
           aside.controls .checkbox .options label:nth-child(1) input.option:focus, aside.controls .checkbox .options label:nth-child(1) input.option:hover {
@@ -784,63 +785,67 @@ aside.controls {
           aside.controls .checkbox .options label:nth-child(1) input.option:checked {
             background-color: #14413d; }
       aside.controls .checkbox .options label:nth-child(2) {
-        background-color: #9CCCC7;
-        color: #6ab2aa;
-        border-bottom: 1px solid #8bc3bd; }
+        background-color: #8DD6D0;
+        color: #3eaba2;
+        border-bottom: 1px solid #7acfc8; }
         aside.controls .checkbox .options label:nth-child(2):focus, aside.controls .checkbox .options label:nth-child(2):hover {
-          background-color: #8bc3bd;
-          color: #396e68; }
+          background-color: #7acfc8;
+          color: #3eaba2; }
         aside.controls .checkbox .options label:nth-child(2).active {
-          color: #396e68; }
+          color: #ab3e3e;
+          background-color: #d68d8d; }
         aside.controls .checkbox .options label:nth-child(2) input.option {
-          background-color: #6ab2aa; }
+          background-color: #55c2b9; }
           aside.controls .checkbox .options label:nth-child(2) input.option:focus, aside.controls .checkbox .options label:nth-child(2) input.option:hover {
-            background-color: #396e68; }
+            background-color: #2b7770; }
           aside.controls .checkbox .options label:nth-child(2) input.option:checked {
-            background-color: #0f1d1b; }
+            background-color: #0a1d1b; }
       aside.controls .checkbox .options label:nth-child(3) {
-        background-color: #8CB2AE;
-        color: #61918c;
-        border-bottom: 1px solid #7da8a3; }
+        background-color: #67C9C1;
+        color: #30867f;
+        border-bottom: 1px solid #54c2b9; }
         aside.controls .checkbox .options label:nth-child(3):focus, aside.controls .checkbox .options label:nth-child(3):hover {
-          background-color: #7da8a3;
-          color: #324a48; }
+          background-color: #54c2b9;
+          color: #30867f; }
         aside.controls .checkbox .options label:nth-child(3).active {
-          color: #324a48; }
+          color: #863030;
+          background-color: #c96867; }
         aside.controls .checkbox .options label:nth-child(3) input.option {
-          background-color: #61918c; }
+          background-color: #3ca89f; }
           aside.controls .checkbox .options label:nth-child(3) input.option:focus, aside.controls .checkbox .options label:nth-child(3) input.option:hover {
-            background-color: #324a48; }
+            background-color: #1d514d; }
           aside.controls .checkbox .options label:nth-child(3) input.option:checked {
-            background-color: #010101; }
+            background-color: black; }
       aside.controls .checkbox .options label:nth-child(4) {
-        background-color: #8B9997;
-        color: #657371;
-        border-bottom: 1px solid #7d8d8b; }
+        background-color: #42BDB3;
+        color: #22625d;
+        border-bottom: 1px solid #3baaa1; }
         aside.controls .checkbox .options label:nth-child(4):focus, aside.controls .checkbox .options label:nth-child(4):hover {
-          background-color: #7d8d8b;
-          color: #2e3433; }
+          background-color: #3baaa1;
+          color: #22625d; }
         aside.controls .checkbox .options label:nth-child(4).active {
-          color: #2e3433; }
+          color: #622323;
+          background-color: #bc4343; }
         aside.controls .checkbox .options label:nth-child(4) input.option {
-          background-color: #657371; }
+          background-color: #2e847d; }
           aside.controls .checkbox .options label:nth-child(4) input.option:focus, aside.controls .checkbox .options label:nth-child(4) input.option:hover {
-            background-color: #2e3433; }
+            background-color: #102d2b; }
           aside.controls .checkbox .options label:nth-child(4) input.option:checked {
             background-color: black; }
       aside.controls .checkbox .options label:nth-child(5) {
-        background-color: #7C7F7F;
-        color: #565858;
-        border-bottom: 1px solid #6f7272; }
+        background-color: #35968F;
+        color: #153c39;
+        border-bottom: 1px solid #2e837d; }
         aside.controls .checkbox .options label:nth-child(5):focus, aside.controls .checkbox .options label:nth-child(5):hover {
-          background-color: #6f7272;
-          color: #1c1d1d; }
+          background-color: #2e837d;
+          color: #153c39; }
         aside.controls .checkbox .options label:nth-child(5).active {
-          color: #1c1d1d; }
+          color: #3b1615;
+          background-color: #963635; }
         aside.controls .checkbox .options label:nth-child(5) input.option {
-          background-color: #565858; }
+          background-color: #215d59; }
           aside.controls .checkbox .options label:nth-child(5) input.option:focus, aside.controls .checkbox .options label:nth-child(5) input.option:hover {
-            background-color: #1c1d1d; }
+            background-color: #020706; }
           aside.controls .checkbox .options label:nth-child(5) input.option:checked {
             background-color: black; }
     aside.controls .checkbox .options input.option {
@@ -1104,14 +1109,16 @@ section.map {
     z-index: 0; }
   section.map > div {
     min-height: 625px; }
-    section.map > div:first-child {
+    section.map > div#mapbox {
       float: left;
       display: block;
       margin-right: 0%;
-      width: 20%; }
-      section.map > div:first-child:last-child {
+      width: 20%;
+      padding: 1.2em;
+      color: #424143; }
+      section.map > div#mapbox:last-child {
         margin-right: 0; }
-      section.map > div:first-child:before {
+      section.map > div#mapbox:before {
         content: "Info o bodu na mapě";
         position: absolute;
         line-height: 3;
@@ -1119,16 +1126,23 @@ section.map {
         color: #807F83;
         font-size: 0.62em;
         text-transform: uppercase; }
-    section.map > div:last-child {
+      section.map > div#mapbox dl {
+        display: none; }
+      section.map > div#mapbox h3 {
+        display: inline-block;
+        opacity: 0.235;
+        margin-top: 230px; }
+      section.map > div#mapbox.active dl {
+        display: block; }
+      section.map > div#mapbox.active h3 {
+        display: none; }
+    section.map > div#map-canvas {
       float: left;
       display: block;
       margin-right: 0%;
       width: 80%; }
-      section.map > div:last-child:last-child {
+      section.map > div#map-canvas:last-child {
         margin-right: 0; }
-  section.map .mapbox {
-    padding: 1.2em;
-    color: #424143; }
 
 html, body {
   max-width: 100%;
