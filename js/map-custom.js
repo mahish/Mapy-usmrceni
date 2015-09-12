@@ -87,6 +87,7 @@ function draw(map, data, filter) {
 				});
 
 if (filter != null) {
+	document.querySelector('div#mapbox').className = 'mapbox';
 	filter = filter.toString().split(',');
 	if (typeof(filter) == 'object' && myYear >= filter[0] && myYear <= filter[1]) {
 				//marker.setMap(map);
