@@ -9,8 +9,9 @@
 // ===============================================
 
 html, body {
-	@include outer-container(100%);
-	min-width: 970px;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
 }
 
 h1 {
@@ -30,34 +31,8 @@ h3 {
 }
 
 header,
-aside.controls,
-section.map,
-footer {
-	@include row();
-}
-
-header {
-	margin: $base-line-height * 0.5em 0;
-	padding: $base-line-height * 0.5em;
-
-	h1 {
-		@include span-columns(12);
-		@include pad(null 2%);
-
-		@include media($large-screen) {
-			@include span-columns(3);
-			@include shift(2);
-		}
-	}
-
-	article {
-		@include span-columns(12);
-		@include pad(null 2%);
-
-		@include media($large-screen) {
-			@include span-columns(5);
-		}
-	}
+section.controls {
+	@include outer-container(100%);
 }
 
 footer {

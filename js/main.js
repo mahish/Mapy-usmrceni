@@ -1,9 +1,17 @@
 $(document).ready(function() {
 
-	// ScrollTo - https://github.com/flesler/jquery.scrollTo
-	$('#toApp').click(function(){
-		$.scrollTo( '#controls', 380, { easing:'swing' });
-		return false;
+	$('#toApp').click(function() {
+		$('header').addClass('hide');
+
+		setTimeout(function () {
+			$('header').addClass('hidden').removeClass('hide');
+		}, 2000);
+
+	});
+
+	// open header
+	$('header').click(function(){
+		$(this).removeClass('hidden');
 	});
 
 	// Assign class active to selected period
@@ -12,6 +20,17 @@ $(document).ready(function() {
 			$(this).parent('label').siblings().removeClass('active');
 			$(this).parent('label').addClass('active');
 		}
+	});
+
+	// close modal infobox & clear active marker
+	$('.infobox').click(function(){
+		$('body').removeClass('active-marker');
+	});
+
+	// open filters
+	$('#filter').click(function(){
+		$(this).toggleClass('hidden');
+		$('body').toggleClass('active-filter');
 	});
 
 });

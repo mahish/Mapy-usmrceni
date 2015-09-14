@@ -1,0 +1,85 @@
+header {
+	@include position(absolute, 0 0 0 0);
+	z-index: 9999;
+	height: 100%;
+	width: 100%;
+	background: white;
+	padding: $base-line-height * 1em;
+
+	&:after {
+		opacity: 0;
+		@include transition-property(opacity);
+		@include transition-duration(0.2s);
+		@include transition-timing-function(ease-in-out);
+
+		top: 100%;
+		left: 50%;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		border-radius: 2px;
+		position: absolute;
+		pointer-events: none;
+		border-color: rgba(255, 255, 255, 0);
+		border-top-color: #fff;
+		border-width: $base-line-height * 1em;
+		margin-left: $base-line-height * -1em;
+	}
+
+	> span {
+		color: white;
+		text-transform: uppercase;
+		@include position(absolute, null 20px 0 null);
+		@include transition-property(all);
+		@include transition-duration(0.2s);
+	}
+
+	@include transition-property(all);
+	@include transition-duration(0.6s);
+	@include transition-timing-function(ease-in-out);
+
+	&.hide,
+	&.hidden {
+		@include transform(translatey(calc(-100% + #{$base-line-height} * 1em)));
+	}
+
+	&.hidden {
+		cursor: pointer;
+
+		@include transition-property(all);
+		@include transition-duration(0.2s);
+	}
+
+	&.hidden:hover {
+		@include transform(translatey(calc(-100% + #{$base-line-height} * 2em)));
+
+		&:after {
+			opacity: 1;
+		}
+
+		span {
+			color: $red;
+		}
+	}
+
+	h1 {
+		@include span-columns(12);
+		@include pad(null 2%);
+
+		@include media($large-screen) {
+			@include span-columns(3);
+			@include shift(2);
+		}
+	}
+
+	article {
+		@include span-columns(12);
+		@include pad(null 2%);
+
+		@include media($large-screen) {
+			@include span-columns(5);
+		}
+	}
+
+}

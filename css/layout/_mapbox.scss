@@ -1,66 +1,56 @@
-section.map {
-	position: relative;
-	overflow: hidden;
-	font-family: $heading-font-family;
-
-	// Add inset box-shadow on Google Maps element — http://stackoverflow.com/questions/11264240/add-inset-box-shadow-on-google-maps-element
-	&:before, &:after, #map-canvas:before, #map-canvas:after {
-		content: '';
-		position: absolute;
-		box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.38);
-		z-index: 1;
-	}
-
-	&:before { top: -20px; left: 0; right: 0; height: 20px; }
-	&:after { right: -20px; top: 0; bottom: 0; width: 20px; }
-	#map-canvas:before { bottom: -20px; left: 0; right: 0; height: 20px; }
-	#map-canvas:after { left: -20px; top: 0; bottom: 0; width: 20px; }
-
 	#map-canvas {
 		z-index: 0;
+		height: 100%;
+		width: 100%;
 	}
 
-	> div {
-		min-height: 625px;
+	.infobox {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 13;
+		width: 100%;
+		height: 100%;
 
-		&#mapbox {
-			@include span-columns(1 of 5);
-			padding: #{$heading-line-height}em;
-			color: $dark-gray;
+		cursor: pointer;
 
-			&:before {
-				content: "Info o bodu na mapě";
-				position: absolute;
-				line-height: 3;
-				left: 0.62em;
-				color: $medium-gray;
-				font-size: 0.62em;
-				text-transform: uppercase;
+		display: none;
+
+		.active-marker & {
+			display: block;
+		}
+
+		// https://css-tricks.com/centering-in-the-unknown/
+		.center-wrapper {
+			display: table;
+			width: 100%;
+			height: 100%;
+
+			background-color: rgba(0,0,0,0.38);
+
+			.centered {
+				display: table-cell;
+				text-align: center;
+				vertical-align: middle;
 			}
+		}
+
+		.info {
+			text-align: left;
+			margin: auto;
+			width: 50%;
+			height: 50%;
+			border-radius: 2px;
+			box-shadow: 0 0 $base-line-height * 1em rgba(0,0,0,0.38);
+			background: $super-light-gray;
+			color: $dark-gray;
+			overflow: auto;
+			padding: $base-line-height * 1em;
 
 			dl {
-				display: none;
+				-webkit-column-count: 3; /* Chrome, Safari, Opera */
+				-moz-column-count: 3; /* Firefox */
+				column-count: 3;
 			}
-
-			h3 {
-				display: inline-block;
-				opacity: 0.235;
-				margin-top: 230px;
-			}
-
-			&.active {
-				dl {
-					display: block;
-				}
-				h3 {
-					display: none;
-				}
-			}
-		}
-
-		&#map-canvas {
-			@include span-columns(4 of 5);
 		}
 	}
-
-}
