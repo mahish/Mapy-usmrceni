@@ -69,22 +69,18 @@ function draw(map, data, filter, oms) {
 
 		google.maps.event.addListener(marker, 'click', function() {
 
-			//same marker
 			if (activeMarkers[activeMarkers.length - 1] === this) {
 				this.setIcon(passiveIcon);
 				$("#mapbox").removeClass('active');
 			} else {
 
-				//deactivate prev markers
 				for (var i = activeMarkers.length - 1; i >= 0; i--) {
 					activeMarkers[i].setIcon(passiveIcon);
 					activeMarkers[i].setZIndex(100);
 				};
 
-				//remove last marker
 				activeMarkers.pop();
 				
-				//show infobox
 				if (!$("#mapbox").hasClass('active')) {
 					$("#mapbox").addClass('active');
 				}
@@ -99,11 +95,9 @@ function draw(map, data, filter, oms) {
 				document.getElementById('obdobi_incidentu').innerHTML = data.obdobi_incidentu.toString();
 				document.getElementById('rok').innerHTML = data.rok.toString();
 
-				//highlight marker
 				this.setIcon(activeIcon);
 				this.setZIndex(200);
 
-				//add marker
 				activeMarkers.push(this);
 			}
 		});
