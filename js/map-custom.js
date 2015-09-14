@@ -66,8 +66,8 @@ function draw(map, data, filter) {
 
 				google.maps.event.addListener(marker, 'click', function() {
 
-					if(!$("#mapbox").hasClass('active')) {
-						$("#mapbox").addClass('active');
+					if(!$("body").hasClass('active-marker')) {
+						$("body").addClass('active-marker');
 					}
 
 
@@ -141,7 +141,15 @@ function initialize() {
 			lat: 49.45,
 			lng: 15.30
 		},
-		zoom: 7
+		zoom: 7,
+		zoomControlOptions: {
+			style: google.maps.ZoomControlStyle.DEFAULT,
+			position: google.maps.ControlPosition.RIGHT_CENTER
+		},
+		mapTypeControlOptions: {
+			style: google.maps.MapTypeControlStyle.DEFAULT,
+			position: google.maps.ControlPosition.BOTTOM_CENTER
+		}
 	};
 	map = new google.maps.Map(document.getElementById('map-canvas'),
 		mapOptions);
