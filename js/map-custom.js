@@ -69,31 +69,47 @@ function draw(map, data, filter, oms) {
 
 		google.maps.event.addListener(marker, 'click', function() {
 
-			if (!$("#mapbox").hasClass('active')) {
-				$("#mapbox").addClass('active');
+			//same marker
+			if (activeMarkers[activeMarkers.length - 1] === this) {
+				this.setIcon(passiveIcon);
+				$("#mapbox").removeClass('active');
+			} else {
+
+				//deactivate prev markers
+				for (var i = activeMarkers.length - 1; i >= 0; i--) {
+					activeMarkers[i].setIcon(passiveIcon);
+					activeMarkers[i].setZIndex(100);
+				};
+
+				//remove last marker
+				activeMarkers.pop();
+				
+				//show infobox
+				if (!$("#mapbox").hasClass('active')) {
+					$("#mapbox").addClass('active');
+				}
+
+				document.getElementById('cislo_osoby').innerHTML = data.cislo_osoby.toString();
+				document.getElementById('vek_h').innerHTML = data.vek_h.toString();
+				document.getElementById('statni_prislusnost').innerHTML = data.statni_prislusnost.toString();
+				document.getElementById('gps_bydliste').innerHTML = data.gps_bydliste.toString();
+				document.getElementById('gps_incidentu').innerHTML = data.gps_incidentu.toString();
+				document.getElementById('smer_prechodu').innerHTML = data.smer_prechodu.toString();
+				document.getElementById('umrti').innerHTML = data.umrti.toString();
+				document.getElementById('obdobi_incidentu').innerHTML = data.obdobi_incidentu.toString();
+				document.getElementById('rok').innerHTML = data.rok.toString();
+
+				//highlight marker
+				this.setIcon(activeIcon);
+				this.setZIndex(200);
+
+				//add marker
+				activeMarkers.push(this);
 			}
-
-
-			for (var i = activeMarkers.length - 1; i >= 0; i--) {
-				activeMarkers[i].setIcon(passiveIcon);
-				activeMarkers[i].setZIndex(100);
-			};
-			document.getElementById('cislo_osoby').innerHTML = data.cislo_osoby.toString();
-			document.getElementById('vek_h').innerHTML = data.vek_h.toString();
-			document.getElementById('statni_prislusnost').innerHTML = data.statni_prislusnost.toString();
-			document.getElementById('gps_bydliste').innerHTML = data.gps_bydliste.toString();
-			document.getElementById('gps_incidentu').innerHTML = data.gps_incidentu.toString();
-			document.getElementById('smer_prechodu').innerHTML = data.smer_prechodu.toString();
-			document.getElementById('umrti').innerHTML = data.umrti.toString();
-			document.getElementById('obdobi_incidentu').innerHTML = data.obdobi_incidentu.toString();
-			document.getElementById('rok').innerHTML = data.rok.toString();
-			this.setIcon(activeIcon);
-			this.setZIndex(200);
-			activeMarkers.push(this);
 		});
 
 		if (filter != null) {
-			document.getElementById('mapbox').className = 'mapbox';
+			$("#mapbox").removeClass('active');
 			filter = filter.toString().split(',');
 			if (typeof(filter) == 'object' && myYear >= filter[0] && myYear <= filter[1]) {
 				//marker.setMap(map);
