@@ -3,6 +3,7 @@ var markers = [];
 var markerCluster;
 var mapsDataJSON;
 var activeMarkers = [];
+var oms;
 
 function getDataJSON() {
 	return $.getJSON("data/data_json/data.json").then(function(data) {
@@ -27,7 +28,7 @@ function clearMarkers() {
 	markerCluster = null;
 }
 
-function draw(map, data, filter) {
+function draw(map, data, filter, oms) {
 
 	clearMarkers();
 
@@ -47,6 +48,9 @@ function draw(map, data, filter) {
 			icon: iconBase + 'marker.png',
 			title: data.cislo_osoby.toString()
 		});
+
+
+		oms.addMarker(marker);
 
 		var activeIcon = {
 			url: iconBase + 'active-marker.png',
@@ -72,6 +76,7 @@ function draw(map, data, filter) {
 
 			for (var i = activeMarkers.length - 1; i >= 0; i--) {
 				activeMarkers[i].setIcon(passiveIcon);
+				activeMarkers[i].setZIndex(100);
 			};
 			document.getElementById('cislo_osoby').innerHTML = data.cislo_osoby.toString();
 			document.getElementById('vek_h').innerHTML = data.vek_h.toString();
@@ -83,6 +88,7 @@ function draw(map, data, filter) {
 			document.getElementById('obdobi_incidentu').innerHTML = data.obdobi_incidentu.toString();
 			document.getElementById('rok').innerHTML = data.rok.toString();
 			this.setIcon(activeIcon);
+			this.setZIndex(200);
 			activeMarkers.push(this);
 		});
 
@@ -105,7 +111,7 @@ function draw(map, data, filter) {
 
 	var mcOptions = {
 		gridSize: 1,
-		maxZoom: 30,
+		maxZoom: 15,
 		styles: [{
 			height: 25,
 			url: "img/marker.png",
@@ -130,8 +136,6 @@ function draw(map, data, filter) {
 	};
 
 	markerCluster = new MarkerClusterer(map, markers, mcOptions);
-	//console.log('Showing data for: ' + filter + '[' + markers.length + ']');
-
 }
 
 function initialize() {
@@ -146,13 +150,19 @@ function initialize() {
 	map = new google.maps.Map(document.getElementById('map-canvas'),
 		mapOptions);
 
+	oms = new OverlappingMarkerSpiderfier(map, {
+		markersWontMove: true,
+		markersWontHide: true,
+		legWeight: 0
+	});
+
 	if (window.location.protocol != 'file:') {
 		getDataJSON().done(function(data) {
 			mapsDataJSON = data;
-			draw(map, mapsDataJSON, null);
+			draw(map, mapsDataJSON, null, oms);
 		});
 	} else {
-		draw(map, mapsDataJSON, null);
+		draw(map, mapsDataJSON, null, oms);
 	}
 
 }
