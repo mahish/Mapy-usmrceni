@@ -149,7 +149,7 @@
 	}
 
 	.active-filter & {
-		height: calc(80% - #{$base-line-height} * 4em + #{$base-line-height} * 1em);
+		height: calc(100% - #{$base-line-height} * 4em + #{$base-line-height} * 1em);
 		overflow-y: hidden;
 	}
 

@@ -6,45 +6,51 @@
 
 	.infobox {
 		position: fixed;
-		top: 0;
+		bottom: 0;
 		left: 0;
 		z-index: 13;
 		width: 100%;
-		height: 100%;
+		@include transform(translatey(calc(#{$base-line-height} * 12em)));
 
-		cursor: pointer;
-
-		display: none;
+		@include transition-property(all);
+		@include transition-duration(0.2s);
+		@include transition-timing-function(ease-in-out);
 
 		.active-marker & {
-			display: block;
+			@include transform(translatey(0));
 		}
 
-		// https://css-tricks.com/centering-in-the-unknown/
-		.center-wrapper {
-			display: table;
-			width: 100%;
-			height: 100%;
+		&:after {
+			// opacity: 0;
+			// @include transition-property(opacity);
+			// @include transition-duration(0.2s);
+			// @include transition-timing-function(ease-in-out);
 
-			background-color: rgba(0,0,0,0.38);
-
-			.centered {
-				display: table-cell;
-				text-align: center;
-				vertical-align: middle;
-			}
+			bottom: 100%;
+			left: 50%;
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			border-radius: 2px;
+			position: absolute;
+			pointer-events: none;
+			border-color: rgba(255, 255, 255, 0);
+			border-bottom-color: #fff;
+			border-width: $base-line-height * 1em;
+			margin-left: $base-line-height * -1em;
 		}
 
 		.info {
 			text-align: left;
 			margin: auto;
-			width: 50%;
-			height: 50%;
+			width: 60%;
+			height: $base-line-height * 12em;
 			border-radius: 2px;
-			box-shadow: 0 0 $base-line-height * 1em rgba(0,0,0,0.38);
+			// box-shadow: 0 0 $base-line-height * 1em rgba(0,0,0,0.38);
 			background: $super-light-gray;
 			color: $dark-gray;
-			overflow: auto;
+			overflow: scroll;
 			padding: $base-line-height * 1em;
 
 			dl {

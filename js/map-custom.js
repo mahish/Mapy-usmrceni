@@ -71,7 +71,7 @@ function draw(map, data, filter, oms) {
 
 			if (activeMarkers[activeMarkers.length - 1] === this) {
 				this.setIcon(passiveIcon);
-				$("#mapbox").removeClass('active');
+				$("body").removeClass('active-marker');
 			} else {
 
 				for (var i = activeMarkers.length - 1; i >= 0; i--) {
@@ -103,7 +103,7 @@ function draw(map, data, filter, oms) {
 		});
 
 		if (filter != null) {
-			$("body").removeClass('active');
+			$("body").removeClass('active-marker');
 			filter = filter.toString().split(',');
 			if (typeof(filter) == 'object' && myYear >= filter[0] && myYear <= filter[1]) {
 				//marker.setMap(map);

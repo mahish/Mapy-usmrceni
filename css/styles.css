@@ -930,7 +930,7 @@ picture {
     border-width: 1.5em;
     margin-left: -1.5em; }
   .active-filter .filter {
-    height: calc(80% - 1.5 * 4em + 1.5 * 1em);
+    height: calc(100% - 1.5 * 4em + 1.5 * 1em);
     overflow-y: hidden; }
   .filter.hidden:hover {
     padding: 2.25em 0; }
@@ -1177,34 +1177,53 @@ header {
 
 .infobox {
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
   z-index: 13;
   width: 100%;
-  height: 100%;
-  cursor: pointer;
-  display: none; }
+  -webkit-transform: translatey(calc(1.5 * 12em));
+  -moz-transform: translatey(calc(1.5 * 12em));
+  -ms-transform: translatey(calc(1.5 * 12em));
+  -o-transform: translatey(calc(1.5 * 12em));
+  transform: translatey(calc(1.5 * 12em));
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out; }
   .active-marker .infobox {
-    display: block; }
-  .infobox .center-wrapper {
-    display: table;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.38); }
-    .infobox .center-wrapper .centered {
-      display: table-cell;
-      text-align: center;
-      vertical-align: middle; }
+    -webkit-transform: translatey(0);
+    -moz-transform: translatey(0);
+    -ms-transform: translatey(0);
+    -o-transform: translatey(0);
+    transform: translatey(0); }
+  .infobox:after {
+    bottom: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    border-radius: 2px;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #fff;
+    border-width: 1.5em;
+    margin-left: -1.5em; }
   .infobox .info {
     text-align: left;
     margin: auto;
-    width: 50%;
-    height: 50%;
+    width: 60%;
+    height: 18em;
     border-radius: 2px;
-    box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.38);
     background: #fafafa;
     color: #424143;
-    overflow: auto;
+    overflow: scroll;
     padding: 1.5em; }
     .infobox .info dl {
       -webkit-column-count: 3;
