@@ -736,31 +736,36 @@ picture {
 .red {
   color: #6D3D3B; }
 
-aside.controls {
+.controls {
+  position: fixed;
+  top: 1.5em;
+  left: 0;
+  z-index: 13;
+  width: 100%;
   background-color: transparent;
   padding: 0;
   overflow: hidden; }
-  aside.controls .checkbox {
+  .controls .checkbox {
     float: left;
     display: block;
     margin-right: 0%;
     width: 100%; }
-    aside.controls .checkbox:last-child {
+    .controls .checkbox:last-child {
       margin-right: 0; }
-    aside.controls .checkbox label {
+    .controls .checkbox label {
       display: inline-block;
       overflow: hidden; }
-    aside.controls .checkbox .options label {
+    .controls .checkbox .options label {
       float: left;
       display: block;
       margin-right: 0%;
       width: 20%;
-      line-height: 5;
+      line-height: 6;
       cursor: pointer;
       margin-bottom: 0; }
-      aside.controls .checkbox .options label:last-child {
+      .controls .checkbox .options label:last-child {
         margin-right: 0; }
-      aside.controls .checkbox .options label:first-child:before {
+      .controls .checkbox .options label:first-child:before {
         content: "Dle období";
         position: absolute;
         line-height: 3;
@@ -768,87 +773,87 @@ aside.controls {
         color: #807F83;
         font-size: 0.62em;
         text-transform: uppercase; }
-      aside.controls .checkbox .options label:nth-child(1) {
+      .controls .checkbox .options label:nth-child(1) {
         background-color: #ACE5E1;
         color: #4fc8bf;
         border-bottom: 1px solid #99dfda; }
-        aside.controls .checkbox .options label:nth-child(1):focus, aside.controls .checkbox .options label:nth-child(1):hover {
+        .controls .checkbox .options label:nth-child(1):focus, .controls .checkbox .options label:nth-child(1):hover {
           background-color: #99dfda;
           color: #4fc8bf; }
-        aside.controls .checkbox .options label:nth-child(1).active {
+        .controls .checkbox .options label:nth-child(1).active {
           color: #c7514f;
           background-color: #e5adac; }
-        aside.controls .checkbox .options label:nth-child(1) input.option {
+        .controls .checkbox .options label:nth-child(1) input.option {
           background-color: #72d3cc; }
-          aside.controls .checkbox .options label:nth-child(1) input.option:focus, aside.controls .checkbox .options label:nth-child(1) input.option:hover {
+          .controls .checkbox .options label:nth-child(1) input.option:focus, .controls .checkbox .options label:nth-child(1) input.option:hover {
             background-color: #319e96; }
-          aside.controls .checkbox .options label:nth-child(1) input.option:checked {
+          .controls .checkbox .options label:nth-child(1) input.option:checked {
             background-color: #14413d; }
-      aside.controls .checkbox .options label:nth-child(2) {
+      .controls .checkbox .options label:nth-child(2) {
         background-color: #8DD6D0;
         color: #3eaba2;
         border-bottom: 1px solid #7acfc8; }
-        aside.controls .checkbox .options label:nth-child(2):focus, aside.controls .checkbox .options label:nth-child(2):hover {
+        .controls .checkbox .options label:nth-child(2):focus, .controls .checkbox .options label:nth-child(2):hover {
           background-color: #7acfc8;
           color: #3eaba2; }
-        aside.controls .checkbox .options label:nth-child(2).active {
+        .controls .checkbox .options label:nth-child(2).active {
           color: #ab3e3e;
           background-color: #d68d8d; }
-        aside.controls .checkbox .options label:nth-child(2) input.option {
+        .controls .checkbox .options label:nth-child(2) input.option {
           background-color: #55c2b9; }
-          aside.controls .checkbox .options label:nth-child(2) input.option:focus, aside.controls .checkbox .options label:nth-child(2) input.option:hover {
+          .controls .checkbox .options label:nth-child(2) input.option:focus, .controls .checkbox .options label:nth-child(2) input.option:hover {
             background-color: #2b7770; }
-          aside.controls .checkbox .options label:nth-child(2) input.option:checked {
+          .controls .checkbox .options label:nth-child(2) input.option:checked {
             background-color: #0a1d1b; }
-      aside.controls .checkbox .options label:nth-child(3) {
+      .controls .checkbox .options label:nth-child(3) {
         background-color: #67C9C1;
         color: #30867f;
         border-bottom: 1px solid #54c2b9; }
-        aside.controls .checkbox .options label:nth-child(3):focus, aside.controls .checkbox .options label:nth-child(3):hover {
+        .controls .checkbox .options label:nth-child(3):focus, .controls .checkbox .options label:nth-child(3):hover {
           background-color: #54c2b9;
           color: #30867f; }
-        aside.controls .checkbox .options label:nth-child(3).active {
+        .controls .checkbox .options label:nth-child(3).active {
           color: #863030;
           background-color: #c96867; }
-        aside.controls .checkbox .options label:nth-child(3) input.option {
+        .controls .checkbox .options label:nth-child(3) input.option {
           background-color: #3ca89f; }
-          aside.controls .checkbox .options label:nth-child(3) input.option:focus, aside.controls .checkbox .options label:nth-child(3) input.option:hover {
+          .controls .checkbox .options label:nth-child(3) input.option:focus, .controls .checkbox .options label:nth-child(3) input.option:hover {
             background-color: #1d514d; }
-          aside.controls .checkbox .options label:nth-child(3) input.option:checked {
+          .controls .checkbox .options label:nth-child(3) input.option:checked {
             background-color: black; }
-      aside.controls .checkbox .options label:nth-child(4) {
+      .controls .checkbox .options label:nth-child(4) {
         background-color: #42BDB3;
         color: #22625d;
         border-bottom: 1px solid #3baaa1; }
-        aside.controls .checkbox .options label:nth-child(4):focus, aside.controls .checkbox .options label:nth-child(4):hover {
+        .controls .checkbox .options label:nth-child(4):focus, .controls .checkbox .options label:nth-child(4):hover {
           background-color: #3baaa1;
           color: #22625d; }
-        aside.controls .checkbox .options label:nth-child(4).active {
+        .controls .checkbox .options label:nth-child(4).active {
           color: #622323;
           background-color: #bc4343; }
-        aside.controls .checkbox .options label:nth-child(4) input.option {
+        .controls .checkbox .options label:nth-child(4) input.option {
           background-color: #2e847d; }
-          aside.controls .checkbox .options label:nth-child(4) input.option:focus, aside.controls .checkbox .options label:nth-child(4) input.option:hover {
+          .controls .checkbox .options label:nth-child(4) input.option:focus, .controls .checkbox .options label:nth-child(4) input.option:hover {
             background-color: #102d2b; }
-          aside.controls .checkbox .options label:nth-child(4) input.option:checked {
+          .controls .checkbox .options label:nth-child(4) input.option:checked {
             background-color: black; }
-      aside.controls .checkbox .options label:nth-child(5) {
+      .controls .checkbox .options label:nth-child(5) {
         background-color: #35968F;
         color: #153c39;
         border-bottom: 1px solid #2e837d; }
-        aside.controls .checkbox .options label:nth-child(5):focus, aside.controls .checkbox .options label:nth-child(5):hover {
+        .controls .checkbox .options label:nth-child(5):focus, .controls .checkbox .options label:nth-child(5):hover {
           background-color: #2e837d;
           color: #153c39; }
-        aside.controls .checkbox .options label:nth-child(5).active {
+        .controls .checkbox .options label:nth-child(5).active {
           color: #3b1615;
           background-color: #963635; }
-        aside.controls .checkbox .options label:nth-child(5) input.option {
+        .controls .checkbox .options label:nth-child(5) input.option {
           background-color: #215d59; }
-          aside.controls .checkbox .options label:nth-child(5) input.option:focus, aside.controls .checkbox .options label:nth-child(5) input.option:hover {
+          .controls .checkbox .options label:nth-child(5) input.option:focus, .controls .checkbox .options label:nth-child(5) input.option:hover {
             background-color: #020706; }
-          aside.controls .checkbox .options label:nth-child(5) input.option:checked {
+          .controls .checkbox .options label:nth-child(5) input.option:checked {
             background-color: black; }
-    aside.controls .checkbox .options input.option {
+    .controls .checkbox .options input.option {
       -webkit-appearance: none;
       -moz-appearance: none;
       -ms-appearance: none;
@@ -866,113 +871,88 @@ aside.controls {
       transition: all 0.15s ease-out 0s;
       border: none;
       cursor: pointer;
-      display: inline-block;
+      display: none;
       outline: none;
       position: relative;
       z-index: 1000; }
-      aside.controls .checkbox .options input.option.radio {
+      .controls .checkbox .options input.option.radio {
         border-radius: 50%; }
-        aside.controls .checkbox .options input.option.radio::after {
+        .controls .checkbox .options input.option.radio::after {
           border-radius: 50%; }
-  aside.controls .slider {
-    float: left;
-    display: block;
-    margin-right: 0%;
-    width: 100%;
-    padding: 0 2%; }
-    aside.controls .slider:last-child {
-      margin-right: 0; }
-    @media screen and (min-width: 62.5em) {
-      aside.controls .slider {
-        float: left;
-        display: block;
-        margin-right: 0%;
-        width: 50%; }
-        aside.controls .slider:last-child {
-          margin-right: 0; } }
-    aside.controls .slider .years > div {
-      float: left;
-      display: block;
-      margin-right: 0%;
-      width: 50%;
-      line-height: 2; }
-      aside.controls .slider .years > div:last-child {
-        margin-right: 0; }
-    aside.controls .slider input.range {
-      -webkit-appearance: none;
-      height: 10px;
-      border-radius: 5px;
-      background: #698C89;
-      outline: none;
-      width: 100%;
-      margin: 1em 0;
-      cursor: ew-resize; }
-      aside.controls .slider input.range::-moz-range-track {
-        background: none;
-        border: none; }
-      aside.controls .slider input.range::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        height: 18px;
-        width: 18px;
-        border-radius: 50%;
-        background: #353535;
-        cursor: pointer;
-        -webkit-transition: background .15s ease-in-out;
-        transition: background .15s ease-in-out; }
-        aside.controls .slider input.range::-webkit-slider-thumb:hover {
-          background: #946563; }
-      aside.controls .slider input.range:active::-webkit-slider-thumb {
-        background: #946563; }
-      aside.controls .slider input.range::-moz-range-thumb {
-        height: 18px;
-        width: 18px;
-        border: 0;
-        border-radius: 50%;
-        background: #353535;
-        cursor: pointer;
-        -webkit-transition: background .15s ease-in-out;
-        transition: background .15s ease-in-out; }
-        aside.controls .slider input.range::-moz-range-thumb:hover {
-          background: #946563; }
-      aside.controls .slider input.range:active::-moz-range-thumb {
-        background: #946563; }
-  aside.controls .slider.x {
-    float: left;
-    display: block;
-    margin-right: 0%;
-    width: 100%;
-    padding: 0 2%;
+
+.filter {
+  position: fixed;
+  top: 7.5em;
+  left: 0;
+  z-index: 13;
+  width: 20%;
+  text-align: center;
+  box-sizing: content-box;
+  padding: 1.5em 0;
+  height: 1.8em;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-top: 1px solid #807F83;
+  cursor: pointer;
+  color: #424143;
+  background-color: #fafafa;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out; }
+  .filter:after {
+    opacity: 0;
+    -webkit-transition-property: opacity;
+    -moz-transition-property: opacity;
+    transition-property: opacity;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    border-radius: 2px;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0);
+    border-top-color: #fafafa;
+    border-width: 1.5em;
+    margin-left: -1.5em; }
+  .active-filter .filter {
+    height: calc(80% - 1.5 * 4em + 1.5 * 1em);
+    overflow-y: hidden; }
+  .filter.hidden:hover {
+    padding: 2.25em 0; }
+  .filter.hidden:after {
+    opacity: 1; }
+  .filter > span {
     position: relative;
-    min-height: 80px; }
-    aside.controls .slider.x:last-child {
-      margin-right: 0; }
-    aside.controls .slider.x label:before {
-      position: absolute;
-      bottom: 0px;
-      left: 0;
-      -webkit-background-clip: text;
-      font-weight: 600;
-      font-size: 0.875rem / 2;
-      line-height: 2;
-      text-indent: 0.5em;
-      word-spacing: 115px;
-      white-space: nowrap;
-      content: '1948 1951 1966 1989'; }
-    @media screen and (min-width: 62.5em) {
-      aside.controls .slider.x {
-        float: left;
-        display: block;
-        margin-right: 0%;
-        width: 33.33333%;
-        margin-left: 33.33333%;
-        padding: 0; }
-        aside.controls .slider.x:last-child {
-          margin-right: 0; }
-        aside.controls .slider.x label:before {
-          margin-left: -1em;
-          word-spacing: 120px; } }
-    aside.controls .slider.x input[type='range'] {
-      width: 457px; }
+    color: #807F83;
+    font-size: 0.62em;
+    text-transform: uppercase;
+    line-height: 1.5;
+    font-weight: 600; }
+  .filter dl {
+    display: none; }
+  .filter h3 {
+    display: inline-block;
+    opacity: 0.235;
+    margin-top: 230px; }
+  .active-marker .filter dl {
+    display: block; }
+  .active-marker .filter h3 {
+    display: none; }
 
 .label-switch {
   border-radius: 32px;
@@ -1076,112 +1056,86 @@ input.option {
     input.option.radio::after {
       border-radius: 50%; }
 
-section.map {
-  position: relative;
-  overflow: hidden;
-  font-family: "karmina-sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif; }
-  section.map:before, section.map:after, section.map #map-canvas:before, section.map #map-canvas:after {
-    content: '';
-    position: absolute;
-    box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.38);
-    z-index: 1; }
-  section.map:before {
-    top: -20px;
-    left: 0;
-    right: 0;
-    height: 20px; }
-  section.map:after {
-    right: -20px;
-    top: 0;
-    bottom: 0;
-    width: 20px; }
-  section.map #map-canvas:before {
-    bottom: -20px;
-    left: 0;
-    right: 0;
-    height: 20px; }
-  section.map #map-canvas:after {
-    left: -20px;
-    top: 0;
-    bottom: 0;
-    width: 20px; }
-  section.map #map-canvas {
-    z-index: 0; }
-  section.map > div {
-    min-height: 625px; }
-    section.map > div#mapbox {
-      float: left;
-      display: block;
-      margin-right: 0%;
-      width: 20%;
-      padding: 1.2em;
-      color: #424143; }
-      section.map > div#mapbox:last-child {
-        margin-right: 0; }
-      section.map > div#mapbox:before {
-        content: "Info o bodu na mapě";
-        position: absolute;
-        line-height: 3;
-        left: 0.62em;
-        color: #807F83;
-        font-size: 0.62em;
-        text-transform: uppercase; }
-      section.map > div#mapbox dl {
-        display: none; }
-      section.map > div#mapbox h3 {
-        display: inline-block;
-        opacity: 0.235;
-        margin-top: 230px; }
-      section.map > div#mapbox.active dl {
-        display: block; }
-      section.map > div#mapbox.active h3 {
-        display: none; }
-    section.map > div#map-canvas {
-      float: left;
-      display: block;
-      margin-right: 0%;
-      width: 80%; }
-      section.map > div#map-canvas:last-child {
-        margin-right: 0; }
-
-html, body {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  min-width: 970px; }
-  html::after, body::after {
-    clear: both;
-    content: "";
-    display: table; }
-
-h1 {
-  font-size: 1.95313em;
-  color: #6D3D3B; }
-  h1 a {
-    font-size: 50%; }
-
-h2 {
-  font-size: 1.5625em; }
-
-h3 {
-  font-size: 1.25em; }
-
-header,
-aside.controls,
-section.map,
-footer {
-  display: block; }
-  header::after,
-  aside.controls::after,
-  section.map::after,
-  footer::after {
-    clear: both;
-    content: "";
-    display: table; }
-
 header {
-  margin: 0.75em 0;
-  padding: 0.75em; }
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  height: 100%;
+  width: 100%;
+  background: white;
+  padding: 1.5em;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.6s;
+  -moz-transition-duration: 0.6s;
+  transition-duration: 0.6s;
+  -webkit-transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out; }
+  header:after {
+    opacity: 0;
+    -webkit-transition-property: opacity;
+    -moz-transition-property: opacity;
+    transition-property: opacity;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    border-radius: 2px;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0);
+    border-top-color: #fff;
+    border-width: 1.5em;
+    margin-left: -1.5em; }
+  header > span {
+    color: white;
+    text-transform: uppercase;
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    -webkit-transition-property: all;
+    -moz-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s; }
+  header.hide, header.hidden {
+    -webkit-transform: translatey(calc(-100% + 1.5 * 1em));
+    -moz-transform: translatey(calc(-100% + 1.5 * 1em));
+    -ms-transform: translatey(calc(-100% + 1.5 * 1em));
+    -o-transform: translatey(calc(-100% + 1.5 * 1em));
+    transform: translatey(calc(-100% + 1.5 * 1em)); }
+  header.hidden {
+    cursor: pointer;
+    -webkit-transition-property: all;
+    -moz-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s; }
+  header.hidden:hover {
+    -webkit-transform: translatey(calc(-100% + 1.5 * 2em));
+    -moz-transform: translatey(calc(-100% + 1.5 * 2em));
+    -ms-transform: translatey(calc(-100% + 1.5 * 2em));
+    -o-transform: translatey(calc(-100% + 1.5 * 2em));
+    transform: translatey(calc(-100% + 1.5 * 2em)); }
+    header.hidden:hover:after {
+      opacity: 1; }
+    header.hidden:hover span {
+      color: #6D3D3B; }
   header h1 {
     float: left;
     display: block;
@@ -1215,6 +1169,77 @@ header {
         width: 41.66667%; }
         header article:last-child {
           margin-right: 0; } }
+
+#map-canvas {
+  z-index: 0;
+  height: 100%;
+  width: 100%; }
+
+.infobox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 13;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  display: none; }
+  .active-marker .infobox {
+    display: block; }
+  .infobox .center-wrapper {
+    display: table;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.38); }
+    .infobox .center-wrapper .centered {
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle; }
+  .infobox .info {
+    text-align: left;
+    margin: auto;
+    width: 50%;
+    height: 50%;
+    border-radius: 2px;
+    box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.38);
+    background: #fafafa;
+    color: #424143;
+    overflow: auto;
+    padding: 1.5em; }
+    .infobox .info dl {
+      -webkit-column-count: 3;
+      /* Chrome, Safari, Opera */
+      -moz-column-count: 3;
+      /* Firefox */
+      column-count: 3; }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden; }
+
+h1 {
+  font-size: 1.95313em;
+  color: #6D3D3B; }
+  h1 a {
+    font-size: 50%; }
+
+h2 {
+  font-size: 1.5625em; }
+
+h3 {
+  font-size: 1.25em; }
+
+header,
+section.controls {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+  header::after,
+  section.controls::after {
+    clear: both;
+    content: "";
+    display: table; }
 
 footer {
   height: 8.4em; }

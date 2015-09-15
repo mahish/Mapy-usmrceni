@@ -80,10 +80,10 @@ function draw(map, data, filter, oms) {
 				};
 
 				activeMarkers.pop();
-				
-				if (!$("#mapbox").hasClass('active')) {
-					$("#mapbox").addClass('active');
-				}
+
+				if(!$("body").hasClass('active-marker')) {
+						$("body").addClass('active-marker');
+					}
 
 				document.getElementById('cislo_osoby').innerHTML = data.cislo_osoby.toString();
 				document.getElementById('vek_h').innerHTML = data.vek_h.toString();
@@ -103,7 +103,7 @@ function draw(map, data, filter, oms) {
 		});
 
 		if (filter != null) {
-			$("#mapbox").removeClass('active');
+			$("body").removeClass('active');
 			filter = filter.toString().split(',');
 			if (typeof(filter) == 'object' && myYear >= filter[0] && myYear <= filter[1]) {
 				//marker.setMap(map);
@@ -155,7 +155,15 @@ function initialize() {
 			lat: 49.45,
 			lng: 15.30
 		},
-		zoom: 7
+		zoom: 7,
+		zoomControlOptions: {
+			style: google.maps.ZoomControlStyle.DEFAULT,
+			position: google.maps.ControlPosition.RIGHT_CENTER
+		},
+		mapTypeControlOptions: {
+			style: google.maps.MapTypeControlStyle.DEFAULT,
+			position: google.maps.ControlPosition.BOTTOM_CENTER
+		}
 	};
 	map = new google.maps.Map(document.getElementById('map-canvas'),
 		mapOptions);
