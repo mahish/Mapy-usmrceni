@@ -7,9 +7,10 @@
 	.infobox {
 		position: fixed;
 		bottom: 0;
-		left: 0;
+		left: 20%;
 		z-index: 13;
-		width: 100%;
+		width: 60%;
+		margin: auto;
 		@include transform(translatey(calc(#{$base-line-height} * 12em)));
 
 		@include transition-property(all);
@@ -42,10 +43,11 @@
 		// }
 
 		.info {
+			position: relative;
 			text-align: left;
 			margin: auto;
-			width: 60%;
-			height: $base-line-height * 12em;
+			width: 100%;
+			height: $base-line-height * 11em;
 			border-radius: 2px;
 			// box-shadow: 0 0 $base-line-height * 1em rgba(0,0,0,0.38);
 			background: white;
@@ -58,5 +60,6 @@
 				-moz-column-count: 3; /* Firefox */
 				column-count: 3;
 			}
+
 		}
 	}

@@ -56,3 +56,42 @@
 .red {
 	color: $red;
 }
+
+.close {
+	@include position(absolute, 0 0 null null);
+
+	img {
+		opacity: 0.62;
+		margin: $base-line-height * 0.5em;
+		width: $base-line-height * 0.5em;
+
+		&:hover  {
+			opacity: 1;
+		}
+	}
+}
+
+.roll-up {
+	@include position(absolute, null null 0 0);
+	width: 100%;
+	text-align: center;
+	margin-bottom: $base-line-height * 0.5em;
+
+	img {
+		opacity: 0.62;
+		margin-bottom: 0;
+		width: .75em;
+
+		&:hover  {
+			opacity: 1;
+		}
+	}
+
+	span {
+		display: block;
+		color: $medium-gray;
+		font-size: 0.62em;
+		text-transform: uppercase;
+		line-height: $base-line-height;
+	}
+}

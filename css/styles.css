@@ -736,6 +736,37 @@ picture {
 .red {
   color: #6D3D3B; }
 
+.close {
+  position: absolute;
+  top: 0;
+  right: 0; }
+  .close img {
+    opacity: 0.62;
+    margin: 0.75em;
+    width: 0.75em; }
+    .close img:hover {
+      opacity: 1; }
+
+.roll-up {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 0.75em; }
+  .roll-up img {
+    opacity: 0.62;
+    margin-bottom: 0;
+    width: .75em; }
+    .roll-up img:hover {
+      opacity: 1; }
+  .roll-up span {
+    display: block;
+    color: #807F83;
+    font-size: 0.62em;
+    text-transform: uppercase;
+    line-height: 1.5; }
+
 .controls {
   position: fixed;
   top: 1.5em;
@@ -884,7 +915,7 @@ picture {
   position: fixed;
   top: 7.5em;
   left: 0;
-  z-index: 13;
+  z-index: 14;
   width: 20%;
   text-align: center;
   box-sizing: content-box;
@@ -906,7 +937,7 @@ picture {
   -moz-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out; }
   .filter:after {
-    opacity: 0;
+    display: none;
     -webkit-transition-property: opacity;
     -moz-transition-property: opacity;
     transition-property: opacity;
@@ -926,16 +957,30 @@ picture {
     position: absolute;
     pointer-events: none;
     border-color: rgba(255, 255, 255, 0);
-    border-top-color: #fafafa;
+    border-top-color: white;
     border-width: 1.5em;
     margin-left: -1.5em; }
+  .filter .roll-up {
+    -webkit-transition-property: opacity;
+    -moz-transition-property: opacity;
+    transition-property: opacity;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+    opacity: 0; }
   .active-filter .filter {
-    height: calc(100% - 1.5 * 4em + 1.5 * 1em);
+    height: calc(100% - 1.5 * 5em - 1.5 * 2em);
     overflow-y: hidden; }
+    .active-filter .filter .roll-up {
+      opacity: 1; }
   .filter.hidden:hover {
     padding: 2.25em 0; }
   .filter.hidden:after {
-    opacity: 1; }
+    opacity: 1;
+    display: block; }
   .filter > span {
     position: relative;
     color: #807F83;
@@ -1178,9 +1223,10 @@ header {
 .infobox {
   position: fixed;
   bottom: 0;
-  left: 0;
+  left: 20%;
   z-index: 13;
-  width: 100%;
+  width: 60%;
+  margin: auto;
   -webkit-transform: translatey(calc(1.5 * 12em));
   -moz-transform: translatey(calc(1.5 * 12em));
   -ms-transform: translatey(calc(1.5 * 12em));
@@ -1202,10 +1248,11 @@ header {
     -o-transform: translatey(0);
     transform: translatey(0); }
   .infobox .info {
+    position: relative;
     text-align: left;
     margin: auto;
-    width: 60%;
-    height: 18em;
+    width: 100%;
+    height: 16.5em;
     border-radius: 2px;
     background: white;
     color: #424143;
