@@ -121,7 +121,7 @@
 	border-top: 1px solid $medium-gray;
 	cursor: pointer;
 	color: $dark-gray;
-	background-color: $super-light-gray;
+	background-color: white;
 
 	@include transition-property(all);
 	@include transition-duration(0.2s);

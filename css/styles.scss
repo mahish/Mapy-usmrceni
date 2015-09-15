@@ -30,14 +30,16 @@ h3 {
 	font-size: modular-scale(1);
 }
 
+dl {
+	margin: 0;
+	dt:first-child {
+		margin-top: 0;
+	}
+}
+
 header,
 section.controls {
 	@include outer-container(100%);
-}
-
-footer {
-	height: #{$heading-line-height*7}em;
-	// background-color: $dark-gray;
 }
 
 

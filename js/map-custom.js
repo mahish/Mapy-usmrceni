@@ -88,11 +88,11 @@ function draw(map, data, filter, oms) {
 				document.getElementById('cislo_osoby').innerHTML = data.cislo_osoby.toString();
 				document.getElementById('vek_h').innerHTML = data.vek_h.toString();
 				document.getElementById('statni_prislusnost').innerHTML = data.statni_prislusnost.toString();
-				document.getElementById('gps_bydliste').innerHTML = data.gps_bydliste.toString();
+				// document.getElementById('gps_bydliste').innerHTML = data.gps_bydliste.toString();
 				document.getElementById('gps_incidentu').innerHTML = data.gps_incidentu.toString();
 				document.getElementById('smer_prechodu').innerHTML = data.smer_prechodu.toString();
 				document.getElementById('umrti').innerHTML = data.umrti.toString();
-				document.getElementById('obdobi_incidentu').innerHTML = data.obdobi_incidentu.toString();
+				// document.getElementById('obdobi_incidentu').innerHTML = data.obdobi_incidentu.toString();
 				document.getElementById('rok').innerHTML = data.rok.toString();
 
 				this.setIcon(activeIcon);
