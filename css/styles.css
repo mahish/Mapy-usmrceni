@@ -596,8 +596,34 @@ input[type="file"] {
 
 select {
   margin-bottom: 1.5em;
-  max-width: 100%;
-  width: auto; }
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #CBC9CF;
+  background: white;
+  padding: 0 0.75em;
+  border-radius: 2px;
+  font-size: 0.875em;
+  font-weight: 200; }
+  select:focus {
+    outline: none; }
+
+label.custom-select {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  line-height: 1.6875;
+  height: 1.6875em; }
+  label.custom-select:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border: 0.375em solid transparent;
+    border-color: #67666A transparent transparent transparent;
+    position: absolute;
+    top: .65em;
+    right: 0.5625em; }
 
 ul,
 ol {
@@ -672,7 +698,7 @@ a {
     outline: none; }
 
 hr {
-  border-bottom: 1px solid #CBC9CF;
+  border-bottom: 1px solid #ededed;
   border-left: none;
   border-right: none;
   border-top: none;
@@ -695,6 +721,11 @@ h2 {
 
 h3 {
   font-size: 1.25em; }
+
+h4 {
+  font-size: 0.875em;
+  font-weight: 200;
+  text-transform: uppercase; }
 
 dl {
   margin: 0; }
@@ -759,7 +790,7 @@ dl {
 .small {
   display: block;
   color: #807F83;
-  font-size: 0.62em;
+  font-size: 0.875em;
   text-transform: uppercase;
   line-height: 1.5; }
 
@@ -1020,7 +1051,8 @@ section.filters {
     color: #807F83;
     text-transform: uppercase;
     background: white;
-    border-bottom: 1px solid #ededed; }
+    border-bottom: 1px solid #ededed;
+    cursor: pointer; }
     section.filters header > div {
       margin: auto; }
   section.filters .filters-wrapper {
@@ -1058,8 +1090,7 @@ section.filters {
     section.filters .filters-wrapper::-webkit-scrollbar-thumb:window-inactive {
       background: rgba(100, 100, 100, 0.4); }
     section.filters .filters-wrapper .filter {
-      margin: auto;
-      margin-bottom: 1.5em; }
+      margin: 0.75em auto; }
   section.filters .roll-up {
     -webkit-transition-property: opacity;
     -moz-transition-property: opacity;
@@ -1082,12 +1113,16 @@ section.filters {
       opacity: 1; }
     .active-filters section.filters .roll-up {
       opacity: 1; }
-  section.filters h3 {
+  section.filters h4 {
     text-align: left; }
-  section.filters select {
-    width: 100%; }
   section.filters #filter-age {
     margin-bottom: 0.75em; }
+  section.filters .age-value {
+    border: 1px solid #CBC9CF;
+    padding: 0 0.75em;
+    border-radius: 2px;
+    margin-bottom: 0.75em;
+    text-transform: none; }
 
 .label-switch {
   border-radius: 32px;
@@ -1423,7 +1458,10 @@ header.intro {
   transition: left 0.3s, top 0.3s; }
 
 .noUi-state-drag * {
-  cursor: pointer !important; }
+  cursor: pointer;
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing; }
 
 /* Painting and performance;
  * Browsers can paint handles in their own layer.
@@ -1469,11 +1507,15 @@ header.intro {
   background: white;
   border: 1px solid #35968F;
   border-radius: 1.5em;
-  cursor: pointer; }
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab; }
   .noUi-handle:hover {
     border: 1px solid #6D3D3B; }
   .noUi-handle:active {
-    cursor: pointer;
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
     border: 1px solid #6D3D3B; }
 
 /* Handle stripes;

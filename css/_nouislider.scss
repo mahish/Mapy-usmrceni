@@ -44,7 +44,10 @@ z-index: 10;
 	transition: left 0.3s, top 0.3s;
 }
 .noUi-state-drag * {
-	cursor: pointer !important;
+	cursor: pointer;
+	cursor: grabbing;
+	cursor: -moz-grabbing;
+	cursor: -webkit-grabbing;
 }
 
 /* Painting and performance;
@@ -103,7 +106,9 @@ z-index: 10;
 	background: white;
 	border: 1px solid $dark-turqois;
 	border-radius: $base-line-height * 1em;
-	cursor: pointer;
+	cursor: grab;
+	cursor: -moz-grab;
+	cursor: -webkit-grab;
 
 	&:hover {
 		// background: darken(white, 5);
@@ -111,7 +116,9 @@ z-index: 10;
 	}
 
 	&:active {
-		cursor: pointer;
+		cursor: grabbing;
+		cursor: -moz-grabbing;
+		cursor: -webkit-grabbing;
 		// background: darken(white, 10);
 		border: 1px solid $red;
 	}

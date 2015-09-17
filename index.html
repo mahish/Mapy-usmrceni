@@ -73,16 +73,18 @@
 		</header>
 		<div class="filters-wrapper">
 			<div class="filter">
-				<h3>Věk</h3>
+				<h4>Věk</h4>
 				<div id="filter-age"></div>
-				<div id="show-age" class="text-center small">20 — 43</div>
+				<!-- <div id="show-age" class="text-center small">20 — 43</div> -->
 
-				<!-- <div id="age-min" class="left text-left small">20</div> -->
-				<!-- <div id="age-max" class="right text-right small">43</div> -->
+				<div>
+					<div id="age-min" class="age-value left text-left small">20 let</div>
+					<div id="age-max" class="age-value right text-right small">43 let</div>
+				</div>
 				<hr>
 			</div>
 			<div id="filter-sex" class="filter">
-				<h3>Pohlaví</h3>
+				<h4>Pohlaví</h4>
 				<label>
 					<input type="radio" name="sex" value="male" checked>Muž
 					<input type="radio" name="sex" value="female">Žena
@@ -90,43 +92,51 @@
 				<hr>
 			</div>
 			<div id="filter-nationality" class="filter">
-				<h3>Národnost</h3>
-				<select>
-					<option value="volvo">Volvo</option>
-					<option value="saab">Saab</option>
-					<option value="opel">Opel</option>
-					<option value="audi">Audi</option>
-				</select>
+				<h4>Národnost</h4>
+				<label class="custom-select" for="">
+					<select>
+						<option value="volvo">Volvo</option>
+						<option value="saab">Saab</option>
+						<option value="opel">Opel</option>
+						<option value="audi">Audi</option>
+					</select>
+				</label>
 				<hr>
 			</div>
 			<div id="filter-residence" class="filter">
-				<h3>Okres bydliště</h3>
-				<select>
-					<option value="volvo">Volvo</option>
-					<option value="saab">Saab</option>
-					<option value="opel">Opel</option>
-					<option value="audi">Audi</option>
-				</select>
+				<h4>Okres bydliště</h4>
+				<label class="custom-select" for="">
+					<select>
+						<option value="volvo">Volvo</option>
+						<option value="saab">Saab</option>
+						<option value="opel">Opel</option>
+						<option value="audi">Audi</option>
+					</select>
+				</label>
 				<hr>
 			</div>
 			<div id="filter-incident" class="filter">
-				<h3>Okres incidentu</h3>
-				<select>
-					<option value="volvo">Volvo</option>
-					<option value="saab">Saab</option>
-					<option value="opel">Opel</option>
-					<option value="audi">Audi</option>
-				</select>
+				<h4>Okres incidentu</h4>
+				<label class="custom-select" for="">
+					<select>
+						<option value="volvo">Volvo</option>
+						<option value="saab">Saab</option>
+						<option value="opel">Opel</option>
+						<option value="audi">Audi</option>
+					</select>
+				</label>
 				<hr>
 			</div>
 			<div id="filter-death" class="filter">
-				<h3>Způsob úmrtí</h3>
-				<select>
-					<option value="volvo">Volvo</option>
-					<option value="saab">Saab</option>
-					<option value="opel">Opel</option>
-					<option value="audi">Audi</option>
-				</select>
+				<h4>Způsob úmrtí</h4>
+				<label class="custom-select" for="">
+					<select>
+						<option value="volvo">Volvo</option>
+						<option value="saab">Saab</option>
+						<option value="opel">Opel</option>
+						<option value="audi">Audi</option>
+					</select>
+				</label>
 			</div>
 		</div>
 		<a id="roll-up-filters" class="roll-up" href="#">

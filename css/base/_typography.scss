@@ -41,7 +41,7 @@ a {
 }
 
 hr {
-  border-bottom: $base-border;
+  border-bottom: 1px solid darken($super-light-gray, 5);
   border-left: none;
   border-right: none;
   border-top: none;
@@ -71,6 +71,12 @@ h2 {
 }
 h3 {
 	font-size: modular-scale(1);
+}
+
+h4 {
+	font-size: em(14);
+	font-weight: 200;
+	text-transform: uppercase;
 }
 
 dl {

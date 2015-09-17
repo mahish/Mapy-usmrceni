@@ -60,7 +60,7 @@
 .small {
 	display: block;
 	color: $medium-gray;
-	font-size: 0.62em;
+	font-size: em(14);
 	text-transform: uppercase;
 	line-height: $base-line-height;
 }
