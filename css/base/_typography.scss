@@ -45,11 +45,40 @@ hr {
   border-left: none;
   border-right: none;
   border-top: none;
-  margin: $base-spacing 0;
+  margin: $small-spacing 0;
+  clear: both;
 }
 
 img,
 picture {
   margin: 0;
   max-width: 100%;
+}
+//
+//
+
+h1 {
+	font-size: modular-scale(3);
+	color: $red;
+
+	a {
+		font-size: 50%;
+	}
+}
+
+h2 {
+	font-size: modular-scale(2);
+}
+h3 {
+	font-size: modular-scale(1);
+}
+
+dl {
+	margin: 0;
+	dt {
+		margin-top: 0;
+	}
+	dd {
+		margin-bottom: $small-spacing;
+	}
 }

@@ -5,6 +5,7 @@
 @import "base/base";
 @import "base/class-variables";
 @import "layout/layout";
+@import "nouislider";
 
 // ===============================================
 
@@ -14,30 +15,7 @@ html, body {
 	overflow: hidden;
 }
 
-h1 {
-	font-size: modular-scale(3);
-	color: $red;
-
-	a {
-		font-size: 50%;
-	}
-}
-
-h2 {
-	font-size: modular-scale(2);
-}
-h3 {
-	font-size: modular-scale(1);
-}
-
-dl {
-	margin: 0;
-	dt:first-child {
-		margin-top: 0;
-	}
-}
-
-header,
+header.intro,
 section.controls {
 	@include outer-container(100%);
 }

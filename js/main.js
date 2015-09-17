@@ -1,16 +1,33 @@
 $(document).ready(function() {
 
+	var sliderAge = document.getElementById('filter-age');
+
+	noUiSlider.create(sliderAge, {
+		start: [ 0, 100 ],
+		step: 1,
+		// snap: true,
+		// margin: 20,
+		connect: true,
+		// direction: 'rtl',
+		// orientation: 'horizontal',
+		// behaviour: 'tap-drag',
+		range: {
+			'min': 0,
+			'max': 100
+		}
+	});
+
 	$('#toApp').click(function() {
-		$('header').addClass('hide');
+		$('header.intro').addClass('hide');
 
 		setTimeout(function () {
-			$('header').addClass('hidden').removeClass('hide');
+			$('header.intro').addClass('hidden').removeClass('hide');
 		}, 2000);
 
 	});
 
 	// open header
-	$('header').click(function(){
+	$('header.intro').click(function(){
 		$(this).removeClass('hidden');
 	});
 
@@ -22,15 +39,27 @@ $(document).ready(function() {
 		}
 	});
 
-	// close modal infobox & clear active marker
+	// close infobox & clear active marker
 	$('.infobox').click(function(){
 		$('body').removeClass('active-marker');
 	});
 
 	// open filters
-	$('#filter').click(function(){
-		$(this).toggleClass('hidden');
-		$('body').toggleClass('active-filter');
-	});
+	// if ($('#filters').hasClass('hidden')) {
+		$('#filters > header').click(function(){
+			$('#filters').toggleClass('hidden');
+			$('body').toggleClass('active-filters');
+			console.log("Open filter.");
+		});
+	// } else if ($('body').hasClass('active-filters')) {
+		// close filters
+		$('#roll-up-filters').click(function(){
+			$('#filters').toggleClass('hidden');
+			$('body').toggleClass('active-filters');
+			console.log("Close filter.");
+		});
+	// }
+
+
 
 });

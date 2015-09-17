@@ -1,8 +1,8 @@
-.controls {
+section.controls {
 	position: fixed;
-	top: $base-line-height * 1em;
+	top: $base-spacing;
 	left: 0;
-	z-index: 13;
+	z-index: 14;
 	width: 100%;
 	background-color: transparent;
 	padding: 0;
@@ -107,21 +107,22 @@
 
 }
 
-.filter {
+section.filters {
 	position: fixed;
-	top: $base-line-height * 4em + $base-line-height * 1em;
+	top: $base-spacing * 4 + $base-spacing;
 	left: 0;
-	z-index: 14;
+	z-index: 13;
 	width: 20%;
 	text-align: center;
 	box-sizing: content-box;
-	padding: $base-line-height * 1em 0;
-	height: $base-line-height * 1.2em; // 1.8em
+	padding: 0;
+	height: $base-spacing * 2; // 48px
 	@include border-bottom-radius(2px);
 	border-top: 1px solid $medium-gray;
 	cursor: pointer;
 	color: $dark-gray;
-	background-color: white;
+	background-color: $super-light-gray;
+	// overflow: hidden; // arrow is not visible if enabled
 
 	@include transition-property(all);
 	@include transition-duration(0.2s);
@@ -144,33 +145,15 @@
 		position: absolute;
 		pointer-events: none;
 		border-color: rgba(255, 255, 255, 0);
-		border-top-color: white;
-		border-width: $base-line-height * 1em;
-		margin-left: $base-line-height * -1em;
-	}
-
-	.roll-up {
-		@include transition-property(opacity);
-		@include transition-duration(0.2s);
-		@include transition-timing-function(ease-in-out);
-		opacity: 0;
-	}
-
-	.active-filter & {
-		height: calc(100% - #{$base-line-height} * 5em - #{$base-line-height} * 2em);
-		overflow-y: hidden;
-
-		.roll-up {
-			// display: block;
-			opacity: 1;
-		}
+		border-top-color: $super-light-gray;
+		border-width: $base-spacing;
+		margin-left: $base-spacing * -1;
 	}
 
 	&.hidden {
 
 		&:hover {
-			// height: $base-line-height * 2em;
-			padding: $base-line-height * 1.5em 0;
+			padding-bottom: $small-spacing;
 		}
 
 		&:after {
@@ -179,31 +162,100 @@
 		}
 	}
 
-	> span {
-		position: relative;
-		color: $medium-gray;
+	header {
+		@include position(absolute, 0);
+		width: 100%;
+		height: $base-spacing * 2 * 1.6129;
+		line-height: $base-spacing * 2 * 1.6129;
 		font-size: 0.62em;
-		text-transform: uppercase;
-		line-height: $base-line-height;
 		font-weight: 600;
+		color: $medium-gray;
+		text-transform: uppercase;
+		background: white;
+		border-bottom: 1px solid darken($super-light-gray, 5);
+
+		> div {
+			margin: auto;
+		}
 	}
 
-	dl {
+	.filters-wrapper {
+		@include position(absolute, $base-spacing * 2 0 0 0);
+		height: calc(100% - #{$base-spacing} * 4); //
+		padding: $small-spacing $base-spacing;
+		text-align: center;
+		overflow-y: scroll;
+		box-sizing: border-box;
+
+		&::-webkit-scrollbar {
+			width: $small-spacing / 4;
+		}
+
+		&::-webkit-scrollbar-track {
+			border-radius: 10px;
+			background: #eee;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			border-radius: 10px;
+			background: #888;
+		}
+		&::-webkit-scrollbar-thumb:window-inactive {
+			background: rgba(100,100,100,0.4);
+		}
+
+		// IE
+		scrollbar-face-color: #888;
+		scrollbar-track-color: #eee;
+
+		.filter {
+			margin: auto;
+			margin-bottom: $base-spacing;
+		}
+
 		display: none;
+		opacity: 0;
+		@include transition-property(all);
+		@include transition-duration(0.6s);
+		@include transition-timing-function(ease-in-out);
+	}
+
+	.roll-up {
+		@include transition-property(opacity);
+		@include transition-duration(0.2s);
+		@include transition-timing-function(ease-in-out);
+		opacity: 0;
+
+		> div {
+			background: white;
+			border-top: 1px solid darken($super-light-gray, 5);
+		}
+	}
+
+	.active-filters & {
+		height: calc(100% - #{$base-line-height} * 4em - #{$base-line-height} * 1em);
+		cursor: initial;
+
+		.filters-wrapper {
+			display: block;
+			opacity: 1;
+		}
+
+		.roll-up {
+			// display: block;
+			opacity: 1;
+		}
 	}
 
 	h3 {
-		display: inline-block;
-		opacity: 0.235;
-		margin-top: 230px;
+		text-align: left;
 	}
 
-	.active-marker & {
-		dl {
-			display: block;
-		}
-		h3 {
-			display: none;
-		}
+	select {
+		width: 100%;
+	}
+
+	#filter-age {
+		margin-bottom: $base-line-height * .5em;
 	}
 }

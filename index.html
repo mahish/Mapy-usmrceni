@@ -26,7 +26,7 @@
 </head>
 <body>
 
-	<header>
+	<header class="intro">
 		<h1 class="">
 			<span class="black">Přes železnou oponu </span>Usmrcení na&#160;československé hranici
 			<br>
@@ -67,55 +67,120 @@
 		</div>
 	</section>
 
-	<section id="filter" class="filter hidden">
-		<span>
-			Filtrování dle dalších kategorií
-		</span>
-		<div class="roll-up">
-			<a href="#"><img src="img/ui/roll-up.png" alt="Schovat okno"><span>schovat</span></a>
+	<section id="filters" class="filters hidden">
+		<header>
+			<div>Filtrování dle dalších kategorií</div>
+		</header>
+		<div class="filters-wrapper">
+			<div class="filter">
+				<h3>Věk</h3>
+				<div id="filter-age"></div>
+				<div id="show-age" class="text-center small">20 — 43</div>
+
+				<!-- <div id="age-min" class="left text-left small">20</div> -->
+				<!-- <div id="age-max" class="right text-right small">43</div> -->
+				<hr>
+			</div>
+			<div id="filter-sex" class="filter">
+				<h3>Pohlaví</h3>
+				<label>
+					<input type="radio" name="sex" value="male" checked>Muž
+					<input type="radio" name="sex" value="female">Žena
+				</label>
+				<hr>
+			</div>
+			<div id="filter-nationality" class="filter">
+				<h3>Národnost</h3>
+				<select>
+					<option value="volvo">Volvo</option>
+					<option value="saab">Saab</option>
+					<option value="opel">Opel</option>
+					<option value="audi">Audi</option>
+				</select>
+				<hr>
+			</div>
+			<div id="filter-residence" class="filter">
+				<h3>Okres bydliště</h3>
+				<select>
+					<option value="volvo">Volvo</option>
+					<option value="saab">Saab</option>
+					<option value="opel">Opel</option>
+					<option value="audi">Audi</option>
+				</select>
+				<hr>
+			</div>
+			<div id="filter-incident" class="filter">
+				<h3>Okres incidentu</h3>
+				<select>
+					<option value="volvo">Volvo</option>
+					<option value="saab">Saab</option>
+					<option value="opel">Opel</option>
+					<option value="audi">Audi</option>
+				</select>
+				<hr>
+			</div>
+			<div id="filter-death" class="filter">
+				<h3>Způsob úmrtí</h3>
+				<select>
+					<option value="volvo">Volvo</option>
+					<option value="saab">Saab</option>
+					<option value="opel">Opel</option>
+					<option value="audi">Audi</option>
+				</select>
+			</div>
 		</div>
+		<a id="roll-up-filters" class="roll-up" href="#">
+			<div>
+				<!-- <img src="img/ui/roll-up.png" alt="Schovat okno"> -->
+				<span>schovat</span>
+			</div>
+		</a>
 	</section>
 
 	<section class="infobox">
 		<div class="info">
-			<h1>Informace o zvoleném bodu</h1>
-			<dl>
-				<dt>
-					Číslo osoby
-				</dt>
-				<dd id="cislo_osoby">
-				</dd>
-				<dt>
-					Věk
-				</dt>
-				<dd id="vek_h">
-				</dd>
-				<dt>
-					Státní příslušnost
-				</dt>
-				<dd id="statni_prislusnost">
-				</dd>
-				<dt>
-					GPS incidentu
-				</dt>
-				<dd id="gps_incidentu">
-				</dd>
-				<dt>
-					Směr přechodu
-				</dt>
-				<dd id="smer_prechodu">
-				</dd>
-				<dt>
-					Úmrtí
-				</dt>
-				<dd id="umrti">
-				</dd>
-				<dt>
-					Rok
-				</dt>
-				<dd id="rok">
-				</dd>
-			</dl>
+			<div class="title">
+				<h1>Informace o zvoleném bodu</h1>
+			</div>
+			<div class="content">
+				<dl>
+					<dt>
+						Číslo osoby
+					</dt>
+					<dd id="cislo_osoby">
+					</dd>
+					<dt>
+						Věk
+					</dt>
+					<dd id="vek_h">
+					</dd>
+					<dt>
+						Státní příslušnost
+					</dt>
+					<dd id="statni_prislusnost">
+					</dd>
+					<dt>
+						GPS incidentu
+					</dt>
+					<dd id="gps_incidentu">
+					</dd>
+					<dt>
+						Směr přechodu
+					</dt>
+					<dd id="smer_prechodu">
+					</dd>
+					<dt>
+						Úmrtí
+					</dt>
+					<dd id="umrti">
+					</dd>
+					<dt>
+						Rok
+					</dt>
+					<dd id="rok">
+					</dd>
+				</dl>
+			</div>
 			<div class="close">
 				<a href="#"><img src="img/ui/close.png" alt="Zavřít okno"></a>
 			</div>
@@ -124,6 +189,7 @@
 
 	<div id="map-canvas"></div>
 
+	<script src="js/nouislider.min.js"></script>
 	<script src="js/main.js"></script>
 
 </body>

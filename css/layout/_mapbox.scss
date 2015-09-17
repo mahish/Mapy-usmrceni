@@ -7,11 +7,11 @@
 	.infobox {
 		position: fixed;
 		bottom: 0;
-		left: 20%;
-		z-index: 13;
-		width: 60%;
+		left: 25%;
+		z-index: 12;
+		width: 50%;
 		margin: auto;
-		@include transform(translatey(calc(#{$base-line-height} * 12em)));
+		@include transform(translatey(calc(#{$base-spacing} * 12)));
 
 		@include transition-property(all);
 		@include transition-duration(0.2s);
@@ -38,8 +38,8 @@
 		// 	pointer-events: none;
 		// 	border-color: rgba(255, 255, 255, 0);
 		// 	border-bottom-color: #fff;
-		// 	border-width: $base-line-height * 1em;
-		// 	margin-left: $base-line-height * -1em;
+		// 	border-width: $base-spacing;
+		// 	margin-left: $base-spacing * -1;
 		// }
 
 		.info {
@@ -47,13 +47,51 @@
 			text-align: left;
 			margin: auto;
 			width: 100%;
-			height: $base-line-height * 11em;
+			height: $base-spacing * 12;
 			border-radius: 2px;
-			// box-shadow: 0 0 $base-line-height * 1em rgba(0,0,0,0.38);
-			background: white;
+			// box-shadow: 0 0 $base-spacing rgba(0,0,0,0.38);
+			background: $super-light-gray;
 			color: $dark-gray;
-			overflow: scroll;
-			padding: $base-line-height * 1em;
+			// overflow: scroll;
+
+			.title {
+				background: white;
+				border-bottom: 1px solid darken($super-light-gray, 5);
+				padding: 0 $base-spacing;
+
+				h1 {
+					line-height: $base-line-height * 2;
+					height: $base-spacing * 2;
+					margin-bottom: 0;
+				}
+			}
+
+			.content {
+				padding: $small-spacing $base-spacing $base-spacing;
+				overflow-y: scroll;
+				height: $base-spacing * 8;
+
+				&::-webkit-scrollbar {
+					width: $small-spacing / 4;
+				}
+
+				&::-webkit-scrollbar-track {
+					border-radius: 10px;
+					background: #eee;
+				}
+
+				&::-webkit-scrollbar-thumb {
+					border-radius: 10px;
+					background: #888;
+				}
+				&::-webkit-scrollbar-thumb:window-inactive {
+					background: rgba(100,100,100,0.4);
+				}
+
+				// IE
+				scrollbar-face-color: #888;
+				scrollbar-track-color: #eee;
+			}
 
 			dl {
 				-webkit-column-count: 3; /* Chrome, Safari, Opera */

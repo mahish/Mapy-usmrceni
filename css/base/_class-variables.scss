@@ -57,13 +57,21 @@
 	color: $red;
 }
 
+.small {
+	display: block;
+	color: $medium-gray;
+	font-size: 0.62em;
+	text-transform: uppercase;
+	line-height: $base-line-height;
+}
+
 .close {
 	@include position(absolute, 0 0 null null);
 
 	img {
 		opacity: 0.62;
-		margin: $base-line-height * 0.5em;
-		width: $base-line-height * 0.5em;
+		margin: $base-spacing / 2;
+		width: $base-spacing / 2;
 
 		&:hover  {
 			opacity: 1;
@@ -71,27 +79,45 @@
 	}
 }
 
-.roll-up {
+.roll-up > div {
 	@include position(absolute, null null 0 0);
 	width: 100%;
 	text-align: center;
-	margin-bottom: $base-line-height * 0.5em;
+	line-height: $base-spacing * 2;
+	height: $base-spacing * 2;
 
 	img {
 		opacity: 0.62;
 		margin-bottom: 0;
 		width: .75em;
 
-		&:hover  {
+		&:hover {
 			opacity: 1;
 		}
 	}
 
 	span {
-		display: block;
+		position: relative;
+		padding-top: 2.25em;
+		top: .75em;
 		color: $medium-gray;
 		font-size: 0.62em;
 		text-transform: uppercase;
-		line-height: $base-line-height;
+		margin-bottom: -.375em;
+
+		&:after {
+			content: "";
+			position: absolute;
+			top: 25%;
+			left: 50%;
+			margin-left: -.375em;
+			width: .75em;
+			height: .75em;
+			background: url("../img/ui/roll-up.png");
+			background-repeat: no-repeat;
+			background-size: .75em;
+			// background-position-y: 20%;
+			// background-position-x: center;
+		}
 	}
 }
