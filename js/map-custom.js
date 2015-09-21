@@ -69,7 +69,7 @@ function draw(map, data, filter, oms) {
 
 		google.maps.event.addListener(marker, 'click', function() {
 
-			if (activeMarkers[activeMarkers.length - 1] === this) {
+			if (activeMarkers[activeMarkers.length - 1] === this && this.icon.url !== undefined && this.icon.url.indexOf('active-marker') != -1) {
 				this.setIcon(passiveIcon);
 				$("body").removeClass('active-marker');
 			} else {
