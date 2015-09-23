@@ -38,6 +38,7 @@ section.controls {
 					line-height: 3;
 					left: 0.62em;
 					color: $medium-gray;
+					font-weight: 200;
 					font-size: 0.62em;
 					text-transform: uppercase;
 				}
@@ -168,7 +169,7 @@ section.filters {
 		height: $base-spacing * 2 * 1.6129;
 		line-height: $base-spacing * 2 * 1.6129;
 		font-size: 0.62em;
-		font-weight: 600;
+		font-weight: 200;
 		color: $medium-gray;
 		text-transform: uppercase;
 		background: white;
@@ -252,7 +253,7 @@ section.filters {
 	}
 
 	#filter-age {
-		margin-bottom: $base-spacing * 0.5;
+		margin: $base-spacing * 0.5 0;
 	}
 
 	.age-value {
@@ -261,9 +262,5 @@ section.filters {
 		border-radius: $base-border-radius;
 		margin-bottom: $small-spacing;
 		text-transform: none;
-	}
-
-	#filter-age + div {
-		// margin-bottom: $base-spacing * 0.5;
 	}
 }

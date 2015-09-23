@@ -110,9 +110,10 @@ z-index: 10;
 	cursor: -moz-grab;
 	cursor: -webkit-grab;
 
-	&:hover {
+	&:hover,
+	&:active {
 		// background: darken(white, 5);
-		border: 1px solid $red;
+		border: $base-spacing / 8 solid $red;
 	}
 
 	&:active {
@@ -120,7 +121,6 @@ z-index: 10;
 		cursor: -moz-grabbing;
 		cursor: -webkit-grabbing;
 		// background: darken(white, 10);
-		border: 1px solid $red;
 	}
 }
 .noUi-active {

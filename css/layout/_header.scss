@@ -4,7 +4,7 @@ header.intro {
 	height: 100%;
 	width: 100%;
 	background: white;
-	padding: $base-line-height * 1em;
+	padding: $base-spacing;
 
 	&:after {
 		opacity: 0;
@@ -23,16 +23,23 @@ header.intro {
 		pointer-events: none;
 		border-color: rgba(255, 255, 255, 0);
 		border-top-color: #fff;
-		border-width: $base-line-height * 1em;
-		margin-left: $base-line-height * -1em;
+		border-width: $base-spacing;
+		margin-left: $base-spacing * -1;
 	}
 
 	> span {
-		color: white;
+		color: $red;
+		font-weight: 600;
 		text-transform: uppercase;
-		@include position(absolute, null 20px 0 null);
+		opacity: 0;
+		display: inline-block;
+		@include position(absolute, null $base-spacing $small-spacing null);
 		@include transition-property(all);
 		@include transition-duration(0.2s);
+
+		img {
+			padding: .25em .5em;
+		}
 	}
 
 	@include transition-property(all);
@@ -41,7 +48,7 @@ header.intro {
 
 	&.hide,
 	&.hidden {
-		@include transform(translatey(calc(-100% + #{$base-line-height} * 1em)));
+		@include transform(translatey(calc(-100% + #{$base-spacing})));
 	}
 
 	&.hidden {
@@ -52,14 +59,11 @@ header.intro {
 	}
 
 	&.hidden:hover {
-		@include transform(translatey(calc(-100% + #{$base-line-height} * 2em)));
+		@include transform(translatey(calc(-100% + #{$base-spacing} * 2)));
 
-		&:after {
+		&:after,
+		> span {
 			opacity: 1;
-		}
-
-		span {
-			color: $red;
 		}
 	}
 
