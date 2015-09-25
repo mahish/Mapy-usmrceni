@@ -49,9 +49,6 @@ function draw(map, data, filter, oms) {
 			title: data.cislo_osoby.toString()
 		});
 
-
-		oms.addMarker(marker);
-
 		var activeIcon = {
 			url: iconBase + 'active-marker.png',
 			// This marker is 25 pixels wide by 25 pixels tall.
@@ -81,9 +78,9 @@ function draw(map, data, filter, oms) {
 
 				activeMarkers.pop();
 
-				if(!$("body").hasClass('active-marker')) {
-						$("body").addClass('active-marker');
-					}
+				if (!$("body").hasClass('active-marker')) {
+					$("body").addClass('active-marker');
+				}
 
 				document.getElementById('cislo_osoby').innerHTML = data.cislo_osoby.toString();
 				document.getElementById('vek_h').innerHTML = data.vek_h.toString();
@@ -121,7 +118,7 @@ function draw(map, data, filter, oms) {
 
 	var mcOptions = {
 		gridSize: 1,
-		maxZoom: 11,
+		maxZoom: 14,
 		styles: [{
 			height: 25,
 			url: "img/marker.png",
@@ -146,6 +143,16 @@ function draw(map, data, filter, oms) {
 	};
 
 	markerCluster = new MarkerClusterer(map, markers, mcOptions);
+
+	map.addListener('zoom_changed', function() {
+		if (map.getZoom() == 15) {
+			for (var i = markers.length - 1; i >= 0; i--) {
+				oms.addMarker(markers[i]);
+			};
+		} else {
+			oms.clearMarkers()
+		}
+	});
 }
 
 function initialize() {
@@ -156,6 +163,7 @@ function initialize() {
 			lng: 15.30
 		},
 		zoom: 7,
+		maxZoom: 15,
 		zoomControlOptions: {
 			style: google.maps.ZoomControlStyle.DEFAULT,
 			position: google.maps.ControlPosition.RIGHT_CENTER
