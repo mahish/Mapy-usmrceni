@@ -94,6 +94,7 @@ function draw(map, data, filter, oms) {
 
 				this.setIcon(activeIcon);
 				this.setZIndex(200);
+				map.panTo(latLng);
 
 				activeMarkers.push(this);
 			}
