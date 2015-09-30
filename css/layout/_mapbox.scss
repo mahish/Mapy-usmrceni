@@ -1,6 +1,8 @@
 	#map-canvas {
 		z-index: 0;
-		height: 100%;
+		position: absolute;
+		bottom: 0;
+		height: calc(100% - #{$base-spacing * 4});
 		width: 100%;
 	}
 

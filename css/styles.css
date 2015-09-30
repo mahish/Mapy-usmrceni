@@ -1348,7 +1348,9 @@ header.intro {
 
 #map-canvas {
   z-index: 0;
-  height: 100%;
+  position: absolute;
+  bottom: 0;
+  height: calc(100% - 6em);
   width: 100%; }
 
 .infobox {
