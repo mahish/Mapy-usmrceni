@@ -3,7 +3,22 @@ var markers = [];
 var markerCluster;
 var mapsDataJSON;
 var activeMarkers = [];
+var filterInput = {ageFrom: '', ageTo: '', sex: '', nationality: '', incident: '', death: '', residence: ''};
 var oms;
+
+$(document).ready(function() {
+	$('#filters select').on('change', function() {
+		var filterName = $(this).attr('id');
+		filterInput[filterName] = $(this).children('option:selected').val();
+		console.log(filterInput);
+	})
+	$('#filters input').on('change', function() {
+		var filterName = $(this).attr('name');
+		filterInput[filterName] = $(this).attr('value');
+		console.log(filterInput);
+	})
+})
+
 
 function getDataJSON() {
 	return $.getJSON("data/data_json/data.json").then(function(data) {

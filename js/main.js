@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	var sliderAge = document.getElementById('filter-age');
+	window.sliderAge = document.getElementById('filter-age');
 
 	noUiSlider.create(sliderAge, {
 		start: [ 0, 100 ],
@@ -16,6 +16,11 @@ $(document).ready(function() {
 			'max': 100
 		}
 	});
+
+	sliderAge.noUiSlider.on('change', function() {
+		filterInput['ageFrom'] = sliderAge.noUiSlider.get()[0];
+		filterInput['ageTo'] = sliderAge.noUiSlider.get()[1];
+	})
 
 	$('#toApp').click(function() {
 		$('header.intro').addClass('hide');
