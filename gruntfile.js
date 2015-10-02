@@ -35,6 +35,9 @@ module.exports = function (grunt) {
     	postcss: {
     		files: 'css/*.css',
     		tasks: ['postcss']
+    	},
+    	options: {
+    		livereload: true,
     	}
     }
   });

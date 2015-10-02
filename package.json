@@ -1,6 +1,7 @@
 {
   "name": "mapy-usmrceni",
   "version": "0.2.5",
+  "private": true,
   "devDependencies": {
     "autoprefixer": "^6.0.3",
     "cssnano": "^3.2.0",
@@ -12,6 +13,7 @@
     "grunt-cssnano": "^2.0.1",
     "grunt-pixrem": "^0.1.2",
     "grunt-postcss": "^0.6.0",
-    "pixrem": "^3.0.0",
+    "grunt-sass": "^1.0.0",
+    "pixrem": "^3.0.0"
   }
 }
