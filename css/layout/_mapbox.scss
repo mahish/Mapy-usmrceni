@@ -6,6 +6,18 @@
 		width: 100%;
 	}
 
+	#reset-view {
+		position: fixed;
+		bottom: 50%;
+		right: 9px;
+		width: 28px;
+		height: 28px;
+		background-color: white;
+		padding: 2px;
+		overflow: hidden;
+		box-shadow: 1px 1px 3px rgba(0,0,0,0.11);
+	}
+
 	.infobox {
 		position: fixed;
 		bottom: 0;

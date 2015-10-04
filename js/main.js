@@ -25,6 +25,13 @@ $(document).ready(function() {
 		}
 	});
 
+	// Reset zoom
+	// how to make it without reloading whole map?
+	$('#reset-view').click(function(){
+		map.setCenter(new google.maps.LatLng(49.35, 14.5));
+		map.setZoom(7);
+	});
+
 	sliderAge.noUiSlider.on('change', function() {
 		filterInput['ageFrom'] = sliderAge.noUiSlider.get()[0];
 		filterInput['ageTo'] = sliderAge.noUiSlider.get()[1];
