@@ -30,22 +30,23 @@ $(document).ready(function() {
 		filterInput['ageTo'] = sliderAge.noUiSlider.get()[1];
 		document.getElementById('age-min').innerHTML = document.getElementById('age-min').innerHTML.replace(/\d{2}/, filterInput['ageFrom']);
 		document.getElementById('age-max').innerHTML = document.getElementById('age-max').innerHTML.replace(/\d{2}/, filterInput['ageTo']);
-		draw(map, mapsDataJSON, filterInput, oms)
+		draw(map, mapsDataJSON, filterInput, oms);
 	})
 
 	$('#filters select').on('change', function() {
 		var filterName = $(this).attr('id');
-		filterInput[filterName] = $(this).children('option:selected').val();
-
+		filterInput[filterName] = $(this).children('option:selected').val()  == "false" ? false : $(this).children('option:selected').val();
+		draw(map, mapsDataJSON, filterInput, oms);
 	})
 	$('#filters input').on('change', function() {
 		var filterName = $(this).attr('name');
-		filterInput[filterName] = $(this).attr('value');
+		filterInput[filterName] = $(this).attr('value') == "false" ? false : $(this).attr('value');
+		draw(map, mapsDataJSON, filterInput, oms);
 	})
 	$('#controls input').on('change', function() {
 		var filterName = $(this).attr('value');
-		filterInput['periodFrom'] = $(this).attr('value').split(',')[0];
-		filterInput['periodTo'] = $(this).attr('value').split(',')[1];
+		filterInput['periodFrom'] = parseInt($(this).attr('value').split(',')[0]);
+		filterInput['periodTo'] = parseInt($(this).attr('value').split(',')[1]);
 		draw(map, mapsDataJSON, filterInput, oms)
 	})
 

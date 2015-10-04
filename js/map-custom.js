@@ -4,7 +4,17 @@ var markerCluster;
 var mapsDataJSON;
 var activeMarkers = [];
 var oms;
-var filterInput = {periodFrom: 1900, periodTo: 2000, ageFrom: 20, ageTo: 43, sex: true, nationality: true, incident: true, death: true, residence: true};
+var filterInput = {
+	periodFrom: false,
+	periodTo: false,
+	ageFrom: false,
+	ageTo: false,
+	sex: false,
+	nationality: false,
+	incident: false,
+	death: false,
+	residence: false
+};
 
 function getDataJSON() {
 	return $.getJSON("data/data_json/data.json").then(function(data) {
@@ -32,15 +42,18 @@ function clearMarkers() {
 function draw(map, data, filter, oms) {
 
 	clearMarkers();
+	
+	var currentLat;
+	var currentLng;
+	var currentYear;
+	var currentAge;
+	var currentNationality;
+	var currentDeath;
 
 	$.each(data, function(key, data) {
 
-		var currentLat = data.gps_incidentu.split(",")[0];
-		var currentLng = data.gps_incidentu.split(",")[1];
-		var currentYear = data.rok;
-		var currentAge = data.vek_h;
-		var currentNationality = data.statni_prislusnost;
-		var currentDeath = data.umrti;
+		currentLat = data.gps_incidentu.split(",")[0];
+		currentLng = data.gps_incidentu.split(",")[1];
 
 		// Customize a map marker - define url
 		var iconBase = 'img/';
@@ -69,11 +82,33 @@ function draw(map, data, filter, oms) {
 			url: iconBase + 'marker.png',
 		};
 
+		var validateCurrent = function(data, filter) {
+			var isValid = true;
+			currentYear = data.rok;
+			currentAge = data.vek_h;
+			currentNationality = data.statni_prislusnost;
+			currentDeath = data.umrti;
+
+			if (filter['periodFrom'] && filter['periodTo'] && (currentYear < filter['periodFrom'] || currentYear > filter['periodTo'])) {
+				return isValid = false;
+			}
+			if (filter['ageFrom'] && filter['ageTo'] && (currentAge < filter['ageFrom'] || currentAge > filter['ageTo'])) {
+				return isValid = false;
+			};
+			if (filter['nationality'] && currentNationality != filter['nationality']) {
+				return isValid = false;
+			};
+			if (filter['death'] && currentNationality != filter['death']) {
+				return isValid = false;
+			};
+			return isValid
+		}
+
 		if (filter != null) {
 			$("body").removeClass('active-marker');
-			if ((currentYear >= filter['periodFrom'] && currentYear <= filter['periodTo']) && (currentAge >= filter['ageFrom'] && currentAge <= filter['ageTo'])) {
+			if (validateCurrent(data, filter)) {
 				markers.push(marker);
-			}
+			};
 		} else {
 			markers.push(marker);
 		};
