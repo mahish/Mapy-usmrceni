@@ -1,6 +1,8 @@
 	#map-canvas {
 		z-index: 0;
-		height: 100%;
+		position: absolute;
+		bottom: 0;
+		height: calc(100% - #{$base-spacing * 4});
 		width: 100%;
 	}
 
@@ -47,12 +49,13 @@
 			text-align: left;
 			margin: auto;
 			width: 100%;
-			height: $base-spacing * 12;
+			// height: $base-spacing * 12;
 			border-radius: 2px;
 			// box-shadow: 0 0 $base-spacing rgba(0,0,0,0.38);
 			background: $super-light-gray;
 			color: $dark-gray;
 			// overflow: scroll;
+			font-size: 87.5%;
 
 			.title {
 				background: white;
@@ -60,6 +63,7 @@
 				padding: 0 $base-spacing;
 
 				h1 {
+					font-size: rem(16);
 					line-height: $base-line-height * 2;
 					height: $base-spacing * 2;
 					margin-bottom: 0;

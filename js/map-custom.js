@@ -158,8 +158,8 @@ function initialize() {
 
 	var mapOptions = {
 		center: {
-			lat: 49.45,
-			lng: 15.30
+			lat: 49.35,
+			lng: 14.5
 		},
 		zoom: 7,
 		maxZoom: 15,
