@@ -3,7 +3,7 @@ $(document).ready(function() {
 	window.sliderAge = document.getElementById('filter-age');
 
 	noUiSlider.create(sliderAge, {
-		start: [ 20, 43 ],
+		start: [ 15, 50 ],
 		step: 1,
 		// snap: true,
 		// margin: 20,
