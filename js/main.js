@@ -3,7 +3,7 @@ $(document).ready(function() {
 	window.sliderAge = document.getElementById('filter-age');
 
 	noUiSlider.create(sliderAge, {
-		start: [ 0, 100 ],
+		start: [ 20, 43 ],
 		step: 1,
 		// snap: true,
 		// margin: 20,
@@ -12,14 +12,41 @@ $(document).ready(function() {
 		// orientation: 'horizontal',
 		// behaviour: 'tap-drag',
 		range: {
-			'min': 0,
-			'max': 100
+			'min': 15,
+			'max': 50
+		},
+		format: {
+			to: function(value) {
+				return value.toString().replace('.00', '');
+			},
+			from: function(value) {
+				return value.toString().replace('.00', '');
+			}
 		}
 	});
 
 	sliderAge.noUiSlider.on('change', function() {
 		filterInput['ageFrom'] = sliderAge.noUiSlider.get()[0];
 		filterInput['ageTo'] = sliderAge.noUiSlider.get()[1];
+		document.getElementById('age-min').innerHTML = document.getElementById('age-min').innerHTML.replace(/\d{2}/, filterInput['ageFrom']);
+		document.getElementById('age-max').innerHTML = document.getElementById('age-max').innerHTML.replace(/\d{2}/, filterInput['ageTo']);
+		draw(map, mapsDataJSON, filterInput, oms)
+	})
+
+	$('#filters select').on('change', function() {
+		var filterName = $(this).attr('id');
+		filterInput[filterName] = $(this).children('option:selected').val();
+
+	})
+	$('#filters input').on('change', function() {
+		var filterName = $(this).attr('name');
+		filterInput[filterName] = $(this).attr('value');
+	})
+	$('#controls input').on('change', function() {
+		var filterName = $(this).attr('value');
+		filterInput['periodFrom'] = $(this).attr('value').split(',')[0];
+		filterInput['periodTo'] = $(this).attr('value').split(',')[1];
+		draw(map, mapsDataJSON, filterInput, oms)
 	})
 
 	$('#toApp').click(function() {

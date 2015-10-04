@@ -3,22 +3,8 @@ var markers = [];
 var markerCluster;
 var mapsDataJSON;
 var activeMarkers = [];
-var filterInput = {ageFrom: '', ageTo: '', sex: '', nationality: '', incident: '', death: '', residence: ''};
 var oms;
-
-$(document).ready(function() {
-	$('#filters select').on('change', function() {
-		var filterName = $(this).attr('id');
-		filterInput[filterName] = $(this).children('option:selected').val();
-		console.log(filterInput);
-	})
-	$('#filters input').on('change', function() {
-		var filterName = $(this).attr('name');
-		filterInput[filterName] = $(this).attr('value');
-		console.log(filterInput);
-	})
-})
-
+var filterInput = {periodFrom: 1900, periodTo: 2000, ageFrom: 20, ageTo: 43, sex: true, nationality: true, incident: true, death: true, residence: true};
 
 function getDataJSON() {
 	return $.getJSON("data/data_json/data.json").then(function(data) {
@@ -49,13 +35,17 @@ function draw(map, data, filter, oms) {
 
 	$.each(data, function(key, data) {
 
-		var myLat = data.gps_incidentu.split(",")[0];
-		var myLng = data.gps_incidentu.split(",")[1];
-		var myYear = data.rok;
+		var currentLat = data.gps_incidentu.split(",")[0];
+		var currentLng = data.gps_incidentu.split(",")[1];
+		var currentYear = data.rok;
+		var currentAge = data.vek_h;
+		var currentNationality = data.statni_prislusnost;
+		var currentDeath = data.umrti;
+
 		// Customize a map marker - define url
 		var iconBase = 'img/';
 
-		var latLng = new google.maps.LatLng(myLat, myLng);
+		var latLng = new google.maps.LatLng(currentLat, currentLng);
 		// Creating a marker and putting it on the map
 		var marker = new google.maps.Marker({
 			position: latLng,
@@ -77,6 +67,15 @@ function draw(map, data, filter, oms) {
 
 		var passiveIcon = {
 			url: iconBase + 'marker.png',
+		};
+
+		if (filter != null) {
+			$("body").removeClass('active-marker');
+			if ((currentYear >= filter['periodFrom'] && currentYear <= filter['periodTo']) && (currentAge >= filter['ageFrom'] && currentAge <= filter['ageTo'])) {
+				markers.push(marker);
+			}
+		} else {
+			markers.push(marker);
 		};
 
 		google.maps.event.addListener(marker, 'click', function() {
@@ -113,21 +112,6 @@ function draw(map, data, filter, oms) {
 				activeMarkers.push(this);
 			}
 		});
-
-		if (filter != null) {
-			$("body").removeClass('active-marker');
-			filter = filter.toString().split(',');
-			if (typeof(filter) == 'object' && myYear >= filter[0] && myYear <= filter[1]) {
-				//marker.setMap(map);
-				markers.push(marker);
-			} else if (myYear == filter) {
-				//marker.setMap(map);
-				markers.push(marker);
-			}
-		} else {
-			//marker.setMap(map);
-			markers.push(marker);
-		};
 
 	});
 
