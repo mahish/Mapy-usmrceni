@@ -27,7 +27,8 @@ $(document).ready(function() {
 
 	// Reset zoom
 	// how to make it without reloading whole map?
-	$('#reset-view').click(function(){
+	var resetView = document.getElementById('reset-view');
+	google.maps.event.addDomListener(resetView, 'click', function() {
 		map.setCenter(new google.maps.LatLng(49.35, 14.5));
 		map.setZoom(7);
 	});
