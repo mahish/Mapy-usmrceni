@@ -29,6 +29,8 @@ $(document).ready(function() {
 	// how to make it without reloading whole map?
 	var resetView = document.getElementById('reset-view');
 	google.maps.event.addDomListener(resetView, 'click', function() {
+		event.preventDefault();
+
 		map.setCenter(new google.maps.LatLng(49.35, 14.5));
 		map.setZoom(7);
 	});
