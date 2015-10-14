@@ -38,9 +38,14 @@ $(document).ready(function() {
 	sliderAge.noUiSlider.on('change', function() {
 		filterInput['ageFrom'] = sliderAge.noUiSlider.get()[0];
 		filterInput['ageTo'] = sliderAge.noUiSlider.get()[1];
+		draw(map, mapsDataJSON, filterInput, oms);
+	})
+
+	sliderAge.noUiSlider.on('update', function() {
+		filterInput['ageFrom'] = sliderAge.noUiSlider.get()[0];
+		filterInput['ageTo'] = sliderAge.noUiSlider.get()[1];
 		document.getElementById('age-min').innerHTML = document.getElementById('age-min').innerHTML.replace(/\d{2}/, filterInput['ageFrom']);
 		document.getElementById('age-max').innerHTML = document.getElementById('age-max').innerHTML.replace(/\d{2}/, filterInput['ageTo']);
-		draw(map, mapsDataJSON, filterInput, oms);
 	})
 
 	$('#filters select').on('change', function() {
