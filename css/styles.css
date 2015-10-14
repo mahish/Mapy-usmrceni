@@ -990,7 +990,10 @@ section.filters {
   top: 7.5em;
   left: 0;
   z-index: 13;
-  width: 20%;
+  width: 40%;
+  -webkit-transition: width 0.2s;
+  -moz-transition: width 0.2s;
+  transition: width 0.2s;
   text-align: center;
   box-sizing: content-box;
   padding: 0;
@@ -1010,6 +1013,9 @@ section.filters {
   -webkit-transition-timing-function: ease-in-out;
   -moz-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out; }
+  @media screen and (min-width: 62.5em) {
+    section.filters {
+      width: 20%; } }
   section.filters:after {
     display: none;
     -webkit-transition-property: opacity;
