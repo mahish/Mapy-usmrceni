@@ -3,7 +3,7 @@ import urllib2
 import json
 import re
 
-resultFile = open("output.csv",'wb')
+resultFile = open("output1.csv",'wb')
 wr = csv.writer(resultFile, dialect='excel')
 
 def getAreaFromGPS(gps):
@@ -11,7 +11,7 @@ def getAreaFromGPS(gps):
     latLng = gps.split(',')
     print latLng
     if re.match('\d{1,}\.\d{1,}', latLng[0].strip()) and re.match('\d{1,}\.\d{1,}', latLng[1].strip()):
-        url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + latLng[0].strip() + "," + latLng[1].strip()
+        url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + latLng[0].strip() + "," + latLng[1].strip() + '&key=AIzaSyAEX0ppwsuLCVSqKzyDkj5KDTnx3KXt_zw'
         print url
         response = urllib2.urlopen(url)
         data = json.load(response)
@@ -19,14 +19,13 @@ def getAreaFromGPS(gps):
             address = data['results'][0]['address_components']
         except Exception, e:
             print 'ERROR: ' + str(data)
-            # raise
-            address = []
+            return '(error)'
         for item in address:
             if 'administrative_area_level_2' in item['types']:
                 areaName = item['short_name']
     return areaName            
 
-with open('../data/data_usmrceni/CSDA!hranice_F1_umysl_vyber9.csv', 'rb') as csvfile:
+with open('/Users/radimsevcik/Dropbox/interaktivni-mapy/okresy/all-data-input.csv', 'rb') as csvfile:
     database = csv.reader(csvfile, delimiter=',', quotechar='"')    
     i = 0
     for row in database:
@@ -38,5 +37,3 @@ with open('../data/data_usmrceni/CSDA!hranice_F1_umysl_vyber9.csv', 'rb') as csv
             row.append(incidentArea.encode("utf8"))                
         wr.writerow(row)
         i += 1
-        if i == 50:
-            break
