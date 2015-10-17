@@ -1425,7 +1425,7 @@ header.intro {
   z-index: 0;
   position: absolute;
   bottom: 0;
-  height: calc(100% - 6em);
+  height: calc(100% - 6.75em);
   width: 100%; }
 
 #reset-view {
@@ -1442,10 +1442,11 @@ header.intro {
 
 .infobox {
   position: fixed;
-  bottom: 0;
-  left: 25%;
   z-index: 12;
-  width: 50%;
+  box-shadow: 0 0 0.375em rgba(0, 0, 0, 0.1);
+  bottom: 1.5em;
+  right: 10%;
+  width: 80%;
   margin: auto;
   -webkit-transform: translatey(calc(1.5em * 12));
   -moz-transform: translatey(calc(1.5em * 12));
@@ -1461,6 +1462,11 @@ header.intro {
   -webkit-transition-timing-function: ease-in-out;
   -moz-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out; }
+  @media screen and (min-width: 30em) {
+    .infobox {
+      bottom: 1.5em;
+      right: 3em;
+      width: 22.5em; } }
   .active-marker .infobox {
     -webkit-transform: translatey(0);
     -moz-transform: translatey(0);

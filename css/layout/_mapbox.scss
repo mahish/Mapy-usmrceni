@@ -2,7 +2,7 @@
 		z-index: 0;
 		position: absolute;
 		bottom: 0;
-		height: calc(100% - #{$base-spacing * 4});
+		height: calc(100% - #{$base-spacing * 4.5});
 		width: 100%;
 	}
 
@@ -21,10 +21,17 @@
 
 	.infobox {
 		position: fixed;
-		bottom: 0;
-		left: 25%;
 		z-index: 12;
-		width: 50%;
+		box-shadow: 0 0 $small-spacing / 2 rgba(0,0,0,0.1);
+		bottom: $base-spacing;
+		right: 10%;
+		width: 80%;
+
+		@include media($small-screen) {
+			bottom: $base-spacing;
+			right: $base-spacing * 2;
+			width: $base-spacing * 15;
+		}
 		margin: auto;
 		@include transform(translatey(calc(#{$base-spacing} * 12)));
 
