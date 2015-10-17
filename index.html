@@ -92,30 +92,31 @@
 				</label>
 				<hr>
 			</div>
-			<div id="filter-nationality" class="filter">
+			<div id="filter-citizenship" class="filter">
 				<h4>Státní příslušnost</h4>
 				<label class="custom-select" for="">
-					<select id="nationality" >
-						<!-- VALUE shoud be numbers instead of such a long string -->
+					<select id="citizenship" >
+						<!-- 1 = Československo (ČSR, ČSSR)  -->
+						<!-- 2 = Polsko -->
+						<!-- 3 = Maďarsko -->
+						<!-- 4 = Rakousko -->
+						<!-- 5 = Německo (do r. 1949) -->
+						<!-- 6 = NDR -->
+						<!-- 7 = SRN -->
+						<!-- 8 = jiná -->
 						<!-- 0 = neurčeno -->
-						<!-- 1 = česká -->
-						<!-- 2 = slovenská -->
-						<!-- 3 = polská -->
-						<!-- 4 = maďarská -->
-						<!-- 5 = rakouská -->
-						<!-- 6 = německá -->
-						<!-- 7 = jiná -->
-						<option value="false">všechny národnosti</option>
-						<option value="československo - čsr, čssr">československá</option>
-						<option value="maďarsko">maďarská</option>
-						<option value="ndr">NDR</option>
-						<option value="německo -do r. 1949">německá (do r.1949)</option>
-						<option value="polsko">polská</option>
-						<option value="rakousko">rakouská</option>
-						<option value="srn">SRN</option>
-						<!-- Pro potřeby webu není problém nahradit kategorii "jiná" jednotlivými národnostmi -->
-						<option value="jiná">jiná</option>
-						<option value="neurčeno">neurčená</option>
+						<option value="false">všechny státní příslušnosti</option>
+						<option value="1">Československo - ČSR, ČSSR</option>
+						<option value="3">Maďarsko</option>
+						<option value="6">NDR</option>
+						<option value="5">Německo (do r.1949)</option>
+						<option value="2">Polsko</option>
+						<option value="4">Rakousko</option>
+						<option value="7">SRN</option>
+						<option value="8">Jugoslávie</option>
+						<option value="9">SSSR</option>
+						<option value="11">Francie</option>
+						<option value="0">neurčeno</option>
 					</select>
 				</label>
 				<hr>
@@ -125,9 +126,9 @@
 				<label class="custom-select" for="">
 					<select id="residence">
 						<option value="false">všechny okresy bydliště</option>
-						<option value="saab">Saab</option>
-						<option value="opel">Opel</option>
-						<option value="audi">Audi</option>
+						<option value="1">Saab</option>
+						<option value="2">Opel</option>
+						<option value="3">Audi</option>
 					</select>
 				</label>
 				<hr>
@@ -136,40 +137,69 @@
 				<h4>Příslušný útvar příhraniční stráže</h4>
 				<label class="custom-select" for="">
 					<select id="incident" >
-						<option value="false">všechny okresy incidentu</option>
-						<option value="saab">Saab</option>
-						<option value="opel">Opel</option>
-						<option value="audi">Audi</option>
-						<option value="audi">Audi2</option>
+						<!-- 0 = neurčeno -->
+						<!-- 1 = 10. volarská bps -->
+						<!-- 2 = 11. bratislavská bps -->
+						<!-- 3 = 12. plánská bps -->
+						<!-- 4 = 15. českobudějovická bps  -->
+						<!-- 5 = 19. děčínská bps -->
+						<!-- 6 = 3. karlovarská bps -->
+						<!-- 7 = 4. znojemská bps -->
+						<!-- 8 = 5. chebská bps -->
+						<!-- 9 = 7. sušická bps -->
+						<!-- 10 = 9. domažlická bps -->
+						<!-- 11 = 9. poběžovická bps -->
+						<option value="false">všechny útvary</option>
+						<option value="1">10. volarská bps</option>
+						<option value="2">11. bratislavská bps</option>
+						<option value="3">12. plánská bps</option>
+						<option value="4">15. českobudějovická bps </option>
+						<option value="5">19. děčínská bps</option>
+						<option value="6">3. karlovarská bps</option>
+						<option value="7">4. znojemská bps</option>
+						<option value="8">5. chebská bps</option>
+						<option value="9">7. sušická bps</option>
+						<option value="10">9. domažlická bps</option>
+						<option value="11">9. poběžovická bps</option>
+						<option value="0">neurčeno</option>
 					</select>
 				</label>
 				<hr>
 			</div>
 			<div id="filter-death" class="filter">
-				<h4>Způsob úmrtí</h4>
+				<h4>Příčina úmrtí</h4>
 				<label class="custom-select" for="">
 					<select id="death">
-						<!-- VALUE shoud be numbers instead of such a long string -->
-						<!-- 0 = zasažení el. proudem (v hraničním zátarasu) -->
-						<!-- 1 = střelba pohraničníků, případně příslušníků armády či SNB -->
-						<!-- 2 = zranění způsobené pádem (sestřeleného) letadla -->
-						<!-- 3 = střelba usmrcené osoby (příp. jejího společníka) – tj. sebevražda -->
-						<!-- 4 = zranění způsobené autohavárií -->
+						<!-- 0 = zasažení el. proudem -->
+						<!-- 1 = střelba pohraničníků -->
+						<!-- 2 = pád sestřeleného letadla -->
+						<!-- 3 = sebevražda -->
+						<!-- 4 = autohavárie -->
 						<!-- 5 = utonutí -->
 						<!-- 6 = utonutí po střelném zranění -->
 						<!-- 7 = zranění výbuchem protipěchotní miny -->
 						<!-- 8 = zranění způsobené psy Pohraniční stráže -->
-						<option value="false">všechny způsoby úmrtí</option>
-						<option value="příčinou úmrtí bylo zasažení el. proudem v hraničním zátaras">zasažení el. proudem (v hraničním zátarasu)</option>
-						<option value="příčinou úmrtí byla střelba pohraničníků, případně příslušní">střelba pohraničníků, případně příslušníků armády či SNB</option>
-						<option value="3">zranění způsobené pádem (sestřeleného) letadla</option>
-						<option value="příčinou úmrtí byla střelba usmrcené osoby případně jejího s">střelba usmrcené osoby (příp. jejího společníka) – tj. sebevražda</option>
-						<option value="5">zranění způsobené autohavárií</option>
-						<option value="6">utonutí</option>
-						<option value="7">utonutí po střelném zranění</option>
-						<option value="8">zranění výbuchem protipěchotní miny</option>
-						<option value="9">zranění způsobené psy Pohraniční stráže</option>
+						<!-- 9 = jiná příčina -->
+						<option value="false">všechny příčiny úmrtí</option>
+						<option value="0">zasažení el. proudem</option>
+						<option value="1">střelba pohraničníků</option>
+						<option value="2">pád sestřeleného letadla</option>
+						<option value="3">sebevražda</option>
+						<option value="4">autohavárie</option>
+						<option value="5">utonutí</option>
+						<option value="6">utonutí po střelném zranění</option>
+						<option value="7">zranění výbuchem protipěchotní miny</option>
+						<option value="8">zranění způsobené psy Pohraniční stráže</option>
+						<option value="9">jiná příčina</option>
 					</select>
+				</label>
+				<hr>
+			</div>
+			<div id="filter-direction" class="filter">
+				<h4>Směr přechodu</h4>
+				<label id="direction">
+					<input type="checkbox" name="direction" value="0" checked>ven
+					<input type="checkbox" name="direction" value="1" checked>dovnitř
 				</label>
 				<hr>
 			</div>
