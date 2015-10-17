@@ -752,7 +752,7 @@ dl {
 
 .hide-for-small {
   display: none; }
-  @media screen and (min-width: 47.5em) {
+  @media screen and (min-width: 45.625em) {
     .hide-for-small {
       display: inline-block; } }
 
@@ -850,6 +850,7 @@ section.controls {
   padding: 0;
   overflow: hidden; }
   section.controls .checkbox {
+    overflow: hidden;
     float: left;
     display: block;
     margin-right: 0%;
@@ -990,7 +991,7 @@ section.filters {
   top: 7.5em;
   left: 0;
   z-index: 13;
-  width: 40%;
+  width: 100%;
   -webkit-transition: width 0.2s;
   -moz-transition: width 0.2s;
   transition: width 0.2s;
@@ -1013,6 +1014,12 @@ section.filters {
   -webkit-transition-timing-function: ease-in-out;
   -moz-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out; }
+  @media screen and (min-width: 30em) {
+    section.filters {
+      width: 60%; } }
+  @media screen and (min-width: 45.625em) {
+    section.filters {
+      width: 40%; } }
   @media screen and (min-width: 62.5em) {
     section.filters {
       width: 20%; } }
