@@ -1130,6 +1130,9 @@ section.filters {
       opacity: 1; }
   section.filters h4 {
     text-align: left; }
+  section.filters label {
+    font-size: 0.875em;
+    font-weight: 200; }
   section.filters #filter-age {
     margin: 0.75em 0; }
   section.filters .age-value {
@@ -1139,6 +1142,64 @@ section.filters {
     border-radius: 2px;
     margin-bottom: 0.75em;
     text-transform: none; }
+  section.filters #filter-gender ul,
+  section.filters #filter-direction ul {
+    padding: 0;
+    margin-top: 0.75em;
+    display: block; }
+    section.filters #filter-gender ul::after,
+    section.filters #filter-direction ul::after {
+      clear: both;
+      content: "";
+      display: table; }
+    section.filters #filter-gender ul li,
+    section.filters #filter-direction ul li {
+      list-style: none;
+      display: inline-block; }
+  section.filters #filter-gender .gender,
+  section.filters #filter-direction .gender {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+    cursor: pointer; }
+  section.filters #filter-gender input[type="checkbox"],
+  section.filters #filter-direction input[type="checkbox"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    opacity: 0;
+    z-index: -1; }
+  section.filters #filter-gender i,
+  section.filters #filter-direction i {
+    display: inline-block;
+    width: 1.125em;
+    height: 1.125em;
+    border: 1px solid #946563;
+    border-radius: 50%;
+    opacity: 0.38; }
+    section.filters #filter-gender i:hover,
+    section.filters #filter-direction i:hover {
+      border: 0.1875em solid #6D3D3B; }
+  section.filters #filter-gender input:checked ~ i,
+  section.filters #filter-direction input:checked ~ i {
+    opacity: 1;
+    background: #946563; }
+  section.filters #filter-gender li {
+    float: left;
+    display: block;
+    margin-right: 0%;
+    width: 33.33333%; }
+    section.filters #filter-gender li:last-child {
+      margin-right: 0; }
+  section.filters #filter-direction li {
+    float: left;
+    display: block;
+    margin-right: 0%;
+    width: 50%; }
+    section.filters #filter-direction li:last-child {
+      margin-right: 0; }
 
 .label-switch {
   border-radius: 32px;
@@ -1523,7 +1584,7 @@ header.intro {
   border-radius: 0.1875em; }
 
 .noUi-connect {
-  background: #35968F;
+  background: #946563;
   -webkit-transition: background 450ms;
   transition: background 450ms; }
 
@@ -1540,13 +1601,13 @@ header.intro {
 
 .noUi-handle {
   background: white;
-  border: 1px solid #35968F;
+  border: 1px solid #946563;
   border-radius: 1.5em;
   cursor: grab;
   cursor: -moz-grab;
   cursor: -webkit-grab; }
   .noUi-handle:hover, .noUi-handle:active {
-    border: 0.1875em solid #6D3D3B; }
+    border: 0.1875em solid #946563; }
   .noUi-handle:active {
     cursor: grabbing;
     cursor: -moz-grabbing;

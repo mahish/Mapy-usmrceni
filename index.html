@@ -75,8 +75,7 @@
 			<div class="filter">
 				<h4>Věk</h4>
 				<div id="filter-age"></div>
-				<!-- <div id="show-age" class="text-center small">20 — 43</div> -->
-
+				<!-- How to filter "not-specified"?-->
 				<div>
 					<div id="age-min" class="age-value left text-left small">od 15 let</div>
 					<div id="age-max" class="age-value right text-right small">do 50 let</div>
@@ -85,11 +84,29 @@
 			</div>
 			<div id="filter-gender" class="filter">
 				<h4>Pohlaví</h4>
-				<label id="gender">
-					<input type="checkbox" name="gender" value="0" checked>&male;
-					<input type="checkbox" name="gender" value="1" checked>&female;
-					<!-- <input type="checkbox" name="gender" value="2" checked>neurčeno -->
-				</label>
+				<ul>
+					<li>
+						<label class="gender">
+							<input type="checkbox" name="gender" value="0" checked>
+							<i></i>
+							<div>žena</div>
+						</label>
+					</li>
+					<li>
+						<label class="gender">
+							<input type="checkbox" name="gender" value="1" checked>
+							<i></i>
+							<div>muž</div>
+						</label>
+					</li>
+					<li>
+						<label class="gender">
+							<input type="checkbox" name="gender" value="2" checked>
+							<i class="gray"></i>
+							<div class="gray">neurčeno</div>
+						</label>
+					</li>
+				</ul>
 				<hr>
 			</div>
 			<div id="filter-citizenship" class="filter">
@@ -197,10 +214,22 @@
 			</div>
 			<div id="filter-direction" class="filter">
 				<h4>Směr přechodu</h4>
-				<label id="direction">
-					<input type="checkbox" name="direction" value="0" checked>ven
-					<input type="checkbox" name="direction" value="1" checked>dovnitř
-				</label>
+				<ul>
+					<li>
+						<label class="gender">
+							<input type="checkbox" name="direction" value="0" checked>
+							<i></i>
+							<div>ven</div>
+						</label>
+					</li>
+					<li>
+						<label class="gender">
+							<input type="checkbox" name="direction" value="1" checked>
+							<i></i>
+							<div>dovtniř</div>
+						</label>
+					</li>
+				</ul>
 				<hr>
 			</div>
 			<a href="" id="reset-filters" class="small text-center">&orarr; Resetovat filtrování</a>

@@ -266,6 +266,10 @@ section.filters {
 	h4 {
 		text-align: left;
 	}
+	label {
+		font-size: 0.875em;
+		font-weight: 200;
+	}
 
 	#filter-age {
 		margin: $base-spacing * 0.5 0;
@@ -278,5 +282,63 @@ section.filters {
 		border-radius: $base-border-radius;
 		margin-bottom: $small-spacing;
 		text-transform: none;
+	}
+
+	#filter-gender,
+	#filter-direction {
+		ul {
+			padding: 0;
+			margin-top: $small-spacing;
+			@include row();
+
+			li {
+				list-style: none;
+				display: inline-block;
+			}
+		}
+		.gender {
+			position: relative;
+			display: inline-block;
+			margin-right: 10px;
+			vertical-align: middle;
+			cursor: pointer;
+		}
+
+		input[type="checkbox"] {
+			position: absolute;
+			top: 0; left: 0;
+			margin: 0;
+			opacity: 0;
+			z-index: -1;
+		}
+
+		i {
+			display: inline-block;
+			width: $base-line-height * .75em;
+			height: $base-line-height * .75em;
+			border: 1px solid $light-red;
+			border-radius: 50%;
+			opacity: 0.38;
+
+			&:hover {
+				border: $base-spacing / 8 solid $red;
+			}
+
+			&.gray + div {
+				// color: $light-gray;
+			}
+		}
+		input:checked ~ i {
+			opacity: 1;
+			background: $light-red;
+		}
+	}
+
+	#filter-gender li {
+		@include span-columns(4);
+	}
+
+	#filter-direction li {
+		@include span-columns(6);
 	}
 }

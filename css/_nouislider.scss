@@ -3,6 +3,8 @@
  * These styles are required for noUiSlider to function.
  * You don't need to change these rules to apply your design.
  */
+ $slider-color: $light-red;
+
  .noUi-target,
  .noUi-target * {
  	-webkit-touch-callout: none;
@@ -86,7 +88,7 @@ z-index: 10;
 	border-radius: $base-line-height * 0.125em;
 }
 .noUi-connect {
-	background: $dark-turqois;
+	background: $slider-color;
 	-webkit-transition: background 450ms;
 	transition: background 450ms;
 }
@@ -104,7 +106,7 @@ z-index: 10;
 }
 .noUi-handle {
 	background: white;
-	border: 1px solid $dark-turqois;
+	border: 1px solid $slider-color;
 	border-radius: $base-line-height * 1em;
 	cursor: grab;
 	cursor: -moz-grab;
@@ -113,7 +115,7 @@ z-index: 10;
 	&:hover,
 	&:active {
 		// background: darken(white, 5);
-		border: $base-spacing / 8 solid $red;
+		border: $base-spacing / 8 solid $slider-color;
 	}
 
 	&:active {
