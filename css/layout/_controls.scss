@@ -6,10 +6,8 @@ section.controls {
 	width: 100%;
 	background-color: transparent;
 	padding: 0;
-	overflow: hidden;
 
 	.checkbox {
-		overflow: hidden;
 		@include span-columns(12);
 
 		@include media($large-screen) {
@@ -20,7 +18,22 @@ section.controls {
 
 		label {
 			display: inline-block;
-			overflow: hidden;
+
+			.tooltip {
+				top: 105%;
+				bottom: inherit;
+				display: none;
+
+				&:after {
+					display: none;
+				}
+			}
+
+			@include media($large-screen) {
+				.tooltip {
+					display: block;
+				}
+			}
 		}
 
 		.options {
