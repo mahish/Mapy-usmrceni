@@ -3,7 +3,7 @@ $(document).ready(function() {
 	window.sliderAge = document.getElementById('filter-age');
 
 	noUiSlider.create(sliderAge, {
-		start: [ 15, 50 ],
+		start: [ 5, 90 ],
 		step: 1,
 		// snap: true,
 		// margin: 20,
@@ -12,8 +12,8 @@ $(document).ready(function() {
 		// orientation: 'horizontal',
 		// behaviour: 'tap-drag',
 		range: {
-			'min': 15,
-			'max': 50
+			'min': 5,
+			'max': 90
 		},
 		format: {
 			to: function(value) {
@@ -44,8 +44,8 @@ $(document).ready(function() {
 	sliderAge.noUiSlider.on('update', function() {
 		filterInput['ageFrom'] = sliderAge.noUiSlider.get()[0];
 		filterInput['ageTo'] = sliderAge.noUiSlider.get()[1];
-		document.getElementById('age-min').innerHTML = document.getElementById('age-min').innerHTML.replace(/\d{2}/, filterInput['ageFrom']);
-		document.getElementById('age-max').innerHTML = document.getElementById('age-max').innerHTML.replace(/\d{2}/, filterInput['ageTo']);
+		document.getElementById('age-min').innerHTML = document.getElementById('age-min').innerHTML.replace(/\d{1,}/, filterInput['ageFrom']);
+		document.getElementById('age-max').innerHTML = document.getElementById('age-max').innerHTML.replace(/\d{1,}/, filterInput['ageTo']);
 	})
 
 	$('#filters select').on('change', function() {
