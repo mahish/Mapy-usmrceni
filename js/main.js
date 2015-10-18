@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+	// Filter age
 	window.sliderAge = document.getElementById('filter-age');
 
 	noUiSlider.create(sliderAge, {
@@ -25,16 +26,6 @@ $(document).ready(function() {
 		}
 	});
 
-	// Reset zoom
-	// how to make it without reloading whole map?
-	var resetView = document.getElementById('reset-view');
-	google.maps.event.addDomListener(resetView, 'click', function() {
-		event.preventDefault();
-
-		map.setCenter(new google.maps.LatLng(49.35, 14.5));
-		map.setZoom(7);
-	});
-
 	sliderAge.noUiSlider.on('change', function() {
 		filterInput['ageFrom'] = sliderAge.noUiSlider.get()[0];
 		filterInput['ageTo'] = sliderAge.noUiSlider.get()[1];
@@ -48,6 +39,7 @@ $(document).ready(function() {
 		document.getElementById('age-max').innerHTML = document.getElementById('age-max').innerHTML.replace(/\d{1,}/, filterInput['ageTo']);
 	})
 
+	// Other filters
 	$('#filters select').on('change', function() {
 		var filterName = $(this).attr('id');
 		filterInput[filterName] = $(this).children('option:selected').val()  == "false" ? false : $(this).children('option:selected').val();
@@ -65,6 +57,7 @@ $(document).ready(function() {
 		draw(map, mapsDataJSON, filterInput, oms)
 	})
 
+	// scroll to
 	$('#toApp').click(function() {
 		$('header.intro').addClass('hide');
 
@@ -74,12 +67,22 @@ $(document).ready(function() {
 
 	});
 
+
+	// Reset zoom
+	var resetView = document.getElementById('reset-view');
+	google.maps.event.addDomListener(resetView, 'click', function() {
+		event.preventDefault();
+
+		map.setCenter(new google.maps.LatLng(49.35, 14.5));
+		map.setZoom(7);
+	});
+
 	// open header
 	$('header.intro').click(function(){
 		$(this).removeClass('hidden');
 	});
 
-	// Assign class active to selected period
+	// Assign class .active to selected period
 	$('.radio.option').click(function(){
 		if ($(this).is(':checked')) {
 			$(this).parent('label').siblings().removeClass('active');
@@ -93,21 +96,16 @@ $(document).ready(function() {
 	});
 
 	// open filters
-	// if ($('#filters').hasClass('hidden')) {
-		$('#filters > header').click(function(){
-			$('#filters').toggleClass('hidden');
-			$('body').toggleClass('active-filters');
-			console.log("Open filter.");
-		});
-	// } else if ($('body').hasClass('active-filters')) {
-		// close filters
-		$('#roll-up-filters').click(function(){
-			$('#filters').toggleClass('hidden');
-			$('body').toggleClass('active-filters');
-			console.log("Close filter.");
-		});
-	// }
+	$('#filters > header').click(function(){
+		$('#filters').toggleClass('hidden');
+		$('body').toggleClass('active-filters');
+		console.log("Open filter.");
+	});
 
-
+	$('#roll-up-filters').click(function(){
+		$('#filters').toggleClass('hidden');
+		$('body').toggleClass('active-filters');
+		console.log("Close filter.");
+	});
 
 });
