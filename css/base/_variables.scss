@@ -1,9 +1,13 @@
+$base-font-size: 1em;
+
+$modular-scale-ratio: $major-third;
+$modular-scale-base: $base-font-size;
+
 // Typography
 $base-font-family: "karmina-sans", $helvetica;
 $heading-font-family: "karmina-sans", $helvetica;
 
 // Font Sizes
-$base-font-size: 1em;
 
 // Line height
 $base-line-height: 1.5;
@@ -16,7 +20,17 @@ $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
 // Colors
+$dark-red: #411A19;
+$red: #946563;
+$light-red: #946563;
+
+$dark-blue: #465957;
 $blue: #477dca;
+$light-blue: #698C89;
+
+$dark-turqois: #35968F;
+$medium-turqois: #475957;
+$turqois: #7BB0AC;
 
 $dark-gray: #424143;
 $gray: #67666A;
@@ -29,6 +43,17 @@ $base-background-color: #fff;
 $base-font-color: $dark-gray;
 $action-color: $blue;
 
+// Input
+$option-color: $turqois;
+$option-text-color: $medium-turqois;
+$active-color: $red;
+$active-text-color: $dark-red;
+$bg-colors-options: #ACE5E1, #8DD6D0, #67C9C1, #42BDB3, #35968F;
+$bg-colors-active: #EBDBDA, #DABAB9, #8CB2AE, #8B9997, #7C7F7F;
+$checked-option-color: $red;
+
+$option-size: em(18);
+
 // Border
 $base-border-color: $light-gray;
 $base-border: 1px solid $base-border-color;
@@ -36,7 +61,3 @@ $base-border: 1px solid $base-border-color;
 // Forms
 $form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
 $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
-
-// ==========================
-
-@import "my-variables";
