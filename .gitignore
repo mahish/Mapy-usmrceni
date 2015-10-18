@@ -3,7 +3,7 @@ _site
 *.sublime-workspace
 *.sublime-project
 
-
+# GRUNT
 # Ignore native extensions in the node_modules folder (things changed by npm rebuild)
 # http://stackoverflow.com/questions/11459475/should-i-check-in-node-modules-to-git-when-creating-a-node-js-app-on-heroku
 node_modules/**/*.node
@@ -15,3 +15,7 @@ node_modules/**/*.target
 node_modules/**/.deps/
 node_modules/**/build/Makefile
 node_modules/**/**/build/Makefile
+
+node_modules
+gruntfile.js
+package.json
