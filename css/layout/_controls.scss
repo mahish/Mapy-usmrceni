@@ -37,8 +37,6 @@ section.controls {
 		}
 
 		.options {
-			$bg-colors-options: #ACE5E1, #8DD6D0, #67C9C1, #42BDB3, #35968F;
-			$bg-colors-active: #EBDBDA, #DABAB9, #8CB2AE, #8B9997, #7C7F7F;
 
 			label {
 				@include span-columns(1 of 5);
@@ -51,48 +49,35 @@ section.controls {
 					position: absolute;
 					line-height: 3;
 					left: 0.62em;
-					color: $medium-gray;
+					color: $option-text-color;
 					font-weight: 200;
 					font-size: 0.62em;
 					text-transform: uppercase;
 				}
-
-				@for $i from 1 to 6 {
-					// assign colors from $bg-colors-options list
-					&:nth-child(#{$i}) {
-						$option-color-from-list: nth($bg-colors-options, $i);
-						background-color: $option-color-from-list;
-						color: darken($option-color-from-list, 24%);
-						border-bottom: 1px solid darken($option-color-from-list, 5%);
-
-						&:focus,
-						&:hover {
-							background-color: darken($option-color-from-list, 5%);
-							color: darken($option-color-from-list, 24%);
-						}
-
-						&.active {
-							color: desaturate(adjust_hue(darken($option-color-from-list, 24), 185), 0.4);
-							background-color: desaturate(adjust_hue($option-color-from-list, 185), 0.4);
-							// saturate(darken(adjust_hue(#8CB2AE, 189), 12), 4)
-							// adjust_hue(darken(#67C9C1, 9), 186)
-							// desaturate(adjust_hue(#67C9C1, 185), 0)
-						}
-
-						input.option {
-							background-color: darken($option-color-from-list, 15%);
-
-							&:focus,
-							&:hover {
-								background-color: darken($option-color-from-list, 38%);
-							}
-
-							&:checked {
-								background-color: darken($option-color-from-list, 62%);
-							}
-						}
-					}
+				&.active:first-child:before {
+					color: $active-text-color;
 				}
+
+				background-color: $option-color;
+				color: $option-text-color;
+				border-bottom: 1px solid darken($option-color, 5%);
+
+				&:not(:last-of-type) {
+					border-right: 1px solid darken($option-color, 5%);
+				}
+
+				&:focus,
+				&:hover {
+					background-color: darken($option-color, 5%);
+					color: darken($option-text-color, 10%);
+				}
+
+				&.active {
+					background-color: $active-color;
+					color: $active-text-color;
+					border-bottom: 1px solid lighten($active-color, 5%);
+				}
+
 			}
 
 			// Checkbox/Radio replacement

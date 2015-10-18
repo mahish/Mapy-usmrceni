@@ -604,7 +604,6 @@ select {
   background: white;
   padding: 0 0.75em;
   border-radius: 2px;
-  font-size: 0.875em;
   font-weight: 200; }
   select:focus {
     outline: none; }
@@ -712,7 +711,7 @@ picture {
 
 h1 {
   font-size: 1.95313em;
-  color: #6D3D3B; }
+  color: #946563; }
   h1 a {
     font-size: 50%; }
 
@@ -786,7 +785,7 @@ dl {
   color: #424143; }
 
 .red {
-  color: #6D3D3B; }
+  color: #946563; }
 
 .small {
   display: block;
@@ -840,6 +839,49 @@ dl {
       background-repeat: no-repeat;
       background-size: .75em; }
 
+.tooltip-item {
+  position: relative; }
+  .tooltip-item:focus, .tooltip-item:hover .tooltip {
+    opacity: 1;
+    visibility: visible; }
+  .tooltip-item .tooltip {
+    position: absolute;
+    right: 0;
+    bottom: 3em;
+    left: 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    background-color: white;
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0 0 0.375em rgba(0, 0, 0, 0.1);
+    font-size: 0.875em;
+    font-weight: 200;
+    margin: 0 auto;
+    max-width: 16em;
+    opacity: 0;
+    padding: 0.75em;
+    text-align: center;
+    visibility: hidden;
+    z-index: 13; }
+    .tooltip-item .tooltip p {
+      color: #424143;
+      line-height: 1.5;
+      margin: 0; }
+    .tooltip-item .tooltip:after {
+      position: absolute;
+      right: 0;
+      left: 0;
+      border: 8px solid transparent;
+      bottom: -1.3em;
+      color: white;
+      content: '▼';
+      font-size: 1.4em;
+      margin-left: -8px;
+      text-align: center;
+      text-shadow: 0 0 0.375em rgba(0, 0, 0, 0.1); }
+
 section.controls {
   position: fixed;
   top: 1.5em;
@@ -847,10 +889,8 @@ section.controls {
   z-index: 14;
   width: 100%;
   background-color: transparent;
-  padding: 0;
-  overflow: hidden; }
+  padding: 0; }
   section.controls .checkbox {
-    overflow: hidden;
     float: left;
     display: block;
     margin-right: 0%;
@@ -858,8 +898,16 @@ section.controls {
     section.controls .checkbox:last-child {
       margin-right: 0; }
     section.controls .checkbox label {
-      display: inline-block;
-      overflow: hidden; }
+      display: inline-block; }
+      section.controls .checkbox label .tooltip {
+        top: 105%;
+        bottom: inherit;
+        display: none; }
+        section.controls .checkbox label .tooltip:after {
+          display: none; }
+      @media screen and (min-width: 62.5em) {
+        section.controls .checkbox label .tooltip {
+          display: block; } }
     section.controls .checkbox .options label {
       float: left;
       display: block;
@@ -867,7 +915,10 @@ section.controls {
       width: 20%;
       line-height: 6;
       cursor: pointer;
-      margin-bottom: 0; }
+      margin-bottom: 0;
+      background-color: #7BB0AC;
+      color: #475957;
+      border-bottom: 1px solid #6ba6a2; }
       section.controls .checkbox .options label:last-child {
         margin-right: 0; }
       section.controls .checkbox .options label:first-child:before {
@@ -875,90 +926,21 @@ section.controls {
         position: absolute;
         line-height: 3;
         left: 0.62em;
-        color: #807F83;
+        color: #475957;
         font-weight: 200;
         font-size: 0.62em;
         text-transform: uppercase; }
-      section.controls .checkbox .options label:nth-child(1) {
-        background-color: #ACE5E1;
-        color: #4fc8bf;
-        border-bottom: 1px solid #99dfda; }
-        section.controls .checkbox .options label:nth-child(1):focus, section.controls .checkbox .options label:nth-child(1):hover {
-          background-color: #99dfda;
-          color: #4fc8bf; }
-        section.controls .checkbox .options label:nth-child(1).active {
-          color: #c7514f;
-          background-color: #e5adac; }
-        section.controls .checkbox .options label:nth-child(1) input.option {
-          background-color: #72d3cc; }
-          section.controls .checkbox .options label:nth-child(1) input.option:focus, section.controls .checkbox .options label:nth-child(1) input.option:hover {
-            background-color: #319e96; }
-          section.controls .checkbox .options label:nth-child(1) input.option:checked {
-            background-color: #14413d; }
-      section.controls .checkbox .options label:nth-child(2) {
-        background-color: #8DD6D0;
-        color: #3eaba2;
-        border-bottom: 1px solid #7acfc8; }
-        section.controls .checkbox .options label:nth-child(2):focus, section.controls .checkbox .options label:nth-child(2):hover {
-          background-color: #7acfc8;
-          color: #3eaba2; }
-        section.controls .checkbox .options label:nth-child(2).active {
-          color: #ab3e3e;
-          background-color: #d68d8d; }
-        section.controls .checkbox .options label:nth-child(2) input.option {
-          background-color: #55c2b9; }
-          section.controls .checkbox .options label:nth-child(2) input.option:focus, section.controls .checkbox .options label:nth-child(2) input.option:hover {
-            background-color: #2b7770; }
-          section.controls .checkbox .options label:nth-child(2) input.option:checked {
-            background-color: #0a1d1b; }
-      section.controls .checkbox .options label:nth-child(3) {
-        background-color: #67C9C1;
-        color: #30867f;
-        border-bottom: 1px solid #54c2b9; }
-        section.controls .checkbox .options label:nth-child(3):focus, section.controls .checkbox .options label:nth-child(3):hover {
-          background-color: #54c2b9;
-          color: #30867f; }
-        section.controls .checkbox .options label:nth-child(3).active {
-          color: #863030;
-          background-color: #c96867; }
-        section.controls .checkbox .options label:nth-child(3) input.option {
-          background-color: #3ca89f; }
-          section.controls .checkbox .options label:nth-child(3) input.option:focus, section.controls .checkbox .options label:nth-child(3) input.option:hover {
-            background-color: #1d514d; }
-          section.controls .checkbox .options label:nth-child(3) input.option:checked {
-            background-color: black; }
-      section.controls .checkbox .options label:nth-child(4) {
-        background-color: #42BDB3;
-        color: #22625d;
-        border-bottom: 1px solid #3baaa1; }
-        section.controls .checkbox .options label:nth-child(4):focus, section.controls .checkbox .options label:nth-child(4):hover {
-          background-color: #3baaa1;
-          color: #22625d; }
-        section.controls .checkbox .options label:nth-child(4).active {
-          color: #622323;
-          background-color: #bc4343; }
-        section.controls .checkbox .options label:nth-child(4) input.option {
-          background-color: #2e847d; }
-          section.controls .checkbox .options label:nth-child(4) input.option:focus, section.controls .checkbox .options label:nth-child(4) input.option:hover {
-            background-color: #102d2b; }
-          section.controls .checkbox .options label:nth-child(4) input.option:checked {
-            background-color: black; }
-      section.controls .checkbox .options label:nth-child(5) {
-        background-color: #35968F;
-        color: #153c39;
-        border-bottom: 1px solid #2e837d; }
-        section.controls .checkbox .options label:nth-child(5):focus, section.controls .checkbox .options label:nth-child(5):hover {
-          background-color: #2e837d;
-          color: #153c39; }
-        section.controls .checkbox .options label:nth-child(5).active {
-          color: #3b1615;
-          background-color: #963635; }
-        section.controls .checkbox .options label:nth-child(5) input.option {
-          background-color: #215d59; }
-          section.controls .checkbox .options label:nth-child(5) input.option:focus, section.controls .checkbox .options label:nth-child(5) input.option:hover {
-            background-color: #020706; }
-          section.controls .checkbox .options label:nth-child(5) input.option:checked {
-            background-color: black; }
+      section.controls .checkbox .options label.active:first-child:before {
+        color: #411A19; }
+      section.controls .checkbox .options label:not(:last-of-type) {
+        border-right: 1px solid #6ba6a2; }
+      section.controls .checkbox .options label:focus, section.controls .checkbox .options label:hover {
+        background-color: #6ba6a2;
+        color: #303d3b; }
+      section.controls .checkbox .options label.active {
+        background-color: #946563;
+        color: #411A19;
+        border-bottom: 1px solid #a07371; }
     section.controls .checkbox .options input.option {
       -webkit-appearance: none;
       -moz-appearance: none;
@@ -966,12 +948,12 @@ section.controls {
       -o-appearance: none;
       appearance: none;
       position: relative;
-      top: 6px;
+      top: 0.375em;
       right: 0;
       bottom: 0;
       left: 0;
-      height: 18px;
-      width: 18px;
+      height: 1.125em;
+      width: 1.125em;
       -webkit-transition: all 0.15s ease-out 0s;
       -moz-transition: all 0.15s ease-out 0s;
       transition: all 0.15s ease-out 0s;
@@ -1181,7 +1163,7 @@ section.filters {
     opacity: 0.38; }
     section.filters #filter-gender i:hover,
     section.filters #filter-direction i:hover {
-      border: 0.1875em solid #6D3D3B; }
+      border: 0.1875em solid #946563; }
   section.filters #filter-gender input:checked ~ i,
   section.filters #filter-direction input:checked ~ i {
     opacity: 1;
@@ -1278,16 +1260,16 @@ input.option {
   -o-appearance: none;
   appearance: none;
   position: relative;
-  top: 6px;
+  top: 0.375em;
   right: 0;
   bottom: 0;
   left: 0;
-  height: 18px;
-  width: 18px;
+  height: 1.125em;
+  width: 1.125em;
   -webkit-transition: all 0.15s ease-out 0s;
   -moz-transition: all 0.15s ease-out 0s;
   transition: all 0.15s ease-out 0s;
-  background: #698C89;
+  background: #7BB0AC;
   border: none;
   cursor: pointer;
   display: inline-block;
@@ -1295,9 +1277,9 @@ input.option {
   position: relative;
   z-index: 1000; }
   input.option:hover {
-    background: #6D3D3B; }
+    background: #946563; }
   input.option:checked {
-    background: #3b2120; }
+    background: #664644; }
   input.option.radio {
     border-radius: 50%; }
     input.option.radio::after {
@@ -1348,7 +1330,7 @@ header.intro {
     border-width: 1.5em;
     margin-left: -1.5em; }
   header.intro > span {
-    color: #6D3D3B;
+    color: #946563;
     font-weight: 600;
     text-transform: uppercase;
     opacity: 0;
