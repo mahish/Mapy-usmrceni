@@ -85,7 +85,7 @@ function draw(map, data, filter, oms) {
 		var validateCurrent = function(data, filter) {
 			var isValid = true;
 			currentYear = data.rok;
-			currentAge = data.vek_h;
+			currentAge = parseFloat(data.vek_h);
 			currentNationality = data.statni_prislusnost;
 			currentDeath = data.umrti;
 

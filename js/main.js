@@ -27,8 +27,8 @@ $(document).ready(function() {
 	});
 
 	sliderAge.noUiSlider.on('change', function() {
-		filterInput['ageFrom'] = sliderAge.noUiSlider.get()[0];
-		filterInput['ageTo'] = sliderAge.noUiSlider.get()[1];
+		filterInput['ageFrom'] = parseFloat(sliderAge.noUiSlider.get()[0]);
+		filterInput['ageTo'] = parseFloat(sliderAge.noUiSlider.get()[1]);
 		draw(map, mapsDataJSON, filterInput, oms);
 	})
 
