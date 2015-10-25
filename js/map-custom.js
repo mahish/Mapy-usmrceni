@@ -42,7 +42,7 @@ function clearMarkers() {
 function draw(map, data, filter, oms) {
 
 	clearMarkers();
-	
+
 	var currentLat;
 	var currentLng;
 	var currentYear;
@@ -214,6 +214,7 @@ function initialize() {
 	oms = new OverlappingMarkerSpiderfier(map, {
 		markersWontMove: true,
 		markersWontHide: true,
+		keepSpiderfied: true,
 		legWeight: 0
 	});
 
