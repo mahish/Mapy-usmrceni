@@ -51,7 +51,7 @@ function draw(map, data, filter, oms) {
 	var currentCitizenship;
 	var currentDeath;
 
-	$.each(data, function(key, data) {
+	data.forEach(function(data) {
 
 		currentLat = data.gps_incidentu.split(",")[0];
 		currentLng = data.gps_incidentu.split(",")[1];
