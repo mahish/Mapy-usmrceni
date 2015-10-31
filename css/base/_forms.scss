@@ -12,6 +12,8 @@ select {
 	font-family: $base-font-family;
 	font-size: $base-font-size;
 }
+/* This is to remove the arrow of select element in IE */
+select::-ms-expand {	display: none; }
 
 label {
 	font-weight: 600;
