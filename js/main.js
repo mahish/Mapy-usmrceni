@@ -89,7 +89,7 @@ $(document).ready(function() {
 			directionIn: false,
 			directionOut: false
 		};
-		draw(map, mapsDataJSON, filterInput, oms);
+		draw(map, mapsDataJSON, null, oms);
 	});
 
 
@@ -129,6 +129,7 @@ $(document).ready(function() {
 	// close infobox & clear active marker
 	$('.infobox').on('click', function(){
 		$('body').removeClass('active-marker');
+		activeMarkers.pop().setIcon(passiveIcon);
 	});
 
 	// open filters

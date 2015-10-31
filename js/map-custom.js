@@ -21,6 +21,19 @@ var filterInput = {
     directionOut: false
 };
 
+var iconBase = 'img/';
+
+var activeIcon = {
+    url: iconBase + 'active-marker.png',
+    size: new google.maps.Size(25, 25),
+    origin: new google.maps.Point(0, 0)
+};
+
+var passiveIcon = {
+    url: iconBase + 'marker.png',
+};
+
+
 function getDataJSON() {
 	return $.getJSON("data/data_json/data2.json").then(function(data) {
 		return data;
@@ -61,9 +74,6 @@ function draw(map, data, filter, oms) {
 		currentLat = data.gps_incidentu.split(",")[0];
 		currentLng = data.gps_incidentu.split(",")[1];
 
-		// Customize a map marker - define url
-		var iconBase = 'img/';
-
 		var latLng = new google.maps.LatLng(currentLat, currentLng);
 		// Creating a marker and putting it on the map
 		var marker = new google.maps.Marker({
@@ -72,21 +82,6 @@ function draw(map, data, filter, oms) {
 			icon: iconBase + 'marker.png',
 			title: data.osoba_cislo.toString()
 		});
-
-		var activeIcon = {
-			url: iconBase + 'active-marker.png',
-			// This marker is 25 pixels wide by 25 pixels tall.
-			size: new google.maps.Size(25, 25),
-			// The origin for this image is 0,0.
-			origin: new google.maps.Point(0, 0)
-				// The anchor for this image is the base of the flagpole at 0,32.
-				// 24.8.2015 — our custom marker is ok with automatic center
-				// anchor: new google.maps.Point(12, 12)
-		};
-
-		var passiveIcon = {
-			url: iconBase + 'marker.png',
-		};
 
 		var validateCurrent = function(data, filter) {
 			var isValid = true;
