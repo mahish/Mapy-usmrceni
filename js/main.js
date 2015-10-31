@@ -49,6 +49,7 @@ $(document).ready(function() {
 		var filterName = $(this).attr('name');
 		filterInput[filterName] = $(this).attr('value') == "false" ? false : $(this).attr('value');
 		draw(map, mapsDataJSON, filterInput, oms);
+		console.log($(this).val());
 	})
 	$('#controls input').on('change', function() {
 		var filterName = $(this).attr('value');
@@ -57,18 +58,16 @@ $(document).ready(function() {
 		draw(map, mapsDataJSON, filterInput, oms)
 	})
 
-	// scroll to
-	$('#toApp').click(function() {
-		$('header.intro').addClass('hide');
 
-		setTimeout(function () {
-			$('header.intro').addClass('hidden').removeClass('hide');
-		}, 2000);
+	// reset of filters
+	$('#reset-filters').on('click', function() {
+			draw(map, mapsDataJSON, {}, oms);
 
+			// we need to set all filters back visually as well
 	});
 
 
-	// Reset zoom
+	// Reset zoom & position of the map
 	var resetView = document.getElementById('reset-view');
 	google.maps.event.addDomListener(resetView, 'click', function() {
 		event.preventDefault();
@@ -77,13 +76,24 @@ $(document).ready(function() {
 		map.setZoom(7);
 	});
 
+
+	// scroll to
+	$('#toApp').on('click', function() {
+		$('header.intro').addClass('hide');
+
+		setTimeout(function () {
+			$('header.intro').addClass('hidden').removeClass('hide');
+		}, 2000);
+
+	});
+
 	// open header
-	$('header.intro').click(function(){
+	$('header.intro').on('click', function(){
 		$(this).removeClass('hidden');
 	});
 
 	// Assign class .active to selected period
-	$('.radio.option').click(function(){
+	$('.radio.option').on('click', function(){
 		if ($(this).is(':checked')) {
 			$(this).parent('label').siblings().removeClass('active');
 			$(this).parent('label').addClass('active');
@@ -91,21 +101,19 @@ $(document).ready(function() {
 	});
 
 	// close infobox & clear active marker
-	$('.infobox').click(function(){
+	$('.infobox').on('click', function(){
 		$('body').removeClass('active-marker');
 	});
 
 	// open filters
-	$('#filters > header').click(function(){
+	$('#filters > header').on('click', function(){
 		$('#filters').toggleClass('hidden');
 		$('body').toggleClass('active-filters');
-		console.log("Open filter.");
 	});
 
-	$('#roll-up-filters').click(function(){
+	$('#roll-up-filters').on('click', function(){
 		$('#filters').toggleClass('hidden');
 		$('body').toggleClass('active-filters');
-		console.log("Close filter.");
 	});
 
 });
