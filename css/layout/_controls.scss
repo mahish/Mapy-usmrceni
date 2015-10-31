@@ -40,6 +40,20 @@ section.controls {
 				}
 			}
 
+			&:first-child {
+				hr {
+					display: none;
+
+					@include media($large-screen) {
+						display: inline-block;
+						width: 15%;
+					}
+					@include media($x-large-screen) {
+						width: 22%;
+					}
+				}
+			}
+
 			&.active {
 				hr {
 					border-color: $active-text-color;

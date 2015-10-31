@@ -751,19 +751,19 @@ dl {
 
 .hide-for-small {
   display: none; }
-  @media screen and (min-width: 45.625em) {
+  @media screen and (min-width: 47.8125em) {
     .hide-for-small {
       display: inline-block; } }
 
 .hide-for-medium {
   display: none; }
-  @media screen and (min-width: 62.5em) {
+  @media screen and (min-width: 65.625em) {
     .hide-for-medium {
       display: inline-block; } }
 
 .hide-for-large {
   display: none; }
-  @media screen and (min-width: 74.375em) {
+  @media screen and (min-width: 78.125em) {
     .hide-for-large {
       display: inline-block; } }
 
@@ -903,9 +903,18 @@ section.controls {
         border-width: 2px;
         border-color: #475957;
         width: 40%; }
-        @media screen and (min-width: 62.5em) {
+        @media screen and (min-width: 65.625em) {
           section.controls .checkbox label hr {
             width: 50%; } }
+      section.controls .checkbox label:first-child hr {
+        display: none; }
+        @media screen and (min-width: 65.625em) {
+          section.controls .checkbox label:first-child hr {
+            display: inline-block;
+            width: 15%; } }
+        @media screen and (min-width: 78.125em) {
+          section.controls .checkbox label:first-child hr {
+            width: 22%; } }
       section.controls .checkbox label.active hr {
         border-color: #411A19; }
       section.controls .checkbox label .tooltip {
@@ -914,7 +923,7 @@ section.controls {
         display: none; }
         section.controls .checkbox label .tooltip:after {
           display: none; }
-      @media screen and (min-width: 62.5em) {
+      @media screen and (min-width: 65.625em) {
         section.controls .checkbox label .tooltip {
           display: block; } }
     section.controls .checkbox .options {
@@ -993,10 +1002,10 @@ section.filters {
   @media screen and (min-width: 32.5em) {
     section.filters {
       width: 60%; } }
-  @media screen and (min-width: 45.625em) {
+  @media screen and (min-width: 47.8125em) {
     section.filters {
       width: 40%; } }
-  @media screen and (min-width: 62.5em) {
+  @media screen and (min-width: 65.625em) {
     section.filters {
       width: 20%; } }
   section.filters:after {
@@ -1370,7 +1379,7 @@ header.intro {
     padding: 2%; }
     header.intro h1:last-child {
       margin-right: 0; }
-    @media screen and (min-width: 62.5em) {
+    @media screen and (min-width: 65.625em) {
       header.intro h1 {
         float: left;
         display: block;
@@ -1387,7 +1396,7 @@ header.intro {
     padding: 2%; }
     header.intro article:last-child {
       margin-right: 0; }
-    @media screen and (min-width: 62.5em) {
+    @media screen and (min-width: 65.625em) {
       header.intro article {
         float: left;
         display: block;
