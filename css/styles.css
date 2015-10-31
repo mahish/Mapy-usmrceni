@@ -891,8 +891,13 @@ section.controls {
   background-color: transparent;
   padding: 0;
   overflow-x: scroll;
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch; }
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap; }
+  @media screen and (min-width: 47.8125em) {
+    section.controls {
+      overflow: initial;
+      white-space: normal; } }
   section.controls .checkbox {
     min-width: 730px; }
     section.controls .checkbox label {
