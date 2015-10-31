@@ -92,13 +92,14 @@ input.option {
 	position: relative;
 	// margin-right: 0.5rem;
 	z-index: 1000;
+	display: none;
 
 	&:hover {
 		background: $checked-option-color;
 	}
 
 	&:checked {
-		background: darken($checked-option-color, 15%);
+		// background: darken($checked-option-color, 15%);
 
 		// The checkmark
 		// &::before {

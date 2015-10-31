@@ -6,9 +6,12 @@ section.controls {
 	width: 100%;
 	background-color: transparent;
 	padding: 0;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	-webkit-overflow-scrolling: touch; // inertia scrolling in iOS	white-space: nowrap;
 
 	.checkbox {
-		@include span-columns(12);
+		min-width: 730px;
 
 		@include media($large-screen) {
 			// @include span-columns(4);
@@ -18,6 +21,30 @@ section.controls {
 
 		label {
 			display: inline-block;
+
+			hr {
+				display: inline-block;
+				margin: 0 0.375em 4px;
+				border-width: 2px;
+				border-color: $option-text-color;
+				width: 40%;
+
+				// @include media($small-screen) {
+				// 	width: 50%;
+				// }
+				// @include media($medium-screen) {
+				// 	width: 40%;
+				// }
+				@include media($large-screen) {
+					width: 50%;
+				}
+			}
+
+			&.active {
+				hr {
+					border-color: $active-text-color;
+				}
+			}
 
 			.tooltip {
 				top: 105%;
@@ -37,12 +64,18 @@ section.controls {
 		}
 
 		.options {
+			min-width: 730px;
 
 			label {
-				@include span-columns(1 of 5);
 				line-height: $base-line-height * 4;
 				cursor: pointer;
 				margin-bottom: 0;
+				@include span-columns(1 of 5);
+
+				@include media($small-screen) {
+					@include span-columns(1 of 5);
+					line-height: $base-line-height * 4;
+				}
 
 				&:first-child:before {
 					content: "Dle období";
@@ -79,28 +112,6 @@ section.controls {
 				}
 
 			}
-
-			// Checkbox/Radio replacement
-			input.option {
-				@include appearance(none);
-				@include position($option-size/3 0 0 0);
-				@include size($option-size);
-				@include transition;
-				border: none;
-				cursor: pointer;
-				display: none; // inline-block
-				outline: none;
-				position: relative;
-				z-index: 1000;
-
-				&.radio {
-					border-radius: 50%;
-
-					&::after {
-						border-radius: 50%;
-					}
-				}
-			}
 		}
 
 	}
@@ -117,6 +128,7 @@ section.filters {
 
 	@include media($small-screen) {
 		width: 60%;
+
 	}
 
 	@include media($medium-screen) {
