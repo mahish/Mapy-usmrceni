@@ -12,7 +12,7 @@ section.controls {
 	white-space: nowrap;
 
 	@include media($medium-screen) {
-		overflow: initial;
+		overflow: visible;
 		white-space: normal;
 	}
 
@@ -27,7 +27,7 @@ section.controls {
 				margin: 0 0.375em 4px;
 				border-width: 2px;
 				border-color: $option-text-color;
-				width: 40%;
+				width: 30%;
 
 				// @include media($small-screen) {
 				// 	width: 50%;
@@ -46,10 +46,10 @@ section.controls {
 
 					@include media($large-screen) {
 						display: inline-block;
-						width: 15%;
+						width: 12%;
 					}
 					@include media($x-large-screen) {
-						width: 22%;
+						width: 18%;
 					}
 				}
 			}
@@ -64,15 +64,18 @@ section.controls {
 				top: 105%;
 				bottom: inherit;
 				display: none;
+				width: 14em;
+
+				@include media($large-screen) {
+					display: block;
+				}
+
+				@include media($x-large-screen) {
+					width: 16em;
+				}
 
 				&:after {
 					display: none;
-				}
-			}
-
-			@include media($large-screen) {
-				.tooltip {
-					display: block;
 				}
 			}
 		}
@@ -265,6 +268,7 @@ section.filters {
 		@include transition-duration(0.2s);
 		@include transition-timing-function(ease-in-out);
 		opacity: 0;
+		visibility: hidden;
 
 		> div {
 			background: white;
@@ -284,6 +288,7 @@ section.filters {
 		.roll-up {
 			// display: block;
 			opacity: 1;
+			visibility: visible;
 		}
 	}
 
