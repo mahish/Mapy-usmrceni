@@ -4,17 +4,21 @@ var markerCluster;
 var mapsDataJSON;
 var activeMarkers = [];
 var oms;
+
 var filterInput = {
-	periodFrom: false,
-	periodTo: false,
-	ageFrom: false,
-	ageTo: false,
-	gender: false,
-	citizenship: false,
-	incident: false,
-	death: false,
-	residence: false,
-	direction: false
+    periodFrom: false,
+    periodTo: false,
+    ageFrom: false,
+    ageTo: false,
+    genderMale: false,
+    genderFemale: false,
+    genderNa: false,
+    citizenship: false,
+    incident: false,
+    death: false,
+    residence: false,
+    directionIn: false,
+    directionOut: false
 };
 
 function getDataJSON() {
@@ -49,7 +53,8 @@ function draw(map, data, filter, oms) {
 	var currentYear;
 	var currentAge;
 	var currentCitizenship;
-	var currentDeath;
+    var currentDeath;
+    var currentDirection;
 
 	data.forEach(function(data) {
 
@@ -90,7 +95,8 @@ function draw(map, data, filter, oms) {
 			currentCitizenship = parseInt(data.statni_prislusnost_cislo);
 			currentDeath = parseInt(data.umrti_cislo);
 			currentGender = parseInt(data.pohlavi_cislo);
-			currentResidence = parseInt(data.okres_bydliste_cislo);
+            currentResidence = parseInt(data.okres_bydliste_cislo);
+            currentDirection = parseInt(data.smer_prechodu_cislo);
 
 			if (filter['periodFrom'] && filter['periodTo'] && (currentYear < filter['periodFrom'] || currentYear > filter['periodTo'])) {
 				return isValid = false;
@@ -99,10 +105,6 @@ function draw(map, data, filter, oms) {
 			if (filter['ageFrom'] && filter['ageTo'] && (currentAge < filter['ageFrom'] || currentAge > filter['ageTo'])) {
 				return isValid = false;
 			}
-			
-			if (filter['gender'] && currentGender != parseInt(filter['gender'])) {
-				return isValid = false;
-			};
 
 			if (filter['citizenship'] && currentCitizenship != parseInt(filter['citizenship'])) {
 				return isValid = false;
@@ -115,6 +117,27 @@ function draw(map, data, filter, oms) {
 			if (filter['death'] && currentDeath != parseInt(filter['death'])) {
 				return isValid = false;
 			}
+
+            if (filter['genderMale'] && currentGender === 0) {
+                return isValid = false;
+            };
+
+            if (filter['genderFemale'] && currentGender === 1) {
+                return isValid = false;
+            };
+
+            if (filter['genderNa'] && currentGender === 2) {
+                return isValid = false;
+            };
+
+            if (filter['directionIn'] && (currentDirection > 3 && currentDirection <= 6 )) {
+                return isValid = false;
+            };
+
+            if (filter['directionOut'] && (currentDirection > 0 && currentDirection <= 3 )) {
+                return isValid = false;
+            };
+
 			return isValid
 		}
 

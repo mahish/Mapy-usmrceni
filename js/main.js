@@ -26,6 +26,7 @@ $(document).ready(function() {
 		}
 	});
 
+	// Age Slider
 	sliderAge.noUiSlider.on('change', function() {
 		filterInput['ageFrom'] = parseFloat(sliderAge.noUiSlider.get()[0]);
 		filterInput['ageTo'] = parseFloat(sliderAge.noUiSlider.get()[1]);
@@ -45,25 +46,50 @@ $(document).ready(function() {
 		filterInput[filterName] = $(this).children('option:selected').val()  == "false" ? false : $(this).children('option:selected').val();
 		draw(map, mapsDataJSON, filterInput, oms);
 	})
+
+	// 
 	$('#filters input').on('change', function() {
 		var filterName = $(this).attr('name');
-		filterInput[filterName] = $(this).attr('value') == "false" ? false : $(this).attr('value');
+		if (filterName == 'gender' || filterName == 'direction' ) {
+			filterInput[$(this).attr('id')] = $(this)[0].checked == true ? false : true;
+		} else {
+			filterInput[filterName] = $(this).attr('value') == "false" ? false : $(this).attr('value');
+		}
 		draw(map, mapsDataJSON, filterInput, oms);
-		console.log($(this).val());
 	})
 	$('#controls input').on('change', function() {
 		var filterName = $(this).attr('value');
 		filterInput['periodFrom'] = parseInt($(this).attr('value').split(',')[0]);
 		filterInput['periodTo'] = parseInt($(this).attr('value').split(',')[1]);
-		draw(map, mapsDataJSON, filterInput, oms)
+		draw(map, mapsDataJSON, filterInput, oms);
 	})
-
 
 	// reset of filters
 	$('#reset-filters').on('click', function() {
-			draw(map, mapsDataJSON, {}, oms);
-
-			// we need to set all filters back visually as well
+		//draw(map, mapsDataJSON, {}, oms);
+		sliderAge.noUiSlider.set([5, 90]);
+		$('#filters input').each(function() {
+			$(this).prop('checked', true);
+		});
+		$('#filters select').each(function() {
+			$(this).prop('selectedIndex', 0);
+		});
+		filterInput = {
+			periodFrom: false,
+			periodTo: false,
+			ageFrom: false,
+			ageTo: false,
+			genderMale: false,
+			genderFemale: false,
+			genderNa: false,
+			citizenship: false,
+			incident: false,
+			death: false,
+			residence: false,
+			directionIn: false,
+			directionOut: false
+		};
+		draw(map, mapsDataJSON, filterInput, oms);
 	});
 
 
