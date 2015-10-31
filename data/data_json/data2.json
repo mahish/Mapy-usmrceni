@@ -2,7 +2,6 @@
   {
     "osoba_cislo":1,
     "vlastni_jmeno":"Adam",
-    "prijmeni":"TROCZEK",
     "prijmeni_ini":"T.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -25,7 +24,6 @@
   {
     "osoba_cislo":2,
     "vlastni_jmeno":"Adolf",
-    "prijmeni":"DIVIŠ",
     "prijmeni_ini":"D.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -48,7 +46,6 @@
   {
     "osoba_cislo":3,
     "vlastni_jmeno":"Adolf",
-    "prijmeni":"LEDER",
     "prijmeni_ini":"L.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -71,7 +68,6 @@
   {
     "osoba_cislo":4,
     "vlastni_jmeno":"Albert",
-    "prijmeni":"JERKE",
     "prijmeni_ini":"J.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -94,7 +90,6 @@
   {
     "osoba_cislo":5,
     "vlastni_jmeno":"Aleš",
-    "prijmeni":"NOVÁČEK",
     "prijmeni_ini":"N.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -117,7 +112,6 @@
   {
     "osoba_cislo":6,
     "vlastni_jmeno":"Alois",
-    "prijmeni":"PASTOREK",
     "prijmeni_ini":"P.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -140,7 +134,6 @@
   {
     "osoba_cislo":7,
     "vlastni_jmeno":"Alois",
-    "prijmeni":"SULZER",
     "prijmeni_ini":"S.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -163,7 +156,6 @@
   {
     "osoba_cislo":8,
     "vlastni_jmeno":"Alois",
-    "prijmeni":"DORŠNER",
     "prijmeni_ini":"D.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -186,7 +178,6 @@
   {
     "osoba_cislo":9,
     "vlastni_jmeno":"Alois",
-    "prijmeni":"JANOTKA",
     "prijmeni_ini":"J.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -209,7 +200,6 @@
   {
     "osoba_cislo":10,
     "vlastni_jmeno":"Alois",
-    "prijmeni":"CAFOUREK",
     "prijmeni_ini":"C.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -232,7 +222,6 @@
   {
     "osoba_cislo":11,
     "vlastni_jmeno":"Andreas",
-    "prijmeni":"PÜCHNER",
     "prijmeni_ini":"P.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -255,7 +244,6 @@
   {
     "osoba_cislo":12,
     "vlastni_jmeno":"Anna",
-    "prijmeni":"SCHIERZOVÁ",
     "prijmeni_ini":"S.",
     "pohlavi_cislo":1,
     "pohlavi":"žena",
@@ -278,7 +266,6 @@
   {
     "osoba_cislo":13,
     "vlastni_jmeno":"Antal",
-    "prijmeni":"PANGRATZ",
     "prijmeni_ini":"P.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -301,7 +288,6 @@
   {
     "osoba_cislo":14,
     "vlastni_jmeno":"Anton",
-    "prijmeni":"TODT",
     "prijmeni_ini":"T.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -324,7 +310,6 @@
   {
     "osoba_cislo":15,
     "vlastni_jmeno":"Antonín",
-    "prijmeni":"SCHNEIDER",
     "prijmeni_ini":"S.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -347,7 +332,6 @@
   {
     "osoba_cislo":16,
     "vlastni_jmeno":"Antonín",
-    "prijmeni":"VRÁNA",
     "prijmeni_ini":"V.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -370,7 +354,6 @@
   {
     "osoba_cislo":17,
     "vlastni_jmeno":"Antonín",
-    "prijmeni":"ŽOLIO",
     "prijmeni_ini":"Ž.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -393,7 +376,6 @@
   {
     "osoba_cislo":18,
     "vlastni_jmeno":"Antonín",
-    "prijmeni":"DENK",
     "prijmeni_ini":"D.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -416,7 +398,6 @@
   {
     "osoba_cislo":19,
     "vlastni_jmeno":"Antonín",
-    "prijmeni":"WEIS",
     "prijmeni_ini":"W.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -439,7 +420,6 @@
   {
     "osoba_cislo":20,
     "vlastni_jmeno":"Antonín Josef",
-    "prijmeni":"FACUN",
     "prijmeni_ini":"F.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -462,7 +442,6 @@
   {
     "osoba_cislo":22,
     "vlastni_jmeno":"Arnold",
-    "prijmeni":"BLANK",
     "prijmeni_ini":"B.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -485,7 +464,6 @@
   {
     "osoba_cislo":23,
     "vlastni_jmeno":"Arnošt",
-    "prijmeni":"TIPPMAN",
     "prijmeni_ini":"T.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -508,7 +486,6 @@
   {
     "osoba_cislo":24,
     "vlastni_jmeno":"Arnošt",
-    "prijmeni":"POMMER",
     "prijmeni_ini":"P.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -531,7 +508,6 @@
   {
     "osoba_cislo":25,
     "vlastni_jmeno":"Arnošt",
-    "prijmeni":"KAŠPÁREK",
     "prijmeni_ini":"K.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -554,7 +530,6 @@
   {
     "osoba_cislo":26,
     "vlastni_jmeno":"Arnošt",
-    "prijmeni":"KLENNER",
     "prijmeni_ini":"K.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -577,7 +552,6 @@
   {
     "osoba_cislo":27,
     "vlastni_jmeno":"Bedřich",
-    "prijmeni":"ŠTEIGER",
     "prijmeni_ini":"Š.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -600,7 +574,6 @@
   {
     "osoba_cislo":28,
     "vlastni_jmeno":"Bedřich",
-    "prijmeni":"BARTONĚK",
     "prijmeni_ini":"B.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -623,7 +596,6 @@
   {
     "osoba_cislo":29,
     "vlastni_jmeno":"Bernhard",
-    "prijmeni":"BASS",
     "prijmeni_ini":"B.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -646,7 +618,6 @@
   {
     "osoba_cislo":30,
     "vlastni_jmeno":"Bohumil",
-    "prijmeni":"ŠTĚTKA",
     "prijmeni_ini":"Š.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -669,7 +640,6 @@
   {
     "osoba_cislo":31,
     "vlastni_jmeno":"Bohumil",
-    "prijmeni":"HASIL",
     "prijmeni_ini":"H.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -692,7 +662,6 @@
   {
     "osoba_cislo":32,
     "vlastni_jmeno":"Bohumila",
-    "prijmeni":"PŘÍHODOVÁ",
     "prijmeni_ini":"P.",
     "pohlavi_cislo":1,
     "pohlavi":"žena",
@@ -715,7 +684,6 @@
   {
     "osoba_cislo":33,
     "vlastni_jmeno":"Bohuslav",
-    "prijmeni":"STEINACHER",
     "prijmeni_ini":"S.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -738,7 +706,6 @@
   {
     "osoba_cislo":34,
     "vlastni_jmeno":"Boleslav",
-    "prijmeni":"LIPSKI",
     "prijmeni_ini":"L.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -761,7 +728,6 @@
   {
     "osoba_cislo":35,
     "vlastni_jmeno":"Bruno",
-    "prijmeni":"PEŠKA",
     "prijmeni_ini":"P.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -784,7 +750,6 @@
   {
     "osoba_cislo":36,
     "vlastni_jmeno":"Břetislav",
-    "prijmeni":"FUNIOK",
     "prijmeni_ini":"F.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -807,7 +772,6 @@
   {
     "osoba_cislo":37,
     "vlastni_jmeno":"Dagmar",
-    "prijmeni":"TOMCOVÁ",
     "prijmeni_ini":"T.",
     "pohlavi_cislo":1,
     "pohlavi":"žena",
@@ -830,7 +794,6 @@
   {
     "osoba_cislo":38,
     "vlastni_jmeno":"Daniel",
-    "prijmeni":"LINHART",
     "prijmeni_ini":"L.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -853,7 +816,6 @@
   {
     "osoba_cislo":39,
     "vlastni_jmeno":"Dionizy",
-    "prijmeni":"BIELANSKI",
     "prijmeni_ini":"B.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -876,7 +838,6 @@
   {
     "osoba_cislo":40,
     "vlastni_jmeno":"Dionýz",
-    "prijmeni":"NEMEŠ",
     "prijmeni_ini":"N.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -899,7 +860,6 @@
   {
     "osoba_cislo":41,
     "vlastni_jmeno":"Ditrich",
-    "prijmeni":"SUDARS",
     "prijmeni_ini":"S.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -922,7 +882,6 @@
   {
     "osoba_cislo":42,
     "vlastni_jmeno":"Dorota",
-    "prijmeni":"KOVÁČIKOVÁ",
     "prijmeni_ini":"K.",
     "pohlavi_cislo":1,
     "pohlavi":"žena",
@@ -945,7 +904,6 @@
   {
     "osoba_cislo":43,
     "vlastni_jmeno":"Eduard",
-    "prijmeni":"TASCHNER",
     "prijmeni_ini":"T.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -968,7 +926,6 @@
   {
     "osoba_cislo":44,
     "vlastni_jmeno":"Edward",
-    "prijmeni":"BILT",
     "prijmeni_ini":"B.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -991,7 +948,6 @@
   {
     "osoba_cislo":45,
     "vlastni_jmeno":"Erich",
-    "prijmeni":"BAUER",
     "prijmeni_ini":"B.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -1014,7 +970,6 @@
   {
     "osoba_cislo":46,
     "vlastni_jmeno":"Eugen",
-    "prijmeni":"EHRENFELD",
     "prijmeni_ini":"E.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -1037,7 +992,6 @@
   {
     "osoba_cislo":47,
     "vlastni_jmeno":"Franciszek",
-    "prijmeni":"MAJCHEREK",
     "prijmeni_ini":"M.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -1060,7 +1014,6 @@
   {
     "osoba_cislo":48,
     "vlastni_jmeno":"Frank Ralf",
-    "prijmeni":"PRZIBOROWSKI",
     "prijmeni_ini":"P.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -1083,7 +1036,6 @@
   {
     "osoba_cislo":49,
     "vlastni_jmeno":"František",
-    "prijmeni":"PLAČKA",
     "prijmeni_ini":"P.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -1106,7 +1058,6 @@
   {
     "osoba_cislo":50,
     "vlastni_jmeno":"František",
-    "prijmeni":"ZEMAN",
     "prijmeni_ini":"Z.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -1129,7 +1080,6 @@
   {
     "osoba_cislo":51,
     "vlastni_jmeno":"František",
-    "prijmeni":"ČERMÁK",
     "prijmeni_ini":"Č.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -1152,7 +1102,6 @@
   {
     "osoba_cislo":52,
     "vlastni_jmeno":"František",
-    "prijmeni":"BORKA",
     "prijmeni_ini":"B.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -1175,7 +1124,6 @@
   {
     "osoba_cislo":53,
     "vlastni_jmeno":"František",
-    "prijmeni":"GAJDA",
     "prijmeni_ini":"G.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -1198,7 +1146,6 @@
   {
     "osoba_cislo":54,
     "vlastni_jmeno":"František",
-    "prijmeni":"FAKTOR",
     "prijmeni_ini":"F.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -1221,7 +1168,6 @@
   {
     "osoba_cislo":55,
     "vlastni_jmeno":"František",
-    "prijmeni":"DOLEJŠ",
     "prijmeni_ini":"D.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -1244,7 +1190,6 @@
   {
     "osoba_cislo":56,
     "vlastni_jmeno":"František",
-    "prijmeni":"SMETANA",
     "prijmeni_ini":"S.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -1267,7 +1212,6 @@
   {
     "osoba_cislo":57,
     "vlastni_jmeno":"František",
-    "prijmeni":"KOLAŘÍK",
     "prijmeni_ini":"K.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -1290,7 +1234,6 @@
   {
     "osoba_cislo":58,
     "vlastni_jmeno":"František",
-    "prijmeni":"HONETSCHLAGER",
     "prijmeni_ini":"H.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -1313,7 +1256,6 @@
   {
     "osoba_cislo":59,
     "vlastni_jmeno":"František",
-    "prijmeni":"ZÁBŘESKÝ",
     "prijmeni_ini":"Z.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -1336,7 +1278,6 @@
   {
     "osoba_cislo":60,
     "vlastni_jmeno":"František",
-    "prijmeni":"LUKASZEK",
     "prijmeni_ini":"L.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -1359,7 +1300,6 @@
   {
     "osoba_cislo":61,
     "vlastni_jmeno":"František",
-    "prijmeni":"BABIČ",
     "prijmeni_ini":"B.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -1382,7 +1322,6 @@
   {
     "osoba_cislo":62,
     "vlastni_jmeno":"František",
-    "prijmeni":"FUCHS",
     "prijmeni_ini":"F.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -1405,7 +1344,6 @@
   {
     "osoba_cislo":63,
     "vlastni_jmeno":"František",
-    "prijmeni":"HAAS",
     "prijmeni_ini":"H.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -1428,7 +1366,6 @@
   {
     "osoba_cislo":64,
     "vlastni_jmeno":"František",
-    "prijmeni":"MÜHLBAUER",
     "prijmeni_ini":"M.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -1451,7 +1388,6 @@
   {
     "osoba_cislo":65,
     "vlastni_jmeno":"František",
-    "prijmeni":"PRCÍN",
     "prijmeni_ini":"P.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -1474,7 +1410,6 @@
   {
     "osoba_cislo":66,
     "vlastni_jmeno":"František",
-    "prijmeni":"JAGOŠ",
     "prijmeni_ini":"J.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -1497,7 +1432,6 @@
   {
     "osoba_cislo":68,
     "vlastni_jmeno":"Frída-Oĺga",
-    "prijmeni":"EHRENFELDOVÁ",
     "prijmeni_ini":"E.",
     "pohlavi_cislo":1,
     "pohlavi":"žena",
@@ -1520,7 +1454,6 @@
   {
     "osoba_cislo":69,
     "vlastni_jmeno":"Gabor",
-    "prijmeni":"FEKETE",
     "prijmeni_ini":"F.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -1543,7 +1476,6 @@
   {
     "osoba_cislo":70,
     "vlastni_jmeno":"George",
-    "prijmeni":"NUSSER",
     "prijmeni_ini":"N.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -1566,7 +1498,6 @@
   {
     "osoba_cislo":71,
     "vlastni_jmeno":"Gerhard",
-    "prijmeni":"SCHMIDT",
     "prijmeni_ini":"S.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -1589,7 +1520,6 @@
   {
     "osoba_cislo":72,
     "vlastni_jmeno":"Gerhard",
-    "prijmeni":"EISNER",
     "prijmeni_ini":"E.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -1612,7 +1542,6 @@
   {
     "osoba_cislo":73,
     "vlastni_jmeno":"Gert",
-    "prijmeni":"MICHNA",
     "prijmeni_ini":"M.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -1635,7 +1564,6 @@
   {
     "osoba_cislo":74,
     "vlastni_jmeno":"Gregorz Francziszek",
-    "prijmeni":"CZIUMPLIK",
     "prijmeni_ini":"C.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -1658,7 +1586,6 @@
   {
     "osoba_cislo":75,
     "vlastni_jmeno":"Günther",
-    "prijmeni":"VADAS",
     "prijmeni_ini":"V.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -1681,7 +1608,6 @@
   {
     "osoba_cislo":76,
     "vlastni_jmeno":"Hans",
-    "prijmeni":"RUINER",
     "prijmeni_ini":"R.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -1704,7 +1630,6 @@
   {
     "osoba_cislo":77,
     "vlastni_jmeno":"Harry",
-    "prijmeni":"HANUŠ",
     "prijmeni_ini":"H.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -1727,7 +1652,6 @@
   {
     "osoba_cislo":78,
     "vlastni_jmeno":"Hartmut",
-    "prijmeni":"TAUTZ",
     "prijmeni_ini":"T.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -1750,7 +1674,6 @@
   {
     "osoba_cislo":79,
     "vlastni_jmeno":"Hedvika",
-    "prijmeni":"KRAMNÁ",
     "prijmeni_ini":"K.",
     "pohlavi_cislo":1,
     "pohlavi":"žena",
@@ -1773,7 +1696,6 @@
   {
     "osoba_cislo":80,
     "vlastni_jmeno":"Heinrich",
-    "prijmeni":"BRUNO",
     "prijmeni_ini":"B.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -1796,7 +1718,6 @@
   {
     "osoba_cislo":81,
     "vlastni_jmeno":"Helmut",
-    "prijmeni":"VÍTŮ",
     "prijmeni_ini":"V.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -1819,7 +1740,6 @@
   {
     "osoba_cislo":82,
     "vlastni_jmeno":"Helmut",
-    "prijmeni":"WITEK",
     "prijmeni_ini":"W.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -1842,7 +1762,6 @@
   {
     "osoba_cislo":84,
     "vlastni_jmeno":"Herbert",
-    "prijmeni":"HEROLD",
     "prijmeni_ini":"H.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -1865,7 +1784,6 @@
   {
     "osoba_cislo":85,
     "vlastni_jmeno":"Herman",
-    "prijmeni":"OSER",
     "prijmeni_ini":"O.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -1888,7 +1806,6 @@
   {
     "osoba_cislo":86,
     "vlastni_jmeno":"Hermine",
-    "prijmeni":"WINKLEROVÁ",
     "prijmeni_ini":"W.",
     "pohlavi_cislo":1,
     "pohlavi":"žena",
@@ -1911,7 +1828,6 @@
   {
     "osoba_cislo":87,
     "vlastni_jmeno":"Horst Stepan",
-    "prijmeni":"PASSLER",
     "prijmeni_ini":"P.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -1934,7 +1850,6 @@
   {
     "osoba_cislo":88,
     "vlastni_jmeno":"Illes",
-    "prijmeni":"TOTH",
     "prijmeni_ini":"T.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -1957,7 +1872,6 @@
   {
     "osoba_cislo":89,
     "vlastni_jmeno":"Imrich",
-    "prijmeni":"PETROVIČ",
     "prijmeni_ini":"P.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -1980,7 +1894,6 @@
   {
     "osoba_cislo":90,
     "vlastni_jmeno":"Istvan",
-    "prijmeni":"SZABÓ",
     "prijmeni_ini":"S.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -2003,7 +1916,6 @@
   {
     "osoba_cislo":91,
     "vlastni_jmeno":"Ivan",
-    "prijmeni":"JIRAN",
     "prijmeni_ini":"J.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -2026,7 +1938,6 @@
   {
     "osoba_cislo":92,
     "vlastni_jmeno":"Ivan",
-    "prijmeni":"MITIČ",
     "prijmeni_ini":"M.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -2049,7 +1960,6 @@
   {
     "osoba_cislo":93,
     "vlastni_jmeno":"Jan",
-    "prijmeni":"KAVAN",
     "prijmeni_ini":"K.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -2072,7 +1982,6 @@
   {
     "osoba_cislo":94,
     "vlastni_jmeno":"Jan",
-    "prijmeni":"KOVÁČ",
     "prijmeni_ini":"K.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -2095,7 +2004,6 @@
   {
     "osoba_cislo":95,
     "vlastni_jmeno":"Jan",
-    "prijmeni":"BRYZYCHCI",
     "prijmeni_ini":"B.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -2118,7 +2026,6 @@
   {
     "osoba_cislo":96,
     "vlastni_jmeno":"Jan",
-    "prijmeni":"ROMANCZIK",
     "prijmeni_ini":"R.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -2141,7 +2048,6 @@
   {
     "osoba_cislo":97,
     "vlastni_jmeno":"Jan",
-    "prijmeni":"PAZOUREK",
     "prijmeni_ini":"P.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -2164,7 +2070,6 @@
   {
     "osoba_cislo":99,
     "vlastni_jmeno":"Jan",
-    "prijmeni":"KRÁL",
     "prijmeni_ini":"K.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -2187,7 +2092,6 @@
   {
     "osoba_cislo":100,
     "vlastni_jmeno":"Jan",
-    "prijmeni":"JUNGA",
     "prijmeni_ini":"J.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -2210,7 +2114,6 @@
   {
     "osoba_cislo":101,
     "vlastni_jmeno":"Jan",
-    "prijmeni":"PETRUK",
     "prijmeni_ini":"P.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -2233,7 +2136,6 @@
   {
     "osoba_cislo":102,
     "vlastni_jmeno":"Jan",
-    "prijmeni":"SVOBODA",
     "prijmeni_ini":"S.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -2256,7 +2158,6 @@
   {
     "osoba_cislo":103,
     "vlastni_jmeno":"Jan",
-    "prijmeni":"MALÁRIK",
     "prijmeni_ini":"M.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -2279,7 +2180,6 @@
   {
     "osoba_cislo":104,
     "vlastni_jmeno":"Jan",
-    "prijmeni":"ONDREJOVIČ",
     "prijmeni_ini":"O.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -2302,7 +2202,6 @@
   {
     "osoba_cislo":105,
     "vlastni_jmeno":"Jan",
-    "prijmeni":"ANDĚL",
     "prijmeni_ini":"A.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -2325,7 +2224,6 @@
   {
     "osoba_cislo":106,
     "vlastni_jmeno":"Jan",
-    "prijmeni":"ŠPONIAR",
     "prijmeni_ini":"Š.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -2348,7 +2246,6 @@
   {
     "osoba_cislo":107,
     "vlastni_jmeno":"Jan",
-    "prijmeni":"PŘIKRYL",
     "prijmeni_ini":"P.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -2371,7 +2268,6 @@
   {
     "osoba_cislo":108,
     "vlastni_jmeno":"Jan",
-    "prijmeni":"ZEMAN",
     "prijmeni_ini":"Z.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -2394,7 +2290,6 @@
   {
     "osoba_cislo":109,
     "vlastni_jmeno":"Ján",
-    "prijmeni":"BRENČIČ",
     "prijmeni_ini":"B.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -2417,7 +2312,6 @@
   {
     "osoba_cislo":110,
     "vlastni_jmeno":"Ján",
-    "prijmeni":"KRIVÁK",
     "prijmeni_ini":"K.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -2440,7 +2334,6 @@
   {
     "osoba_cislo":111,
     "vlastni_jmeno":"Ján",
-    "prijmeni":"BAŠTA",
     "prijmeni_ini":"B.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -2463,7 +2356,6 @@
   {
     "osoba_cislo":112,
     "vlastni_jmeno":"Jan Ignacy",
-    "prijmeni":"MROHS",
     "prijmeni_ini":"M.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -2486,7 +2378,6 @@
   {
     "osoba_cislo":113,
     "vlastni_jmeno":"Jan Stanislaw",
-    "prijmeni":"PIETKA",
     "prijmeni_ini":"P.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -2509,7 +2400,6 @@
   {
     "osoba_cislo":114,
     "vlastni_jmeno":"Jarmila",
-    "prijmeni":"POSPÍŠILOVÁ",
     "prijmeni_ini":"P.",
     "pohlavi_cislo":1,
     "pohlavi":"žena",
@@ -2532,7 +2422,6 @@
   {
     "osoba_cislo":115,
     "vlastni_jmeno":"Jaroslav",
-    "prijmeni":"OUŔADA",
     "prijmeni_ini":"O.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -2555,7 +2444,6 @@
   {
     "osoba_cislo":116,
     "vlastni_jmeno":"Jaroslav",
-    "prijmeni":"MONHART",
     "prijmeni_ini":"M.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -2578,7 +2466,6 @@
   {
     "osoba_cislo":117,
     "vlastni_jmeno":"Jiří",
-    "prijmeni":"PEČENÝ",
     "prijmeni_ini":"P.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -2601,7 +2488,6 @@
   {
     "osoba_cislo":118,
     "vlastni_jmeno":"Jiří",
-    "prijmeni":"JIROUCH",
     "prijmeni_ini":"J.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -2624,7 +2510,6 @@
   {
     "osoba_cislo":119,
     "vlastni_jmeno":"Jiří",
-    "prijmeni":"ŠTRUPL",
     "prijmeni_ini":"Š.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -2647,7 +2532,6 @@
   {
     "osoba_cislo":120,
     "vlastni_jmeno":"Jiří",
-    "prijmeni":"BAUMGARTNER",
     "prijmeni_ini":"B.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -2670,7 +2554,6 @@
   {
     "osoba_cislo":121,
     "vlastni_jmeno":"Jiří",
-    "prijmeni":"VORLÍČEK",
     "prijmeni_ini":"V.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -2693,7 +2576,6 @@
   {
     "osoba_cislo":122,
     "vlastni_jmeno":"Josef",
-    "prijmeni":"ZÍKA",
     "prijmeni_ini":"Z.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -2716,7 +2598,6 @@
   {
     "osoba_cislo":123,
     "vlastni_jmeno":"Josef",
-    "prijmeni":"VEJRAŽKA",
     "prijmeni_ini":"V.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -2739,7 +2620,6 @@
   {
     "osoba_cislo":125,
     "vlastni_jmeno":"Josef",
-    "prijmeni":"MAŠEK",
     "prijmeni_ini":"M.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -2762,7 +2642,6 @@
   {
     "osoba_cislo":126,
     "vlastni_jmeno":"Josef",
-    "prijmeni":"SELL",
     "prijmeni_ini":"S.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -2785,7 +2664,6 @@
   {
     "osoba_cislo":127,
     "vlastni_jmeno":"Josef",
-    "prijmeni":"FRYDRYCH",
     "prijmeni_ini":"F.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -2808,7 +2686,6 @@
   {
     "osoba_cislo":128,
     "vlastni_jmeno":"Josef",
-    "prijmeni":"KRÁLOVEC",
     "prijmeni_ini":"K.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -2831,7 +2708,6 @@
   {
     "osoba_cislo":129,
     "vlastni_jmeno":"Josef",
-    "prijmeni":"HOLOTA",
     "prijmeni_ini":"H.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -2854,7 +2730,6 @@
   {
     "osoba_cislo":130,
     "vlastni_jmeno":"Josef",
-    "prijmeni":"VÍTŮ",
     "prijmeni_ini":"V.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -2877,7 +2752,6 @@
   {
     "osoba_cislo":132,
     "vlastni_jmeno":"Josef",
-    "prijmeni":"VENCL",
     "prijmeni_ini":"V.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -2900,7 +2774,6 @@
   {
     "osoba_cislo":133,
     "vlastni_jmeno":"Josef",
-    "prijmeni":"PELC",
     "prijmeni_ini":"P.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -2923,7 +2796,6 @@
   {
     "osoba_cislo":135,
     "vlastni_jmeno":"Josef",
-    "prijmeni":"GILEWITZ",
     "prijmeni_ini":"G.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -2946,7 +2818,6 @@
   {
     "osoba_cislo":136,
     "vlastni_jmeno":"Josef",
-    "prijmeni":"BLAŽEK",
     "prijmeni_ini":"B.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -2969,7 +2840,6 @@
   {
     "osoba_cislo":137,
     "vlastni_jmeno":"Josef",
-    "prijmeni":"SCHUBERT",
     "prijmeni_ini":"S.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -2992,7 +2862,6 @@
   {
     "osoba_cislo":138,
     "vlastni_jmeno":"Josef",
-    "prijmeni":"KUTRA",
     "prijmeni_ini":"K.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -3015,7 +2884,6 @@
   {
     "osoba_cislo":139,
     "vlastni_jmeno":"Josef",
-    "prijmeni":"ŠTELMÁK",
     "prijmeni_ini":"Š.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -3038,7 +2906,6 @@
   {
     "osoba_cislo":140,
     "vlastni_jmeno":"Josef",
-    "prijmeni":"KITZBERGER",
     "prijmeni_ini":"K.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -3061,7 +2928,6 @@
   {
     "osoba_cislo":141,
     "vlastni_jmeno":"Josef",
-    "prijmeni":"HESEK",
     "prijmeni_ini":"H.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -3084,7 +2950,6 @@
   {
     "osoba_cislo":142,
     "vlastni_jmeno":"Josef",
-    "prijmeni":"HALUZICKÝ",
     "prijmeni_ini":"H.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -3107,7 +2972,6 @@
   {
     "osoba_cislo":143,
     "vlastni_jmeno":"Josef",
-    "prijmeni":"ŠKOP",
     "prijmeni_ini":"Š.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -3130,7 +2994,6 @@
   {
     "osoba_cislo":144,
     "vlastni_jmeno":"Josef",
-    "prijmeni":"ŠVAJDA",
     "prijmeni_ini":"Š.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -3153,7 +3016,6 @@
   {
     "osoba_cislo":145,
     "vlastni_jmeno":"Josef",
-    "prijmeni":"MARUŠÁK",
     "prijmeni_ini":"M.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -3176,7 +3038,6 @@
   {
     "osoba_cislo":146,
     "vlastni_jmeno":"Jozef",
-    "prijmeni":"BLAŠKO",
     "prijmeni_ini":"B.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -3199,7 +3060,6 @@
   {
     "osoba_cislo":147,
     "vlastni_jmeno":"Jozef",
-    "prijmeni":"GALUS",
     "prijmeni_ini":"G.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -3222,7 +3082,6 @@
   {
     "osoba_cislo":148,
     "vlastni_jmeno":"Jozef",
-    "prijmeni":"KOVÁČ",
     "prijmeni_ini":"K.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -3245,7 +3104,6 @@
   {
     "osoba_cislo":149,
     "vlastni_jmeno":"Jozef",
-    "prijmeni":"KAKONI",
     "prijmeni_ini":"K.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -3268,7 +3126,6 @@
   {
     "osoba_cislo":150,
     "vlastni_jmeno":"Jozef",
-    "prijmeni":"PODHORA",
     "prijmeni_ini":"P.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -3291,7 +3148,6 @@
   {
     "osoba_cislo":151,
     "vlastni_jmeno":"Jozef",
-    "prijmeni":"REMŽA",
     "prijmeni_ini":"R.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -3314,7 +3170,6 @@
   {
     "osoba_cislo":152,
     "vlastni_jmeno":"Jurij Štěpanovič",
-    "prijmeni":"LUBNIN",
     "prijmeni_ini":"L.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -3337,7 +3192,6 @@
   {
     "osoba_cislo":153,
     "vlastni_jmeno":"Karel",
-    "prijmeni":"PETRÁŠ",
     "prijmeni_ini":"P.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -3360,7 +3214,6 @@
   {
     "osoba_cislo":154,
     "vlastni_jmeno":"Karel",
-    "prijmeni":"RUDOLF",
     "prijmeni_ini":"R.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -3383,7 +3236,6 @@
   {
     "osoba_cislo":155,
     "vlastni_jmeno":"Karel",
-    "prijmeni":"KILLER",
     "prijmeni_ini":"K.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -3406,7 +3258,6 @@
   {
     "osoba_cislo":157,
     "vlastni_jmeno":"Karel",
-    "prijmeni":"ROBAN",
     "prijmeni_ini":"R.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -3429,7 +3280,6 @@
   {
     "osoba_cislo":158,
     "vlastni_jmeno":"Karel",
-    "prijmeni":"EBENSTREIT",
     "prijmeni_ini":"E.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -3452,7 +3302,6 @@
   {
     "osoba_cislo":159,
     "vlastni_jmeno":"Karel",
-    "prijmeni":"NĚMEC",
     "prijmeni_ini":"N.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -3475,7 +3324,6 @@
   {
     "osoba_cislo":160,
     "vlastni_jmeno":"Karel Herman",
-    "prijmeni":"RIPL",
     "prijmeni_ini":"R.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -3498,7 +3346,6 @@
   {
     "osoba_cislo":161,
     "vlastni_jmeno":"Karl",
-    "prijmeni":"BENEDIKT",
     "prijmeni_ini":"B.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -3521,7 +3368,6 @@
   {
     "osoba_cislo":162,
     "vlastni_jmeno":"Katarína",
-    "prijmeni":"EHRENFELDOVÁ",
     "prijmeni_ini":"E.",
     "pohlavi_cislo":1,
     "pohlavi":"žena",
@@ -3544,7 +3390,6 @@
   {
     "osoba_cislo":163,
     "vlastni_jmeno":"Kazimír",
-    "prijmeni":"STREZIVILK",
     "prijmeni_ini":"S.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -3567,7 +3412,6 @@
   {
     "osoba_cislo":164,
     "vlastni_jmeno":"Kevin",
-    "prijmeni":"STRECKER",
     "prijmeni_ini":"S.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -3590,7 +3434,6 @@
   {
     "osoba_cislo":165,
     "vlastni_jmeno":"Kurt",
-    "prijmeni":"HOFFMEISTER",
     "prijmeni_ini":"H.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -3613,7 +3456,6 @@
   {
     "osoba_cislo":166,
     "vlastni_jmeno":"Ladislav",
-    "prijmeni":"ČERNOCKÝ",
     "prijmeni_ini":"Č.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -3636,7 +3478,6 @@
   {
     "osoba_cislo":167,
     "vlastni_jmeno":"Ladislav",
-    "prijmeni":"VANÍK",
     "prijmeni_ini":"V.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -3659,7 +3500,6 @@
   {
     "osoba_cislo":168,
     "vlastni_jmeno":"Ladislav",
-    "prijmeni":"MALINA",
     "prijmeni_ini":"M.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -3682,7 +3522,6 @@
   {
     "osoba_cislo":169,
     "vlastni_jmeno":"Ladislav",
-    "prijmeni":"NĚMEC",
     "prijmeni_ini":"N.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -3705,7 +3544,6 @@
   {
     "osoba_cislo":170,
     "vlastni_jmeno":"Ladislav",
-    "prijmeni":"KOLÁŘ",
     "prijmeni_ini":"K.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -3728,7 +3566,6 @@
   {
     "osoba_cislo":171,
     "vlastni_jmeno":"Ladislav",
-    "prijmeni":"VRANÁK",
     "prijmeni_ini":"V.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -3751,7 +3588,6 @@
   {
     "osoba_cislo":172,
     "vlastni_jmeno":"Leo",
-    "prijmeni":"BAČÍK",
     "prijmeni_ini":"B.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -3774,7 +3610,6 @@
   {
     "osoba_cislo":173,
     "vlastni_jmeno":"Ludevít",
-    "prijmeni":"TOTIN",
     "prijmeni_ini":"T.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -3797,7 +3632,6 @@
   {
     "osoba_cislo":174,
     "vlastni_jmeno":"Ludvík",
-    "prijmeni":"DUROŇ",
     "prijmeni_ini":"D.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -3820,7 +3654,6 @@
   {
     "osoba_cislo":175,
     "vlastni_jmeno":"Ludwig",
-    "prijmeni":"BRANDL",
     "prijmeni_ini":"B.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -3843,7 +3676,6 @@
   {
     "osoba_cislo":176,
     "vlastni_jmeno":"Mária",
-    "prijmeni":"ROZMAŇOVÁ",
     "prijmeni_ini":"R.",
     "pohlavi_cislo":1,
     "pohlavi":"žena",
@@ -3866,7 +3698,6 @@
   {
     "osoba_cislo":177,
     "vlastni_jmeno":"Marian",
-    "prijmeni":"GRABOWSKI",
     "prijmeni_ini":"G.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -3889,7 +3720,6 @@
   {
     "osoba_cislo":178,
     "vlastni_jmeno":"Marian",
-    "prijmeni":"FRANKIČ",
     "prijmeni_ini":"F.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -3912,7 +3742,6 @@
   {
     "osoba_cislo":179,
     "vlastni_jmeno":"Marian",
-    "prijmeni":"GAWLICZKI",
     "prijmeni_ini":"G.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -3935,7 +3764,6 @@
   {
     "osoba_cislo":180,
     "vlastni_jmeno":"Marie",
-    "prijmeni":"GRACKOVÁ",
     "prijmeni_ini":"G.",
     "pohlavi_cislo":1,
     "pohlavi":"žena",
@@ -3958,7 +3786,6 @@
   {
     "osoba_cislo":181,
     "vlastni_jmeno":"Marie",
-    "prijmeni":"KÁŇOVÁ",
     "prijmeni_ini":"K.",
     "pohlavi_cislo":1,
     "pohlavi":"žena",
@@ -3981,7 +3808,6 @@
   {
     "osoba_cislo":182,
     "vlastni_jmeno":"Matěj",
-    "prijmeni":"FORHAY",
     "prijmeni_ini":"F.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -4004,7 +3830,6 @@
   {
     "osoba_cislo":184,
     "vlastni_jmeno":"Mieczysław Alojzy",
-    "prijmeni":"DRAŽKOWIAK",
     "prijmeni_ini":"D.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -4027,7 +3852,6 @@
   {
     "osoba_cislo":185,
     "vlastni_jmeno":"Michael",
-    "prijmeni":"KÜHNEL",
     "prijmeni_ini":"K.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -4050,7 +3874,6 @@
   {
     "osoba_cislo":186,
     "vlastni_jmeno":"Michal",
-    "prijmeni":"HORŇÁK",
     "prijmeni_ini":"H.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -4073,7 +3896,6 @@
   {
     "osoba_cislo":187,
     "vlastni_jmeno":"Milan",
-    "prijmeni":"EHRENFELD",
     "prijmeni_ini":"E.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -4096,7 +3918,6 @@
   {
     "osoba_cislo":188,
     "vlastni_jmeno":"Milan",
-    "prijmeni":"BAREŠ",
     "prijmeni_ini":"B.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -4119,7 +3940,6 @@
   {
     "osoba_cislo":189,
     "vlastni_jmeno":"Milan",
-    "prijmeni":"ČEPEK",
     "prijmeni_ini":"Č.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -4142,7 +3962,6 @@
   {
     "osoba_cislo":190,
     "vlastni_jmeno":"Milan",
-    "prijmeni":"DLUBAČ",
     "prijmeni_ini":"D.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -4165,7 +3984,6 @@
   {
     "osoba_cislo":191,
     "vlastni_jmeno":"Milena",
-    "prijmeni":"ZAJÍČKOVÁ",
     "prijmeni_ini":"Z.",
     "pohlavi_cislo":1,
     "pohlavi":"žena",
@@ -4188,7 +4006,6 @@
   {
     "osoba_cislo":192,
     "vlastni_jmeno":"Miloslav",
-    "prijmeni":"HORSKÝ",
     "prijmeni_ini":"H.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -4211,7 +4028,6 @@
   {
     "osoba_cislo":193,
     "vlastni_jmeno":"Miloslav",
-    "prijmeni":"KOPP",
     "prijmeni_ini":"K.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -4234,7 +4050,6 @@
   {
     "osoba_cislo":194,
     "vlastni_jmeno":"Miloslav",
-    "prijmeni":"DUB",
     "prijmeni_ini":"D.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -4257,7 +4072,6 @@
   {
     "osoba_cislo":195,
     "vlastni_jmeno":"Miloš",
-    "prijmeni":"CETTL",
     "prijmeni_ini":"C.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -4280,7 +4094,6 @@
   {
     "osoba_cislo":196,
     "vlastni_jmeno":"Miroslav",
-    "prijmeni":"KANDL",
     "prijmeni_ini":"K.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -4303,7 +4116,6 @@
   {
     "osoba_cislo":198,
     "vlastni_jmeno":"neurčeno",
-    "prijmeni":"Neurčeno",
     "prijmeni_ini":"N.",
     "pohlavi_cislo":2,
     "pohlavi":"neurčeno",
@@ -4326,7 +4138,6 @@
   {
     "osoba_cislo":199,
     "vlastni_jmeno":"neurčeno",
-    "prijmeni":"Neurčeno",
     "prijmeni_ini":"N.",
     "pohlavi_cislo":2,
     "pohlavi":"neurčeno",
@@ -4349,7 +4160,6 @@
   {
     "osoba_cislo":200,
     "vlastni_jmeno":"neurčeno",
-    "prijmeni":"Neurčeno",
     "prijmeni_ini":"N.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -4372,7 +4182,6 @@
   {
     "osoba_cislo":201,
     "vlastni_jmeno":"neurčeno",
-    "prijmeni":"Neurčeno",
     "prijmeni_ini":"N.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -4395,7 +4204,6 @@
   {
     "osoba_cislo":202,
     "vlastni_jmeno":"neurčeno",
-    "prijmeni":"Neurčeno",
     "prijmeni_ini":"N.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -4418,7 +4226,6 @@
   {
     "osoba_cislo":203,
     "vlastni_jmeno":"neurčeno",
-    "prijmeni":"BRONČÍK",
     "prijmeni_ini":"B.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -4441,7 +4248,6 @@
   {
     "osoba_cislo":204,
     "vlastni_jmeno":"neurčeno",
-    "prijmeni":"Neurčeno",
     "prijmeni_ini":"N.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -4464,7 +4270,6 @@
   {
     "osoba_cislo":205,
     "vlastni_jmeno":"neurčeno",
-    "prijmeni":"Neurčeno",
     "prijmeni_ini":"N.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -4487,7 +4292,6 @@
   {
     "osoba_cislo":206,
     "vlastni_jmeno":"neurčeno",
-    "prijmeni":"KOLARCZYK",
     "prijmeni_ini":"K.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -4510,7 +4314,6 @@
   {
     "osoba_cislo":207,
     "vlastni_jmeno":"neurčeno",
-    "prijmeni":"Neurčeno",
     "prijmeni_ini":"N.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -4533,7 +4336,6 @@
   {
     "osoba_cislo":208,
     "vlastni_jmeno":"neurčeno",
-    "prijmeni":"Neurčeno",
     "prijmeni_ini":"N.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -4556,7 +4358,6 @@
   {
     "osoba_cislo":209,
     "vlastni_jmeno":"neurčeno",
-    "prijmeni":"Neurčeno",
     "prijmeni_ini":"N.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -4579,7 +4380,6 @@
   {
     "osoba_cislo":211,
     "vlastni_jmeno":"neurčeno",
-    "prijmeni":"PANKRÁC",
     "prijmeni_ini":"P.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -4602,7 +4402,6 @@
   {
     "osoba_cislo":212,
     "vlastni_jmeno":"Oldřich",
-    "prijmeni":"MACH",
     "prijmeni_ini":"M.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -4625,7 +4424,6 @@
   {
     "osoba_cislo":213,
     "vlastni_jmeno":"Oldřich",
-    "prijmeni":"CHVOJKA",
     "prijmeni_ini":"C.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -4648,7 +4446,6 @@
   {
     "osoba_cislo":214,
     "vlastni_jmeno":"Olga",
-    "prijmeni":"FICTUMOVÁ",
     "prijmeni_ini":"F.",
     "pohlavi_cislo":1,
     "pohlavi":"žena",
@@ -4671,7 +4468,6 @@
   {
     "osoba_cislo":215,
     "vlastni_jmeno":"Ondrej",
-    "prijmeni":"BREJKA",
     "prijmeni_ini":"B.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -4694,7 +4490,6 @@
   {
     "osoba_cislo":216,
     "vlastni_jmeno":"Otakar",
-    "prijmeni":"JANOUT",
     "prijmeni_ini":"J.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -4717,7 +4512,6 @@
   {
     "osoba_cislo":217,
     "vlastni_jmeno":"Otakar",
-    "prijmeni":"KRÁLÍČEK",
     "prijmeni_ini":"K.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -4740,7 +4534,6 @@
   {
     "osoba_cislo":218,
     "vlastni_jmeno":"Pavel",
-    "prijmeni":"HANÁK",
     "prijmeni_ini":"H.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -4763,7 +4556,6 @@
   {
     "osoba_cislo":219,
     "vlastni_jmeno":"Pavel",
-    "prijmeni":"HYNEK",
     "prijmeni_ini":"H.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -4786,7 +4578,6 @@
   {
     "osoba_cislo":220,
     "vlastni_jmeno":"Pavel",
-    "prijmeni":"WINN",
     "prijmeni_ini":"W.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -4809,7 +4600,6 @@
   {
     "osoba_cislo":221,
     "vlastni_jmeno":"Pavel",
-    "prijmeni":"PROCHÁZKA",
     "prijmeni_ini":"P.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -4832,7 +4622,6 @@
   {
     "osoba_cislo":222,
     "vlastni_jmeno":"Pawel",
-    "prijmeni":"MEDWID",
     "prijmeni_ini":"M.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -4855,7 +4644,6 @@
   {
     "osoba_cislo":223,
     "vlastni_jmeno":"Peter Ralph",
-    "prijmeni":"SAURIEN",
     "prijmeni_ini":"S.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -4878,7 +4666,6 @@
   {
     "osoba_cislo":224,
     "vlastni_jmeno":"Petr",
-    "prijmeni":"MILANOV",
     "prijmeni_ini":"M.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -4901,7 +4688,6 @@
   {
     "osoba_cislo":225,
     "vlastni_jmeno":"Petr",
-    "prijmeni":"SLÁDEK",
     "prijmeni_ini":"S.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -4924,7 +4710,6 @@
   {
     "osoba_cislo":226,
     "vlastni_jmeno":"René-Aime",
-    "prijmeni":"LANDREY",
     "prijmeni_ini":"L.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -4947,7 +4732,6 @@
   {
     "osoba_cislo":227,
     "vlastni_jmeno":"Richard",
-    "prijmeni":"SCHLENZ",
     "prijmeni_ini":"S.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -4970,7 +4754,6 @@
   {
     "osoba_cislo":228,
     "vlastni_jmeno":"Richard",
-    "prijmeni":"KOLENKO",
     "prijmeni_ini":"K.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -4993,7 +4776,6 @@
   {
     "osoba_cislo":229,
     "vlastni_jmeno":"Roland",
-    "prijmeni":"KREMER",
     "prijmeni_ini":"K.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -5016,7 +4798,6 @@
   {
     "osoba_cislo":230,
     "vlastni_jmeno":"Roman",
-    "prijmeni":"DZIDYCZ",
     "prijmeni_ini":"D.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -5039,7 +4820,6 @@
   {
     "osoba_cislo":231,
     "vlastni_jmeno":"Roman",
-    "prijmeni":"HONETSCHLAGER",
     "prijmeni_ini":"H.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -5062,7 +4842,6 @@
   {
     "osoba_cislo":232,
     "vlastni_jmeno":"Rudolf",
-    "prijmeni":"VALTERA",
     "prijmeni_ini":"V.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -5085,7 +4864,6 @@
   {
     "osoba_cislo":233,
     "vlastni_jmeno":"Rudolf",
-    "prijmeni":"MANČUŠKA",
     "prijmeni_ini":"M.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -5108,7 +4886,6 @@
   {
     "osoba_cislo":234,
     "vlastni_jmeno":"Rudolf",
-    "prijmeni":"FRITZ",
     "prijmeni_ini":"F.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -5131,7 +4908,6 @@
   {
     "osoba_cislo":235,
     "vlastni_jmeno":"Rudolf",
-    "prijmeni":"VACULÍK",
     "prijmeni_ini":"V.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -5154,7 +4930,6 @@
   {
     "osoba_cislo":236,
     "vlastni_jmeno":"Rudolf Erwin",
-    "prijmeni":"BUSS",
     "prijmeni_ini":"B.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -5177,7 +4952,6 @@
   {
     "osoba_cislo":237,
     "vlastni_jmeno":"Rudolf Vilém",
-    "prijmeni":"KMOCH",
     "prijmeni_ini":"K.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -5200,7 +4974,6 @@
   {
     "osoba_cislo":238,
     "vlastni_jmeno":"Stanislav",
-    "prijmeni":"SZCZOTKA",
     "prijmeni_ini":"S.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -5223,7 +4996,6 @@
   {
     "osoba_cislo":239,
     "vlastni_jmeno":"Stanislav",
-    "prijmeni":"BOČAN",
     "prijmeni_ini":"B.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -5246,7 +5018,6 @@
   {
     "osoba_cislo":240,
     "vlastni_jmeno":"Stanislav Antonín",
-    "prijmeni":"LATA",
     "prijmeni_ini":"L.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -5269,7 +5040,6 @@
   {
     "osoba_cislo":241,
     "vlastni_jmeno":"Štefan",
-    "prijmeni":"HUŽVÁR",
     "prijmeni_ini":"H.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -5292,7 +5062,6 @@
   {
     "osoba_cislo":242,
     "vlastni_jmeno":"Štefan",
-    "prijmeni":"KREIGER",
     "prijmeni_ini":"K.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -5315,7 +5084,6 @@
   {
     "osoba_cislo":243,
     "vlastni_jmeno":"Štefan",
-    "prijmeni":"KOLLMAN",
     "prijmeni_ini":"K.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -5338,7 +5106,6 @@
   {
     "osoba_cislo":244,
     "vlastni_jmeno":"Štefan",
-    "prijmeni":"ČITAN",
     "prijmeni_ini":"Č.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -5361,7 +5128,6 @@
   {
     "osoba_cislo":245,
     "vlastni_jmeno":"Štěpán",
-    "prijmeni":"HROZ",
     "prijmeni_ini":"H.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -5384,7 +5150,6 @@
   {
     "osoba_cislo":246,
     "vlastni_jmeno":"Tadeusz",
-    "prijmeni":"GOLCZ",
     "prijmeni_ini":"G.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -5407,7 +5172,6 @@
   {
     "osoba_cislo":247,
     "vlastni_jmeno":"Tadeusz",
-    "prijmeni":"BERNARD",
     "prijmeni_ini":"B.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -5430,7 +5194,6 @@
   {
     "osoba_cislo":248,
     "vlastni_jmeno":"Thomas",
-    "prijmeni":"DAUSCH",
     "prijmeni_ini":"D.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -5453,7 +5216,6 @@
   {
     "osoba_cislo":249,
     "vlastni_jmeno":"Tibor",
-    "prijmeni":"WALTER",
     "prijmeni_ini":"W.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -5476,7 +5238,6 @@
   {
     "osoba_cislo":251,
     "vlastni_jmeno":"Václav",
-    "prijmeni":"KOFRÁNEK",
     "prijmeni_ini":"K.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -5499,7 +5260,6 @@
   {
     "osoba_cislo":252,
     "vlastni_jmeno":"Vasil",
-    "prijmeni":"ARANOŽ",
     "prijmeni_ini":"A.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -5522,7 +5282,6 @@
   {
     "osoba_cislo":253,
     "vlastni_jmeno":"Vilém",
-    "prijmeni":"HEBKÝ",
     "prijmeni_ini":"H.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -5545,7 +5304,6 @@
   {
     "osoba_cislo":254,
     "vlastni_jmeno":"Vladimír",
-    "prijmeni":"NOVÁK",
     "prijmeni_ini":"N.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -5568,7 +5326,6 @@
   {
     "osoba_cislo":255,
     "vlastni_jmeno":"Vojtěch",
-    "prijmeni":"RYGAL",
     "prijmeni_ini":"R.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -5591,7 +5348,6 @@
   {
     "osoba_cislo":256,
     "vlastni_jmeno":"Walter",
-    "prijmeni":"WAWRA",
     "prijmeni_ini":"W.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -5614,7 +5370,6 @@
   {
     "osoba_cislo":257,
     "vlastni_jmeno":"Waltr",
-    "prijmeni":"WALSCH",
     "prijmeni_ini":"W.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -5637,7 +5392,6 @@
   {
     "osoba_cislo":258,
     "vlastni_jmeno":"Wilhelm",
-    "prijmeni":"SPECHT",
     "prijmeni_ini":"S.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -5660,7 +5414,6 @@
   {
     "osoba_cislo":259,
     "vlastni_jmeno":"Wladyslaw",
-    "prijmeni":"MAKULA",
     "prijmeni_ini":"M.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -5683,7 +5436,6 @@
   {
     "osoba_cislo":260,
     "vlastni_jmeno":"Wolfgang",
-    "prijmeni":"MICHAL",
     "prijmeni_ini":"M.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -5706,7 +5458,6 @@
   {
     "osoba_cislo":261,
     "vlastni_jmeno":"Zdeněk",
-    "prijmeni":"MACAN",
     "prijmeni_ini":"M.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -5729,7 +5480,6 @@
   {
     "osoba_cislo":262,
     "vlastni_jmeno":"Zdeněk",
-    "prijmeni":"ORLÍK",
     "prijmeni_ini":"O.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -5752,7 +5502,6 @@
   {
     "osoba_cislo":263,
     "vlastni_jmeno":"Zdeněk",
-    "prijmeni":"ŠNAJDR",
     "prijmeni_ini":"Š.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -5775,7 +5524,6 @@
   {
     "osoba_cislo":264,
     "vlastni_jmeno":"Zdeněk",
-    "prijmeni":"ŠŤASTNÝ",
     "prijmeni_ini":"Š.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -5798,7 +5546,6 @@
   {
     "osoba_cislo":265,
     "vlastni_jmeno":"Zdeněk",
-    "prijmeni":"POLÁŠEK",
     "prijmeni_ini":"P.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",
@@ -5821,7 +5568,6 @@
   {
     "osoba_cislo":266,
     "vlastni_jmeno":"Zikmund",
-    "prijmeni":"ŠÁL",
     "prijmeni_ini":"Š.",
     "pohlavi_cislo":0,
     "pohlavi":"muž",

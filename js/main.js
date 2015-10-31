@@ -47,7 +47,7 @@ $(document).ready(function() {
 		draw(map, mapsDataJSON, filterInput, oms);
 	})
 
-	// 
+	//
 	$('#filters input').on('change', function() {
 		var filterName = $(this).attr('name');
 		if (filterName == 'gender' || filterName == 'direction' ) {
@@ -57,6 +57,7 @@ $(document).ready(function() {
 		}
 		draw(map, mapsDataJSON, filterInput, oms);
 	})
+
 	$('#controls input').on('change', function() {
 		var filterName = $(this).attr('value');
 		filterInput['periodFrom'] = parseInt($(this).attr('value').split(',')[0]);
@@ -133,12 +134,14 @@ $(document).ready(function() {
 	});
 
 	// open filters
-	$('#filters > header').on('click', function(){
+	$('#filters > header').on('click', function(e){
+		e.preventDefault();
 		$('#filters').toggleClass('hidden');
 		$('body').toggleClass('active-filters');
 	});
 
-	$('#roll-up-filters').on('click', function(){
+	$('#roll-up-filters').on('click', function(e){
+		e.preventDefault();
 		$('#filters').toggleClass('hidden');
 		$('body').toggleClass('active-filters');
 	});

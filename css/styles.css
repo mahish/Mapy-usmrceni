@@ -1182,7 +1182,7 @@ section.filters {
     float: left;
     display: block;
     margin-right: 0%;
-    width: 50%; }
+    width: 33.33333%; }
     section.filters #filter-direction li:last-child {
       margin-right: 0; }
 
@@ -1492,11 +1492,11 @@ header.intro {
       .infobox .info .content::-webkit-scrollbar-thumb:window-inactive {
         background: rgba(100, 100, 100, 0.4); }
     .infobox .info dl {
-      -webkit-column-count: 3;
+      -webkit-column-count: 2;
       /* Chrome, Safari, Opera */
-      -moz-column-count: 3;
+      -moz-column-count: 2;
       /* Firefox */
-      column-count: 3; }
+      column-count: 2; }
 
 /* Functional styling;
  * These styles are required for noUiSlider to function.

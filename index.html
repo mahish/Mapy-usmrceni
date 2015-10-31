@@ -125,15 +125,6 @@
 				<h4>Státní příslušnost</h4>
 				<label class="custom-select" for="">
 					<select id="citizenship" >
-						<!-- 1 = Československo (ČSR, ČSSR)  -->
-						<!-- 2 = Polsko -->
-						<!-- 3 = Maďarsko -->
-						<!-- 4 = Rakousko -->
-						<!-- 5 = Německo (do r. 1949) -->
-						<!-- 6 = NDR -->
-						<!-- 7 = SRN -->
-						<!-- 8 = jiná -->
-						<!-- 0 = neurčeno -->
 						<option value="false">všechny státní příslušnosti</option>
 						<option value="1">Československo - ČSR, ČSSR</option>
 						<option value="3">Maďarsko</option>
@@ -155,88 +146,103 @@
 				<label class="custom-select" for="">
 					<select id="residence">
 						<option value="false">všechny okresy bydliště</option>
-						<option value="1">Allier</option>
-						<option value="2">Arnsberg</option>
+						<option value="1">Allier (F)</option>
+						<option value="2">Arnsberg (SRN)</option>
 						<option value="3">Benešov</option>
-						<option value="4">Beroun</option>
-						<option value="5">Břeclav</option>
-						<option value="6">Brno-Country</option>
-						<option value="7">Brno-město</option>
-						<option value="8">Bruntál</option>
-						<option value="9">Budapest</option>
-						<option value="10">Bytom</option>
-						<option value="11">C</option>
-						<option value="12">České Budějovice</option>
-						<option value="13">Český Krumlov</option>
-						<option value="14">Cheb</option>
-						<option value="15">Chomutov</option>
-						<option value="16">DA</option>
-						<option value="17">DD</option>
-						<option value="18">Děčín</option>
-						<option value="19">Domažlice</option>
-						<option value="20">Esztergomi</option>
-						<option value="21">Frýdek-Místek</option>
-						<option value="22">Gdańsk</option>
-						<option value="23">gliwicki</option>
-						<option value="24">Hlavní město Praha</option>
-						<option value="25">Jablonec nad Nisou</option>
-						<option value="26">Jindřichův Hradec</option>
-						<option value="27">Karlovy Vary</option>
-						<option value="28">Karviná</option>
-						<option value="29">Katowice</option>
-						<option value="30">Kladno</option>
-						<option value="31">Klatovy</option>
-						<option value="32">Kolín</option>
-						<option value="33">Kroměříž</option>
-						<option value="34">KS</option>
-						<option value="35">Leipzig</option>
-						<option value="36">Levoča</option>
-						<option value="37">Liberec</option>
-						<option value="38">Linz</option>
-						<option value="39">Litoměřice</option>
-						<option value="40">Louny</option>
-						<option value="41">Malacky</option>
-						<option value="42">Mělník</option>
-						<option value="43">Mistelbach</option>
-						<option value="44">Mittelfranken</option>
-						<option value="45">Mladá Boleslav</option>
-						<option value="46">Most</option>
-						<option value="47">Nagykátai</option>
-						<option value="48">Niederbayern</option>
-						<option value="49">Nový Jičín</option>
-						<option value="50">Nymburk</option>
-						<option value="51">Oberbayern</option>
-						<option value="52">Oberfranken</option>
-						<option value="53">Oberpfalz</option>
-						<option value="54">Olomouc</option>
-						<option value="55">Opole</option>
-						<option value="56">Ostrava-město</option>
-						<option value="57">Písek</option>
-						<option value="58">Plzeň-jih</option>
-						<option value="59">Plzeň-město</option>
-						<option value="60">Poznań</option>
-						<option value="61">Prachatice</option>
-						<option value="62">Prague-East</option>
-						<option value="63">Přerov</option>
-						<option value="64">radomski</option>
-						<option value="65">Rokycany</option>
-						<option value="66">Skalica</option>
-						<option value="67">Sokolov</option>
-						<option value="68">Stará Ľubovňa</option>
-						<option value="69">Süd</option>
-						<option value="70">Šumperk</option>
-						<option value="71">świdnicki</option>
-						<option value="72">Tachov</option>
-						<option value="73">Trnava</option>
-						<option value="74">Trutnov</option>
-						<option value="75">Ústí nad Labem</option>
-						<option value="76">Vsetín</option>
-						<option value="77">Vyškov</option>
-						<option value="78">Waidhofen an der Thaya</option>
-						<option value="79">wałbrzyski</option>
-						<option value="8O">Zlín</option>
-						<option value="81">Znojmo</option>
-						<option value="82">Žďár nad Sázavou</option>
+						<option value="4">Berlin (NDR)</option>
+						<option value="5">Beroun</option>
+						<option value="6">Bratislava</option>
+						<option value="7">Břeclav</option>
+						<option value="8">Brno-město</option>
+						<option value="9">Brno-venkov</option>
+						<option value="10">Bruntál</option>
+						<option value="11">Budapest</option>
+						<option value="12">Budapest (H)</option>
+						<option value="13">Bytom</option>
+						<option value="14">Bytom (PL)</option>
+						<option value="15">České Budějovice</option>
+						<option value="16">Český Krumlov</option>
+						<option value="17">Cheb</option>
+						<option value="18">Chemnitz</option>
+						<option value="19">Chomutov</option>
+						<option value="20">Darmstadt (SRN)</option>
+						<option value="21">Děčín</option>
+						<option value="22">Domažlice</option>
+						<option value="23">Dresden (NDR)</option>
+						<option value="24">Esztergomi (H)</option>
+						<option value="25">Frankfurt (Oder; NDR)</option>
+						<option value="26">Frýdek-Místek</option>
+						<option value="27">Gdańsk (PL)</option>
+						<option value="28">Gliwicki District (PL)</option>
+						<option value="29">Hlavní město Praha</option>
+						<option value="30">Jablonec nad Nisou</option>
+						<option value="31">Jindřichův Hradec</option>
+						<option value="32">Karlovy Vary</option>
+						<option value="33">Karviná</option>
+						<option value="34">Kassel (SRN)</option>
+						<option value="35">Katowice (PL)</option>
+						<option value="36">Kežmarok</option>
+						<option value="37">Kladno</option>
+						<option value="38">Klatovy</option>
+						<option value="39">Kolín</option>
+						<option value="40">Kroměříž</option>
+						<option value="41">Leipzig</option>
+						<option value="42">Levoča</option>
+						<option value="43">Liberec</option>
+						<option value="44">Linz</option>
+						<option value="45">Litoměřice</option>
+						<option value="46">Louny</option>
+						<option value="47">Magdeburg (NDR)</option>
+						<option value="48">Malacky</option>
+						<option value="49">Mělník</option>
+						<option value="50">Mistelbach (A)</option>
+						<option value="51">Mittelfranken (SRN)</option>
+						<option value="52">Mladá Boleslav</option>
+						<option value="53">Most</option>
+						<option value="54">Nagykátai (H)</option>
+						<option value="55">Niederbayern (SRN)</option>
+						<option value="56">Nitra</option>
+						<option value="57">Nové Mesto nad Váhom</option>
+						<option value="58">Nové Zámky</option>
+						<option value="59">Nový Jičín</option>
+						<option value="60">Nymburk</option>
+						<option value="61">Oberbayern (SRN)</option>
+						<option value="62">Oberfranken (SRN)</option>
+						<option value="63">Oberpfalz (SRN)</option>
+						<option value="64">Okres wałbrzyski (PL)</option>
+						<option value="65">Olomouc</option>
+						<option value="66">Opole (PL)</option>
+						<option value="67">Ostrava-město</option>
+						<option value="68">Písek</option>
+						<option value="69">Plzeň-jih</option>
+						<option value="70">Plzeň-město</option>
+						<option value="71">Powiat radomski (PL)</option>
+						<option value="72">Poznań (PL)</option>
+						<option value="73">Prachatice</option>
+						<option value="74">Praha-východ</option>
+						<option value="75">Přerov</option>
+						<option value="76">Rokycany</option>
+						<option value="77">Senica</option>
+						<option value="78">Skalica</option>
+						<option value="79">Sokolov</option>
+						<option value="80">Stará Ľubovňa</option>
+						<option value="81">Süd (SRN)</option>
+						<option value="82">Šumperk</option>
+						<option value="83">Świdnica (PL)</option>
+						<option value="84">Tachov</option>
+						<option value="85">Trnava</option>
+						<option value="86">Trutnov</option>
+						<option value="87">Ústí nad Labem</option>
+						<option value="88">Veľký Krtíš</option>
+						<option value="89">Vsetín</option>
+						<option value="90">Vyškov</option>
+						<option value="91">Waidhofen an der Thaya (A)</option>
+						<option value="92">Wien (A)</option>
+						<option value="93">Žďár nad Sázavou</option>
+						<option value="94">Žiar nad Hronom</option>
+						<option value="95">Zlín</option>
+						<option value="96">Znojmo</option>
+						<option value="0">neurčeno</option>
 					</select>
 				</label>
 				<hr>
@@ -244,19 +250,7 @@
 			<div id="filter-incident" class="filter">
 				<h4>Příslušný útvar příhraniční stráže</h4>
 				<label class="custom-select" for="">
-					<select id="incident" >
-						<!-- 0 = neurčeno -->
-						<!-- 1 = 10. volarská bps -->
-						<!-- 2 = 11. bratislavská bps -->
-						<!-- 3 = 12. plánská bps -->
-						<!-- 4 = 15. českobudějovická bps  -->
-						<!-- 5 = 19. děčínská bps -->
-						<!-- 6 = 3. karlovarská bps -->
-						<!-- 7 = 4. znojemská bps -->
-						<!-- 8 = 5. chebská bps -->
-						<!-- 9 = 7. sušická bps -->
-						<!-- 10 = 9. domažlická bps -->
-						<!-- 11 = 9. poběžovická bps -->
+					<select id="incident">
 						<option value="false">všechny útvary příhraniční stráže</option>
 						<option value="1">10. volarská bps</option>
 						<option value="2">11. bratislavská bps</option>
@@ -278,16 +272,6 @@
 				<h4>Příčina úmrtí</h4>
 				<label class="custom-select" for="">
 					<select id="death">
-						<!-- 0 = zasažení el. proudem -->
-						<!-- 1 = střelba pohraničníků -->
-						<!-- 2 = pád sestřeleného letadla -->
-						<!-- 3 = sebevražda -->
-						<!-- 4 = autohavárie -->
-						<!-- 5 = utonutí -->
-						<!-- 6 = utonutí po střelném zranění -->
-						<!-- 7 = zranění výbuchem protipěchotní miny -->
-						<!-- 8 = zranění způsobené psy Pohraniční stráže -->
-						<!-- 9 = jiná příčina -->
 						<option value="false">všechny příčiny úmrtí</option>
 						<option value="0">zasažení el. proudem</option>
 						<option value="1">střelba pohraničníků</option>
@@ -320,6 +304,13 @@
 							<div>dovnitř</div>
 						</label>
 					</li>
+					<li>
+						<label class="gender" for="directionNa">
+							<input type="checkbox" name="direction" value="na" id="directionNa" checked>
+							<i></i>
+							<div>neurčeno</div>
+						</label>
+					</li>
 				</ul>
 				<hr>
 			</div>
@@ -335,14 +326,11 @@
 	<section class="infobox">
 		<div class="info">
 			<div class="title">
-				<h1>Informace o zvoleném bodu</h1>
+				<h1>Informace o zvolené osobě</h1>
 			</div>
 			<div class="content">
 				<dl>
-					<dt>
-						Číslo osoby
-					</dt>
-					<dd id="cislo_osoby">
+					<dd id="jmeno_osoby">
 					</dd>
 					<dt>
 						Věk
@@ -354,10 +342,12 @@
 					</dt>
 					<dd id="statni_prislusnost">
 					</dd>
+					<dt>Okres bydliště</dt>
+					<dd id="okres_bydliste_cz"></dd>
 					<dt>
-						GPS incidentu
+						Odpovědný útvar
 					</dt>
-					<dd id="gps_incidentu">
+					<dd id="utvar_incidentu">
 					</dd>
 					<dt>
 						Směr přechodu
@@ -390,3 +380,6 @@
 
 </body>
 </html>
+
+
+

@@ -363,6 +363,6 @@ section.filters {
 	}
 
 	#filter-direction li {
-		@include span-columns(6);
+		@include span-columns(4);
 	}
 }
