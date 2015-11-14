@@ -12,6 +12,11 @@ select {
 	font-family: $base-font-family;
 	font-size: $base-font-size;
 }
+select {
+	-moz-appearance: none;
+	text-indent: 0.01px;
+	text-overflow: '';
+}
 /* This is to remove the arrow of select element in IE */
 select::-ms-expand {	display: none; }
 
@@ -82,9 +87,9 @@ select {
 	appearance: none;
 
 	border: 1px solid $light-gray;
+	border-radius: $base-border-radius;
 	background: white;
 	padding: 0 $small-spacing;
-	border-radius: $base-border-radius;
 
 	// font-size: em(14);
 	font-weight: 200;
@@ -108,7 +113,20 @@ label.custom-select {
 		border: $base-spacing / 4 solid transparent;
 		border-color: $gray transparent transparent transparent;
 		position: absolute;
-		top: .65em;
+		top: .75em;
 		right: $base-spacing / 2 - $base-spacing / 8;
+	}
+}
+
+@-moz-document url-prefix(){
+	label.custom-select {
+		overflow: hidden;
+		border: 1px solid $light-gray;
+		border-radius: $base-border-radius;
+
+	}
+	select {
+		width: 110%;
+		border-color: transparent;
 	}
 }
