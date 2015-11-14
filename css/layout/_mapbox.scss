@@ -115,12 +115,20 @@
 				// IE
 				scrollbar-face-color: #888;
 				scrollbar-track-color: #eee;
+
+				& > div {
+					@include span-columns(1 of 2);
+
+					&:first-of-type {
+						padding-right: $small-spacing;
+					}
+				}
 			}
 
 			dl {
-				-webkit-column-count: 2; /* Chrome, Safari, Opera */
-				-moz-column-count: 2; /* Firefox */
-				column-count: 2;
+				// -webkit-column-count: 2; /* Chrome, Safari, Opera */
+				// -moz-column-count: 2; /* Firefox */
+				// column-count: 2;
 			}
 
 		}
