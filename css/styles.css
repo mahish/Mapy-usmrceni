@@ -1231,7 +1231,8 @@ section.filters {
       display: inline-block;
       vertical-align: middle;
       margin-bottom: 3px;
-      opacity: 0.62; }
+      opacity: 0.62;
+      width: 28px; }
     section.filters #reset-filters:hover img {
       opacity: 0.95; }
 
