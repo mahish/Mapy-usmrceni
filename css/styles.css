@@ -900,6 +900,10 @@ dl {
       text-align: center;
       text-shadow: 0 0 0.375em rgba(0, 0, 0, 0.1); }
 
+section.controls a:hover,
+section.filters a:hover {
+  color: #424143; }
+
 section.controls {
   position: fixed;
   top: 1.5em;
@@ -1214,6 +1218,16 @@ section.filters {
     width: 33.33333%; }
     section.filters #filter-direction li:last-child {
       margin-right: 0; }
+  section.filters #reset-filters {
+    line-height: 28px;
+    margin-bottom: 0.75em; }
+    section.filters #reset-filters img {
+      display: inline-block;
+      vertical-align: middle;
+      margin-bottom: 3px;
+      opacity: 0.62; }
+    section.filters #reset-filters:hover img {
+      opacity: 0.95; }
 
 .label-switch {
   border-radius: 32px;
@@ -1454,6 +1468,10 @@ header.intro {
   background-color: white;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.11);
   border-radius: 2px; }
+  #reset-view img {
+    opacity: 0.62; }
+  #reset-view:hover img {
+    opacity: 0.95; }
 
 .infobox {
   position: fixed;

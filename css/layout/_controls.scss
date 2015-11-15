@@ -1,3 +1,9 @@
+section.controls,
+section.filters {
+	a:hover {
+		color: $dark-gray;
+	}
+}
 section.controls {
 	position: fixed;
 	top: $base-spacing;
@@ -369,5 +375,23 @@ section.filters {
 
 	#filter-direction li {
 		@include span-columns(4);
+	}
+
+	#reset-filters {
+		line-height: 28px;
+		margin-bottom: $small-spacing;
+
+		img {
+			display: inline-block;
+			vertical-align: middle;
+			margin-bottom: 3px;
+			opacity: 0.62;
+		}
+
+		&:hover {
+			img {
+				opacity: 0.95;
+			}
+		}
 	}
 }
