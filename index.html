@@ -29,16 +29,33 @@
 <body>
 
 	<header class="intro">
-		<h1 class="">
-			Usmrcení na československé hranici
-			<br>
-			<a id="toApp" href="javascript:void(0)">&#8702; Aplikace</a>
-		</h1>
-		<article>
-			<p>
-				Na hranicích Československa zahynulo v období komunistického režimu mezi lety 1948 a&#160;1989 nejméně 266 lidí, kteří se na hranici zřejmě neocitli náhodou. Tato aplikace představuje výsledky projektu Dokumentace usmrcených na čs. hranici 1948-1989, který se zabýval osudy těchto lidí. Na základě podrobného zmapování jednotlivých případů lze volit vlastní pohledy, a&#160;skládat tak příběh této skupiny tragicky zesnulých.
-			</p>
-		</article>
+		<div class="scroll wrap">
+			<section class="welcome">
+				<h1 class="">
+					Usmrcení na československé hranici
+					<br>
+					<a class="toApp hide-for-small" href="javascript:void(0)">&#8702; Aplikace</a>
+				</h1>
+				<article>
+					<p>
+						Na hranicích Československa zahynulo v období komunistického režimu mezi lety 1948 a&#160;1989 nejméně 266 lidí, kteří se na hranici zřejmě neocitli náhodou. Tato aplikace představuje výsledky projektu Dokumentace usmrcených na čs. hranici 1948-1989, který se zabýval osudy těchto lidí. Na základě podrobného zmapování jednotlivých případů lze volit vlastní pohledy, a&#160;skládat tak příběh této skupiny tragicky zesnulých.
+					</p>
+				</article>
+			</section>
+			<section class="guide">
+				<h6>Návod k aplikaci</h6>
+				<div class="guide-images" id="overall-guide">
+					<img src="img/navod/navod.jpg" alt="Obecný popis aplikace">
+				</div>
+				<div class="guide-images" id="marker">
+					<img src="img/navod/marker.jpg" alt="Popis interakce s bodem na mapě">
+				</div>
+			</section>
+			<div class="text-center">
+				Přejít do
+				<a class="toApp" href="javascript:void(0)">Aplikace</a>
+			</div>
+		</div>
 		<span><img class="left" src="img/ui/burger.png" alt="Menu"> Menu</span>
 	</header>
 
@@ -317,7 +334,7 @@
 				<hr>
 			</div>
 			<a href="javascript:void(0)" id="reset-filters" class="small text-center">
-				<img src="img/refresh-arrow.png" alt="Resetovat úroveň přiblížení a pozici na mapě"> Resetovat filtrování
+				<img src="img/ui/refresh-arrow.png" alt="Resetovat úroveň přiblížení a pozici na mapě"> Resetovat filtrování
 			</a>
 		</div>
 		<a id="roll-up-filters" class="roll-up" href="#">
@@ -385,7 +402,7 @@
 
 	<div id="map-canvas"></div>
 	<a href="#" id="reset-view" class="button text-center" title="Resetovat zobrazení mapy">
-		<img src="img/refresh-arrow.png" alt="Resetovat úroveň přiblížení a pozici na mapě">
+		<img src="img/ui/refresh-arrow.png" alt="Resetovat úroveň přiblížení a pozici na mapě">
 	</a>
 
 	<script src="js/nouislider.min.js"></script>

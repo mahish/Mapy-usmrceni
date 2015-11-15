@@ -4,7 +4,6 @@ header.intro {
 	height: 100%;
 	width: 100%;
 	background: white;
-	padding: $base-spacing;
 
 	&:after {
 		opacity: 0;
@@ -36,6 +35,8 @@ header.intro {
 		@include position(absolute, null $base-spacing $small-spacing null);
 		@include transition-property(all);
 		@include transition-duration(0.2s);
+		// padding-top: 0;
+		// padding-bottom: 0;
 
 		img {
 			padding: .25em .5em;
@@ -51,6 +52,12 @@ header.intro {
 		@include transform(translatey(calc(-100% + #{$base-spacing})));
 		-ms-transform: translateY(-100%) translateY($base-spacing);
 
+		> .wrap {
+			overflow-y: hidden;
+			opacity: 0;
+			@include transition-property(opacity);
+			@include transition-duration(0.2s);
+		}
 	}
 
 	&.hidden {
@@ -71,22 +78,93 @@ header.intro {
 		}
 	}
 
-	h1 {
-		@include span-columns(12);
-		@include pad(null 2%);
+	> .wrap {
+		@include outer-container;
+		@include transition-property(opacity);
+		@include transition-duration(0.2s);
+		overflow-y: scroll;
+		height: 100%;
+		opacity: 1;
+		padding-bottom: $base-spacing * 2;
 
-		@include media($large-screen) {
-			@include span-columns(3);
-			@include shift(2);
+		> * {
+			@include row();
+			padding: $base-spacing;
 		}
 	}
 
-	article {
-		@include span-columns(12);
-		@include pad(null 2%);
+	.welcome {
+		@include row();
+		h1 {
+			@include span-columns(12);
+			@include pad(null 2%);
 
-		@include media($large-screen) {
-			@include span-columns(5);
+			@include media($large-screen) {
+				@include span-columns(3);
+				@include shift(2);
+			}
+		}
+
+		article {
+			@include span-columns(12);
+			@include pad(null 2%);
+
+			@include media($large-screen) {
+				@include span-columns(5);
+			}
+		}
+	}
+
+	.guide {
+		@include row();
+		background-color: $super-light-gray;
+		padding-top: $base-spacing;
+		border-top: $base-border;
+		border-bottom: $base-border;
+		text-align: center;
+		display: none;
+		margin-bottom: $base-spacing;
+
+		@include media($medium-screen) {
+			display: block;
+		}
+
+		h6 {
+			@include span-columns(12);
+			margin-bottom: $base-spacing * 2;
+			text-align: left;
+		}
+
+		.guide-images {
+			margin-bottom: $base-spacing;
+		}
+
+		#overall-guide {
+			@include span-columns(12);
+		}
+		#marker {
+			@include span-columns(12);
+			border-top: $base-border;
+		}
+
+		hr {
+			border-color: $light-gray;
+		}
+	}
+
+	.toApp {
+		font-weight: bold;
+		margin: $base-spacing auto;
+		padding: $small-spacing;
+		padding-top: 0;
+		border-bottom: $base-border;
+		// border-radius: 50px;
+		background-color: white;
+
+		&:hover {
+			border-width: 2px;
+			border-color: $red;
+			color: $red;
 		}
 	}
 

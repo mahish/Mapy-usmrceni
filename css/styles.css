@@ -702,6 +702,12 @@ h6 {
   line-height: 1.2;
   margin: 0 0 0.75em; }
 
+h6 {
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 75%;
+  color: #CBC9CF; }
+
 p {
   margin: 0 0 0.75em; }
 
@@ -1340,7 +1346,6 @@ header.intro {
   height: 100%;
   width: 100%;
   background: white;
-  padding: 1.5em;
   -webkit-transition-property: all;
   -moz-transition-property: all;
   transition-property: all;
@@ -1398,6 +1403,15 @@ header.intro {
     -o-transform: translatey(calc(-100% + 1.5em));
     transform: translatey(calc(-100% + 1.5em));
     -ms-transform: translateY(-100%) translateY(1.5em); }
+    header.intro.hide > .wrap, header.intro.hidden > .wrap {
+      overflow-y: hidden;
+      opacity: 0;
+      -webkit-transition-property: opacity;
+      -moz-transition-property: opacity;
+      transition-property: opacity;
+      -webkit-transition-duration: 0.2s;
+      -moz-transition-duration: 0.2s;
+      transition-duration: 0.2s; }
   header.intro.hidden {
     cursor: pointer;
     -webkit-transition-property: all;
@@ -1416,39 +1430,125 @@ header.intro {
     header.intro.hidden:hover:after,
     header.intro.hidden:hover > span {
       opacity: 1; }
-  header.intro h1 {
-    float: left;
+  header.intro > .wrap {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-transition-property: opacity;
+    -moz-transition-property: opacity;
+    transition-property: opacity;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    overflow-y: scroll;
+    height: 100%;
+    opacity: 1;
+    padding-bottom: 3em; }
+    header.intro > .wrap::after {
+      clear: both;
+      content: "";
+      display: table; }
+    header.intro > .wrap > * {
+      display: block;
+      padding: 1.5em; }
+      header.intro > .wrap > *::after {
+        clear: both;
+        content: "";
+        display: table; }
+  header.intro .welcome {
+    display: block; }
+    header.intro .welcome::after {
+      clear: both;
+      content: "";
+      display: table; }
+    header.intro .welcome h1 {
+      float: left;
+      display: block;
+      margin-right: 0%;
+      width: 100%;
+      padding: 2%; }
+      header.intro .welcome h1:last-child {
+        margin-right: 0; }
+      @media screen and (min-width: 65.625em) {
+        header.intro .welcome h1 {
+          float: left;
+          display: block;
+          margin-right: 0%;
+          width: 25%;
+          margin-left: 16.66667%; }
+          header.intro .welcome h1:last-child {
+            margin-right: 0; } }
+    header.intro .welcome article {
+      float: left;
+      display: block;
+      margin-right: 0%;
+      width: 100%;
+      padding: 2%; }
+      header.intro .welcome article:last-child {
+        margin-right: 0; }
+      @media screen and (min-width: 65.625em) {
+        header.intro .welcome article {
+          float: left;
+          display: block;
+          margin-right: 0%;
+          width: 41.66667%; }
+          header.intro .welcome article:last-child {
+            margin-right: 0; } }
+  header.intro .guide {
     display: block;
-    margin-right: 0%;
-    width: 100%;
-    padding: 2%; }
-    header.intro h1:last-child {
-      margin-right: 0; }
-    @media screen and (min-width: 65.625em) {
-      header.intro h1 {
-        float: left;
-        display: block;
-        margin-right: 0%;
-        width: 25%;
-        margin-left: 16.66667%; }
-        header.intro h1:last-child {
-          margin-right: 0; } }
-  header.intro article {
-    float: left;
-    display: block;
-    margin-right: 0%;
-    width: 100%;
-    padding: 2%; }
-    header.intro article:last-child {
-      margin-right: 0; }
-    @media screen and (min-width: 65.625em) {
-      header.intro article {
-        float: left;
-        display: block;
-        margin-right: 0%;
-        width: 41.66667%; }
-        header.intro article:last-child {
-          margin-right: 0; } }
+    background-color: #fafafa;
+    padding-top: 1.5em;
+    border-top: 1px solid #CBC9CF;
+    border-bottom: 1px solid #CBC9CF;
+    text-align: center;
+    display: none;
+    margin-bottom: 1.5em; }
+    header.intro .guide::after {
+      clear: both;
+      content: "";
+      display: table; }
+    @media screen and (min-width: 47.8125em) {
+      header.intro .guide {
+        display: block; } }
+    header.intro .guide h6 {
+      float: left;
+      display: block;
+      margin-right: 0%;
+      width: 100%;
+      margin-bottom: 3em;
+      text-align: left; }
+      header.intro .guide h6:last-child {
+        margin-right: 0; }
+    header.intro .guide .guide-images {
+      margin-bottom: 1.5em; }
+    header.intro .guide #overall-guide {
+      float: left;
+      display: block;
+      margin-right: 0%;
+      width: 100%; }
+      header.intro .guide #overall-guide:last-child {
+        margin-right: 0; }
+    header.intro .guide #marker {
+      float: left;
+      display: block;
+      margin-right: 0%;
+      width: 100%;
+      border-top: 1px solid #CBC9CF; }
+      header.intro .guide #marker:last-child {
+        margin-right: 0; }
+    header.intro .guide hr {
+      border-color: #CBC9CF; }
+  header.intro .toApp {
+    font-weight: bold;
+    margin: 1.5em auto;
+    padding: 0.75em;
+    padding-top: 0;
+    border-bottom: 1px solid #CBC9CF;
+    background-color: white; }
+    header.intro .toApp:hover {
+      border-width: 2px;
+      border-color: #946563;
+      color: #946563; }
 
 #map-canvas {
   z-index: 0;

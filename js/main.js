@@ -96,7 +96,7 @@ $(document).ready(function() {
 
 	// Reset zoom & position of the map
 	var resetView = document.getElementById('reset-view');
-	google.maps.event.addDomListener(resetView, 'click', function() {
+	google.maps.event.addDomListener(resetView, 'click', function(event) {
 		event.preventDefault();
 
 		map.setCenter(new google.maps.LatLng(49.35, 14.5));
@@ -105,7 +105,7 @@ $(document).ready(function() {
 
 
 	// scroll to
-	$('#toApp').on('click', function() {
+	$('.toApp').on('click', function() {
 		$('header.intro').addClass('hide');
 
 		setTimeout(function () {
