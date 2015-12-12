@@ -51,6 +51,7 @@ header.intro {
 	&.hidden {
 		@include transform(translatey(calc(-100% + #{$base-spacing})));
 		-ms-transform: translateY(-100%) translateY($base-spacing);
+		transform: translateY(-100%) translateY($base-spacing);
 
 		> .wrap {
 			overflow-y: hidden;
@@ -70,6 +71,7 @@ header.intro {
 	&.hidden:hover {
 		@include transform(translatey(calc(-100% + #{$base-spacing} * 2)));
 		-ms-transform: translateY(-100%) translateY($base-spacing * 2);
+		transform: translateY(-100%) translateY($base-spacing * 2);
 
 
 		&:after,
@@ -93,15 +95,21 @@ header.intro {
 		}
 	}
 
-	.welcome {
+	section.welcome {
+		text-align: center;
 		@include row();
-		h1 {
+
+		.title {
 			@include span-columns(12);
 			@include pad(null 2%);
 
 			@include media($large-screen) {
 				@include span-columns(3);
 				@include shift(2);
+
+				.toApp {
+					margin-left: 0 !important;
+				}
 			}
 		}
 
@@ -112,6 +120,10 @@ header.intro {
 			@include media($large-screen) {
 				@include span-columns(5);
 			}
+		}
+
+		@include media($large-screen) {
+			text-align: left;
 		}
 	}
 
@@ -152,19 +164,42 @@ header.intro {
 		}
 	}
 
+	section:last-of-type + div {
+		display: none;
+		@include media($medium-screen) {
+			display: block;
+		}
+	}
+
 	.toApp {
+		display: block;
+		color: $turqois;
+		line-height: 1;
 		font-weight: bold;
-		margin: $base-spacing auto;
-		padding: $small-spacing;
-		padding-top: 0;
-		border-bottom: $base-border;
-		// border-radius: 50px;
-		background-color: white;
+		text-align: center;
+		text-transform: uppercase;
+		max-width: $base-spacing * 6;
+		padding: $base-spacing;
+		border: 1px solid $turqois;
+		border-radius: $base-border-radius;
+		margin: $small-spacing auto;
+
+		// &::after {
+		// 	content: "";
+		// 	border-bottom: 1px solid $turqois;
+		// 	width: 71%;
+		// 	display: block;
+		// 	margin: auto;
+		// }
 
 		&:hover {
-			border-width: 2px;
-			border-color: $red;
-			color: $red;
+			background-color: $turqois;
+			color: $super-light-gray;
+			border-color: $turqois;
+
+			// &::after {
+			// 	border-color: $super-light-gray;
+			// }
 		}
 	}
 
