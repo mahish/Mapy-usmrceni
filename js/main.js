@@ -66,7 +66,7 @@ $(document).ready(function() {
 		draw(map, mapsDataJSON, filterInput, oms);
 	})
 
-	$('#controls input').on('change', function() {
+	$('#periods input').on('change', function() {
 		var filterName = $(this).attr('value');
 		filterInput['periodFrom'] = parseInt($(this).attr('value').split(',')[0]);
 		filterInput['periodTo'] = parseInt($(this).attr('value').split(',')[1]);
@@ -75,6 +75,7 @@ $(document).ready(function() {
 
 	// reset of filters
 	$('#reset-filters').on('click', function() {
+		// remove active-marker class since the reset filter deselect any active marker
 		$('body').removeClass('active-marker');
 
 		// reset visually the period filter

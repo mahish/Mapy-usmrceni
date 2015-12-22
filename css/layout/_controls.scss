@@ -1,10 +1,10 @@
-section.controls,
-section.filters {
+section#periods,
+section#filters {
 	a:hover {
 		color: $dark-gray;
 	}
 }
-section.controls {
+section#periods {
 	position: fixed;
 	top: $base-spacing;
 	left: 0;
@@ -141,7 +141,7 @@ section.controls {
 
 }
 
-section.filters {
+section#filters {
 	position: fixed;
 	top: $base-spacing * 4 + $base-spacing;
 	left: 0;
