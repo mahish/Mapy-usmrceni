@@ -75,6 +75,7 @@ $(document).ready(function() {
 
 	// reset of filters
 	$('#reset-filters').on('click', function() {
+		$('body').removeClass('active-marker');
 		//draw(map, mapsDataJSON, {}, oms);
 		sliderAge.noUiSlider.set([5, 90]);
 		$('#filters input').each(function() {
