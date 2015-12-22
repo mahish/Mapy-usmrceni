@@ -76,6 +76,11 @@ $(document).ready(function() {
 	// reset of filters
 	$('#reset-filters').on('click', function() {
 		$('body').removeClass('active-marker');
+
+		// reset visually the period filter
+		$('#periods label').removeClass('active');
+		$('#periods label:first-of-type').addClass('active');
+
 		//draw(map, mapsDataJSON, {}, oms);
 		sliderAge.noUiSlider.set([5, 90]);
 		$('#filters input').each(function() {
