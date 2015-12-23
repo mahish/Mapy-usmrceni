@@ -173,7 +173,7 @@ header.intro {
 
 	.toApp {
 		display: block;
-		color: $turqois;
+		// color: $turqois;
 		line-height: 1;
 		font-weight: bold;
 		text-align: center;
@@ -184,6 +184,15 @@ header.intro {
 		border-radius: $base-border-radius;
 		margin: $small-spacing auto;
 
+		background-color: $option-color;
+		color: $option-text-color;
+
+		color: $super-light-gray;
+		border: $option-color;
+		background-color: $option-color;
+
+		@include transition(all 0.2s);
+
 		// &::after {
 		// 	content: "";
 		// 	border-bottom: 1px solid $turqois;
@@ -193,9 +202,12 @@ header.intro {
 		// }
 
 		&:hover {
-			background-color: $turqois;
-			color: $super-light-gray;
-			border-color: $turqois;
+			// background-color: $turqois;
+			// color: $super-light-gray;
+			// border-color: $turqois;
+			background-color: $active-color;
+			border-color: $active-color;
+			// color: darken($option-text-color, 10%);
 
 			// &::after {
 			// 	border-color: $super-light-gray;
