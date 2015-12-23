@@ -95,6 +95,22 @@ header.intro {
 		}
 	}
 
+	a#priloha {
+		background-color: $light-blue;
+		color: $red;
+		text-align: center;
+		@include transition(all 0.2s);
+
+		&:hover {
+			background-color: lighten($light-blue, 5%);
+			// color: $dark-red;
+		}
+
+		.caps {
+			font-weight: bold;
+		}
+	}
+
 	section.welcome {
 		text-align: center;
 		@include row();
