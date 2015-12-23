@@ -234,65 +234,39 @@ function draw(map, data, filter, oms) {
 		}
 	});
 
-	var updateDropdowns = function(markers) {
-		//citizenship
-		var markersCitizenship = [];
+	var updateDropdown = function(dropdownId) {
+		markersValues = [];
 		for (var i = 0; i < markers.length; i++) {
-			markersCitizenship.push(markers[i].jsondata.citizenship);
+			markersValues.push(markers[i].jsondata[dropdownId]);
 		}
-		var formCitizenship = document.querySelectorAll('select#citizenship option');
-		for (var i = 0; i < formCitizenship.length; i++) {
-			if (markersCitizenship.indexOf(parseInt(formCitizenship[i].value)) > -1 || formCitizenship[i].value == 'false') {
-				formCitizenship[i].disabled = false;
-				// add count in brackets				
+		var formOptions = document.querySelectorAll('select#' + dropdownId + ' option');
+		for (var i = 0; i < formOptions.length; i++) {
+			if (markersValues.indexOf(parseInt(formOptions[i].value)) > -1 || formOptions[i].value == 'false') {
+				formOptions[i].disabled = false;
+				if (formOptions[i].value != 'false') {
+					var count = 0;
+					for (var j = 0; j < markersValues.length; j++) {
+						var num = markersValues[j];
+						count = markersValues[j] == formOptions[i].value ? count + 1 : count;
+					}
+					if (new RegExp(/\[\d{1,}\]$/).test(formOptions[i].text)) {
+						formOptions[i].text = formOptions[i].text.replace(/\[\d{1,}\]/, ' [' + count + ']');
+					} else {
+						formOptions[i].text = formOptions[i].text + ' [' + count + ']';
+					}
+				}
 			} else {
-				formCitizenship[i].disabled = true;
-			}
-		}
-		//residence
-		var markersResidence = [];
-		for (var i = 0; i < markers.length; i++) {
-			markersResidence.push(markers[i].jsondata.residence);
-		}
-		var formResidence = document.querySelectorAll('select#residence option');
-		for (var i = 0; i < formResidence.length; i++) {
-			if (markersResidence.indexOf(parseInt(formResidence[i].value)) > -1 || formResidence[i].value == 'false') {
-				formResidence[i].disabled = false;
-				// add count in brackets				
-			} else {
-				formResidence[i].disabled = true;
-			}
-		}
-		//incident
-		var markersIncident = [];
-		for (var i = 0; i < markers.length; i++) {
-			markersIncident.push(markers[i].jsondata.incident);
-		}
-		var formIncident = document.querySelectorAll('select#incident option');
-		for (var i = 0; i < formIncident.length; i++) {
-			if (markersIncident.indexOf(parseInt(formIncident[i].value)) > -1 || formIncident[i].value == 'false') {
-				formIncident[i].disabled = false;
-				// add count in brackets				
-			} else {
-				formIncident[i].disabled = true;
-			}
-		}
-		//death
-		var markersDeath = [];
-		for (var i = 0; i < markers.length; i++) {
-			markersDeath.push(markers[i].jsondata.death);
-		}
-		var formDeath = document.querySelectorAll('select#death option');
-		for (var i = 0; i < formDeath.length; i++) {
-			if (markersDeath.indexOf(parseInt(formDeath[i].value)) > -1 || formDeath[i].value == 'false') {
-				formDeath[i].disabled = false;
-				// add count in brackets				
-			} else {
-				formDeath[i].disabled = true;
+				formOptions[i].disabled = true;
+				if (new RegExp(/\[\d{1,}\]$/).test(formOptions[i].text)) {
+					formOptions[i].text = formOptions[i].text.replace(/\[\d{1,}\]/, '');
+				}
 			}
 		}
 	}
-	updateDropdowns(markers);
+	updateDropdown('citizenship');
+	updateDropdown('residence');
+	updateDropdown('death');
+	updateDropdown('incident');
 
 }
 
