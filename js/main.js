@@ -53,6 +53,7 @@ $(document).ready(function() {
 		var filterName = $(this).attr('id');
 		filterInput[filterName] = $(this).children('option:selected').val()  == "false" ? false : $(this).children('option:selected').val();
 		draw(map, mapsDataJSON, filterInput, oms);
+		markersLength();
 	})
 
 	//
@@ -64,6 +65,7 @@ $(document).ready(function() {
 			filterInput[filterName] = $(this).attr('value') == "false" ? false : $(this).attr('value');
 		}
 		draw(map, mapsDataJSON, filterInput, oms);
+		markersLength();
 	})
 
 	$('#periods input').on('change', function() {
@@ -71,6 +73,7 @@ $(document).ready(function() {
 		filterInput['periodFrom'] = parseInt($(this).attr('value').split(',')[0]);
 		filterInput['periodTo'] = parseInt($(this).attr('value').split(',')[1]);
 		draw(map, mapsDataJSON, filterInput, oms);
+		markersLength();
 	})
 
 	// reset of filters
@@ -160,5 +163,25 @@ $(document).ready(function() {
 		$('#filters').toggleClass('hidden');
 		$('body').toggleClass('active-filters');
 	});
+
+	function markersLength() {
+		var number      = markers.length;
+		var numberField = $('#number-markers > span:first-child');
+		var wordField   = $('#number-markers > span:last-child');
+
+		$(numberField).html(number);
+
+		// Czech language specifics
+		if (number == 0) {
+			$(numberField).html('žádní');
+			$(wordField).html('usmrcení');
+		} else if (number == 1) {
+			$(wordField).html('usmrcený');
+		} else if (number > 1 && number < 5) {
+			$(wordField).html('usmrcení');
+		} else if (number >= 5) {
+			$(wordField).html('usmrcených');
+		}
+	}
 
 });
