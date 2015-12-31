@@ -25,27 +25,19 @@ $(document).ready(function() {
 			'15%': [ 17, 1 ],	// 20 years old, step by 1 year
 			'70%': [ 38, 1 ],	// 30 years old, step by 1 year
 			'max': [ 90, 1 ]	// 90 years old, step by 1 year
-		},
-		format: {
-			to: function(value) {
-				return value.toString().replace('.00', '');
-			},
-			from: function(value) {
-				return value.toString().replace('.00', '');
-			}
 		}
 	});
 
 	// Age Slider
 	sliderAge.noUiSlider.on('change', function() {
-		filterInput['ageFrom'] = parseFloat(sliderAge.noUiSlider.get()[0]);
-		filterInput['ageTo'] = parseFloat(sliderAge.noUiSlider.get()[1]);
+		filterInput['ageFrom'] = parseFloat(sliderAge.noUiSlider.get()[0]).toFixed(2);
+		filterInput['ageTo'] = parseFloat(sliderAge.noUiSlider.get()[1]).toFixed(2);
 		draw(map, mapsDataJSON, filterInput, oms);
 	})
 
 	sliderAge.noUiSlider.on('update', function() {
-		filterInput['ageFrom'] = sliderAge.noUiSlider.get()[0];
-		filterInput['ageTo'] = sliderAge.noUiSlider.get()[1];
+		filterInput['ageFrom'] = parseInt(sliderAge.noUiSlider.get()[0]);
+		filterInput['ageTo'] = parseInt(sliderAge.noUiSlider.get()[1]);
 		document.getElementById('age-min').innerHTML = document.getElementById('age-min').innerHTML.replace(/\d{1,}/, filterInput['ageFrom']);
 		document.getElementById('age-max').innerHTML = document.getElementById('age-max').innerHTML.replace(/\d{1,}/, filterInput['ageTo']);
 	})
