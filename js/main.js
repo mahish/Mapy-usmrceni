@@ -21,8 +21,10 @@ $(document).ready(function() {
 		// orientation: 'horizontal',
 		// behaviour: 'tap-drag',
 		range: {
-			'min': 5,
-			'max': 90
+			'min': [  5, 1 ],	// 5 years old, step by 1 year
+			'15%': [ 17, 1 ],	// 20 years old, step by 1 year
+			'70%': [ 38, 1 ],	// 30 years old, step by 1 year
+			'max': [ 90, 1 ]	// 90 years old, step by 1 year
 		},
 		format: {
 			to: function(value) {
