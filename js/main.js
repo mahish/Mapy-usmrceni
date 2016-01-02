@@ -62,6 +62,7 @@ $(document).ready(function() {
 		var filterName = $(this).attr('id');
 		filterInput[filterName] = $(this).children('option:selected').val()  == "false" ? false : $(this).children('option:selected').val();
 		draw(map, mapsDataJSON, filterInput, oms);
+	
 	})
 
 	//

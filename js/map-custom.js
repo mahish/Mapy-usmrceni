@@ -58,6 +58,26 @@ function clearMarkers() {
 	markerCluster = null;
 }
 
+function markersLength() {
+	var number = markers.length;
+	var numberField = $('#number-markers > span:first-child');
+	var wordField = $('#number-markers > span:last-child');
+
+	$(numberField).html(number);
+
+	// Czech language specifics
+	if (number == 0) {
+		$(numberField).html('žádní');
+		$(wordField).html('usmrcení');
+	} else if (number == 1) {
+		$(wordField).html('usmrcený');
+	} else if (number > 1 && number < 5) {
+		$(wordField).html('usmrcení');
+	} else if (number >= 5) {
+		$(wordField).html('usmrcených');
+	}
+}
+
 function draw(map, data, filter, oms) {
 
 	clearMarkers();
@@ -132,15 +152,15 @@ function draw(map, data, filter, oms) {
 				return isValid = false;
 			};
 
-			if (filter['directionIn'] && (currentDirection > 3 && currentDirection <= 6 )) {
+			if (filter['directionIn'] && (currentDirection > 3 && currentDirection <= 6)) {
 				return isValid = false;
 			};
 
-			if (filter['directionOut'] && (currentDirection > 0 && currentDirection <= 3 )) {
+			if (filter['directionOut'] && (currentDirection > 0 && currentDirection <= 3)) {
 				return isValid = false;
 			};
 
-			if (filter['directionNa'] && (currentDirection === 0 )) {
+			if (filter['directionNa'] && (currentDirection === 0)) {
 				return isValid = false;
 			};
 
@@ -193,45 +213,48 @@ function draw(map, data, filter, oms) {
 			}
 		});
 
-});
+	});
 
-var mcOptions = {
-	gridSize: 1,
-	maxZoom: 14,
-	styles: [{
-		height: 25,
-		url: "img/marker.png",
-		width: 25
-	}, {
-		height: 25,
-		url: "img/marker.png",
-		width: 25
-	}, {
-		height: 25,
-		url: "img/marker.png",
-		width: 25
-	}, {
-		height: 25,
-		url: "img/marker.png",
-		width: 25
-	}, {
-		height: 25,
-		url: "img/marker.png",
-		width: 25
-	}]
-};
+	var mcOptions = {
+		gridSize: 1,
+		maxZoom: 14,
+		styles: [{
+			height: 25,
+			url: "img/marker.png",
+			width: 25
+		}, {
+			height: 25,
+			url: "img/marker.png",
+			width: 25
+		}, {
+			height: 25,
+			url: "img/marker.png",
+			width: 25
+		}, {
+			height: 25,
+			url: "img/marker.png",
+			width: 25
+		}, {
+			height: 25,
+			url: "img/marker.png",
+			width: 25
+		}]
+	};
 
-markerCluster = new MarkerClusterer(map, markers, mcOptions);
+	markerCluster = new MarkerClusterer(map, markers, mcOptions);
 
-map.addListener('zoom_changed', function() {
-	if (map.getZoom() == 15) {
-		for (var i = markers.length - 1; i >= 0; i--) {
-			oms.addMarker(markers[i]);
-		};
-	} else {
-		oms.clearMarkers()
-	}
-});
+	map.addListener('zoom_changed', function() {
+		if (map.getZoom() == 15) {
+			for (var i = markers.length - 1; i >= 0; i--) {
+				oms.addMarker(markers[i]);
+			};
+		} else {
+			oms.clearMarkers()
+		}
+	});
+
+	markersLength();
+
 }
 
 function initialize() {

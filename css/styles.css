@@ -1612,6 +1612,20 @@ header.intro {
   #reset-view:hover img {
     opacity: 0.95; }
 
+#number-markers {
+  overflow: hidden;
+  position: fixed;
+  top: 8.0625em;
+  right: 9px;
+  width: auto;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  padding: 0 0.75em;
+  background-color: white;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.11);
+  border-radius: 2px; }
+
 .infobox {
   position: fixed;
   z-index: 12;
