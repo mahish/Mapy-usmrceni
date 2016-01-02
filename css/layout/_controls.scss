@@ -238,18 +238,23 @@ section#filters {
 		box-sizing: border-box;
 
 		&::-webkit-scrollbar {
-			width: $small-spacing / 4;
+			width: 5px;
 		}
 
+		// &:hover::-webkit-scrollbar {
+		// 	width: 7px;
+		// }
+
 		&::-webkit-scrollbar-track {
-			border-radius: 10px;
+			border-radius: $base-border-radius;
 			background: #eee;
 		}
 
 		&::-webkit-scrollbar-thumb {
-			border-radius: 10px;
+			border-radius: $base-border-radius;
 			background: #888;
 		}
+
 		&::-webkit-scrollbar-thumb:window-inactive {
 			background: rgba(100,100,100,0.4);
 		}
