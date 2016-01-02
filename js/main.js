@@ -21,31 +21,40 @@ $(document).ready(function() {
 		// orientation: 'horizontal',
 		// behaviour: 'tap-drag',
 		range: {
-			'min': 5,
-			'max': 90
-		},
-		format: {
-			to: function(value) {
-				return value.toString().replace('.00', '');
-			},
-			from: function(value) {
-				return value.toString().replace('.00', '');
-			}
+			'min': [  0, 5 ],	//  0 as undefined, step by 5
+			'10%': [  5, 1 ],	//  5 years old, step by 1 year
+			'20%': [ 17, 1 ],	// 20 years old, step by 1 year
+			'80%': [ 38, 1 ],	// 30 years old, step by 1 year
+			'max': [ 90, 1 ]	// 90 years old, step by 1 year
 		}
 	});
 
 	// Age Slider
 	sliderAge.noUiSlider.on('change', function() {
-		filterInput['ageFrom'] = parseFloat(sliderAge.noUiSlider.get()[0]);
-		filterInput['ageTo'] = parseFloat(sliderAge.noUiSlider.get()[1]);
+		filterInput['ageFrom'] = parseFloat(sliderAge.noUiSlider.get()[0]).toFixed(2);
+		filterInput['ageTo'] = parseFloat(sliderAge.noUiSlider.get()[1]).toFixed(2);
 		draw(map, mapsDataJSON, filterInput, oms);
 	})
 
 	sliderAge.noUiSlider.on('update', function() {
-		filterInput['ageFrom'] = sliderAge.noUiSlider.get()[0];
-		filterInput['ageTo'] = sliderAge.noUiSlider.get()[1];
-		document.getElementById('age-min').innerHTML = document.getElementById('age-min').innerHTML.replace(/\d{1,}/, filterInput['ageFrom']);
-		document.getElementById('age-max').innerHTML = document.getElementById('age-max').innerHTML.replace(/\d{1,}/, filterInput['ageTo']);
+
+		var agemin = document.getElementById('age-min');
+		var agemax = document.getElementById('age-max');
+
+		filterInput['ageFrom'] = parseInt(sliderAge.noUiSlider.get()[0]);
+		filterInput['ageTo'] = parseInt(sliderAge.noUiSlider.get()[1]);
+
+		if ( filterInput['ageFrom'] == 0 ) {
+			agemin.innerHTML = agemin.innerHTML.replace(/.{1,}/, 'neurčeno');
+		} else {
+			agemin.innerHTML = agemin.innerHTML.replace(/.{1,}/, 'od ' + filterInput['ageFrom'] + ' let');
+		}
+
+		if ( filterInput['ageTo'] == 0 ) {
+			agemax.innerHTML = agemax.innerHTML.replace(/.{1,}/, 'neurčeno');
+		} else {
+			agemax.innerHTML = agemax.innerHTML.replace(/.{1,}/, 'do ' + filterInput['ageTo'] + ' let');
+		}
 	})
 
 	// Other filters
