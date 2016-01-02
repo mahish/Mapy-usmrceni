@@ -106,15 +106,15 @@ function draw(map, data, filter, oms) {
 		});
 
 		var validateCurrent = function(data, filter) {
-			var isValid = true;
-			currentYear = parseInt(data.rok);
-			currentAge = parseFloat(data.vek_h);
+			var isValid        = true;
+			currentYear        = parseInt(data.rok);
+			currentAge         = parseFloat(data.vek_h);
 			currentCitizenship = parseInt(data.statni_prislusnost_cislo);
-			currentDeath = parseInt(data.umrti_cislo);
-			currentGender = parseInt(data.pohlavi_cislo);
-			currentIncident = parseInt(data.utvar_incidentu_cislo);
-			currentResidence = parseInt(data.okres_bydliste_cislo);
-			currentDirection = parseInt(data.smer_prechodu_cislo);
+			currentDeath       = parseInt(data.umrti_cislo);
+			currentGender      = parseInt(data.pohlavi_cislo);
+			currentIncident    = parseInt(data.utvar_incidentu_cislo);
+			currentResidence   = parseInt(data.okres_bydliste_cislo);
+			currentDirection   = parseInt(data.smer_prechodu_cislo);
 
 			if (filter['periodFrom'] && filter['periodTo'] && (currentYear < filter['periodFrom'] || currentYear > filter['periodTo'])) {
 				return isValid = false;
