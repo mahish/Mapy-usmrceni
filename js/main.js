@@ -115,7 +115,7 @@ $(document).ready(function() {
 			directionIn: false,
 			directionOut: false
 		};
-		draw(map, mapsDataJSON, null, oms);
+		draw(map, mapsDataJSON, filterInput, oms);
 	});
 
 
