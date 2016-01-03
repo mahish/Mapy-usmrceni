@@ -8,8 +8,8 @@ var oms;
 var filterInput = {
 	periodFrom: false,
 	periodTo: false,
-	ageFrom: false,
-	ageTo: false,
+	ageFrom: 20,
+	ageTo: 90,
 	genderMale: false,
 	genderFemale: false,
 	genderNa: false,
@@ -285,14 +285,14 @@ function initialize() {
 		legWeight: 0
 	});
 
+	// load data from JSON file
 	if (window.location.protocol != 'file:') {
 		getDataJSON().done(function(data) {
 			mapsDataJSON = data;
-			draw(map, mapsDataJSON, null, oms);
 		});
-	} else {
-		draw(map, mapsDataJSON, null, oms);
 	}
+	// init draw
+	draw(map, mapsDataJSON, filterInput, oms);
 
 }
 
