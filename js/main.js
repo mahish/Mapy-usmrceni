@@ -103,8 +103,8 @@ $(document).ready(function() {
 		filterInput = {
 			periodFrom: false,
 			periodTo: false,
-			ageFrom: false,
-			ageTo: false,
+			ageFrom: 5,
+			ageTo: 90,
 			genderMale: false,
 			genderFemale: false,
 			genderNa: false,
