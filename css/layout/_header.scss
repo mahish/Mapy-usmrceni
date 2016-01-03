@@ -5,6 +5,8 @@ header.intro {
 	width: 100%;
 	background: white;
 
+	display:none;
+
 	&:after {
 		opacity: 0;
 		@include transition-property(opacity);
