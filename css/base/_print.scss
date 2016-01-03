@@ -1,0 +1,79 @@
+@media all {
+	#print {
+		display: none;
+		background-color: $white;
+		color: $black;
+		padding: $base-spacing;
+	}
+}
+
+@media print{
+	@page {
+		size: landscape;
+	}
+
+	html, body {
+		height: auto;
+		overflow: initial;
+		float: none !important;
+		font-size: 8pt;
+	}
+
+	#periods,
+	#filters,
+	#reset-view,
+	#infobox {
+		display: none;
+	}
+
+	#map,
+	#map-canvas,
+	#print {
+		position: relative;
+		display: block !important;
+		z-index: 0 !important;
+	}
+
+	#map {
+		height: 450pt !important;
+		width: 400pt !important;
+		position: absolute !important;
+		bottom: 0;
+		// display: none !important;
+
+		#map-canvas {
+			height: 100% !important;
+		}
+	}
+
+	#print {
+		page-break-before: always !important;
+		height: 145pt !important;
+		// width: 50% !important;
+
+		& > div {
+			@include span-columns(1 of 2);
+
+			&:first-of-type {
+				padding-right: $small-spacing;
+			}
+		}
+	}
+
+	#list-of-filters {
+
+	}
+
+	#p-infobox {
+		// height: 195pt !important;
+		// width: 50% !important;
+
+		& > div {
+			@include span-columns(1 of 2);
+
+			&:first-of-type {
+				padding-right: $small-spacing;
+			}
+		}
+	}
+}

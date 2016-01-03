@@ -1,57 +1,77 @@
-	#map-canvas {
-		z-index: 0;
-		position: absolute;
-		bottom: 0;
-		height: calc(100% - #{$base-spacing * 4.5});
-		width: 100%;
-	}
+#map {
+	display: block;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	text-align: center;
 
-	#reset-view {
+	.button {
+		z-index: 1;
 		overflow: hidden;
 		position: fixed;
-		bottom: 50%;
 		right: 9px;
-		width: 28px;
 		height: 28px;
 		line-height: 28px;
 		background-color: white;
 		box-shadow: 1px 1px 3px rgba(0,0,0,0.11);
 		border-radius: $base-border-radius;
+	}
+}
 
-		img {
-			opacity: 0.62;
-		}
+#map-canvas {
+	z-index: 0;
+	position: absolute;
+	bottom: 0;
+	height: calc(100% - #{$base-spacing * 4.5});
+	width: 100%;
+	margin: 0 auto;
+}
 
-		&:hover {
-			img {
-				opacity: 0.95;
-			}
-		}
+#map-print {
+	top: $base-spacing * 5 + em(9) + em(28) + em(9);
+	width: auto;
+	padding: 0 $small-spacing;
+	cursor: pointer;
+}
+
+#reset-view {
+	bottom: 50%;
+	width: 28px;
+
+	img {
+		opacity: 0.62;
 	}
 
-	.infobox {
-		position: fixed;
-		z-index: 12;
-		box-shadow: 0 0 $small-spacing / 2 rgba(0,0,0,0.1);
+	&:hover {
+		img {
+			opacity: 0.95;
+		}
+	}
+}
+
+#infobox {
+	position: fixed;
+	z-index: 12;
+	box-shadow: 0 0 $small-spacing / 2 rgba(0,0,0,0.1);
+	bottom: $base-spacing;
+	right: 10%;
+	width: 80%;
+
+	@include media($small-screen) {
 		bottom: $base-spacing;
-		right: 10%;
-		width: 80%;
+		right: $base-spacing * 2;
+		width: $base-spacing * 15;
+	}
+	margin: auto;
+	@include transform(translatey(calc(#{$base-spacing} * 12)));
 
-		@include media($small-screen) {
-			bottom: $base-spacing;
-			right: $base-spacing * 2;
-			width: $base-spacing * 15;
-		}
-		margin: auto;
-		@include transform(translatey(calc(#{$base-spacing} * 12)));
+	@include transition-property(all);
+	@include transition-duration(0.2s);
+	@include transition-timing-function(ease-in-out);
 
-		@include transition-property(all);
-		@include transition-duration(0.2s);
-		@include transition-timing-function(ease-in-out);
-
-		.active-marker & {
-			@include transform(translatey(0));
-		}
+	.active-marker & {
+		@include transform(translatey(0));
+	}
 
 		// &:after {
 		// 	// opacity: 0;

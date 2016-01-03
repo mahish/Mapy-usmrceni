@@ -354,7 +354,7 @@
 		</a>
 	</section>
 
-	<section class="infobox">
+	<section id="infobox">
 		<div class="info">
 			<div class="title">
 				<h1>Informace o zvolené osobě</h1>
@@ -410,10 +410,67 @@
 		</div>
 	</section>
 
-	<div id="map-canvas"></div>
-	<a href="#" id="reset-view" class="button text-center" title="Resetovat zobrazení mapy">
-		<img src="img/ui/refresh-arrow.svg" alt="Resetovat úroveň přiblížení a pozici	 na mapě">
-	</a>
+	<div id="map">
+		<a href="#" id="reset-view" class="button text-center" title="Resetovat zobrazení mapy">
+			<img src="img/ui/refresh-arrow.svg" alt="Resetovat úroveň přiblížení a pozici	 na mapě">
+		</a>
+
+		<div id="map-print" class="button text-center">
+			Tisk
+		</div>
+
+		<div id="map-canvas"></div>
+	</div>
+
+	<div id="print">
+		<h1>Přes železnou oponu: Usmrcení na československé hranici</h1>
+		<div id="list-of-filters"></div>
+		<div id="p-infobox">
+			<div>
+				<dl>
+					<dt>Jméno osoby</dt>
+					<dd id="jmeno_osoby">
+					</dd>
+					<dt>
+						Státní příslušnost
+					</dt>
+					<dd id="statni_prislusnost">
+					</dd>
+					<dt>
+						Rok incidentu
+					</dt>
+					<dd id="rok">
+					</dd>
+					<dt>
+						Odpovědný útvar
+					</dt>
+					<dd id="utvar_incidentu">
+					</dd>
+				</dl>
+			</div>
+			<div>
+				<dl>
+					<dt>
+						Věk
+					</dt>
+					<dd id="vek_h">
+					</dd>
+					<dt>Okres bydliště</dt>
+					<dd id="okres_bydliste_cz"></dd>
+					<dt>
+						Směr přechodu
+					</dt>
+					<dd id="smer_prechodu">
+					</dd>
+					<dt>
+						Způsob úmrtí
+					</dt>
+					<dd id="umrti">
+					</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
 
 	<!-- Hotjar Tracking Code for http://mapa.zelezna-opona.cz -->
 	<script>

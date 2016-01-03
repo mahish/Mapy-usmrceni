@@ -53,6 +53,7 @@ $(document).ready(function() {
 		var filterName = $(this).attr('id');
 		filterInput[filterName] = $(this).children('option:selected').val()  == "false" ? false : $(this).children('option:selected').val();
 		draw(map, mapsDataJSON, filterInput, oms);
+		listFilters();
 	})
 
 	//
@@ -64,6 +65,7 @@ $(document).ready(function() {
 			filterInput[filterName] = $(this).attr('value') == "false" ? false : $(this).attr('value');
 		}
 		draw(map, mapsDataJSON, filterInput, oms);
+		listFilters();
 	})
 
 	$('#periods input').on('change', function() {
@@ -71,6 +73,7 @@ $(document).ready(function() {
 		filterInput['periodFrom'] = parseInt($(this).attr('value').split(',')[0]);
 		filterInput['periodTo'] = parseInt($(this).attr('value').split(',')[1]);
 		draw(map, mapsDataJSON, filterInput, oms);
+		listFilters();
 	})
 
 	// reset of filters
@@ -143,7 +146,7 @@ $(document).ready(function() {
 	});
 
 	// close infobox & clear active marker
-	$('.infobox').on('click', function(){
+	$('#infobox').on('click', function(){
 		$('body').removeClass('active-marker');
 		activeMarkers.pop().setIcon(passiveIcon);
 	});
@@ -160,5 +163,60 @@ $(document).ready(function() {
 		$('#filters').toggleClass('hidden');
 		$('body').toggleClass('active-filters');
 	});
+
+	$('#map-print').on('click', printMaps);
+
+	/**
+	* Print dat maps! \o/
+	*/
+	function printMaps() {
+		console.log('Print the map! START');
+
+		var body           = $('body'),
+		mapContainer       = $('#map-canvas'),
+		mapContainerParent = mapContainer.parent(),
+
+		printContainer     = $('<div>');
+
+		body.prepend(printContainer);
+		printContainer
+		.addClass('print-container')
+		.css('position', 'relative')
+		.height(mapContainer.height())
+		.append(mapContainer);
+
+		var content = body.children()
+		.not('script')
+		.not(printContainer)
+		.detach();
+
+		window.print();
+
+		body.prepend(content);
+		mapContainerParent.prepend(mapContainer);
+		printContainer.remove();
+
+		console.log('Print the map! END');
+	}
+
+	function listFilters() {
+		var selectedA = [],
+		selectedB = [],
+		selectedAge = sliderAge.noUiSlider.get();
+
+		$('option:checked').each(function() {
+			selectedA.push($(this).html());
+		});
+		$('input:checked').each(function() {
+			selectedB.push($(this).attr('value'));
+		});
+
+		var selected = selectedA.concat(selectedB.concat(selectedAge));
+		console.log(selected);
+		var selStr = selected.toString()
+		// console.log(selStr);
+
+		$('#list-of-filters').html(selStr);
+	}
 
 });

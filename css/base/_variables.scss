@@ -32,14 +32,16 @@ $dark-turqois: #35968F;
 $medium-turqois: #475957;
 $turqois: #7BB0AC;
 
+$black: #000;
 $dark-gray: #424143;
 $gray: #67666A;
 $medium-gray: #807F83;
 $light-gray: #CBC9CF;
 $super-light-gray: #fafafa;
+$white: #fff;
 
 // Font Colors
-$base-background-color: #fff;
+$base-background-color: $white;
 $base-font-color: $dark-gray;
 $action-color: $blue;
 
@@ -59,7 +61,7 @@ $base-border-color: $light-gray;
 $base-border: 1px solid $base-border-color;
 
 // Forms
-$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
+$form-box-shadow: inset 0 1px 3px rgba($black, 0.06);
 $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
 
 $tiny-screen: em(300);
