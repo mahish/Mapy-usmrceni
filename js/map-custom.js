@@ -198,6 +198,7 @@ function draw(map, data, filter, oms) {
 var mcOptions = {
 	gridSize: 1,
 	maxZoom: 14,
+	printable: true,
 	styles: [{
 		height: 25,
 		url: "img/marker.png",
