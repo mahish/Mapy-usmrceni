@@ -8,7 +8,7 @@ var oms;
 var filterInput = {
 	periodFrom: false,
 	periodTo: false,
-	ageFrom: 20,
+	ageFrom: 5,
 	ageTo: 90,
 	genderMale: false,
 	genderFemale: false,
