@@ -1120,7 +1120,7 @@ section#filters {
     -moz-transition-timing-function: ease-in-out;
     transition-timing-function: ease-in-out; }
     section#filters .filters-wrapper::-webkit-scrollbar {
-      width: 5px; }
+      width: 7px; }
     section#filters .filters-wrapper::-webkit-scrollbar-track {
       border-radius: 2px;
       background: #eee; }
@@ -1684,7 +1684,7 @@ header.intro {
       scrollbar-face-color: #888;
       scrollbar-track-color: #eee; }
       .infobox .info .content::-webkit-scrollbar {
-        width: 5px; }
+        width: 7px; }
       .infobox .info .content::-webkit-scrollbar-track {
         border-radius: 2px;
         background: #eee; }
