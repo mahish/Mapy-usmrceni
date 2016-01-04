@@ -66,7 +66,7 @@ function markersLength() {
 	$(numberField).html(number);
 
 	// Czech language specifics
-	if (number == 0) {
+	if (number === 0) {
 		$(numberField).html('žádní');
 		$(wordField).html('usmrcení');
 	} else if (number == 1) {
@@ -142,32 +142,32 @@ function draw(map, data, filter, oms) {
 
 			if (filter['genderMale'] && currentGender === 0) {
 				return isValid = false;
-			};
+			}
 
 			if (filter['genderFemale'] && currentGender === 1) {
 				return isValid = false;
-			};
+			}
 
 			if (filter['genderNa'] && currentGender === 2) {
 				return isValid = false;
-			};
+			}
 
 			if (filter['directionIn'] && (currentDirection > 3 && currentDirection <= 6)) {
 				return isValid = false;
-			};
+			}
 
 			if (filter['directionOut'] && (currentDirection > 0 && currentDirection <= 3)) {
 				return isValid = false;
-			};
+			}
 
 			if (filter['directionNa'] && (currentDirection === 0)) {
 				return isValid = false;
-			};
+			}
 
 			return isValid
 		}
 
-		if (filter != null) {
+		if (filter !== null) {
 			$("body").removeClass('active-marker');
 			if (validateCurrent(data, filter)) {
 				markers.push(marker);

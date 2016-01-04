@@ -44,13 +44,13 @@ $(document).ready(function() {
 		filterInput['ageFrom'] = parseInt(sliderAge.noUiSlider.get()[0]);
 		filterInput['ageTo'] = parseInt(sliderAge.noUiSlider.get()[1]);
 
-		if ( filterInput['ageFrom'] == 0 ) {
+		if ( filterInput['ageFrom'] === 0 ) {
 			agemin.innerHTML = agemin.innerHTML.replace(/.{1,}/, 'neurčeno');
 		} else {
 			agemin.innerHTML = agemin.innerHTML.replace(/.{1,}/, 'od ' + filterInput['ageFrom'] + ' let');
 		}
 
-		if ( filterInput['ageTo'] == 0 ) {
+		if ( filterInput['ageTo'] === 0 ) {
 			agemax.innerHTML = agemax.innerHTML.replace(/.{1,}/, 'neurčeno');
 		} else {
 			agemax.innerHTML = agemax.innerHTML.replace(/.{1,}/, 'do ' + filterInput['ageTo'] + ' let');
@@ -68,7 +68,7 @@ $(document).ready(function() {
 	$('#filters input').on('change', function() {
 		var filterName = $(this).attr('name');
 		if (filterName == 'gender' || filterName == 'direction' ) {
-			filterInput[$(this).attr('id')] = $(this)[0].checked == true ? false : true;
+			filterInput[$(this).attr('id')] = $(this)[0].checked === true ? false : true;
 		} else {
 			filterInput[filterName] = $(this).attr('value') == "false" ? false : $(this).attr('value');
 		}
