@@ -23,8 +23,8 @@ $(document).ready(function() {
 		range: {
 			'min': [  0, 5 ],	//  0 as undefined, step by 5
 			'10%': [  5, 1 ],	//  5 years old, step by 1 year
-			'20%': [ 17, 1 ],	// 20 years old, step by 1 year
-			'80%': [ 38, 1 ],	// 30 years old, step by 1 year
+			'20%': [ 17, 1 ],	// 17 years old, step by 1 year
+			'80%': [ 38, 1 ],	// 38 years old, step by 1 year
 			'max': [ 90, 1 ]	// 90 years old, step by 1 year
 		}
 	});
@@ -62,7 +62,6 @@ $(document).ready(function() {
 		var filterName = $(this).attr('id');
 		filterInput[filterName] = $(this).children('option:selected').val()  == "false" ? false : $(this).children('option:selected').val();
 		draw(map, mapsDataJSON, filterInput, oms);
-	
 	})
 
 	//
