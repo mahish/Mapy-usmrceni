@@ -8,8 +8,8 @@ var oms;
 var filterInput = {
 	periodFrom: false,
 	periodTo: false,
-	ageFrom: false,
-	ageTo: false,
+	ageFrom: 5,
+	ageTo: 90,
 	genderMale: false,
 	genderFemale: false,
 	genderNa: false,
@@ -58,6 +58,26 @@ function clearMarkers() {
 	markerCluster = null;
 }
 
+function markersLength() {
+	var number = markers.length;
+	var numberField = $('#number-markers > span:first-child');
+	var wordField = $('#number-markers > span:last-child');
+
+	$(numberField).html(number);
+
+	// Czech language specifics
+	if (number === 0) {
+		$(numberField).html('žádní');
+		$(wordField).html('usmrcení');
+	} else if (number == 1) {
+		$(wordField).html('usmrcený');
+	} else if (number > 1 && number < 5) {
+		$(wordField).html('usmrcení');
+	} else if (number >= 5) {
+		$(wordField).html('usmrcených');
+	}
+}
+
 function draw(map, data, filter, oms) {
 
 	clearMarkers();
@@ -87,15 +107,15 @@ function draw(map, data, filter, oms) {
 		});
 
 		var validateCurrent = function(data, filter) {
-			var isValid = true;
-			currentYear = parseInt(data.rok);
-			currentAge = parseFloat(data.vek_h);
+			var isValid        = true;
+			currentYear        = parseInt(data.rok);
+			currentAge         = parseFloat(data.vek_h);
 			currentCitizenship = parseInt(data.statni_prislusnost_cislo);
-			currentDeath = parseInt(data.umrti_cislo);
-			currentGender = parseInt(data.pohlavi_cislo);
-			currentIncident = parseInt(data.utvar_incidentu_cislo);
-			currentResidence = parseInt(data.okres_bydliste_cislo);
-			currentDirection = parseInt(data.smer_prechodu_cislo);
+			currentDeath       = parseInt(data.umrti_cislo);
+			currentGender      = parseInt(data.pohlavi_cislo);
+			currentIncident    = parseInt(data.utvar_incidentu_cislo);
+			currentResidence   = parseInt(data.okres_bydliste_cislo);
+			currentDirection   = parseInt(data.smer_prechodu_cislo);
 
 			if (filter['periodFrom'] && filter['periodTo'] && (currentYear < filter['periodFrom'] || currentYear > filter['periodTo'])) {
 				return isValid = false;
@@ -123,32 +143,32 @@ function draw(map, data, filter, oms) {
 
 			if (filter['genderMale'] && currentGender === 0) {
 				return isValid = false;
-			};
+			}
 
 			if (filter['genderFemale'] && currentGender === 1) {
 				return isValid = false;
-			};
+			}
 
 			if (filter['genderNa'] && currentGender === 2) {
 				return isValid = false;
-			};
+			}
 
 			if (filter['directionIn'] && (currentDirection > 3 && currentDirection <= 6)) {
 				return isValid = false;
-			};
+			}
 
 			if (filter['directionOut'] && (currentDirection > 0 && currentDirection <= 3)) {
 				return isValid = false;
-			};
+			}
 
 			if (filter['directionNa'] && (currentDirection === 0)) {
 				return isValid = false;
-			};
+			}
 
 			return isValid
 		}
 
-		if (filter != null) {
+		if (filter !== null) {
 			$("body").removeClass('active-marker');
 			if (validateCurrent(data, filter)) {
 				markers.push(marker);
@@ -298,14 +318,14 @@ function initialize() {
 		legWeight: 0
 	});
 
+	// load data from JSON file
 	if (window.location.protocol != 'file:') {
 		getDataJSON().done(function(data) {
 			mapsDataJSON = data;
-			draw(map, mapsDataJSON, null, oms);
 		});
-	} else {
-		draw(map, mapsDataJSON, null, oms);
 	}
+	// init draw
+	draw(map, mapsDataJSON, filterInput, oms);
 
 }
 
