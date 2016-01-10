@@ -57,6 +57,10 @@
 	color: $red;
 }
 
+.caps {
+	text-transform: uppercase;
+}
+
 .small {
 	display: block;
 	color: $medium-gray;
@@ -100,7 +104,7 @@
 		position: relative;
 		padding-top: 2.25em;
 		top: .75em;
-		color: $medium-gray;
+		color: $dark-red;
 		font-size: 0.62em;
 		text-transform: uppercase;
 		margin-bottom: -.375em;

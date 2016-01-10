@@ -811,6 +811,9 @@ dl {
 .red {
   color: #946563; }
 
+.caps {
+  text-transform: uppercase; }
+
 .small {
   display: block;
   color: #807F83;
@@ -847,7 +850,7 @@ dl {
     position: relative;
     padding-top: 2.25em;
     top: .75em;
-    color: #807F83;
+    color: #411A19;
     font-size: 0.62em;
     text-transform: uppercase;
     margin-bottom: -.375em; }
@@ -1085,7 +1088,7 @@ section#filters {
     line-height: 4.8387em;
     font-size: 0.62em;
     font-weight: 200;
-    color: #807F83;
+    color: #411A19;
     text-transform: uppercase;
     background: white;
     border-bottom: 1px solid #ededed;
@@ -1117,12 +1120,12 @@ section#filters {
     -moz-transition-timing-function: ease-in-out;
     transition-timing-function: ease-in-out; }
     section#filters .filters-wrapper::-webkit-scrollbar {
-      width: 0.1875em; }
+      width: 7px; }
     section#filters .filters-wrapper::-webkit-scrollbar-track {
-      border-radius: 10px;
+      border-radius: 2px;
       background: #eee; }
     section#filters .filters-wrapper::-webkit-scrollbar-thumb {
-      border-radius: 10px;
+      border-radius: 2px;
       background: #888; }
     section#filters .filters-wrapper::-webkit-scrollbar-thumb:window-inactive {
       background: rgba(100, 100, 100, 0.4); }
@@ -1458,6 +1461,17 @@ header.intro {
         clear: both;
         content: "";
         display: table; }
+  header.intro a#priloha {
+    background-color: #d2e7ef;
+    color: #946563;
+    text-align: center;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s; }
+    header.intro a#priloha:hover {
+      background-color: #e5f1f6; }
+    header.intro a#priloha .caps {
+      font-weight: bold; }
   header.intro section.welcome {
     text-align: center;
     display: block; }
@@ -1554,7 +1568,6 @@ header.intro {
         display: block; } }
   header.intro .toApp {
     display: block;
-    color: #7BB0AC;
     line-height: 1;
     font-weight: bold;
     text-align: center;
@@ -1563,11 +1576,18 @@ header.intro {
     padding: 1.5em;
     border: 1px solid #7BB0AC;
     border-radius: 2px;
-    margin: 0.75em auto; }
+    margin: 0.75em auto;
+    background-color: #7BB0AC;
+    color: #475957;
+    color: #fafafa;
+    border: #7BB0AC;
+    background-color: #7BB0AC;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s; }
     header.intro .toApp:hover {
-      background-color: #7BB0AC;
-      color: #fafafa;
-      border-color: #7BB0AC; }
+      background-color: #946563;
+      border-color: #946563; }
 
 #map-canvas {
   z-index: 0;
@@ -1591,6 +1611,20 @@ header.intro {
     opacity: 0.62; }
   #reset-view:hover img {
     opacity: 0.95; }
+
+#number-markers {
+  overflow: hidden;
+  position: fixed;
+  top: 8.0625em;
+  right: 9px;
+  width: auto;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  padding: 0 0.75em;
+  background-color: white;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.11);
+  border-radius: 2px; }
 
 .infobox {
   position: fixed;
@@ -1650,15 +1684,13 @@ header.intro {
       scrollbar-face-color: #888;
       scrollbar-track-color: #eee; }
       .infobox .info .content::-webkit-scrollbar {
-        width: 0.1875em; }
+        width: 7px; }
       .infobox .info .content::-webkit-scrollbar-track {
-        border-radius: 10px;
+        border-radius: 2px;
         background: #eee; }
       .infobox .info .content::-webkit-scrollbar-thumb {
-        border-radius: 10px;
+        border-radius: 2px;
         background: #888; }
-      .infobox .info .content::-webkit-scrollbar-thumb:window-inactive {
-        background: rgba(100, 100, 100, 0.4); }
       .infobox .info .content > div {
         float: left;
         display: block;

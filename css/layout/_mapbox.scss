@@ -29,6 +29,21 @@
 		}
 	}
 
+	#number-markers {
+		overflow: hidden;
+		position: fixed;
+		top: $base-spacing * 5 + em(9);
+		right: 9px;
+		width: auto;
+		height: 28px;
+		line-height: 28px;
+		text-align: center;
+		padding: 0 $small-spacing;
+		background-color: white;
+		box-shadow: 1px 1px 3px rgba(0,0,0,0.11);
+		border-radius: $base-border-radius;
+	}
+
 	.infobox {
 		position: fixed;
 		z-index: 12;
@@ -106,20 +121,21 @@
 				height: $base-spacing * 8;
 
 				&::-webkit-scrollbar {
-					width: $small-spacing / 4;
+					width: 7px;
 				}
 
+				// &:hover::-webkit-scrollbar {
+				// 	width: 7px;
+				// }
+
 				&::-webkit-scrollbar-track {
-					border-radius: 10px;
+					border-radius: $base-border-radius;
 					background: #eee;
 				}
 
 				&::-webkit-scrollbar-thumb {
-					border-radius: 10px;
+					border-radius: $base-border-radius;
 					background: #888;
-				}
-				&::-webkit-scrollbar-thumb:window-inactive {
-					background: rgba(100,100,100,0.4);
 				}
 
 				// IE
