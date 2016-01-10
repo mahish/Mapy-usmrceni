@@ -254,6 +254,8 @@ function draw(map, data, filter, oms) {
 		}
 	});
 
+	markersLength();
+
 	var updateDropdown = function(dropdownId) {
 		markersValues = [];
 		for (var i = 0; i < markers.length; i++) {
