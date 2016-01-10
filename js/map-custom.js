@@ -258,13 +258,17 @@ function draw(map, data, filter, oms) {
 
 	var updateDropdown = function(dropdownId) {
 		markersValues = [];
+		// array of active markers dimension values
 		for (var i = 0; i < markers.length; i++) {
 			markersValues.push(markers[i].jsondata[dropdownId]);
 		}
 		var formOptions = document.querySelectorAll('select#' + dropdownId + ' option');
+		// loop option items to find freq among markers
 		for (var i = 0; i < formOptions.length; i++) {
+			// enabled items
 			if (markersValues.indexOf(parseInt(formOptions[i].value)) > -1 || formOptions[i].value == 'false') {
 				formOptions[i].disabled = false;
+				// add freqency number to the items
 				if (formOptions[i].value != 'false') {
 					var count = 0;
 					for (var j = 0; j < markersValues.length; j++) {
@@ -277,6 +281,7 @@ function draw(map, data, filter, oms) {
 						formOptions[i].text = formOptions[i].text + ' [' + count + ']';
 					}
 				}
+			// disabled items
 			} else {
 				formOptions[i].disabled = true;
 				if (new RegExp(/\[\d{1,}\]$/).test(formOptions[i].text)) {
