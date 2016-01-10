@@ -256,6 +256,40 @@ function draw(map, data, filter, oms) {
 
 	markersLength();
 
+	var updateDropdown = function(dropdownId) {
+		markersValues = [];
+		for (var i = 0; i < markers.length; i++) {
+			markersValues.push(markers[i].jsondata[dropdownId]);
+		}
+		var formOptions = document.querySelectorAll('select#' + dropdownId + ' option');
+		for (var i = 0; i < formOptions.length; i++) {
+			if (markersValues.indexOf(parseInt(formOptions[i].value)) > -1 || formOptions[i].value == 'false') {
+				formOptions[i].disabled = false;
+				if (formOptions[i].value != 'false') {
+					var count = 0;
+					for (var j = 0; j < markersValues.length; j++) {
+						var num = markersValues[j];
+						count = markersValues[j] == formOptions[i].value ? count + 1 : count;
+					}
+					if (new RegExp(/\[\d{1,}\]$/).test(formOptions[i].text)) {
+						formOptions[i].text = formOptions[i].text.replace(/\[\d{1,}\]/, ' [' + count + ']');
+					} else {
+						formOptions[i].text = formOptions[i].text + ' [' + count + ']';
+					}
+				}
+			} else {
+				formOptions[i].disabled = true;
+				if (new RegExp(/\[\d{1,}\]$/).test(formOptions[i].text)) {
+					formOptions[i].text = formOptions[i].text.replace(/\[\d{1,}\]/, '');
+				}
+			}
+		}
+	}
+	updateDropdown('citizenship');
+	updateDropdown('residence');
+	updateDropdown('death');
+	updateDropdown('incident');
+
 }
 
 function initialize() {
