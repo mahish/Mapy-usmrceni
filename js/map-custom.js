@@ -103,7 +103,14 @@ function draw(map, data, filter, oms) {
 			// Define the icon
 			icon: iconBase + 'marker.png',
 			title: data.osoba_cislo.toString(),
-			jsondata: {citizenship: parseInt(data.statni_prislusnost_cislo), residence: parseInt(data.okres_bydliste_cislo), incident: parseInt(data.utvar_incidentu_cislo), death: parseInt(data.umrti_cislo)}
+			jsondata: {
+				citizenship: parseInt(data.statni_prislusnost_cislo),
+				residence: parseInt(data.okres_bydliste_cislo),
+				incident: parseInt(data.utvar_incidentu_cislo),
+				death: parseInt(data.umrti_cislo),
+				gender: parseInt(data.pohlavi_cislo),
+				direction: (parseInt(data.smer_prechodu_cislo) > 3 && parseInt(data.smer_prechodu_cislo) <= 6) ? 2 : (parseInt(data.smer_prechodu_cislo) > 0 && parseInt(data.smer_prechodu_cislo) <= 3 ? 1 : 0)
+			}
 		});
 
 		var validateCurrent = function(data, filter) {
@@ -256,7 +263,7 @@ function draw(map, data, filter, oms) {
 
 	markersLength();
 
-	var updateDropdown = function(dropdownId) {
+	var updateCount = function(dropdownId) {
 		markersValues = [];
 		// array of active markers dimension values
 		for (var i = 0; i < markers.length; i++) {
@@ -278,7 +285,7 @@ function draw(map, data, filter, oms) {
 					if (new RegExp(/\[\d{1,}\]$/).test(formOptions[i].text)) {
 						formOptions[i].text = formOptions[i].text.replace(/\[\d{1,}\]/, ' [' + count + ']');
 					} else {
-						formOptions[i].text = formOptions[i].text + ' [' + count + ']';
+						formOptions[i].innerHTML = formOptions[i].innerHTML + '<span class="item-count"> [' + count + ']</span>';
 					}
 				}
 			// disabled items
@@ -290,10 +297,38 @@ function draw(map, data, filter, oms) {
 			}
 		}
 	}
-	updateDropdown('citizenship');
-	updateDropdown('residence');
-	updateDropdown('death');
-	updateDropdown('incident');
+	var updateCountCheckbox = function(dropdownId) {
+		markersValues = [];
+		// array of active markers dimension values
+		for (var i = 0; i < markers.length; i++) {
+			markersValues.push(markers[i].jsondata[dropdownId]);
+		}
+		var formOptions = document.querySelectorAll('div#filter-' + dropdownId + ' input');
+		// loop option items to find freq among markers
+		for (var i = 0; i < formOptions.length; i++) {
+			// enabled items
+			// add freqency number to the items
+				var count = 0;
+				for (var j = 0; j < markersValues.length; j++) {
+					var num = markersValues[j];
+					count = markersValues[j] == formOptions[i].value ? count + 1 : count;
+				}
+				var text = document.querySelectorAll('div#filter-' + dropdownId + ' ul div')[i].textContent;
+				if (new RegExp(/\[\d{1,}\]$/).test(text)) {
+					document.querySelectorAll('div#filter-' + dropdownId + ' ul div')[i].textContent = text.replace(/\[\d{1,}\]/, ' [' + count + ']');
+				} else {
+					document.querySelectorAll('div#filter-' + dropdownId + ' ul div')[i].innerHTML = document.querySelectorAll('div#filter-' + dropdownId + ' ul div')[i].innerHTML  + '<span class="item-count"> [' + count + ']</span>';
+				}
+				// disabled items when 0 count ?
+		}
+	}
+	updateCount('citizenship');
+	updateCount('residence');
+	updateCount('death');
+	updateCount('incident');
+	updateCountCheckbox('gender');
+	updateCountCheckbox('direction');
+
 
 }
 
