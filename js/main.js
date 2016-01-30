@@ -172,7 +172,7 @@ $(document).ready(function() {
 	function printMaps() {
 		console.log('Print the map! START');
 
-		map.panBy($(window).width()/2-980/2, 0);
+		map.panBy($(window).width()/2-980/2, ($(window).height()-108)/2-470/2);
 
 		if(activeMarkers){
 			var items = $('#print-infobox dd');
@@ -210,7 +210,7 @@ $(document).ready(function() {
 			mapContainerParent.prepend(mapContainer);
 			printContainer.remove();
 
-			map.panBy(-($(window).width()/2-980/2), 0);
+			map.panBy(-($(window).width()/2-980/2), -(($(window).height()-108)/2-470/2));
 
 		});
 
