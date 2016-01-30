@@ -773,6 +773,7 @@ dl {
   #periods,
   #filters,
   #reset-view,
+  #map-print,
   #infobox,
   #print-infobox {
     display: none; }
@@ -793,7 +794,8 @@ dl {
       height: 200px !important;
       width: 100% !important;
       color: #000;
-      padding: 1.5em; }
+      padding: 1.5em;
+      overflow: visible; }
       .print-container #print > div {
         float: left;
         display: block;
