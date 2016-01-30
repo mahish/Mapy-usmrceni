@@ -164,7 +164,7 @@ $(document).ready(function() {
 		$('body').toggleClass('active-filters');
 	});
 
-	$('#map-print').on('click', printMaps);
+	$('#print-button').on('click', printMaps);
 
 	/**
 	* Print dat maps! \o/
