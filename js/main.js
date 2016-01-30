@@ -194,8 +194,8 @@ $(document).ready(function() {
 			.addClass('print-container')
 			.css('position', 'relative')
 			.height(mapContainer.height())
-			.append(mapContainer)
-			.append($('#print'));
+			.append($('#print'))
+			.append(mapContainer);
 
 			listFilters();
 
