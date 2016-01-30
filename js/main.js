@@ -172,23 +172,27 @@ $(document).ready(function() {
 	function printMaps() {
 		console.log('Print the map! START');
 
-		var body           = $('body'),
-		mapContainer       = $('#map-canvas'),
-		mapContainerParent = mapContainer.parent(),
+		map.panBy(($(window).width()-842)/2, 0);
+		google.maps.event.addListenerOnce(map, 'idle', function(){
+    		console.log('this logs after the panTo finishes.');
+    		var body = $('body'),
+			mapContainer = $('#map-canvas'),
+			mapContainerParent = mapContainer.parent(),
 
-		printContainer     = $('<div>');
+			printContainer = $('<div>');
 
 		body.prepend(printContainer);
 		printContainer
-		.addClass('print-container')
-		.css('position', 'relative')
-		.height(mapContainer.height())
-		.append(mapContainer);
+			.addClass('print-container')
+			.css('position', 'relative')
+			.height(mapContainer.height())
+			.append(mapContainer);
 
+		
 		var content = body.children()
-		.not('script')
-		.not(printContainer)
-		.detach();
+			.not('script')
+			.not(printContainer)
+			.detach();
 
 		window.print();
 
@@ -196,6 +200,8 @@ $(document).ready(function() {
 		mapContainerParent.prepend(mapContainer);
 		printContainer.remove();
 
+		});
+		
 		console.log('Print the map! END');
 	}
 
