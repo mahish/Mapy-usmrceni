@@ -1,9 +1,6 @@
 @media all {
 	#print {
 		display: none;
-		background-color: $white;
-		color: $black;
-		padding: $base-spacing;
 	}
 }
 
@@ -22,57 +19,63 @@
 	#periods,
 	#filters,
 	#reset-view,
-	#infobox {
+	#infobox,
+	#print-infobox {
 		display: none;
 	}
 
-	#map,
 	#map-canvas,
-	#print {
+	#print,
+	.print-container {
 		position: relative;
 		display: block !important;
 		z-index: 0 !important;
 	}
 
-	#map {
-		height: 450pt !important;
-		width: 400pt !important;
-		position: absolute !important;
-		bottom: 0;
-		// display: none !important;
+	.print-container {
+		// height: 100%;
+		width: 980px !important;
 
 		#map-canvas {
-			height: 100% !important;
+			height: 470px !important;
 		}
-	}
 
-	#print {
-		page-break-before: always !important;
-		height: 145pt !important;
-		// width: 50% !important;
+		#print {
+			display: block;
+			// page-break-before: always !important;
+			height: 200px !important;
+			width: 100% !important;
+			// background-color: $white;
+			color: $black;
+			padding: $base-spacing;
 
-		& > div {
-			@include span-columns(1 of 2);
+			& > div {
+				@include span-columns(1 of 2);
 
-			&:first-of-type {
-				padding-right: $small-spacing;
+				&:first-of-type {
+					padding-right: $small-spacing;
+				}
 			}
 		}
-	}
 
-	#list-of-filters {
+		#list-of-filters {
 
-	}
+		}
 
-	#p-infobox {
-		// height: 195pt !important;
-		// width: 50% !important;
+		#print-infobox {
 
-		& > div {
-			@include span-columns(1 of 2);
+			& > div {
+				@include span-columns(1 of 2);
 
-			&:first-of-type {
-				padding-right: $small-spacing;
+				&:first-of-type {
+					padding-right: $small-spacing;
+				}
+			}
+		}
+
+		.active-markers {
+			#print-infobox {
+				display: block;
 			}
 		}
 	}

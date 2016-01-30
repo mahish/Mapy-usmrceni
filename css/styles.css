@@ -760,10 +760,7 @@ dl {
 
 @media all {
   #print {
-    display: none;
-    background-color: #fff;
-    color: #000;
-    padding: 1.5em; } }
+    display: none; } }
 @media print {
   @page {
     size: landscape; }
@@ -776,46 +773,47 @@ dl {
   #periods,
   #filters,
   #reset-view,
-  #infobox {
+  #infobox,
+  #print-infobox {
     display: none; }
 
-  #map,
   #map-canvas,
-  #print {
+  #print,
+  .print-container {
     position: relative;
     display: block !important;
     z-index: 0 !important; }
 
-  #map {
-    height: 450pt !important;
-    width: 400pt !important;
-    position: absolute !important;
-    bottom: 0; }
-    #map #map-canvas {
-      height: 100% !important; }
-
-  #print {
-    page-break-before: always !important;
-    height: 145pt !important; }
-    #print > div {
+  .print-container {
+    width: 980px !important; }
+    .print-container #map-canvas {
+      height: 470px !important; }
+    .print-container #print {
+      display: block;
+      height: 200px !important;
+      width: 100% !important;
+      color: #000;
+      padding: 1.5em; }
+      .print-container #print > div {
+        float: left;
+        display: block;
+        margin-right: 0%;
+        width: 50%; }
+        .print-container #print > div:last-child {
+          margin-right: 0; }
+        .print-container #print > div:first-of-type {
+          padding-right: 0.75em; }
+    .print-container #print-infobox > div {
       float: left;
       display: block;
       margin-right: 0%;
       width: 50%; }
-      #print > div:last-child {
+      .print-container #print-infobox > div:last-child {
         margin-right: 0; }
-      #print > div:first-of-type {
+      .print-container #print-infobox > div:first-of-type {
         padding-right: 0.75em; }
-
-  #p-infobox > div {
-    float: left;
-    display: block;
-    margin-right: 0%;
-    width: 50%; }
-    #p-infobox > div:last-child {
-      margin-right: 0; }
-    #p-infobox > div:first-of-type {
-      padding-right: 0.75em; } }
+    .print-container .active-markers #print-infobox {
+      display: block; } }
 .left {
   float: left; }
 
