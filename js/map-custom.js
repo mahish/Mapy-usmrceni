@@ -161,6 +161,7 @@ function draw(map, data, filter, oms) {
 			if (activeMarkers[activeMarkers.length - 1] === this && this.icon.url !== undefined && this.icon.url.indexOf('active-marker') != -1) {
 				this.setIcon(passiveIcon);
 				$("body").removeClass('active-marker');
+				activeMarkers.pop();
 			} else {
 
 				for (var i = activeMarkers.length - 1; i >= 0; i--) {

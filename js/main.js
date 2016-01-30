@@ -172,7 +172,15 @@ $(document).ready(function() {
 	function printMaps() {
 		console.log('Print the map! START');
 
-		map.panBy(($(window).width()-842)/2, 0);
+		map.panBy($(window).width()/2-842/2, 0);
+
+		if(activeMarkers){
+			var items = $('#print dd');
+			for (var i = items.length - 1; i >= 0; i--) {
+				items[i].innerHTML = document.getElementById(items[i].id).innerHTML;
+			};
+		}
+
 		google.maps.event.addListenerOnce(map, 'idle', function(){
     		console.log('this logs after the panTo finishes.');
     		var body = $('body'),
