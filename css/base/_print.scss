@@ -42,20 +42,25 @@
 		}
 
 		#print {
-			display: block;
-			// page-break-before: always !important;
+			// page-break-before: before !important;
 			height: 200px !important;
 			width: 100% !important;
 			// background-color: $white;
 			color: $black;
 			padding: $base-spacing;
+			overflow: visible;
 
 			& > div {
-				@include span-columns(1 of 2);
-
 				&:first-of-type {
 					padding-right: $small-spacing;
 				}
+			}
+			#list-of-filters {
+				@include span-columns(1 of 3);
+
+			}
+			#print-infobox {
+				@include span-columns(2 of 3);
 			}
 		}
 
@@ -66,12 +71,19 @@
 		#print-infobox {
 
 			& > div {
-				@include span-columns(1 of 2);
+				@include span-columns(1 of 3);
 
-				&:first-of-type {
-					padding-right: $small-spacing;
+				&:not(:last-of-type) {
+					padding-right: 10px;
 				}
 			}
+
+			dl {
+				dd {
+					font-size: 10pt;
+				}
+			}
+
 		}
 
 		.active-markers {
