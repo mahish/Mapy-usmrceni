@@ -218,23 +218,55 @@ $(document).ready(function() {
 	}
 
 	function listFilters() {
-		var selectedA = [],
-		selectedB = [],
-		selectedAge = sliderAge.noUiSlider.get();
-
-		$('option:checked').each(function() {
-			selectedA.push($(this).html());
+		var selectedAge         = sliderAge.noUiSlider.get();
+		var selectedCitizenship = $('#filter-citizenship option:checked').text();
+		var selectedResidence   = $('#filter-residence option:checked').text();
+		var selectedIncident    = $('#filter-incident option:checked').text();
+		var selectedDeath       = $('#filter-death option:checked').text();
+		var selectedPeriod      = $('#periods input:checked').attr('value');
+		var selectedGender      = '';
+		$('#filter-gender input:checked').each(function() {
+			selectedGender    += $(this).attr('value');
+			selectedGender    += ', ';
 		});
-		$('input:checked').each(function() {
-			selectedB.push($(this).attr('value'));
+		var selectedDirection   = '';
+		$('#filter-direction input:checked').each(function() {
+			selectedDirection += $(this).attr('value');
+			selectedDirection += ', ';
 		});
 
-		var selected = selectedA.concat(selectedB.concat(selectedAge));
+		var selected = 'Použité filtrování:';
+		selected += '<br>';
+		selected += 'Období (od,do): ';
+		selected += selectedPeriod;
+		selected += '<br>';
+		selected += 'Věk (od,do): ';
+		selected += selectedAge;
+		selected += '<br>';
+		selected += 'Pohlaví: ';
+		selected += selectedGender;
+		selected += '<br>';
+		selected += 'Státní příslušnost: ';
+		selected += selectedCitizenship;
+		selected += '<br>';
+		selected += 'Okres bydliště: ';
+		selected += selectedResidence;
+		selected += '<br>';
+		selected += 'Příslušný útvar příhraniční stráže: ';
+		selected += selectedIncident;
+		selected += '<br>';
+		selected += 'Příčina úmrtí: ';
+		selected += selectedDeath;
+		selected += '<br>';
+		selected += 'Směr přechodu: ';
+		selected += selectedDirection;
+
 		console.log(selected);
-		var selStr = selected.toString()
+
+		// var selStr = selected.toString()
 		// console.log(selStr);
 
-		$('#list-of-filters').html(selStr);
+		$('#list-of-filters').html(selected);
 	}
 
 });
