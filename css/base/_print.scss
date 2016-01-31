@@ -34,7 +34,6 @@
 	}
 
 	.print-container {
-		// height: 100%;
 		width: 980px !important;
 
 		#map-canvas {
@@ -60,7 +59,7 @@
 
 			}
 			#print-infobox {
-				@include span-columns(2 of 3);
+				// @include span-columns(2 of 3);
 			}
 		}
 
@@ -86,10 +85,11 @@
 
 		}
 
-		.active-markers {
-			#print-infobox {
-				display: block;
-			}
+	}
+
+	.active-marker {
+		#print-infobox {
+			@include span-columns(2 of 3);
 		}
 	}
 }

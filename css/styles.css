@@ -804,13 +804,6 @@ dl {
         width: 33.33333%; }
         .print-container #print #list-of-filters:last-child {
           margin-right: 0; }
-      .print-container #print #print-infobox {
-        float: left;
-        display: block;
-        margin-right: 0%;
-        width: 66.66667%; }
-        .print-container #print #print-infobox:last-child {
-          margin-right: 0; }
     .print-container #print-infobox > div {
       float: left;
       display: block;
@@ -822,8 +815,14 @@ dl {
         padding-right: 10px; }
     .print-container #print-infobox dl dd {
       font-size: 10pt; }
-    .print-container .active-markers #print-infobox {
-      display: block; } }
+
+  .active-marker #print-infobox {
+    float: left;
+    display: block;
+    margin-right: 0%;
+    width: 66.66667%; }
+    .active-marker #print-infobox:last-child {
+      margin-right: 0; } }
 .left {
   float: left; }
 
