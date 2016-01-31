@@ -207,6 +207,7 @@ $(document).ready(function() {
 			window.print();
 
 			// body.prepend(content);
+			body.append($('#print'))
 			mapContainerParent.prepend(mapContainer);
 			printContainer.remove();
 
