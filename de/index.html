@@ -1,26 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Přes železnou oponu: Usmrcení na československé hranici</title>
+  <title>Die Getöteten an der tschechoslowakischen Grenze</title>
   <meta name="description" content="">
 
-  <link rel="shortcut icon" href="favicon.png">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="shortcut icon" href="../favicon.png">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="css/de.css">
 
-  <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyCeqrczrlglVimhitwMibahs-F68YISeCE"></script>
+  <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyAe61I3bAuxg7oIRHdlNIVPhV8VoHYkyMk"></script>
 
   <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 
-  <script src="js/modernizr.js"></script>
+  <script src="../js/modernizr.js"></script>
 
   <!-- <script src="http://google-maps-utility-library-v3.googlecode.com/svn/tags/markerclusterer/1.0.2/src/markerclusterer_compiled.js"></script> -->
-  <script src="js/markercluster.min.js"></script>
-  <script src="js/oms.min.js"></script>
+  <script src="../js/markercluster.min.js"></script>
+  <script src="../js/oms.min.js"></script>
   <script src="js/map-custom.js"></script>
 
   <script src="https://use.typekit.net/pry6suo.js"></script>
@@ -32,50 +33,47 @@
 
   <header class="intro">
     <div class="scroll wrap">
-      <a id="priloha" href="//www.zelezna-opona.cz/" target="_blank">
+      <!-- <a id="priloha" href="//www.zelezna-opona.cz/" target="_blank">
         <section>
           Tato interaktivní mapová aplikace vznikla k příležitosti vydání knihy
           <span class="caps">Železná opona v Československu. Usmrcení na československých státních hranicích v letech 1948–1989</span>.
         </section>
-      </a>
+      </a> -->
       <section class="welcome">
         <div class="title">
           <h1 class="">
-            Usmrcení na československé hranici
+            Die Getöteten an der tschechoslowakischen Grenze
           </h1>
-          <a class="toApp hide-for-small" href="javascript:void(0)">Aplikace</a>
+          <a class="toApp hide-for-small" href="javascript:void(0)">Applikation</a>
         </div>
         <article>
           <p>
-            Na hranicích Československa zahynulo v období komunistického režimu mezi lety 1948 a&#160;1989 nejméně 266 lidí, kteří se
-            na hranici zřejmě neocitli náhodou. Tato aplikace představuje výsledky projektu Dokumentace usmrcených na čs.
-            hranici 1948-1989, který se zabýval osudy těchto lidí. Na základě podrobného zmapování jednotlivých případů lze
-            volit vlastní pohledy, a&#160;skládat tak příběh této skupiny tragicky zesnulých.
+            An der tschechoslowakischen Grenze sind während der Periode des kommunistischen Regimes in den Jahren 1948-1989 mindestens 266 Leute gestorben, die sich an der Grenze nicht zufällig befanden. Diese Applikation stellt Ergebnisse des Projekts "Dokumentation der Getöteten an der tschechoslowakischen Grenze 1948-1989" vor. Das Projekt beschäftigte sich mit Geschichten dieser Menschen. Basierend auf der detaillierten Zuordnung der einzelnen Fälle kann man eigene Perspektive wählen und so die Geschichte der auf tragische Weise gestorbenen Menschen zusammensetzen.
           </p>
           <p>
-            V případě dotazů pište na
+            Bei Fragen kontaktieren Sie 
             <a href="mailto:zeleznaopona@ustrcr.cz">zeleznaopona@ustrcr.cz</a>.
           </p>
         </article>
       </section>
       <section class="guide">
-        <h6>Návod k aplikaci</h6>
+        <h6>Gebrauchsanweisungen</h6>
         <div class="guide-images" id="overall-guide">
-          <img src="img/navod/navod.jpg" alt="Obecný popis aplikace">
+          <img src="img/navod/de-1.png" alt="Allgemeine Beschreibung der Applikation">
         </div>
         <div class="guide-images" id="marker">
-          <img src="img/navod/marker.jpg" alt="Popis interakce s bodem na mapě">
+          <img src="img/navod/de-2.png" alt="Beschreibung der Interaktion mit Punkten auf der Karte">
         </div>
         <br>
         <div class="text-center">
-          Přejít do
-          <a class="toApp" href="javascript:void(0)">Aplikace</a>
+          &nbsp;
+          <a class="toApp" href="javascript:void(0)">Applikation</a>
         </div>
       </section>
 
     </div>
     <span>
-      <img class="left" src="img/ui/burger.png" alt="Menu"> Menu</span>
+      <img class="left" src="../img/ui/burger.png" alt="Menu"> Menu</span>
   </header>
 
   <section id="periods" class="controls periods">
@@ -83,35 +81,35 @@
       <div class="options">
         <label class="text-center active">
           <input checked type="radio" class="radio option" name="radio_button" value="1948,1989">
-          <hr> Všechna období
+          <hr>alle Epochen.
           <hr>
         </label>
         <label class="text-center tooltip-item">
           <input type="radio" class="radio option" name="radio_button" value="1948,1950"> 1948
           <hr> 1950
           <div class="tooltip">
-            <p>Od komunistického převratu do vzniku Pohraniční stráže.</p>
+            <p>Seit der Machtübernahme der kommunistischen Partei bis zur Entstehung der Grenzwache.</p>
           </div>
         </label>
         <label class="text-center tooltip-item">
           <input type="radio" class="radio option" name="radio_button" value="1951,1965"> 1951
           <hr> 1965
           <div class="tooltip">
-            <p>Od vzniku pohraniční stráže do odpojení vysokého napětí a přechodu PS pod ministerstvo národní obrany.</p>
+            <p>Seit der Entstehung der Grenzwache bis zur Abschaltung der Hoschspanung und zum Übergang der Grenzwache unter Ministerium für nationale Verteidigung.</p>
           </div>
         </label>
         <label class="text-center tooltip-item">
           <input type="radio" class="radio option" name="radio_button" value="1966,1971"> 1966
           <hr> 1971
           <div class="tooltip">
-            <p>Od odpojení vysokého napětí do zařazení Pohraniční stráže pod Federální ministerstvo vnitra.</p>
+            <p>Seit der Abschlatung der Hochspanung bis zur Eingliederung der Grenzwache unter Föderales Innenministerium.</p>
           </div>
         </label>
         <label class="text-center tooltip-item">
           <input type="radio" class="radio option" name="radio_button" value="1972,1989"> 1972
           <hr> 1989
           <div class="tooltip">
-            <p>Od zařazení Pohraniční stráže pod Federální ministerstvo vnitra po pád komunistického režimu.</p>
+            <p>Seit der Eingliederung der Grenzwache unter Föderales Innenministerium bis zur Wende.</p>
           </div>
         </label>
       </div>
@@ -120,75 +118,75 @@
 
   <section id="filters" class="controls filters hidden">
     <header>
-      <div>Filtrování dle dalších kategorií</div>
+      <div>Nach weiteren Kategorien filtern</div>
     </header>
     <div class="filters-wrapper">
       <div class="filter">
-        <h4>Věk</h4>
+        <h4>Alter</h4>
         <div id="filter-age"></div>
         <!-- How to filter "not-specified"?-->
         <div>
-          <div id="age-min" class="age-value left text-left small">od 5 let</div>
-          <div id="age-max" class="age-value right text-right small">do 90 let</div>
+          <div id="age-min" class="age-value left text-left small">ab 5 Jahren</div>
+          <div id="age-max" class="age-value right text-right small">bis 90 Jahre</div>
         </div>
         <hr>
       </div>
       <div id="filter-gender" class="filter">
-        <h4>Pohlaví</h4>
+        <h4>Geschlecht</h4>
         <ul>
           <li>
             <label class="gender" for="genderFemale">
               <input type="checkbox" name="gender" value="female" id="genderFemale" checked>
               <i></i>
-              <div>žena</div>
+              <div>Frau</div>
             </label>
           </li>
           <li>
             <label class="gender" for="genderMale">
               <input type="checkbox" name="gender" value="male" id="genderMale" checked>
               <i></i>
-              <div>muž</div>
+              <div>Mann</div>
             </label>
           </li>
           <li>
             <label class="gender" for="genderNa">
               <input type="checkbox" name="gender" value="na" id="genderNa" checked>
               <i class="gray"></i>
-              <div class="gray">neurčeno</div>
+              <div class="gray">unbestimmt</div>
             </label>
           </li>
         </ul>
         <hr>
       </div>
       <div id="filter-citizenship" class="filter">
-        <h4>Státní příslušnost</h4>
+        <h4>Nationalität</h4>
         <label class="custom-select" for="">
           <select id="citizenship">
-            <option value="false">všechny státní příslušnosti</option>
-            <option value="1">Československo - ČSR, ČSSR</option>
-            <option value="3">Maďarsko</option>
-            <option value="6">NDR</option>
-            <option value="5">Německo (do r.1949)</option>
-            <option value="2">Polsko</option>
-            <option value="4">Rakousko</option>
-            <option value="7">SRN</option>
-            <option value="8">Jugoslávie</option>
-            <option value="9">SSSR</option>
-            <option value="11">Francie</option>
-            <option value="0">neurčeno</option>
+            <option value="false">Alle Nationalitäten</option>
+            <option value="1">Tschechoslowakei (ČSR, ČSSR)</option>
+            <option value="3">Ungarn</option>
+            <option value="6">DDR</option>
+            <option value="5">Deutschland (bis 1949)</option>
+            <option value="2">Polen</option>
+            <option value="4">Österreich</option>
+            <option value="7">BRD</option>
+            <option value="8">Jugoslawien</option>
+            <option value="9">Sowjetunion</option>
+            <option value="11">Frankreich</option>
+            <option value="0">unbestimmt</option>
           </select>
         </label>
         <hr>
       </div>
       <div id="filter-residence" class="filter">
-        <h4>Okres bydliště</h4>
+        <h4>Heimatbezirk</h4>
         <label class="custom-select" for="">
           <select id="residence">
-            <option value="false">všechny okresy bydliště</option>
+            <option value="false">alle Heimatbezirke</option>
             <option value="1">Allier (F)</option>
-            <option value="2">Arnsberg (SRN)</option>
+            <option value="2">Arnsberg (BRD)</option>
             <option value="3">Benešov</option>
-            <option value="4">Berlin (NDR)</option>
+            <option value="4">Berlin (DDR)</option>
             <option value="5">Beroun</option>
             <option value="6">Bratislava</option>
             <option value="7">Břeclav</option>
@@ -196,7 +194,7 @@
             <option value="9">Brno-venkov</option>
             <option value="10">Bruntál</option>
             <option value="11">Budapest</option>
-            <option value="12">Budapest (H)</option>
+            <option value="12">Budapest (U)</option>
             <option value="13">Bytom</option>
             <option value="14">Bytom (PL)</option>
             <option value="15">České Budějovice</option>
@@ -204,12 +202,12 @@
             <option value="17">Cheb</option>
             <option value="18">Chemnitz</option>
             <option value="19">Chomutov</option>
-            <option value="20">Darmstadt (SRN)</option>
+            <option value="20">Darmstadt (BRD)</option>
             <option value="21">Děčín</option>
             <option value="22">Domažlice</option>
-            <option value="23">Dresden (NDR)</option>
-            <option value="24">Esztergomi (H)</option>
-            <option value="25">Frankfurt (Oder; NDR)</option>
+            <option value="23">Dresden (DDR)</option>
+            <option value="24">Esztergomi (U)</option>
+            <option value="25">Frankfurt (Oder; DDR)</option>
             <option value="26">Frýdek-Místek</option>
             <option value="27">Gdańsk (PL)</option>
             <option value="28">Gliwicki District (PL)</option>
@@ -218,7 +216,7 @@
             <option value="31">Jindřichův Hradec</option>
             <option value="32">Karlovy Vary</option>
             <option value="33">Karviná</option>
-            <option value="34">Kassel (SRN)</option>
+            <option value="34">Kassel (BRD)</option>
             <option value="35">Katowice (PL)</option>
             <option value="36">Kežmarok</option>
             <option value="37">Kladno</option>
@@ -231,23 +229,23 @@
             <option value="44">Linz</option>
             <option value="45">Litoměřice</option>
             <option value="46">Louny</option>
-            <option value="47">Magdeburg (NDR)</option>
+            <option value="47">Magdeburg (DDR)</option>
             <option value="48">Malacky</option>
             <option value="49">Mělník</option>
-            <option value="50">Mistelbach (A)</option>
-            <option value="51">Mittelfranken (SRN)</option>
+            <option value="50">Mistelbach (Ö)</option>
+            <option value="51">Mittelfranken (BRD)</option>
             <option value="52">Mladá Boleslav</option>
             <option value="53">Most</option>
-            <option value="54">Nagykátai (H)</option>
-            <option value="55">Niederbayern (SRN)</option>
+            <option value="54">Nagykátai (U)</option>
+            <option value="55">Niederbayern (BRD)</option>
             <option value="56">Nitra</option>
             <option value="57">Nové Mesto nad Váhom</option>
             <option value="58">Nové Zámky</option>
             <option value="59">Nový Jičín</option>
             <option value="60">Nymburk</option>
-            <option value="61">Oberbayern (SRN)</option>
-            <option value="62">Oberfranken (SRN)</option>
-            <option value="63">Oberpfalz (SRN)</option>
+            <option value="61">Oberbayern (BRD)</option>
+            <option value="62">Oberfranken (BRD)</option>
+            <option value="63">Oberpfalz (BRD)</option>
             <option value="64">Okres wałbrzyski (PL)</option>
             <option value="65">Olomouc</option>
             <option value="66">Opole (PL)</option>
@@ -265,7 +263,7 @@
             <option value="78">Skalica</option>
             <option value="79">Sokolov</option>
             <option value="80">Stará Ľubovňa</option>
-            <option value="81">Süd (SRN)</option>
+            <option value="81">Süd (BRD)</option>
             <option value="82">Šumperk</option>
             <option value="83">Świdnica (PL)</option>
             <option value="84">Tachov</option>
@@ -275,91 +273,91 @@
             <option value="88">Veľký Krtíš</option>
             <option value="89">Vsetín</option>
             <option value="90">Vyškov</option>
-            <option value="91">Waidhofen an der Thaya (A)</option>
-            <option value="92">Wien (A)</option>
+            <option value="91">Waidhofen an der Thaya (Ö)</option>
+            <option value="92">Wien (Ö)</option>
             <option value="93">Žďár nad Sázavou</option>
             <option value="94">Žiar nad Hronom</option>
             <option value="95">Zlín</option>
             <option value="96">Znojmo</option>
-            <option value="0">neurčeno</option>
+            <option value="0">unbestimmt</option>
           </select>
         </label>
         <hr>
       </div>
       <div id="filter-incident" class="filter">
-        <h4>Příslušný útvar příhraniční stráže</h4>
+        <h4>Die zuständige Grenzwacheabteilung</h4>
         <label class="custom-select" for="">
           <select id="incident">
-            <option value="false">všechny útvary příhraniční stráže</option>
-            <option value="1">10. volarská bps</option>
-            <option value="2">11. bratislavská bps</option>
-            <option value="3">12. plánská bps</option>
-            <option value="4">15. českobudějovická bps </option>
-            <option value="5">19. děčínská bps</option>
-            <option value="6">3. karlovarská bps</option>
-            <option value="7">4. znojemská bps</option>
-            <option value="8">5. chebská bps</option>
-            <option value="9">7. sušická bps</option>
-            <option value="10">9. domažlická bps</option>
-            <option value="11">9. poběžovická bps</option>
-            <option value="0">neurčeno</option>
+            <option value="false">alle Formationen der Grenzwache</option>
+            <option value="1">10. Grenzwachebrigade Volary</option>
+            <option value="2">11. Grenzwachebrigade Bratislava</option>
+            <option value="3">10. Grenzwachebrigade Planá</option>
+            <option value="4">15. Grenzwachebrigade České Budějovice</option>
+            <option value="5">19. Grenzwachebrigade Děčín</option>
+            <option value="6">3. Grenzwachebrigade Karlovy Vary</option>
+            <option value="7">4. Grenzwachebrigade Znojmo</option>
+            <option value="8">5. Grenzwachebrigade Cheb</option>
+            <option value="9">7. Grenzwachebrigade Sušice</option>
+            <option value="10">9. Grenzwachebrigade Domažlice</option>
+            <option value="11">9. Grenzwachebrigade Poběžovice</option>
+            <option value="0">unbestimmt</option>
           </select>
         </label>
         <hr>
       </div>
       <div id="filter-death" class="filter">
-        <h4>Příčina úmrtí</h4>
+        <h4>Todesursache</h4>
         <label class="custom-select" for="">
           <select id="death">
-            <option value="false">všechny příčiny úmrtí</option>
-            <option value="0">zasažení elektrickým proudem</option>
-            <option value="1">střelba pohraničníků</option>
-            <option value="2">pád sestřeleného letadla</option>
-            <option value="3">sebevražda</option>
-            <option value="4">autohavárie</option>
-            <option value="5">utonutí</option>
-            <option value="6">utonutí po střelném zranění</option>
-            <option value="7">zranění výbuchem protipěchotní miny</option>
-            <option value="8">zranění způsobené psy Pohraniční stráže</option>
-            <option value="9">jiná příčina</option>
+            <option value="false">alle Todesursachen</option>
+            <option value="0">Stromschlag</option>
+            <option value="1">Grenzwächterschießen</option>
+            <option value="2">Absturz eines heruntergeholten Flugzeugs</option>
+            <option value="3">Selbstmord</option>
+            <option value="4">Autounfall</option>
+            <option value="5">Ertrinken</option>
+            <option value="6">Ertrinken nach einer Schußwunde</option>
+            <option value="7">Verletzung durch Antipersonenmine</option>
+            <option value="8">Verletzung von Hunden der Grenzwache beigebracht</option>
+            <option value="9">anderes</option>
           </select>
         </label>
         <hr>
       </div>
       <div id="filter-direction" class="filter">
-        <h4>Směr přechodu</h4>
+        <h4>Richtung der Überschreitung</h4>
         <ul>
           <li>
             <label class="gender" for="directionOut">
               <input type="checkbox" name="direction" value="out" id="directionOut" checked>
               <i></i>
-              <div>ven</div>
+              <div>nach außen</div>
             </label>
           </li>
           <li>
             <label class="gender" for="directionIn">
               <input type="checkbox" name="direction" value="in" id="directionIn" checked>
               <i></i>
-              <div>dovnitř</div>
+              <div>nach innen</div>
             </label>
           </li>
           <li>
             <label class="gender" for="directionNa">
               <input type="checkbox" name="direction" value="na" id="directionNa" checked>
               <i></i>
-              <div>neurčeno</div>
+              <div>unbestimmt</div>
             </label>
           </li>
         </ul>
         <hr>
       </div>
       <a href="javascript:void(0)" id="reset-filters" class="small text-center">
-        <img src="img/ui/refresh-arrow.svg" alt="Resetovat úroveň přiblížení a pozici na mapě"> Resetovat filtrování
+        <img src="../img/ui/refresh-arrow.svg" alt=""> Filter zurücksetzen
       </a>
     </div>
     <a id="roll-up-filters" class="roll-up" href="#">
       <div>
-        <span>schovat</span>
+        <span>verstecken</span>
       </div>
     </a>
   </section>
@@ -367,28 +365,28 @@
   <section class="infobox">
     <div class="info">
       <div class="title">
-        <h1>Informace o zvolené osobě</h1>
+        <h1>Informationen über die ausgewählte Person</h1>
       </div>
       <div class="content">
         <div>
           <dl>
             <dt>
-              Jméno osoby
+              Name der Person
             </dt>
             <dd id="jmeno_osoby">
             </dd>
             <dt>
-              Státní příslušnost
+              Nationalität
             </dt>
             <dd id="statni_prislusnost">
             </dd>
             <dt>
-              Rok incidentu
+              Jahr des Vorfalls
             </dt>
             <dd id="rok">
             </dd>
             <dt>
-              Odpovědný útvar
+              verantwortliche Abteilung
             </dt>
             <dd id="utvar_incidentu">
             </dd>
@@ -397,21 +395,21 @@
         <div>
           <dl>
             <dt>
-              Věk
+              Alter
             </dt>
             <dd id="vek_h">
             </dd>
             <dt>
-              Okres bydliště
+              Heimatbezirk
             </dt>
             <dd id="okres_bydliste_cz"></dd>
             <dt>
-              Směr přechodu
+              Richtung der Überschreitung
             </dt>
             <dd id="smer_prechodu">
             </dd>
             <dt>
-              Způsob úmrtí
+              Todesursache
             </dt>
             <dd id="umrti">
             </dd>
@@ -420,7 +418,7 @@
       </div>
       <div class="close">
         <a href="javascript:void(0)">
-          <img src="img/ui/close.png" title="Zavřít okno">
+          <img src="../img/ui/close.png" title="Fenster schließen">
         </a>
       </div>
     </div>
@@ -433,8 +431,8 @@
     <span></span>
   </div>
 
-  <a href="#" id="reset-view" class="button text-center" title="Resetovat zobrazení mapy">
-    <img src="img/ui/refresh-arrow.svg" alt="Resetovat úroveň přiblížení a pozici na mapě">
+  <a href="#" id="reset-view" class="button text-center" title="Die Ansicht der Karte zurücksetzen">
+    <img src="../img/ui/refresh-arrow.svg" alt="Zoom und Position auf der Karte zurücksetzen">
   </a>
 
   <!-- Hotjar Tracking Code for http://mapa.zelezna-opona.cz -->
@@ -460,7 +458,7 @@
   </script>
 
   <script src="//cdn.jsdelivr.net/jquery.scrollto/2.1.0/jquery.scrollTo.min.js"></script>
-  <script src="js/nouislider.min.js"></script>
+  <script src="../js/nouislider.min.js"></script>
   <script src="js/main.js"></script>
 
 </body>

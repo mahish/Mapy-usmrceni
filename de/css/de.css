@@ -1,0 +1,8 @@
+html:lang(de) .toApp {
+  max-width: 10em;
+}
+
+.infobox .info .title h1 {
+  white-space: nowrap;
+  font-size: .875rem;
+}
